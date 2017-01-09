@@ -1,0 +1,405 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     20584,        404]
+NotebookOptionsPosition[     20083,        380]
+NotebookOutlinePosition[     20444,        396]
+CellTagsIndexPosition[     20401,        393]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Documentation", "Section",
+ CellChangeTimes->{{3.690220594031942*^9, 3.690220603131773*^9}, {
+  3.690392460474176*^9, 3.690392461511745*^9}, {3.690392521788485*^9, 
+  3.690392524598116*^9}}],
+
+Cell[TextData[{
+ "\nThis package was written using Mathematica version 11. The best way to \
+get started is by becoming familiar with the palette. After this, additional \
+examples can be found by running the file \[OpenCurlyDoubleQuote]Examples\
+\[CloseCurlyDoubleQuote]. These instructions assume you have already read and \
+implemented the steps in Quick Start.\n\nOpen a new notebook*. If the palette \
+is not open, select it from the Palette menu. In the 2nd section of the \
+palette, Subscripts & Operators, click on ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["e", "1"], TraditionalForm]]],
+ ", then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "2"], "."}], TraditionalForm]]],
+ " Hover over the 3 operators (geometric product, wedge, and dot) until you \
+find the diamond that represents geometric product, and click it. Then click \
+on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], " "}], TraditionalForm]]],
+ "again and press \[EnterKey].  Try other examples and use the wedge and dot \
+operators to examine the results. Observe that the tooltips explain how to \
+enter both the subscripted e\[CloseCurlyQuote]s and the operators from the \
+keyboard. If you find the operator symbols too small to see, click on a \
+magnification level at the bottom of the palette. Zoom back when you wish to \
+restore a smaller palette.\n\nIn the next section of the palette, Multivector \
+Generators, you may need to click the triangle to expand the section. (Click \
+it again to hide the section.) In the 1st column enter a command by selecting \
+it. In the workbook, press \[EnterKey]. The output should be the same as the \
+corresponding entry in the right-hand column of the palette. Now modify some \
+parameters in the notebook, say, change the letter a to the letter b, or \
+dimension 3 to dimension 4. Now select something from column 2. This \
+generates the same output, but now it is provided in the input area for you \
+to use, saving you from having to copy and paste the output. Finally, hoover \
+over the commands in both columns to get more information. \n\nRotors are \
+used to perform rotations in any number of dimensions. They are used in \
+Clifford algebras and there is an example in the Examples file.\n\nThe last 2 \
+items in this section are Complex numbers and Quaternions. The complex \
+numbers are the Clifford subalgebra {a + b i} with i = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], 
+    SubscriptBox["e", "2"]}], TraditionalForm]]],
+ " and a and b are reals. Quaternions are the Clifford subalgebra of elements \
+{a + b i + c j + d k} where a, b, c, & d are real numbers and i, j, and k are \
+as explained in the palette (remember to hover your mouse to reveal \
+tooltips). GA operations  that are appropriate (such as InverseG and NormG) \
+for complex numbers or quaternions will also work when restricted to these \
+subalgebras. To use this package to perform complex multiplication, simply \
+type ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], 
+    SubscriptBox["e", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " where you would normally type i. Similarly for Quaternions, type ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "2"], 
+    SubscriptBox["e", "3"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " for i, - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], 
+    SubscriptBox["e", "3"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " for j, and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], 
+    SubscriptBox["e", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " for k.\n\nAt this time (2016) there seems not to be a standard vocabulary \
+for GA objects like multivectors, n-vectors, and blades. For example, is a \
+2-vector a vector in 2-space or is it a bivector, a grade 2 multivector? The \
+vocabulary used in the palette is illustrated clearly in the spreadsheet \
+named Multivector Terminology.\n\nThe 4th section of the palette, Geometric \
+Algebra Operations, should largely be self-explanatory except perhaps for the \
+Hodge Dual. There are several conflicting definitions given in current \
+literature so I have provided a couple of functions to allow the user freedom \
+of choice. The equations defining the two I have chosen are shown in the \
+tooltips (hover the mouse over the palette). The first definition is \
+consistent with the implicit definition that the Hodge Dual is the unique \
+operator that satisfies clif2 ",
+ Cell[BoxData[
+  FormBox["\[Wedge]", TraditionalForm]]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{"Hodge", "[", " ", "clif", " ", "]"}], "  ", "=", " "}]}], 
+   TraditionalForm]]],
+ "( clif \[CenterDot] clif2 ) \[SmallCircle] i  for all multivectors clif2 \
+and where i is the pseudoscalar. By using this package I was able to \
+experimentally verify that the simple explicit definition I use in function \
+HodgeDualG works. The HodgeDual2G definition does NOT satisfy the implicit \
+equations but does have similarly nice geometric properties and seems to be \
+pretty commonly used. \n\nThe operators in the next section, Multivector \
+Support, were developed to simplify the definitions of the primary operators \
+in the prior section and thus may or may not be useful to the user.  ExpandG \
+and CollectG are similar to Mathematica\[CloseCurlyQuote]s Expand and Collect \
+commands except they are basis-aware, able to expand and collect while \
+handling ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "i"], " ", "terms"}], TraditionalForm]]],
+ ". GradePpiece will pick out the grade p component, if any, of a \
+multivector. MaxDimG will find the highest basis subscript among the terms of \
+a multivector. ConstantG will pick out the constant term or terms, if any, in \
+a multivector. InitializeG is used internally to reduce squares of basis \
+elements. In the event that the user creates his own products, not using the \
+GA operators, InitializeG can be used to reduce the squares according to the \
+GA initialization specified by the user in step 1.\n\nIt is not necessary to \
+revert to lists in order to perform most operations. This package allows \
+straight-forward operation on the multivectors themselves using standard \
+mathematical notation. However, it can be convenient to use lists for complex \
+operations where one needs to keep the terms of a multivector in a particular \
+order in order to operate on them. (Mathematica, as we all know, puts terms \
+in its own inimitable and mostly-uncontrollable order.) Thus, the last \
+section of the palette is list-related. The top two operators quickly switch \
+between a multivector and its corresponding list of terms. The 2nd row \
+generates two lists from a multivector. The 2nd list is a list of the \
+subscripts of the blades of the multivector terms. The 1st list is a similar \
+list but with the subscripts represented as e-subscripts like ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["e", 
+    RowBox[{"2", ",", " ", "3", ",", " ", "5"}]], TraditionalForm]]],
+ ". Both lists can come in handy. \n\nThe last item is a Signature operator \
+that extends Mathematica\[CloseCurlyQuote]s signature operator. Mathematica\
+\[CloseCurlyQuote]s operator will find the signature of a list of, say, \
+integers as long as they are all distinct. But, in GA we often as not deal \
+with duplicate integers such as in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "2"], 
+    SubscriptBox["e", "3"]}], TraditionalForm]]],
+ Cell[BoxData[
+  FormBox["\[Wedge]", TraditionalForm]]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], 
+    SubscriptBox["e", "3"]}], TraditionalForm]]],
+ ". SignatureG will find the signature for { 2, 3, 1, 3 }. I believe, \
+actually, that Signature G will find the signature for any class of items for \
+which Mathematica\[CloseCurlyQuote]s Signature function works but I have not \
+extensively tested this. Signature is a measure of the number of pairwise \
+transpositions of adjacent terms required to put the list in natural order. \
+An odd number of transpositions reverses signs and an even number preserves \
+the sign. It is used to determine the correct signs during antisymmetrization \
+operations. Thus, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["e", "1"], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["e", "2"], TraditionalForm]]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Wedge]", 
+    SubscriptBox["e", "1"]}], TraditionalForm]]],
+ "= - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["e", "2"], TraditionalForm]]],
+ " in 2-space in a + + Clifford algebra.\n\n",
+ StyleBox["Cautions", "Text",
+  FontSize->16,
+  FontColor->RGBColor[0, 0, 1]],
+ "\n   1. If you receive a warning about context shadowing or if you notice \
+",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["e", "i"], "2"], TraditionalForm]]],
+ " terms in your output, you should quit the kernel using the Evaluation \
+menu, close and reopen the palette, and reset your GA initialization \
+settings. \n\n   2. Until such time as the author might implement operator \
+precedence, it is necessary to put parentheses around your multivectors when \
+using the binary operator symbols (see 1st section of palette). For example, \
+you must enter (2 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["e", "1"], TraditionalForm]]],
+ ") \[CenterDot] (3 + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], 
+    SubscriptBox["e", "2"]}], TraditionalForm]]],
+ "). \[CapitalEta]owever, \[CapitalAlpha]  =  2 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["e", "1"], TraditionalForm]]],
+ ", \[CapitalBeta] = 3 + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], 
+    SubscriptBox["e", "2"]}], TraditionalForm]]],
+ " and \[CapitalAlpha] \[CenterDot] \[CapitalBeta] is \[CapitalOmicron]\
+\[CapitalKappa]. So is DotPrdtG [ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", 
+       SubscriptBox["e", "1"]}], ",", " ", 
+      RowBox[{"3", " ", "+", " ", 
+       RowBox[{
+        SubscriptBox["e", "1"], 
+        SubscriptBox["e", "2"]}]}]}], " ", "]"}], "."}], TraditionalForm]]],
+ "\n\nThis package contains only a very basic set of GA operations, but other \
+GA operations can easily be built upon them. The geometric product is \
+somewhat complicated to program because it must handle antisymmetrization. \
+Most GA operations are easy to implement once the geometric product is \
+defined. Thus, the benefits of this package are:\n\n   1. It uses natural \
+mathematical notation for subscripts and standard wedge and dot symbols, not \
+requiring you to learn new notation. (Both geometric product and Mathematica\
+\[CloseCurlyQuote]s product use a space. To distinguish them, we use a \
+diamond for geometrical product.)\n   2. Operations are performed naturally, \
+not by converting back and forth to lists (though lists are supported)\n   3. \
+The function definitions are generally very short, self-documented, and easy \
+to follow, thus easily modified or extended\n   4. The palette greatly \
+simplifies typing input, entering sample multivectors that can quickly be \
+edited \n   5. Because symbolic equations are handled (as well as numeric), \
+it is easy to generate generic formulas and to test hypotheses such as \
+whether an identity works in dimensions higher than, say, 3 or whether an \
+identity can be expanded from vectors to blades or beyond.\n   6. The numeric \
+capabilities allow you to instantly carry out computations that would require \
+an extensive amount of time and tedium to do manually\n  7. One can quickly \
+configure, or switch between, spatial dimensions, space and space-time, and \
+Clifford and Grassmann.\n  8. Except for printouts (which can be pages long \
+in higher dimensions) most operations compute instantly even in higher \
+dimensions. The definitions are written entirely without slow computing \
+\[OpenCurlyDoubleQuote]for loops\[CloseCurlyDoubleQuote] and other such \
+constructs.\n\nFinally, the author is retired and built this package working \
+in a vacuum as a way of teaching himself both GA and Mathematica. If you are \
+using this package, consider yourself a beta-tester. Let me know of any bugs \
+you find. I might find time to correct them. I have thoroughly tested - + + + \
+and somewhat tested + - - - Clifford algebras, but haven\[CloseCurlyQuote]t \
+much tested Grassmann algebras as of yet. Contact me at \
+budsimrin@sbcglobal.net.\n\n\n* You can use the notebook as is or else \
+implement a private notebook context. Private cell contexts have not been \
+tested are likely compatible. The problem is that the author has had to take \
+great care to manage the context of the symbol e used in the basis ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], ",", " ", 
+    SubscriptBox["e", "2"], ",", " ", 
+    RowBox[{"...", " ", ".", " ", "."}]}], TraditionalForm]]],
+ " This is because only the multivector symbols, like A,  are passed to the \
+package yet the package manipulates the basis elements contained in A. Were \
+the package \[OpenCurlyDoubleQuote]e\[CloseCurlyDoubleQuote] to have a \
+different context than the notebook \[OpenCurlyDoubleQuote]e\
+\[CloseCurlyDoubleQuote], those manipulations would fail.\n\n",
+ StyleBox["Warning:",
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 0]],
+ " If you open a second notebook during a session, you must execute the \
+\[OpenCurlyDoubleQuote]Needs\[CloseCurlyDoubleQuote] statement before \
+performing any package operations. Otherwise the context of e will not be \
+preserved and those computations will fail dramatically. If you forget, you \
+need to quit the kernel and then execute Needs \
+[\[OpenCurlyDoubleQuote]GeomAlg2017Jan`\[CloseCurlyDoubleQuote]] as soon as \
+you see the failure.\n\n"
+}],
+ CellChangeTimes->{{3.690220627457881*^9, 3.690221159129568*^9}, {
+   3.690221214249576*^9, 3.690221647753193*^9}, {3.6902217987675743`*^9, 
+   3.690221884507244*^9}, {3.690221946363057*^9, 3.690221976324597*^9}, {
+   3.690222021888039*^9, 3.690222205659092*^9}, {3.6902222578426447`*^9, 
+   3.6902225991216927`*^9}, {3.690222635895948*^9, 3.6902226441682158`*^9}, {
+   3.690223402003695*^9, 3.6902234293315887`*^9}, {3.6902235029698477`*^9, 
+   3.690223604339479*^9}, {3.690223636623301*^9, 3.690223724424255*^9}, {
+   3.6902237725597153`*^9, 3.690224040976597*^9}, {3.6902240799396467`*^9, 
+   3.690225268714959*^9}, {3.690225359052948*^9, 3.69022536155757*^9}, 
+   3.69022601276604*^9, 3.6902260728200703`*^9, 3.690226248512381*^9, {
+   3.6902262846904163`*^9, 3.690226289960484*^9}, 3.690226320438218*^9, {
+   3.690226453105798*^9, 3.690226457748454*^9}, 3.690226573800996*^9, {
+   3.690229270033553*^9, 3.690229325546369*^9}, {3.690229386880629*^9, 
+   3.690229389964439*^9}, {3.69022945824294*^9, 3.6902294864695873`*^9}, {
+   3.6902295203176947`*^9, 3.690229656542444*^9}, {3.690229869250367*^9, 
+   3.690229871478753*^9}, {3.690229948155706*^9, 3.690229958329833*^9}, {
+   3.6902299915861464`*^9, 3.690229993992199*^9}, {3.690230119379198*^9, 
+   3.690230137588632*^9}, {3.690230199031416*^9, 3.6902302087116537`*^9}, {
+   3.690230239774667*^9, 3.690230301547369*^9}, {3.690232505626642*^9, 
+   3.690232564559026*^9}, {3.6902326121760073`*^9, 3.690232632413225*^9}, {
+   3.690232741098394*^9, 3.690233219454867*^9}, {3.690233288510297*^9, 
+   3.6902333301718693`*^9}, {3.690233366626815*^9, 3.690233367155498*^9}, 
+   3.6903813553764067`*^9, {3.690381428305646*^9, 3.690381452971223*^9}, {
+   3.690381498331566*^9, 3.69038150607417*^9}, {3.690381574772512*^9, 
+   3.6903816668380747`*^9}, {3.6903817004614573`*^9, 3.690381709069059*^9}, {
+   3.6903817464447403`*^9, 3.690382037344945*^9}, {3.690382069081039*^9, 
+   3.690382116949985*^9}, {3.690382147874434*^9, 3.69038230709873*^9}, {
+   3.6903823384538603`*^9, 3.690382497368915*^9}, {3.690382536994369*^9, 
+   3.690382558292448*^9}, 3.690382596756497*^9, {3.6903826711872673`*^9, 
+   3.690382776367221*^9}, {3.690382826693898*^9, 3.690382883451593*^9}, {
+   3.690383041540007*^9, 3.690383184465918*^9}, {3.690383951126672*^9, 
+   3.690383951457296*^9}, {3.6903885836519117`*^9, 3.690388600027852*^9}, {
+   3.6903895957708197`*^9, 3.690389631255232*^9}, {3.690389999453937*^9, 
+   3.690390148637292*^9}, {3.690390213788431*^9, 3.69039023038234*^9}, {
+   3.6903922828781652`*^9, 3.6903923252938223`*^9}, {3.6903924771094933`*^9, 
+   3.690392490507182*^9}, {3.690392561449929*^9, 3.69039278718006*^9}, {
+   3.69039281736336*^9, 3.6903928777417192`*^9}, {3.6903929174250317`*^9, 
+   3.69039295702008*^9}, {3.690392998476769*^9, 3.690393049513288*^9}, {
+   3.690393090232897*^9, 3.690393569558009*^9}, {3.690393609069454*^9, 
+   3.690393842114031*^9}, {3.6903939117224073`*^9, 3.690393912767527*^9}, {
+   3.6903939499389353`*^9, 3.690394034485299*^9}, {3.690394107943692*^9, 
+   3.6903941982461023`*^9}, {3.690394234587799*^9, 3.690394291576169*^9}, {
+   3.690394328465876*^9, 3.6903943378889914`*^9}, {3.6903960102072153`*^9, 
+   3.690396099029976*^9}, {3.69039615082224*^9, 3.6903962160594378`*^9}, {
+   3.690396290583662*^9, 3.6903963452516947`*^9}, {3.69039650260045*^9, 
+   3.690396694095615*^9}, {3.690396729664632*^9, 3.6903970358649893`*^9}, {
+   3.690397073427163*^9, 3.690397122332676*^9}, {3.690397154600328*^9, 
+   3.690397159363697*^9}, {3.690397223416815*^9, 3.690397306360038*^9}, {
+   3.690397357726946*^9, 3.6903973789858017`*^9}, {3.69039743864469*^9, 
+   3.690397548546801*^9}, 3.690397600715446*^9, {3.690397691798705*^9, 
+   3.6903977603497877`*^9}, 3.690397830659396*^9, {3.690397875885807*^9, 
+   3.690397910120747*^9}, {3.690398026653585*^9, 3.690398026909342*^9}, {
+   3.6903980739722652`*^9, 3.690398176605606*^9}, {3.690398240170021*^9, 
+   3.6903984074879017`*^9}, {3.690398442247344*^9, 3.690398447803707*^9}, {
+   3.690398484290226*^9, 3.690398704124454*^9}, {3.6903987476734858`*^9, 
+   3.690398750663403*^9}, {3.690405648708377*^9, 3.6904056649074373`*^9}, {
+   3.6904056990272903`*^9, 3.6904057000488*^9}, 3.690405845590397*^9, 
+   3.690406039209449*^9, {3.690406183333818*^9, 3.690406193252252*^9}, 
+   3.690406238240418*^9, 3.690406275391851*^9, 3.6904064259237833`*^9, {
+   3.690406464123914*^9, 3.6904064935590887`*^9}, {3.690406561866547*^9, 
+   3.6904065784956837`*^9}, {3.690406853725759*^9, 3.690406889158929*^9}, {
+   3.690495718455055*^9, 3.690495784187035*^9}, 3.690496133405141*^9, {
+   3.692571800679339*^9, 3.692571827017172*^9}, {3.692571868694385*^9, 
+   3.6925722182324057`*^9}, {3.692572249537302*^9, 3.692572287206916*^9}, 
+   3.692572321434681*^9, {3.692572612213114*^9, 3.692572614292485*^9}, {
+   3.692572645468986*^9, 3.692572667802022*^9}, 3.6927342287406597`*^9, {
+   3.6927343477524977`*^9, 3.6927343563505583`*^9}, {3.692734502976609*^9, 
+   3.692734506584001*^9}, {3.692736389520771*^9, 3.692736403278708*^9}, {
+   3.692736579348284*^9, 3.6927365816360207`*^9}, {3.692736804923664*^9, 
+   3.6927368149451647`*^9}, 3.692736859652051*^9, {3.69273702703314*^9, 
+   3.6927370945090437`*^9}, {3.6927371332563477`*^9, 3.692737191439633*^9}, {
+   3.6927372365200377`*^9, 3.692737338299015*^9}, 3.6927374306527576`*^9, {
+   3.692745073942712*^9, 3.6927450846329203`*^9}, {3.69275070644508*^9, 
+   3.6927507070714273`*^9}, {3.6927510801523533`*^9, 3.69275119814283*^9}},
+ FontFamily->"Arial",
+ FontSize->14]
+}, Open  ]]
+},
+WindowSize->{807, 1044},
+WindowMargins->{{378, Automatic}, {Automatic, 35}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 196, 3, 64, "Section"],
+Cell[621, 20, 19446, 357, 1929, InheritFromParent]
+}, Open  ]]
+}
+]
+*)
+

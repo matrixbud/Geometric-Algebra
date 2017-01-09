@@ -1,0 +1,140 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[      7551,        139]
+NotebookOptionsPosition[      7055,        115]
+NotebookOutlinePosition[      7415,        131]
+CellTagsIndexPosition[      7372,        128]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["QuickStart", "Section",
+ CellChangeTimes->{{3.690220594031942*^9, 3.690220603131773*^9}}],
+
+Cell[TextData[{
+ "\nInstall* the package using the instructions in the Installation Guide. \
+Then, to use the package, open a notebook and start your session with the \
+statement Needs [\[OpenCurlyDoubleQuote]GeomAlg2017Jan`\
+\[CloseCurlyDoubleQuote]] or, equivalently, \
+<<\[CloseCurlyDoubleQuote]GeomAlg2017Jan`\[CloseCurlyDoubleQuote]. If you \
+open a 2nd notebook later, it also must begin with the \
+\[OpenCurlyDoubleQuote]Needs\[CloseCurlyDoubleQuote] statement. You can use \
+the palette to quickly enter the needs statement. If Mathematica gives you \
+\[OpenCurlyDoubleQuote]shadow\[CloseCurlyDoubleQuote] errors, you may wish to \
+read the cautions in the main documentation.\n\nThe palette has been designed \
+as an instrumental part of this package and should be installed before \
+proceeding. Simply open the notebook Geom Alg Palette.nb, run it (i.e., put \
+the cursor anywhere within the code and press ENTER) to display the palette, \
+move it to your preferred default location, and select Install Palette ... \
+from the Palette menu. Select Geometric Algebra Palette from the Source \
+drop-down menu, give the palette any name, for example Geometric Algebra, and \
+click OK. If you later wish to change the default palette location, simply \
+move it. If you find any items too small to read, click on the magnification \
+box at the bottom.\n\nStep 1 is to use the palette to select your GA algebra \
+(Grassmann, Clifford, etc.). After that you can use the palette to quickly \
+enter vectors, bivectors, blades, and general multivectors (which I often \
+call clifs, for Clifford, because clif is shorter than multivector and helps \
+keep the palette narrower). The palette not only shows you all the available \
+commands, it illustrates many of them and has tooltips for all of them. Thus, \
+it is your on-screen documentation center as well as your user interface. \
+Click on the triangles to expand/contract sections. \n\nThe file \
+\[OpenCurlyDoubleQuote]Examples\[CloseCurlyDoubleQuote] can be examined to \
+see how most of the operations work. I recommend you first run it using the \
+default initialization of \n\tClifford Algebra\n\tMathematicians\n\t0 Time \
+dimensions\nEspecially, the airplane rotation example is meant for using a \
+Clifford algebra in pure space.\n\nThis package was designed primarily for \
+Clifford algebras but basic Grassmann algebra operations such as dot and \
+wedge products follow the same rules except for what happens when basis \
+elements are squared. Thus, by using only 1-line of code to control the \
+results of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["e", "i"], "2"], TraditionalForm]]],
+ " for every i, it was expedient to enable Grassmann operations. However, \
+many of the built-in operations may not be relevant for Grassmann algebras.\n\
+\n* This package was developed and tested only on a Mac. Windows users may \
+need to install a font that recognizes the binary operator symbols , \
+SmallCircle, Wedge, CenterDot, and CircleDot, shown here:",
+ StyleBox["  \[SmallCircle]  \[Wedge]  \[CenterDot]  \[CircleDot]   ",
+  Background->RGBColor[0.88, 1, 0.88]],
+ " If the symbols are visible, then no font change is required.\n\n\n\n\n"
+}],
+ CellChangeTimes->{{3.690220627457881*^9, 3.690221159129568*^9}, {
+   3.690221214249576*^9, 3.690221647753193*^9}, {3.6902217987675743`*^9, 
+   3.690221884507244*^9}, {3.690221946363057*^9, 3.690221976324597*^9}, {
+   3.690222021888039*^9, 3.690222205659092*^9}, {3.6902222578426447`*^9, 
+   3.6902225991216927`*^9}, {3.690222635895948*^9, 3.6902226441682158`*^9}, {
+   3.690223402003695*^9, 3.6902234293315887`*^9}, {3.6902235029698477`*^9, 
+   3.690223604339479*^9}, {3.690223636623301*^9, 3.690223724424255*^9}, {
+   3.6902237725597153`*^9, 3.690224040976597*^9}, {3.6902240799396467`*^9, 
+   3.690225268714959*^9}, {3.690225359052948*^9, 3.69022536155757*^9}, 
+   3.69022601276604*^9, 3.6902260728200703`*^9, 3.690226248512381*^9, {
+   3.6902262846904163`*^9, 3.690226289960484*^9}, 3.690226320438218*^9, {
+   3.690226453105798*^9, 3.690226457748454*^9}, 3.690226573800996*^9, {
+   3.690229270033553*^9, 3.690229325546369*^9}, {3.690229386880629*^9, 
+   3.690229389964439*^9}, {3.69022945824294*^9, 3.6902294864695873`*^9}, {
+   3.6902295203176947`*^9, 3.690229656542444*^9}, {3.690229869250367*^9, 
+   3.690229871478753*^9}, {3.690229948155706*^9, 3.690229958329833*^9}, {
+   3.6902299915861464`*^9, 3.690229993992199*^9}, {3.690230119379198*^9, 
+   3.690230137588632*^9}, {3.690230199031416*^9, 3.6902302087116537`*^9}, {
+   3.690230239774667*^9, 3.690230301547369*^9}, {3.690232505626642*^9, 
+   3.690232564559026*^9}, {3.6902326121760073`*^9, 3.690232632413225*^9}, {
+   3.690232741098394*^9, 3.690233219454867*^9}, {3.690233288510297*^9, 
+   3.6902333301718693`*^9}, {3.690233366626815*^9, 3.690233367155498*^9}, 
+   3.6903813553764067`*^9, {3.690381428305646*^9, 3.690381452971223*^9}, {
+   3.690381498331566*^9, 3.69038150607417*^9}, {3.690381574772512*^9, 
+   3.6903816668380747`*^9}, {3.6903817004614573`*^9, 3.690381709069059*^9}, {
+   3.6903817464447403`*^9, 3.690382037344945*^9}, {3.690382069081039*^9, 
+   3.690382116949985*^9}, {3.690382147874434*^9, 3.69038230709873*^9}, {
+   3.6903823384538603`*^9, 3.690382497368915*^9}, {3.690382536994369*^9, 
+   3.690382558292448*^9}, 3.690382596756497*^9, {3.6903826711872673`*^9, 
+   3.690382776367221*^9}, {3.690382826693898*^9, 3.690382883451593*^9}, {
+   3.690383041540007*^9, 3.690383184465918*^9}, {3.690383951126672*^9, 
+   3.690383951457296*^9}, {3.6903885836519117`*^9, 3.690388600027852*^9}, {
+   3.6903895957708197`*^9, 3.690389631255232*^9}, {3.690389999453937*^9, 
+   3.690390148637292*^9}, {3.690390213788431*^9, 3.69039023038234*^9}, {
+   3.6903922828781652`*^9, 3.6903923252938223`*^9}, 3.690396133583868*^9, {
+   3.6925729347983027`*^9, 3.692572971304777*^9}, {3.692622517052618*^9, 
+   3.692622664214405*^9}, {3.692730919013892*^9, 3.692730923706027*^9}, {
+   3.692730991554173*^9, 3.6927309962573338`*^9}, {3.692731081181052*^9, 
+   3.6927310852916403`*^9}, {3.692737949009603*^9, 3.6927379893370123`*^9}, {
+   3.692745306218671*^9, 3.6927453143451357`*^9}, {3.692807192401059*^9, 
+   3.692807373122759*^9}, 3.6928074100506563`*^9, 3.6928075615976753`*^9, {
+   3.692807628734433*^9, 3.6928076337754097`*^9}, {3.692807692440535*^9, 
+   3.692807695313075*^9}, 3.692968162546371*^9, 3.692968192937145*^9, 
+   3.6929682691985703`*^9, {3.6929683702850733`*^9, 3.692968375419038*^9}},
+ FontFamily->"Arial",
+ FontSize->14]
+}, Open  ]]
+},
+WindowSize->{808, 1044},
+WindowMargins->{{29, Automatic}, {Automatic, 10}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 95, 1, 64, "Section"],
+Cell[520, 18, 6519, 94, 672, InheritFromParent]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,74 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2582,         66]
+NotebookOptionsPosition[      2323,         52]
+NotebookOutlinePosition[      2684,         68]
+CellTagsIndexPosition[      2641,         65]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Names", " ", "File"}], " ", "*)"}], "\n", "\n", 
+  RowBox[{"DeclarePackage", "[", 
+   RowBox[{"\"\<GeomAlg2017Jan`\>\"", ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<e\>\"", ",", "\"\<algebraType\>\"", ",", "\"\<signatureType\>\"", 
+      ",", "\"\<numTimelike\>\"", ",", "\"\<GeomPrdtG\>\"", ",", 
+      "\"\<WedgePrdtG\>\"", ",", "\"\<DotPrdtG\>\"", ",", 
+      "\"\<HodgeDualG\>\"", ",", "\"\<HodgeDual2G\>\"", ",", 
+      "\"\<LeftContractionG\>\"", ",", "\"\<GormG\>\"", ",", "\"\<NormG\>\"", 
+      ",", "\"\<ReverseG\>\"", ",", "\"\<InverseG\>\"", ",", 
+      "\"\<nVectorG\>\"", ",", "\"\<BiVectorG\>\"", ",", "\"\<BladeG\>\"", 
+      ",", "\"\<pseudoScalarG\>\"", ",", "\"\<pBladeG\>\"", ",", 
+      "\"\<nClifG\>\"", ",", "\"\<RotorG\>\"", ",", "\"\<ComplexG\>\"", ",", 
+      "\"\<QuaternionG\>\"", ",", "\"\<ClifFormatG\>\"", ",", 
+      "\"\<ExpandG\>\"", ",", "\"\<CollectG\>\"", ",", "\"\<GradePpieceG\>\"",
+       ",", "\"\<MaxDimG\>\"", ",", "\"\<ConstantG\>\"", ",", 
+      "\"\<InitializeG\>\"", ",", "\"\<ClifToListG\>\"", ",", 
+      "\"\<ListToClifG\>\"", ",", "\"\<eSubscriptListG\>\"", ",", 
+      "\"\<SubscriptListG\>\"", ",", "\"\<GradeListG\>\"", ",", 
+      "\"\<SignatureG\>\""}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.690556855123518*^9, 3.690556965392563*^9}, {
+   3.690557020890552*^9, 3.690557314676291*^9}, {3.690557752614789*^9, 
+   3.690557845029039*^9}, {3.692793396756822*^9, 3.692793401171687*^9}, {
+   3.692793490982996*^9, 3.692793504729951*^9}, {3.692793577328727*^9, 
+   3.6927935963627577`*^9}, {3.692793651138321*^9, 3.6927936558608847`*^9}, {
+   3.692795919464995*^9, 3.692795924727254*^9}, 3.692796788849413*^9, 
+   3.6927972581334476`*^9}]
+},
+WindowSize->{771, 381},
+WindowMargins->{{Automatic, 148}, {Automatic, 253}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1761, 30, 222, "Input"]
+}
+]
+*)
+

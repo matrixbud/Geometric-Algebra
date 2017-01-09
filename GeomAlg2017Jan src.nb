@@ -1,0 +1,4452 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[    193725,       4451]
+NotebookOptionsPosition[    191788,       4377]
+NotebookOutlinePosition[    192150,       4393]
+CellTagsIndexPosition[    192107,       4390]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Geometric Algebra", "Title",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722519822702`*^9, 3.6910723269774513`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Overview", "Chapter",
+ CellChangeTimes->{{3.691079996566341*^9, 3.691080000246093*^9}}],
+
+Cell[TextData[{
+ "This Geometric Algebra (GA) package performs GA operations in n-dimensions \
+for any n. The package can be configured for either Grassmann or Clifford \
+algebras. The latter can be configured to use either the  + - - -  or  - + + \
++  convention, and can be configured for space or space-time (with additional \
+time dimensions possible for those who wish to explore that.) This package \
+uses everyday standard (i.e., subscript) notation and uses the symbols ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["e", "1"], ",", 
+    SubscriptBox["e", "2"]}], TraditionalForm]]],
+ ", ... for its orthonormal basis. \n\nThe package has a palette to simplify \
+entering of multivectors so that entering subscripts is made easy.  The \
+palette also shows all the available functions, discusses them in tooltips \
+(i.e., hover the mouse over a palette entry), and displays examples.  All \
+commands can be used with symbols as well as numerical values.\n\nQuick Start \
+describes how to install the palette. To use the commands in this package, \
+put the file GeomAlg2017Jan.m in one of the directories listed in your $Path. \
+The preferred location is $UserBaseDirectory. After that, to use the package \
+simple enter Needs[\"GeomAlg2017Jan`\"] at the top of a notebook and then \
+start using any of these commands along with usual Mathematica commands"
+}], "Text",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, {
+   3.6910722815485487`*^9, 3.6910723157986307`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["1 Begin Package", "Chapter",
+ CellChangeTimes->{{3.691191133633431*^9, 3.6911911457483177`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Mathematica", " ", 
+     RowBox[{"Package", "\n", "   ", ":", "Title", ":", 
+      RowBox[{
+       RowBox[{"Geometric", " ", "Alagebra", " ", "in", " ", "n"}], "-", 
+       RowBox[{
+       "Space", "\n", "   ", ":", "Context", ":", "GeomAlg2017Jan`", "\n", 
+        "   ", ":", "Author", ":", 
+        RowBox[{
+         RowBox[{"Dr", ".", " ", "Bud"}], " ", 
+         RowBox[{"Simrin", "\n", "   ", ":", "Date", ":", 
+          RowBox[{"2017", "-", "01", "-", "01"}], "\n", " ", "\n", "   ", ":", 
+          RowBox[{"Package", " ", "Version"}], ":", "0.3", "\n", "   ", ":", 
+          RowBox[{"Mathematica", " ", "Version"}], ":", 
+          RowBox[{"11.0", ".1"}], "\n", "   ", ":", "Copyright", ":", 
+          RowBox[{
+           RowBox[{"(", "c", ")"}], " ", "2017", " ", 
+           RowBox[{"Dr", ".", " ", "Bud"}], " ", 
+           RowBox[{"Simrin", "\n", "   ", ":", "Keywords", ":", " ", 
+            RowBox[{"geometric", " ", "algeba"}]}]}]}]}]}]}]}]}], ",", " ", 
+    RowBox[{"Clifford", " ", "algebra"}], ",", " ", 
+    RowBox[{"wedge", " ", "product"}], ",", " ", 
+    RowBox[{"dot", " ", "product"}], ",", " ", 
+    RowBox[{"exterior", " ", "\n", "\t", "product"}], ",", " ", 
+    RowBox[{"interior", " ", "product"}], ",", " ", 
+    RowBox[{"Hodge", " ", "dual"}], ",", " ", "clif", ",", " ", "multivector",
+     ",", " ", "bivector", ",", " ", "rotor", ",", " ", "rotation", ",", " ", 
+    "\n", "\t", "spacetime", ",", " ", 
+    RowBox[{"n", "-", "dimensional"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+     "quaternion", "\n", " ", "\n", "   ", ":", "Discussion", ":", "\n", "\n",
+       "USAGE", ":", "\n", "\n", "\t", 
+      RowBox[{"SetDirectory", "[", 
+       RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}], ";"}]}], 
+   "\[IndentingNewLine]", " ", "*)"}], "\n", "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", "\"\<GeomAlg2017Jan`*\>\"", "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"BeginPackage", "[", "\"\<GeomAlg2017Jan`\>\"", "]"}], 
+    ";"}]}]}]], "Code",
+ CellChangeTimes->{{3.691072406579616*^9, 3.6910724363613253`*^9}, 
+   3.691170964657378*^9, {3.691172520460575*^9, 3.6911725999701433`*^9}, {
+   3.691172635376563*^9, 3.691172662039344*^9}, 3.691172699111658*^9, {
+   3.691172758994171*^9, 3.691172771331914*^9}, {3.691346315195692*^9, 
+   3.691346344412607*^9}, {3.69134734084857*^9, 3.691347342087324*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Debug Flags", "Subchapter",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691079948952552*^9, 
+   3.6910812311298847`*^9, 3.691081438596291*^9, {3.691081646385612*^9, 
+   3.691081654529285*^9}, {3.691088126555492*^9, 3.691088132162998*^9}, 
+   3.69108858883849*^9, {3.691170806738544*^9, 3.691170809408004*^9}, {
+   3.691170901550271*^9, 3.691170925069228*^9}, {3.691171165424671*^9, 
+   3.691171166415215*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"debug1", ";"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Initialization", ",", " ", 
+    RowBox[{
+    "both", " ", "section", " ", "3", " ", "and", " ", "section", " ", 
+     "5"}]}], " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"debug2", ";"}], "  ", 
+  RowBox[{"(*", " ", "MaxDimG", " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"debug3", ";"}], "  ", 
+  RowBox[{"(*", " ", "GeomPrdtG", " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"debug4", ";"}], "  ", 
+  RowBox[{"(*", " ", "GradePpieceG", " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"debug5", ";"}], "  ", 
+  RowBox[{"(*", " ", "ClifFormatG", " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"debug6", ";"}], "  ", 
+  RowBox[{"(*", " ", "WedgePrdtG", " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"debug7", ";"}], "  ", 
+  RowBox[{"(*", " ", "ReverseG", " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"debug8", ";"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Left", " ", "ContractionG"}], " ", "*)"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{"debug9", ";"}], "  ", 
+  RowBox[{"(*", " ", "DotPrdtG", " ", "*)"}]}]}], "Code",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691079948952552*^9, 
+   3.6910812311298847`*^9, 3.691081438596291*^9, {3.691081646385612*^9, 
+   3.691081654529285*^9}, {3.691088126555492*^9, 3.691088132162998*^9}, 
+   3.69108858883849*^9, {3.691170806738544*^9, 3.691170809408004*^9}, 
+   3.691170901550271*^9, 3.691170931919511*^9, {3.691172262541596*^9, 
+   3.691172280579797*^9}, {3.691184231285781*^9, 3.691184255799389*^9}, {
+   3.6911843009750767`*^9, 3.691184303414172*^9}, {3.6911850616919937`*^9, 
+   3.691185191375659*^9}, {3.691690494441842*^9, 3.691690522462504*^9}, 
+   3.6918635764610147`*^9, 3.691864051439683*^9, {3.69186519347125*^9, 
+   3.691865194446713*^9}, {3.691865255606691*^9, 3.691865265057385*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Initialization Variables", "Subchapter",
+ CellChangeTimes->{{3.691170942724934*^9, 3.691170953344343*^9}, {
+  3.691171121385624*^9, 3.691171159839477*^9}}],
+
+Cell[TextData[{
+ StyleBox["algebraType",
+  FontColor->RGBColor[0.5, 0, 0.5]],
+ "\n \t1 Grassmann algebra  i.e., ",
+ Cell[BoxData[
+  RowBox[{
+   SuperscriptBox[
+    SubscriptBox["e", "k"], "2"], "=", " ", "0"}]]],
+ " for all k\n \t2 Clifford algebra\n The following are only relevant for \
+Clifford algebra\n \t",
+ StyleBox["signatureType",
+  FontColor->RGBColor[0.5, 0, 0.5]],
+ "\n \t\t-1 Physicists  + - - -   i.e., ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      SubscriptBox["e", "k"], "2"], "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"+", "1"}], " ", "if", " ", "k"}], " ", "\[LessEqual]", " ", 
+      "numTimelike"}]}], ";", " ", 
+    RowBox[{
+     RowBox[{"else", " ", 
+      SuperscriptBox[
+       SubscriptBox["e", "k"], "2"]}], " ", "=", " ", 
+     RowBox[{"-", "1"}]}]}], TraditionalForm]]],
+ "\n \t\t+1 Mathematicians  - + + +   i.e., ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      SubscriptBox["e", "k"], "2"], "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "1"}], " ", "if", " ", "k"}], " ", "\[LessEqual]", " ", 
+      "numTimelike"}]}], ";", " ", 
+    RowBox[{
+     RowBox[{"else", " ", 
+      SuperscriptBox[
+       SubscriptBox["e", "k"], "2"]}], " ", "=", " ", 
+     RowBox[{"+", "1"}]}]}], TraditionalForm]]],
+ "\n \t",
+ StyleBox["numTimelike",
+  FontColor->RGBColor[0.5, 0, 0.5]],
+ "\n \t\t0 Space\n \t\t1 Space-time\n \t\t2+ More than 1 time dimension, \
+allowed for those who wish to explore this\n If user forgets to initialize \
+these variables, a warning will be issued and defaults will be implemented:\n \
+\tClifford, Mathematician ++++, Space\n Best place to initialize is using the \
+palette, but these variables can also be set within a notebook\n These are \
+global symbols (i.e., context Global`) so they are not listed in the Usage \
+section (i.e., context GeomAlg2017Jan`)"
+}], "Text",
+ CellChangeTimes->{{3.691170942724934*^9, 3.691170953344343*^9}, 
+   3.691171175156817*^9, {3.691171213138802*^9, 3.691171252256806*^9}, {
+   3.6911712945730667`*^9, 3.691171319391305*^9}, {3.69117186351514*^9, 
+   3.691171869997806*^9}, {3.691192290180006*^9, 3.691192292331027*^9}, {
+   3.691193332053104*^9, 3.691193333887773*^9}, 3.691193373353045*^9, {
+   3.691193411235981*^9, 3.6911934461324387`*^9}, {3.691193481872799*^9, 
+   3.691193598312434*^9}, {3.691967304104115*^9, 3.691967369824239*^9}, {
+   3.692446763319111*^9, 3.692446768656983*^9}, {3.692446874407032*^9, 
+   3.692446910164687*^9}, {3.69244699587866*^9, 3.6924470061464*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Usage (and one Warning Statement)", "Subchapter",
+ CellChangeTimes->{{3.691170942724934*^9, 3.691170953344343*^9}, {
+  3.6911912013084583`*^9, 3.6911912146556377`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"e", ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "MUST", " ", "pass", " ", "e", " ", "as", " ", "a", " ", "global", " ", 
+      RowBox[{"variable", ".", " ", "This"}], " ", "cause", " ", 
+      RowBox[{"Context", "[", "e", "]"}]}], " ", "=", " ", 
+     RowBox[{
+     "GeomAlg2017Jan`", " ", "in", " ", "any", " ", "user", " ", "Notebook", 
+      " ", "\n", "\t\t", "that", " ", "uses", " ", "this", " ", "package"}]}],
+     ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "thus", " ", "operations", " ", "like", " ", 
+      RowBox[{"Subscript", "[", 
+       RowBox[{"e", ",", " ", "u_"}], "]"}]}], "\[Rule]", 
+     RowBox[{"1", " ", "work", " ", "correctly"}]}]}], " ", "*)"}], "\n", 
+  "\t\t"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"BladeG", "::", "usage"}], "=", 
+   "\"\<BladeG[p,q,...,r] generates the blade \!\(\*SubscriptBox[\(e\), \
+\(p\)]\)\!\(\*SubscriptBox[\(e\), \(q\)]\)...\!\(\*SubscriptBox[\(e\), \(r\)]\
+\)\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"BiVectorG", "::", "usage"}], "=", 
+   "\"\<BiVectorG[a,n] generates an n-dimensional bivector\>\""}], 
+  ";"}], "\n", 
+ RowBox[{"ClifFormatG", ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClifToListG", "::", "usage"}], "=", 
+   "\"\<ClifToListG[x] converts multivector x into a list of its components\>\
+\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CollectG", "::", "usage"}], "=", 
+   "\"\<CollectG[x] groups the terms of multivector x by blades \
+\!\(\*SubscriptBox[\(e\), \(i\)]\)\!\(\*SubscriptBox[\(e\), \(j ... \)]\)\!\(\
+\*SubscriptBox[\(e\), \(k\)]\). It also reduces any \
+\!\(\*SuperscriptBox[SubscriptBox[\(e\), \(i\)], \(2\)]\) terms that might be \
+present\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ComplexG", "::", "usage"}], "=", 
+   "\"\<ComplexG[a,b] generates a complex number a + b i, where i is the \
+dimension 2 PseudoScalar\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ConstantG", "::", "usage"}], "=", 
+   "\"\<ConstantG[x] picks out the constant term(s) of multivector x\>\""}], 
+  ";"}], "\n", 
+ RowBox[{"ConstantToListZeroG", ";"}], "\n", 
+ RowBox[{"ConstantToZeroG", ";"}], "\n", 
+ RowBox[{"DotPrdtBladeG", ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DotPrdtG", "::", "usage"}], "=", 
+   "\"\<DotPrdtG[x,y,...,z] computes dot product of several multivectors \
+multivectors\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"eSubscriptListG", "::", "usage"}], "=", 
+   "\"\<eSubscriptListG[x] computes a list of terms \!\(\*SubscriptBox[\(e\), \
+\(i, j,  ... \)]\) corresponding to the components of multivector x\>\""}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ExpandG", "::", "usage"}], "=", 
+   "\"\<ExpandG[x] expands multivector x, including computation of possible \
+lingering \!\(\*SuperscriptBox[SubscriptBox[\(e\), \(i\)], \(2\)]\) \
+terms\>\""}], ";"}], "\n", 
+ RowBox[{"GeomPrdtBladeG", ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GeomPrdtG", "::", "usage"}], "=", 
+   "\"\<GeomPrdtG[x,y,...,z] computes the geometric product of several \
+multivectors\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GormG", "::", "usage"}], "=", 
+   "\"\<GormG[x] computes the gorm, \!\(\*SubscriptBox[\(x\), \(Reverse\)]\) \
+\[CenterDot] x, of multivector x\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GradeListG", "::", "usage"}], "=", 
+   "\"\<GradeListG[x] generates a list of grades matching the components of \
+multivector x\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GradePpieceG", "::", "usage"}], "=", 
+   "\"\<GradePpiece[x,p] finds the components of multivector x that are of \
+grade p\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HodgeDualG", "::", "usage"}], "=", 
+   "\"\<HodgeDualG[x,n] generates the Hodge Dual, x \[SmallCircle] i, of \
+multivector x, where i is the pseudovector of dimenstion n\>\""}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HodgeDual2G", "::", "usage"}], "=", 
+   "\"\<HodgeDual2G[x,n] generates an alternative Hodge Dual, x \
+\[SmallCircle] \!\(\*SuperscriptBox[\(i\), \(-1\)]\), of multivector x, where \
+i is the pseudovector of dimenstion n\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InitializeG", "::", "usage"}], "=", 
+   "\"\<InitializeG[x] reduces any \!\(\*SuperscriptBox[SubscriptBox[\(e\), \
+\(i\)], \(2\)]\) terms in multivector x according to user's initialization \
+scheme\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InitializeG", "::", "warning"}], "=", 
+   "\"\<Warning: Implementing initialization defaults. Please use Palette to \
+initialize your Geometric Algebra\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InverseG", "::", "usage"}], "=", 
+   "\"\<InverseG[x] computes the inverse, if it exists, of multivector \
+x\>\""}], ";"}], "\n", 
+ RowBox[{"LeftContractionBladeG", ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LeftContractionG", "::", "usage"}], "=", 
+   "\"\<LeftContractionG[x,y,...,z] computes the left contraction of several \
+multivectors\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ListToClifG", "::", "usage"}], "=", 
+   "\"\<ListToclifG[xList] converts a list into its corresponding multivector\
+\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"MaxDimG", "::", "usage"}], "=", 
+   "\"\<MaxDimG[x] finds the maximum dimension among blades in the \
+multivector\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nClifG", "::", "usage"}], "=", 
+   "\"\<nClifG[a,n] generates a general symbolic multivector of dimension n \
+with coefficients \!\(\*SubscriptBox[\(a\), \(i, j,  ... \)]\) \>\""}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NormG", "::", "usage"}], "=", 
+   "\"\<Norm[x] generates the norm of a multivector x when it exists\>\""}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nVectorG", "::", "usage"}], "=", 
+   "\"\<nVectorG[a,n] generates a general (1-dimensional) vector of dimension \
+n with coefficients \!\(\*SubscriptBox[\(a\), \(i\)]\)\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"pBladeG", "::", "usage"}], "=", 
+   "\"\<pBladeG[a,p,n] outputs a general blade of grade p in n-space having \
+coefficients \!\(\*SubscriptBox[\(a\), \(i, j,  ... \)]\)\>\""}], ";"}], "\n", 
+ RowBox[{"PrdtBladeG", ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PseudoScalarG", "::", "usage"}], "=", 
+   "\"\<PseudoScalarG[n] generates the dimension n positive unit pseudoscalar\
+\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"QuaternionG", "::", "usage"}], "=", 
+   "\"\<QuaternionG[a,b,c,d\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ReverseG", "::", "usage"}], "=", 
+   "\"\<ReverseG[x] generates the reverse of multivector x. That is, it \
+changes signs of even blades of grade > 0\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"RotorG", "::", "usage"}], "=", 
+   "\"\<RotorG[m,n,\[Theta]} generates a rotor that spins the m n-axis \
+counter-clockwise by \[Theta]\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SignatureG", "::", "usage"}], "=", 
+   "\"\<SignatureG[list] computes the signature of a list; i.e., \
+\[PlusMinus]1 depending upon whether the number of adjacent transpositions to \
+put the list in order is even or odd. SignatureG works the same as \
+Mathematica's Signature function except that it also calculates signatures \
+even if there are repeating elements in the list. While SignatureG is more \
+general in nature than GA, it is used here to greatly simplify the \
+antisymmetrization process required for the geometric product.\>\""}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SubscriptListG", "::", "usage"}], "=", 
+   "\"\<SubscriptListG[x] generates a list of subscripts of the terms in \
+multivector x\>\""}], ";"}], "\n", 
+ RowBox[{"WedgePrdtBladeG", ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"WedgePrdtG", "::", "usage"}], "=", 
+   "\"\<WedgeProductG[x,y,...,z] computes the wedge product of multivectors \
+x, y, ..., z\>\""}], ";"}]}], "Code",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691079948952552*^9, 
+   3.6910812311298847`*^9, 3.691081438596291*^9, {3.691081646385612*^9, 
+   3.691081654529285*^9}, {3.691088126555492*^9, 3.691088132162998*^9}, 
+   3.69108858883849*^9, {3.691170806738544*^9, 3.691170809408004*^9}, 
+   3.691170901550271*^9, 3.691170931919511*^9, 3.691191012184572*^9, {
+   3.691191574857904*^9, 3.691191598506023*^9}, {3.6913488450185633`*^9, 
+   3.691348845609715*^9}, {3.692447079216297*^9, 3.6924471231196547`*^9}, {
+   3.692466346018285*^9, 3.69246635158994*^9}, {3.6924792339877777`*^9, 
+   3.692479235697345*^9}, 3.6924918220692053`*^9, {3.6925515108435583`*^9, 
+   3.6925515144652643`*^9}, 3.6925523727379313`*^9, {3.6925645231271973`*^9, 
+   3.69256452496769*^9}}]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["2 Begin Private (i.e., define functions)", "Chapter",
+ CellChangeTimes->{{3.6911912574424143`*^9, 3.691191285333445*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}], ";"}]], "Code",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691079948952552*^9, 
+   3.6910812311298847`*^9, 3.691081438596291*^9, {3.691081646385612*^9, 
+   3.691081654529285*^9}, {3.691088126555492*^9, 3.691088132162998*^9}, 
+   3.69108858883849*^9, {3.691170806738544*^9, 3.691170809408004*^9}, 
+   3.691170901550271*^9, 3.691170931919511*^9, 3.691191012184572*^9, {
+   3.691346372215829*^9, 3.691346379937498*^9}, {3.69134830962848*^9, 
+   3.691348380261441*^9}, {3.691618877779533*^9, 3.691618892258176*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["3 Operator Symbols", "Chapter",
+ CellChangeTimes->{{3.691072646164959*^9, 3.691072653027358*^9}, 
+   3.691191316677023*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SmallCircle", ":=", "GeomPrdtG"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Enter", " ", "clifA", " ", "Esc", " ", "sc", " ", "Esc", " ", 
+    RowBox[{"clifB", ":", " ", 
+     RowBox[{"clifA", " ", "\[SmallCircle]", " ", "clifB"}]}]}], " ", 
+   "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"Wedge", ":=", "WedgePrdtG"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Enter", " ", "clifA", " ", 
+    RowBox[{"Esc", " ", "^", " ", "Esc"}], " ", 
+    RowBox[{"clifB", ":", " ", 
+     RowBox[{"clifA", " ", "\[Wedge]", " ", "clifB"}]}]}], " ", 
+   "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"CenterDot", ":=", "DotPrdtG"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Enter", " ", 
+    RowBox[{"Esc", " ", ".", " ", 
+     RowBox[{"Esc", ":", " ", 
+      RowBox[{"clifA", " ", "\[CenterDot]", " ", "clifB"}]}]}]}], "  ", 
+   "*)"}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{" ", 
+      RowBox[{
+       RowBox[{"In", " ", "Mathematica"}], ",", " ", 
+       RowBox[{
+        RowBox[{"can", "'"}], "t", " ", "use", " ", "Right", " ", "Floor"}], 
+       ","}], "  ", "\[RightFloor]"}], "  ", "as", " ", "a", " ", "binary", 
+     " ", "operator", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"i", ".", "e", "."}], ",", " ", "infix"}], ")"}], ".", " ", 
+      "So"}], " ", 
+     RowBox[{"use", " ", "\[CircleDot]"}]}], ",", " ", "instead"}], "   ", 
+   "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"CircleDot", ":=", "LeftContractionG"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Enter", " ", "Esc", " ", 
+    RowBox[{"c", ".", " ", 
+     RowBox[{"Esc", ":", "  ", 
+      RowBox[{
+       RowBox[{"clifA", " ", "\[CircleDot]", " ", "clif"}], " ", "B"}]}]}]}], 
+   "  ", "*)"}], "\n", "\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Example", ":", " ", 
+    RowBox[{"wedge", " ", "product", " ", "of", " ", "3", " ", "vectors"}], 
+    ":", " ", 
+    RowBox[{"vector1", " ", "^", " ", 
+     RowBox[{"vector2", " ", "^", " ", "vector3"}]}]}], "  ", "*)"}]}], "\n", 
+
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Future", ":", " ", 
+    RowBox[{"Add", " ", "unary", " ", "operators", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"i", ".", "e", "."}], ",", " ", "postfix"}], ")"}], " ", "\n", 
+     "\t\t", "Consider", " ", "SuperStar", " ", 
+     RowBox[{"(", 
+      RowBox[{
+      "unfortunately", " ", "considered", " ", "a", " ", "power", " ", "I", 
+       " ", "believe"}], ")"}], " ", "or", " ", "\n", "\t\t", "OverHat", " ", 
+     "for", " ", "Hodge", " ", "Dual", " ", "and", " ", "OverTilde", " ", 
+     "for", " ", "Reverse"}]}], "  ", "*)"}]}]}], "Code",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691072666710598*^9, 
+   3.6910730313977747`*^9, 3.691079943689949*^9, {3.69108238077335*^9, 
+   3.691082387422855*^9}, 3.691347313509397*^9, {3.692447192883754*^9, 
+   3.692447224436717*^9}, {3.692447254520227*^9, 3.6924473080464687`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "4 Typing Aids: Multivector Generators\n\t",
+ StyleBox["Vectors, Blades, Multivectors, Rotors, \n\t   Complex Numbers, \
+Quaternions", "Subchapter"]
+}], "Chapter",
+ CellChangeTimes->{{3.691073654834609*^9, 3.691073665779769*^9}, {
+  3.691079848496414*^9, 3.691079895746023*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ModifyContextPathG", ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"len", ",", "ContextPath"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"len", "=", 
+       RowBox[{"Length", "[", "$ContextPath", "]"}]}], ";", "\n", 
+      RowBox[{"ContextPath", "=", 
+       RowBox[{"Permute", "[", 
+        RowBox[{"$ContextPath", ",", 
+         RowBox[{"Cycles", "[", 
+          RowBox[{"{", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "len"}], "}"}], "}"}], "]"}]}], "]"}]}]}]}], 
+    "]"}]}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Move", " ", "pkg", " ", "context", " ", "to", " ", "end", " ", "of", " ", 
+    "path"}], " ", "*)"}], "\n", "\n", "\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Together", " ", "the", " ", "BladeG", " ", "efinitions", " ", "below", 
+     " ", "enable", " ", "expressions", " ", "like", " ", 
+     RowBox[{"Blade", "[", 
+      RowBox[{"u", ",", "v", ",", "w", ",", "x"}], "]"}]}], " ", "=", " ", 
+    RowBox[{
+     SubscriptBox["e", "u"], 
+     SubscriptBox["e", "v"], 
+     SubscriptBox["e", "w"], 
+     SubscriptBox["e", "x"]}]}], " ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{"BladeG", "[", 
+   SubscriptBox["e", "u_"], "]"}], ":=", 
+  SubscriptBox["e", "u"]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"BladeG", "[", "u_", "]"}], ":=", 
+   SubscriptBox["e", "u"]}], "  \t\t\t\t\t "}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"BladeG", "[", 
+    RowBox[{
+     SubscriptBox["e", "u_"], ",", "v_"}], "]"}], ":=", 
+   RowBox[{
+    SubscriptBox["e", "u"], 
+    RowBox[{"BladeG", "[", 
+     SubscriptBox["e", "v"], "]"}]}]}], "  ", "\n", "\t", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "These", " ", "blades", " ", "are", " ", "simple", " ", "products", " ", 
+     "of", " ", "basis", " ", "vectors"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["e", "i"], ".", "\n", "\t", "In"}], " ", "general"}], ",", 
+    " ", 
+    RowBox[{
+    "blades", " ", "can", " ", "be", " ", "from", " ", "any", " ", 
+     "independent", " ", "vectors"}], ",", " ", 
+    RowBox[{
+    "but", " ", "basis", " ", "elements", " ", "are", " ", "convenient"}]}], 
+   "  ", "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"BladeG", "[", 
+    RowBox[{"u_", ",", "v__"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"BladeG", "[", "u", "]"}], 
+    RowBox[{"BladeG", "[", "v", "]"}]}]}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Ex", ":", " ", 
+     RowBox[{"BladeG", "[", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}]}], " ", "=", " ", 
+    RowBox[{
+     SubscriptBox["e", "1"], 
+     SubscriptBox["e", "2"], 
+     SubscriptBox["e", "3"], 
+     SubscriptBox["e", "4"]}]}], "  ", "*)"}], "\n", "\n", "\t", 
+  RowBox[{"(*", 
+   RowBox[{"End", " ", "of", " ", "BladeG", " ", "Module"}], "*)"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"pBladeG", "[", 
+   RowBox[{"c_", ",", "0", ",", "n_"}], "]"}], ":=", 
+  SubscriptBox["c", "0"]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"pBladeG", "[", 
+    RowBox[{"c_", ",", "p_", ",", "n_"}], "]"}], ":=", "   ", "\n", "\t", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Note", ":", " ", 
+      RowBox[{
+       RowBox[{
+       "this", " ", "is", " ", "a", " ", "generic", " ", "homogeneous", " ", 
+        "clif", " ", "of", " ", "grade", " ", "p", " ", "in", " ", "n"}], "-", 
+       RowBox[{"Space", ".", " ", "\n", "\t\t", "Ex"}]}], ":", " ", 
+      RowBox[{"pBladeG", "[", 
+       RowBox[{"a", ",", "2", ",", "4"}], "]"}]}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["e", "1"], 
+       SubscriptBox["e", "2"], 
+       SubscriptBox["a", 
+        RowBox[{"1", ",", "2"}]]}], " ", "+", " ", 
+      RowBox[{
+       SubscriptBox["e", "1"], 
+       SubscriptBox["e", "3"]}], " ", "+", " ", 
+      RowBox[{
+       SubscriptBox["e", "1"], 
+       SubscriptBox["e", "4"], 
+       SubscriptBox["a", 
+        RowBox[{"1", ",", "4"}]]}], " ", "+", " ", 
+      RowBox[{
+       SubscriptBox["e", "2"], 
+       SubscriptBox["e", "3"], 
+       SubscriptBox["a", 
+        RowBox[{"2", ",", "3"}]]}], " ", "+", " ", 
+      RowBox[{
+       SubscriptBox["e", "2"], 
+       SubscriptBox["e", "4"], 
+       SubscriptBox["a", 
+        RowBox[{"2", ",", "4"}]]}], " ", "+", " ", 
+      RowBox[{
+       SubscriptBox["e", "3"], 
+       SubscriptBox["e", "4"], 
+       SubscriptBox["a", 
+        RowBox[{"3", ",", "4"}]]}]}]}], " ", "*)"}], "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"pBlade", ",", "tupleList", ",", "cList", ",", "eList"}], "}"}],
+      ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{
+        RowBox[{"SubValues", "[", "Subscript", "]"}], ",", 
+        RowBox[{"dv_", "/;", 
+         RowBox[{"FreeQ", "[", 
+          RowBox[{"dv", ",", "c"}], "]"}]}]}], "]"}], ";", 
+      RowBox[{"DownValues", "[", "Subscript", "]"}], ";", "\n", "\t\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Clear", " ", "all", " ", "c"}], "-", 
+        RowBox[{"subscripted", " ", "variables"}]}], " ", "*)"}], "\n", 
+      "\t\t", "\n", "\t\t", 
+      RowBox[{"pBlade", "=", "0"}], ";", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"p", "\[LessEqual]", "n"}], ",", "\n", "\t\t\t", 
+        RowBox[{
+         RowBox[{"tupleList", "=", 
+          RowBox[{"Subsets", "[", 
+           RowBox[{
+            RowBox[{"Range", "[", "n", "]"}], ",", 
+            RowBox[{"{", "p", "}"}]}], "]"}]}], ";", "\n", "\t\t\t\t", 
+         RowBox[{"(*", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "3"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", "3"}], "}"}]}], "}"}], "  ", "*)"}], "\n", 
+         "\t\t\t", 
+         RowBox[{"cList", "=", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Subscript", "[", 
+             RowBox[{"c", ",", "##"}], "]"}], "&"}], "@@@", 
+           RowBox[{"Subsets", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", "n", "]"}], ",", 
+             RowBox[{"{", "p", "}"}]}], "]"}]}]}], ";", "\n", "\t\t\t\t", 
+         RowBox[{"(*", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            SubscriptBox["c", 
+             RowBox[{"1", ",", "2"}]], ",", 
+            SubscriptBox["c", 
+             RowBox[{"1", ",", "3"}]], ",", 
+            SubscriptBox["c", 
+             RowBox[{"2", ",", "3"}]]}], "}"}], "  ", "*)"}], "\n", "\t\t\t", 
+         
+         RowBox[{"eList", "=", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Product", "[", 
+             RowBox[{
+              RowBox[{"Subscript", "[", 
+               RowBox[{"e", ",", "i"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"{", "##", "}"}]}], "}"}]}], "]"}], "&"}], "@@@", 
+           RowBox[{"Subsets", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", "n", "]"}], ",", 
+             RowBox[{"{", "p", "}"}]}], "]"}]}]}], ";", "\n", "\t\t\t\t", 
+         RowBox[{"(*", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["e", "1"], 
+             SubscriptBox["e", "2"]}], ",", " ", 
+            RowBox[{
+             SubscriptBox["e", "1"], 
+             SubscriptBox["e", "3"]}], ",", " ", 
+            RowBox[{
+             SubscriptBox["e", "2"], 
+             SubscriptBox["e", "3"]}]}], "}"}], "   ", "*)"}], "\n", "\t\t\t", 
+         RowBox[{"pBlade", "=", 
+          RowBox[{
+           RowBox[{"cList", " ", "eList"}], "/.", 
+           RowBox[{"List", "\[Rule]", "Plus"}]}]}]}], "\n", "\t\t\t\t", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["e", "1"], 
+           SubscriptBox["e", "2"], 
+           SubscriptBox["c", 
+            RowBox[{"1", ",", "2", " "}]]}], "+", " ", 
+          RowBox[{
+           SubscriptBox["e", "1"], 
+           SubscriptBox["e", "3"], 
+           SubscriptBox["c", 
+            RowBox[{"1", ",", "3"}]]}], " ", "+", " ", 
+          RowBox[{
+           SubscriptBox["e", "2"], 
+           SubscriptBox["e", "3"], 
+           SubscriptBox["c", 
+            RowBox[{"2", ",", "3"}]]}]}], "  ", "*)"}], "\n", "\t\t", ",", 
+        "\n", "\t\t\t", 
+        RowBox[{
+        "Print", "[", "\"\<Error: pBladeG requires p \[LessEqual] n.\>\"", 
+         "]"}]}], "\n", "\t\t", "]"}], ";", "\n", "\t\t", "pBlade"}]}], " ", 
+    "\n", "\t", "]"}]}], "       ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "pBladeG", " ", "Module"}], " ", "*)"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nClifG", "[", 
+    RowBox[{"c_", ",", "n_"}], "]"}], ":=", " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Create", " ", "an", " ", "n"}], "-", 
+      RowBox[{"dimensional", " ", "Clif", " ", "using", " ", "user"}], "-", 
+      RowBox[{"provided", " ", "base", " ", "\"\<c\>\"", "   ", "\n", 
+       RowBox[{"INPUTS", ":", "\n", "\t", "c"}]}]}], " ", "\[Dash]", " ", 
+     RowBox[{
+     "Coefficient", " ", "letter", " ", "to", " ", "use", " ", "in", " ", 
+      "Clif"}], ",", " ", 
+     RowBox[{
+     "often", " ", "a", " ", "for", " ", "1", "st", " ", "array", " ", "and", 
+      " ", "b", " ", "for", " ", "a", " ", "second", " ", "one", "\n", "\t", 
+      "n"}], " ", "\[Dash]", " ", 
+     RowBox[{"Number", " ", "of", " ", "desired", " ", "dimension", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"i", ".", "e", "."}], ",", " ", 
+        RowBox[{"the", " ", "grade"}]}], ")"}], " ", "of", " ", "the", " ", 
+      "clif", "\n", "\n", 
+      RowBox[{"PROCESS", ":", "\n", "\t", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "Cases", " ", "command", " ", "clears", " ", "out", " ", "any", " ",
+            "possible", " ", "values", " ", "or", " ", "definition", " ", 
+           "for", " ", "the", " ", "base", " ", "c", "\n", "\t", "eArray", 
+           " ", "generates", " ", "a", " ", "list", " ", "of", " ", "all", 
+           " ", "possible", " ", 
+           SubscriptBox["e", "i"], 
+           SubscriptBox["e", "j"]}], "..."}], " ", "products", " ", "of", " ",
+          "grade"}], " ", "\[LessEqual]", " ", 
+        RowBox[{
+        "n", "\n", "\t\t", "The", " ", "subset", " ", "formula", " ", "fails",
+          " ", "for", " ", "grades", " ", "0", " ", "and", " ", "1", " ", 
+         "so", " ", "those", " ", "are", " ", "handled", " ", "by", " ", 
+         "brute", " ", "force", "\n", "\t", "cList", " ", "generate", " ", 
+         "a", " ", "matching", " ", "of", " ", 
+         SubscriptBox["c", 
+          RowBox[{"i", ",", "j", ",", "..."}]], "coefficients", "\n", "\t", 
+         "The", " ", "desired", " ", "clif", " ", "is", " ", "the", " ", 
+         "dot", " ", "product", " ", "of", " ", "the", " ", "2", " ", "lists",
+          "\n", "\n", "OUTPUT"}]}], ":", "\n", "\t", 
+       RowBox[{
+        RowBox[{"An", " ", "array", " ", "like", " ", 
+         SubscriptBox["b", "0"]}], " ", "+", " ", 
+        RowBox[{
+         SubscriptBox["b", "1"], 
+         SubscriptBox["e", "1"]}], " ", "+", " ", 
+        RowBox[{
+         SubscriptBox["b", "2"], 
+         SubscriptBox["e", 
+          RowBox[{"2", " "}]]}], "+", " ", 
+        RowBox[{
+         SubscriptBox["b", "3"], 
+         SubscriptBox["e", 
+          RowBox[{"3", " "}]]}], "+", " ", 
+        RowBox[{
+         SubscriptBox["e", "1"], 
+         SubscriptBox["e", "2"], 
+         SubscriptBox["b", 
+          RowBox[{"1", ",", "2"}]]}], " ", "+", " ", 
+        RowBox[{
+         SubscriptBox["e", "1"], 
+         SubscriptBox["e", "3"], 
+         SubscriptBox["b", 
+          RowBox[{"1", ",", "3", " "}]]}], "+", " ", 
+        RowBox[{
+         SubscriptBox["e", "2"], 
+         SubscriptBox["e", "3"], 
+         SubscriptBox["b", 
+          RowBox[{"2", ",", "3"}]]}], " ", "+", " ", 
+        RowBox[{
+         SubscriptBox["e", "1"], 
+         SubscriptBox["e", "2"], 
+         SubscriptBox["e", "3"], 
+         SubscriptBox["b", 
+          RowBox[{"1", ",", "2", ",", "3"}]]}]}]}]}]}], "   ", "*)"}], "\n", 
+   "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"cList", ",", "eArray"}], "}"}], ",", "\n", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{
+        RowBox[{"SubValues", "[", "Subscript", "]"}], ",", 
+        RowBox[{"dv_", "/;", 
+         RowBox[{"FreeQ", "[", 
+          RowBox[{"dv", ",", "c"}], "]"}]}]}], "]"}], ";", "\n", "\t\t    ", 
+      RowBox[{"DownValues", "[", "Subscript", "]"}], ";", "\n", "\t\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Clear", " ", "all", " ", "c"}], "-", 
+        RowBox[{"subscripted", " ", "variables"}]}], " ", "*)"}], "\n", "\t", 
+      "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n", ">", "1"}], ",", 
+        RowBox[{"eArray", "=", 
+         RowBox[{"Subsets", "[", 
+          RowBox[{
+           RowBox[{
+            UnderoverscriptBox["\[Product]", "i", "n"], 
+            SubscriptBox["e", "i"]}], ",", " ", "n"}], "]"}]}]}], "]"}], ";", 
+      "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"List", " ", "of", " ", "all", " ", 
+          SubscriptBox["e", "i"], 
+          SubscriptBox["e", "j"]}], "..."}], " ", "products"}], " ", "*)"}], 
+      "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n", "\[Equal]", "1"}], ",", 
+        RowBox[{"eArray", "=", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", 
+           SubscriptBox["e", "1"]}], "}"}]}]}], "]"}], ";", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n", "\[LessEqual]", "0"}], ",", 
+        RowBox[{"eArray", "=", 
+         RowBox[{"{", "1", "}"}]}]}], "]"}], ";", "\n", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n", "\[LessEqual]", "0"}], ",", "\n", "\t\t", 
+        RowBox[{"cList", "=", 
+         RowBox[{"{", 
+          SubscriptBox["c", "0"], "}"}]}], ",", "\t\t\t", "\n", "\t\t", 
+        RowBox[{"cList", "=", 
+         RowBox[{"Flatten", "[", 
+          RowBox[{"Append", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             SubscriptBox["c", "0"], "}"}], ",", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Subscript", "[", 
+               RowBox[{"c", ",", "##"}], "]"}], "&"}], "@@@", 
+             RowBox[{"Rest", "[", 
+              RowBox[{"Subsets", "[", 
+               RowBox[{"Range", "[", "n", "]"}], "]"}], "]"}]}]}], "]"}], 
+          "]"}]}]}], "\n", "\t", "]"}], ";", "\n", "\n", "\t", 
+      RowBox[{"cList", ".", "eArray"}]}]}], "\n", "\t", "]"}]}], "   ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "nClifG", " ", "Module"}], "  ", "*)"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClifFormatG", "[", "n_", "]"}], ":=", "  ", 
+   RowBox[{"(*", "  ", "\n", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"INPUT", ":", "\n", "\t", "n"}], " ", "=", " ", 
+      RowBox[{"largest", " ", "subscript", " ", "on", " ", "any", " ", 
+       SubscriptBox["e", "i"], " ", "term", " ", "in", " ", "clif", 
+       RowBox[{"(", "s", ")"}], " ", "under", " ", "consideration", " ", 
+       "for", " ", "simplifying", " ", "printout", "\n", "\n", 
+       RowBox[{"PROCESS", ":", "\n", "\t", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"First", " ", "form", " ", "the", " ", "product", " ", 
+           SubscriptBox["e", "1"], 
+           SubscriptBox["e", "2"]}], "..."}], 
+         RowBox[{
+          SubscriptBox["e", "n"], ".", " ", "For"}], " ", "example"}]}]}]}], 
+     ",", " ", 
+     RowBox[{
+      RowBox[{"for", " ", "n"}], " ", "=", " ", 
+      RowBox[{"3", " ", "we", " ", "form", " ", 
+       SubscriptBox["e", "1"], 
+       SubscriptBox["e", "2"], 
+       SubscriptBox["e", "3"], "\n", "\t", "Then", " ", "make", " ", "a", " ",
+        "list", " ", "of", " ", "all", " ", "subsets", " ", "of", " ", "the", 
+       " ", 
+       RowBox[{"product", ".", " ", "For"}], " ", "example"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"for", " ", "n"}], " ", "=", " ", "3"}], ",", " ", 
+     RowBox[{"the", " ", "list", " ", "is", "\n", "\t\t", 
+      RowBox[{"{", 
+       RowBox[{
+        SubscriptBox["e", "1"], ",", " ", 
+        SubscriptBox["e", "2"], ",", " ", 
+        SubscriptBox["e", "3"], ",", " ", 
+        RowBox[{
+         SubscriptBox["e", "1"], 
+         SubscriptBox["e", "2"]}], ",", " ", 
+        RowBox[{
+         SubscriptBox["e", "1"], 
+         SubscriptBox["e", "3"]}], ",", " ", 
+        RowBox[{
+         SubscriptBox["e", "2"], 
+         SubscriptBox["e", "3"]}], ",", " ", 
+        RowBox[{
+         SubscriptBox["e", "1"], 
+         SubscriptBox["e", "2"], 
+         SubscriptBox["e", "3"]}]}], "}"}], " ", "\n", "\t", "Finally"}], ",",
+      " ", 
+     RowBox[{
+     "Mathematica", " ", "works", " ", "better", " ", "with", " ", "this", 
+      " ", "list", " ", "in", " ", "reverse", " ", "order", "\n", "\t", 
+      "This", " ", "function", " ", "is", " ", "used", " ", "by", " ", 
+      "function", " ", "CollectG", " ", "and", " ", "can", " ", "also", " ", 
+      "be", " ", "used", " ", "directly", " ", "by", " ", "the", " ", "user", 
+      "\n", "\n", 
+      RowBox[{"OUTPUT", ":", "\n", "\t", "collectTerms"}]}], " ", "\[Dash]", 
+     " ", 
+     RowBox[{"the", " ", "list", " ", "above"}], ",", " ", "reversed"}], 
+    "   ", "*)"}], "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "collectTerms", "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n", ">", "0"}], ",", "\n", "\t\t\t", 
+        RowBox[{
+         RowBox[{"collectTerms", "=", 
+          RowBox[{"Subsets", "[", 
+           RowBox[{
+            RowBox[{
+             SubsuperscriptBox["\[Product]", "i", "n"], 
+             SubscriptBox["e", "i"]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "n"}], "}"}]}], "]"}]}], ";", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "Terms", " ", "we", " ", "wish", " ", "to", " ", "collect", " ", 
+           "by"}], " ", "*)"}], "\n", "\t\t\t", 
+         RowBox[{"collectTerms", "=", 
+          RowBox[{"Reverse", "[", "collectTerms", "]"}]}]}], "\n", "\t\t\t\t", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "Reverse", " ", "order", " ", "to", " ", "force", " ", "Mathematica",
+           " ", "to", " ", "collect", " ", "terms", " ", "correctly"}], " ", 
+         "*)"}], "\n", "\t\t", ",", "\n", "\t\t\t", 
+        RowBox[{"collectTerms", "=", 
+         RowBox[{"{", 
+          SubscriptBox["e", "1"], "}"}]}]}], "\n", "\t\t", "]"}], ";", "\n", 
+      "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug5", ",", 
+        RowBox[{"Print", "[", 
+         RowBox[{"\"\<Arrange List = \>\"", ",", "collectTerms"}], "]"}]}], 
+       "]"}], ";", "\n", "\t\t", "collectTerms"}]}], "\n", "\t", "]"}]}], 
+  "       ", 
+  RowBox[{"(*", 
+   RowBox[{"End", " ", "of", " ", "ClifFormatG", " ", "Module"}], "*)"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ComplexG", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "complexNum", "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"i", "=", 
+       RowBox[{
+        SubscriptBox["e", "1"], 
+        SubscriptBox["e", "2"]}]}], ";", 
+      RowBox[{"complexNum", "=", 
+       RowBox[{"a", "+", 
+        RowBox[{"b", " ", "i"}]}]}]}]}], "\n", "\t", "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PseudoScalarG", "[", "n_", "]"}], ":=", 
+   RowBox[{"Product", "[", 
+    RowBox[{
+     SubscriptBox["e", "i"], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "n"}], "}"}]}], "]"}]}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SubscriptBox["e", "1"], 
+      SubscriptBox["e", "2"]}], "..."}], 
+    SubscriptBox["e", "n"]}], " ", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"QuaternionG", "[", 
+    RowBox[{"a_", ",", "b_", ",", "c_", ",", "d_"}], "]"}], ":=", "\n", "\t", 
+   
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "quaternionNum", "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"i", "=", 
+       RowBox[{
+        SubscriptBox["e", "2"], 
+        SubscriptBox["e", "3"]}]}], ";", 
+      RowBox[{"j", "=", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["e", "1"]}], 
+        SubscriptBox["e", "3"]}]}], ";", 
+      RowBox[{"k", "=", 
+       RowBox[{
+        SubscriptBox["e", "1"], 
+        SubscriptBox["e", "2"]}]}], ";", 
+      RowBox[{"quaternionNum", "=", 
+       RowBox[{"a", "+", 
+        RowBox[{"b", " ", "i"}], "+", 
+        RowBox[{"c", " ", "j"}], "+", 
+        RowBox[{"d", " ", "k"}]}]}], ";", "\n", "\t\t", "quaternionNum"}]}], 
+    "\n", "\t", "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"RotorG", "[", 
+    RowBox[{"i_", ",", "j_", ",", "\[Theta]_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Cos", "[", 
+     RowBox[{"\[Theta]", "/", "2"}], "]"}], "+", 
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Theta]", "/", "2"}], "]"}], 
+     SubscriptBox["e", "i"], 
+     SubscriptBox["e", "j"]}]}]}], "  ", "\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Create", " ", "rotor", " ", "from", " ", "rotation", " ", "angle", " ", 
+    "plane", " ", "of", " ", "rotation", " ", 
+    RowBox[{"(", 
+     RowBox[{
+     "denoted", " ", "by", " ", "the", " ", "pair", " ", "of", " ", "axis", 
+      " ", "numbers"}], ")"}]}], "  ", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"BiVectorG", "[", 
+    RowBox[{"c_", ",", "n_"}], "]"}], ":=", "    ", "\n", "\t", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Note", ":", " ", 
+     RowBox[{
+     "bivector", " ", "is", " ", "visualized", " ", "as", " ", "a", " ", "2", 
+      "D", " ", "region", " ", "spanned", " ", "by", " ", "2", " ", "vectors",
+       " ", "in", " ", "a", " ", "space", " ", "of", " ", "\n", "\t\t", 
+      "dimension", " ", "2", " ", "or", " ", "higher"}]}], "   ", "*)"}], 
+   "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"pairList", ",", "cList", ",", "eList", ",", "bivectorC"}], 
+      "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{
+        RowBox[{"SubValues", "[", "Subscript", "]"}], ",", 
+        RowBox[{"dv_", "/;", 
+         RowBox[{"FreeQ", "[", 
+          RowBox[{"dv", ",", "c"}], "]"}]}]}], "]"}], ";", 
+      RowBox[{"DownValues", "[", "Subscript", "]"}], ";", "\n", "\t\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Clear", " ", "all", " ", "c"}], "-", 
+        RowBox[{"subscripted", " ", "variables"}]}], " ", "*)"}], "\n", 
+      "\t\t", "\n", "\t\t", 
+      RowBox[{"pairList", "=", 
+       RowBox[{"Subsets", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{"i", ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "n"}], "}"}]}], "]"}], ",", 
+         RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"cList", "=", 
+       RowBox[{"pairList", "/.", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"u_", ",", "v_"}], "}"}], "\[Rule]", 
+         SubscriptBox["c", 
+          RowBox[{"u", ",", "v"}]]}]}]}], ";", "\n", "\t\t", 
+      RowBox[{"eList", "=", 
+       RowBox[{"pairList", "/.", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"u_", ",", "v_"}], "}"}], "\[Rule]", 
+         RowBox[{
+          SubscriptBox["e", "u"], 
+          SubscriptBox["e", "v"]}]}]}]}], ";", "\n", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n", ">", "1"}], ",", "\n", "\t\t\t", 
+        RowBox[{"bivectorC", "=", 
+         RowBox[{
+          RowBox[{"cList", " ", "eList"}], " ", "/.", 
+          RowBox[{"List", "\[Rule]", "Plus"}]}]}], ",", "\n", "\t\t\t", 
+        RowBox[{
+        "Print", "[", 
+         "\"\<Error: 2nd entry of BiVectorG must be greater than 1.\>\"", 
+         "]"}]}], "\n", "\t\t", "]"}], ";", "\n", "\n", "\t\t", 
+      "bivectorC"}]}], "      ", 
+    RowBox[{"(*", 
+     RowBox[{"End", " ", "of", " ", "BivectorG", " ", "Module"}], "*)"}], 
+    "\n", "\t", "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"nVectorG", "[", 
+   RowBox[{"c_", ",", "n_"}], "]"}], ":=", "   ", 
+  RowBox[{"(*", "  ", 
+   RowBox[{"Note", ":", " ", 
+    RowBox[{"n", "-", 
+     RowBox[{
+     "vector", " ", "is", " ", "a", " ", "vector", " ", "of", " ", 
+      "dimension", " ", "1", " ", "in", " ", "n"}], "-", 
+     RowBox[{"dimensional", " ", "space"}]}]}], "  ", "*)"}], "\n", "\t", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "vectorC", "}"}], ",", "\n", "\t\t", 
+    RowBox[{
+     RowBox[{"Cases", "[", 
+      RowBox[{
+       RowBox[{"SubValues", "[", "Subscript", "]"}], ",", 
+       RowBox[{"dv_", "/;", 
+        RowBox[{"FreeQ", "[", 
+         RowBox[{"dv", ",", "c"}], "]"}]}]}], "]"}], ";", 
+     RowBox[{"DownValues", "[", "Subscript", "]"}], ";", "\n", "\t\t", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{"Clear", " ", "all", " ", "c"}], "-", 
+       RowBox[{"subscripted", " ", "variables"}]}], " ", "*)"}], "\n", "\t\t",
+      "\n", "\t\t", 
+     RowBox[{"vectorC", "=", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["c", "i"], " ", 
+         SubscriptBox["e", "i"]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "n"}], "}"}]}], "]"}]}]}]}], "\n", "\t", "]"}], 
+  "     ", 
+  RowBox[{"(*", 
+   RowBox[{"End", " ", "of", " ", "nVectorG", " ", "Module"}], 
+   "*)"}]}]}], "Code",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691072666710598*^9, 
+   3.6910730313977747`*^9, 3.691073072029634*^9, 3.691073593702551*^9, 
+   3.691073646277369*^9, 3.691073715183025*^9, 3.691073841869029*^9, 
+   3.691073879917136*^9, {3.691083790822109*^9, 3.691083807709655*^9}, 
+   3.691102705583344*^9, 3.691162433031191*^9, 3.691170784665902*^9, {
+   3.691346561571847*^9, 3.691346570068967*^9}, {3.692447373223377*^9, 
+   3.692447532918645*^9}, {3.692469057395756*^9, 3.692469107232608*^9}, 
+   3.692469147166288*^9, {3.692469349943776*^9, 3.6924693632114563`*^9}, {
+   3.692469760038862*^9, 3.692469762206094*^9}, {3.6924698004424343`*^9, 
+   3.692469821952053*^9}, {3.6924698943308783`*^9, 3.692469905801302*^9}, {
+   3.692469955916291*^9, 3.692470000503005*^9}, {3.69247023043757*^9, 
+   3.692470235895976*^9}, 3.6924702957546053`*^9, {3.692470325763568*^9, 
+   3.692470327864963*^9}, {3.6924703646562357`*^9, 3.692470365999009*^9}, {
+   3.692477730817863*^9, 3.6924777369195423`*^9}, {3.6924806243244343`*^9, 
+   3.692480627296599*^9}, {3.692480715831465*^9, 3.692480746817174*^9}, {
+   3.6924807785484743`*^9, 3.6924807795406113`*^9}, {3.692483482874556*^9, 
+   3.692483510142209*^9}, {3.692483576261361*^9, 3.692483577773611*^9}, {
+   3.692483757488112*^9, 3.6924837586716547`*^9}, {3.6924838557341843`*^9, 
+   3.6924838802727127`*^9}, {3.6924842352926903`*^9, 3.692484242631442*^9}, {
+   3.6924842837660093`*^9, 3.692484307298365*^9}, {3.692484751172928*^9, 
+   3.692484751699987*^9}, {3.692484876432817*^9, 3.692484906650508*^9}, {
+   3.6924851127171087`*^9, 3.692485136152149*^9}, {3.692485187634049*^9, 
+   3.6924851980868073`*^9}, {3.6924863997635202`*^9, 3.692486402915242*^9}, 
+   3.6924875308975143`*^9, {3.692487942626789*^9, 3.692487957464012*^9}, {
+   3.692488104024858*^9, 3.6924881095812073`*^9}, {3.69248938242953*^9, 
+   3.692489511660285*^9}, {3.692489773534418*^9, 3.692489798312385*^9}, {
+   3.692490135012905*^9, 3.692490216669692*^9}, 3.692490297360961*^9, 
+   3.692490394216696*^9, {3.692490496683786*^9, 3.692490505331368*^9}, {
+   3.6925520012295637`*^9, 3.6925520019241133`*^9}, {3.692552037863998*^9, 
+   3.692552065234827*^9}, {3.6925529539656267`*^9, 3.692552968456435*^9}, {
+   3.6926607006192703`*^9, 3.6926607328520737`*^9}, {3.6926643967708263`*^9, 
+   3.692664435716918*^9}, {3.6926644747913713`*^9, 3.692664511024021*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["5 Multivector Support Functions", "Chapter",
+ CellChangeTimes->{{3.691073885336754*^9, 3.691073896408777*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"CollectG", "[", 
+    RowBox[{"clifInput_", ",", 
+     RowBox[{"n_:", "-", "1"}]}], "]"}], ":=", "  ", 
+   RowBox[{"(*", "  ", "\n", "\n", 
+    RowBox[{
+     RowBox[{"INPUTS", ":", "\n", "\t", 
+      RowBox[{
+      "clifInput", " ", "is", " ", "the", " ", "clif", " ", "to", " ", "be", 
+       " ", "simplified", "\n", "\t", "n"}]}], " ", "\[Dash]", " ", 
+     RowBox[{"Optional", " ", 
+      RowBox[{"input", ".", " ", "Max"}], " ", "value", " ", "of", " ", "any",
+       " ", 
+      SubscriptBox["e", "i"], "subscript", " ", "for", " ", "purposes", " ", 
+      "of", " ", "collecting", " ", "terms", " ", "in", " ", "printout", "\n",
+       "\n", 
+      RowBox[{"PROCESS", ":", "\n", "\t", 
+       RowBox[{
+        RowBox[{
+        "Call", " ", "function", " ", "MaxDimG", " ", "to", " ", "find", " ", 
+         "the", " ", "size", " ", "of", " ", "the", " ", "largest", " ", 
+         "e"}], "-", 
+        RowBox[{
+        "subscript", " ", "in", " ", "the", " ", "clif", "\n", "\t", "Modify",
+          " ", "multivector", " ", "clifInput", " ", "according", " ", "to", 
+         " ", 
+         RowBox[{"user", "'"}], "s", " ", "initialization", " ", "rules", 
+         "\n", "\t", "Use", " ", 
+         RowBox[{"Mathematica", "'"}], "s", " ", "Collect", " ", "to", " ", 
+         "collect", " ", "the", " ", "terms", " ", "by", " ", 
+         SubscriptBox["e", "1"]}]}]}]}], ",", " ", "...", ",", " ", 
+     SubscriptBox["e", "n"], ",", " ", 
+     RowBox[{
+      SubscriptBox["e", "1"], 
+      SubscriptBox["e", "2"]}], ",", " ", "\n", "\t\t", 
+     RowBox[{
+      SubscriptBox["e", "1"], 
+      SubscriptBox["e", "3"]}], ",", " ", "...", ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SubscriptBox["e", "1"], 
+         SubscriptBox["e", "2"]}], "..."}], 
+       SubscriptBox["e", "n"], "\n", "\t", "This", " ", "function", " ", "is",
+        " ", "used", " ", "by", " ", "other", " ", "functions", " ", "and", 
+       " ", "can", " ", "also", " ", "be", " ", "called", " ", "directly", 
+       " ", "by", " ", "the", " ", "unser", "\n", "\n", 
+       RowBox[{"OUTPUT", ":", "\n", "\t", "clifOutput"}]}], " ", "=", " ", 
+      RowBox[{
+      "clif", " ", "with", " ", "all", " ", "multiplications", " ", "carried",
+        " ", "out", " ", "and", " ", "then", " ", "arranged", " ", "by", " ", 
+       "product", " ", "of", " ", 
+       SubscriptBox["e", "i"], " ", "terms", "\n", "\t", "This", " ", "is", 
+       " ", "same", " ", "as", " ", 
+       RowBox[{"Mathematica", "'"}], "s", " ", "Collect", " ", "function", 
+       " ", "except", " ", "for", " ", "implementation", " ", "of", " ", 
+       RowBox[{"user", "'"}], "s", " ", "initialization", " ", "rules", " ", 
+       "to", " ", "handle", " ", 
+       SuperscriptBox[
+        SubscriptBox["e", "i"], "2"], " ", "terms"}]}]}], "   ", "*)"}], "\n",
+    "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", ",", "clifOutput"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"n", "\[Equal]", 
+         RowBox[{"-", "1"}]}], ",", 
+        RowBox[{"(*", " ", 
+         RowBox[{"if", " ", "user", " ", 
+          RowBox[{"doesn", "'"}], "t", " ", "supply", " ", "an", " ", 
+          "input"}], " ", "*)"}], "\n", "\t\t\t", 
+        RowBox[{"m", "=", 
+         RowBox[{"MaxDimG", "[", "clifInput", "]"}]}], "\n", "\t\t", ",", 
+        "\n", "\t\t\t", 
+        RowBox[{"m", "=", "n"}]}], "\n", "\t\t", "]"}], ";", "\n", "\n", 
+      "\t\t", 
+      RowBox[{"clifOutput", "=", 
+       RowBox[{"Collect", "[", 
+        RowBox[{
+         RowBox[{"ExpandG", "[", "clifInput", "]"}], ",", 
+         RowBox[{"ClifFormatG", "[", "m", "]"}]}], "]"}]}], ";", "\n", "\t\t",
+       "clifOutput"}]}], "\n", "]"}]}], "       ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "CollectG", " ", "Module"}], "\t", "*)"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ConstantG", "[", "clif_", "]"}], ":=", " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Generate", " ", "the", " ", "constant", " ", "term", 
+     RowBox[{"(", "s", ")"}], " ", "in", " ", "a", " ", "clif"}], " ", "*)"}],
+    "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"clif1", ",", "const"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"clif1", "=", 
+       RowBox[{"Expand", "[", "clif", "]"}]}], ";", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+       "Need", " ", "to", " ", "work", " ", "with", " ", "simplified", " ", 
+        "terms"}], " ", "*)"}], "\n", "\t\t", 
+      RowBox[{"const", "=", 
+       RowBox[{"clif1", "/.", 
+        RowBox[{
+         SubscriptBox["e", "u_"], "\[Rule]", "0"}]}]}], ";", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Constant", ",", " ", 
+        RowBox[{
+         RowBox[{
+         "may", " ", "be", " ", "zero", " ", "or", " ", "consist", " ", "of", 
+          " ", "one", " ", "or", " ", "more", " ", "non"}], "-", 
+         RowBox[{"zero", " ", "terms"}]}]}], " ", "*)"}], "\n", 
+      RowBox[{"(*", "\n", "\t\t", 
+       RowBox[{
+        RowBox[{"Print", "[", 
+         RowBox[{
+         "\"\<ConstantG: clif = \>\"", ",", "clif", ",", 
+          "\"\<, Context of e: \>\"", ",", 
+          RowBox[{"Context", "[", "e", "]"}]}], "]"}], ";"}], " ", "\n", 
+       "*)"}], "\t\t", "\n", "\t\t", "const"}]}], "\n", "\t", "]"}]}], "\n", 
+  "\t", 
+  RowBox[{"(*", "  ", 
+   RowBox[{"End", " ", "of", " ", "ConstantG"}], "  ", "*)"}], "\n", 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ExpandG", "[", "clifInput_", "]"}], ":=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{"InitializeG", "[", "clifInput", "]"}], "]"}]}], "  ", 
+  RowBox[{"(*", "\n", 
+   RowBox[{"Same", " ", "as", " ", 
+    RowBox[{"Mathematica", "'"}], "s", " ", "Expand", " ", "function", " ", 
+    "except", " ", "that", " ", "multivector", " ", "is", " ", "modified", 
+    " ", "first", " ", "according", " ", "to", " ", 
+    RowBox[{"user", "'"}], "s", " ", "initialization", " ", "rules", " ", 
+    "set", " ", "up", " ", "in", " ", "Palette", " ", "or", " ", "manually"}],
+    "  ", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GradePpieceG", "[", 
+    RowBox[{"clif_", ",", "p_"}], "]"}], ":=", "  ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"User", "'"}], "s", " ", "Clif", " ", "is", " ", 
+          SubscriptBox["c", "0"]}], " ", "+", " ", 
+         RowBox[{
+          SubscriptBox["c", "1"], " ", 
+          SubscriptBox["e", "1"]}], " ", "+", " ", 
+         RowBox[{
+          SubscriptBox["c", 
+           RowBox[{"1", ",", "2"}]], " ", 
+          SubscriptBox["e", "1"], 
+          SubscriptBox["e", "2"]}], " ", "+"}], " ", "..."}], "  ", "\n", 
+       RowBox[{"INPUTS", ":", "\n", "\t", "clif"}]}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"a", " ", "Clif", "\n", "\t", "p"}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{
+        "grade", " ", "of", " ", "terms", " ", "we", " ", "wish", " ", "to", 
+         " ", "select", "\n", "\n", 
+         RowBox[{"PROCESS", ":", "\n", "\t", 
+          RowBox[{
+          "This", " ", "function", " ", "finds", " ", "terms", " ", "in", " ",
+            "clif", " ", "of", " ", "grade", " ", "p", "\n", "\t", "Call", 
+           " ", "other", " ", "functions", " ", "to", " ", "generate4", " ", 
+           "2", " ", "arrays"}], ":", "\n", "\t\t", "cliflist"}]}], " ", "=", 
+        " ", 
+        RowBox[{
+        "list", " ", "of", " ", "terms", " ", "in", " ", "clif"}]}]}]}], ",", 
+     " ", 
+     RowBox[{
+      RowBox[{
+      "with", " ", "all", " ", "constants", " ", "grouped", " ", "into", " ", 
+       "term", " ", "1", "\n", "\t\t", "gradesClif"}], " ", "=", " ", 
+      RowBox[{
+      "list", " ", "of", " ", "grades", " ", "of", " ", "terms", " ", "in", 
+       " ", "cliflist", "\n", "\t", "From", " ", "gradesClif"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"create", " ", "an", " ", "array", " ", "with", " ", 
+        RowBox[{"1", "'"}], "s", " ", "for", " ", "all", " ", "grade", " ", 
+        "p", " ", "terms", " ", "and", " ", 
+        RowBox[{"0", "'"}], "s", " ", "otherwise", "\n", "\t", "Then", " ", 
+        "simiply", " ", "dot", " ", "multiply", " ", "this", " ", "array", 
+        " ", "with", " ", "the", " ", "list", " ", "of", " ", "terms", " ", 
+        "from", " ", "clif", "\n", "\n", "\t", "Note", " ", "1"}], ":", " ", 
+       "p"}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "0", " ", "requires", " ", "special", " ", "treatment", " ", "since", 
+         " ", "we", " ", "are", " ", "setting", " ", "non"}], "-", 
+        RowBox[{
+        "grade", " ", "p", " ", "terms", " ", "to", " ", "0", "\n", "\t\t", 
+         "\n", "\t", "Note", " ", "1"}]}], ":", " ", 
+       RowBox[{
+       "The", " ", "constant", " ", "term", " ", "have", " ", "been", " ", 
+        "rounded", " ", "up", " ", "into", " ", "term", " ", "1"}]}]}], ",", 
+     " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "and", " ", "due", " ", "to", " ", "Note", " ", "1", "  ", "\n", 
+        "\t\t", "the", " ", "grade", " ", "has", " ", "been", " ", "changed", 
+        " ", "from", " ", "0", " ", "to"}], " ", "-", 
+       RowBox[{"1", "\n", "\n", 
+        RowBox[{"OUTPUT", ":", "\n", "\t", "gradePClif"}]}]}], " ", "=", " ", 
+      
+      RowBox[{
+       RowBox[{
+       "clif", " ", "composed", " ", "of", " ", "just", " ", "the", " ", 
+        "grade"}], "-", 
+       RowBox[{"p", " ", "terms"}]}]}], ",", " ", 
+     RowBox[{"if", " ", "any"}]}], "\n", "*)"}], "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "clifList", ",", "gradesClif", ",", "gradeParray", ",", "gradePclif"}], 
+      "}"}], ",", "\n", "\t", "\n", "\t", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{"debug4", ",", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", "\n", "\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Clif being examined = \>\"", ",", 
+           RowBox[{"Expand", "[", "clif", "]"}], ",", 
+           "\"\<   (GradePpieceG)\>\""}], "]"}], ";", "\n", "\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Grade being investigated = \>\"", ",", "p"}], 
+          "]"}]}]}], "\n", "\t", "]"}], ";", "\n", "\t", "\n", "\t", 
+      RowBox[{"gradesClif", "=", 
+       RowBox[{
+        RowBox[{"GradeListG", "[", "clif", "]"}], "/.", 
+        RowBox[{
+         RowBox[{"x_", "/;", 
+          RowBox[{"x", "\[Equal]", "0"}]}], "\[Rule]", 
+         RowBox[{"-", "1"}]}]}]}], ";", "\n", "\t\t", 
+      RowBox[{"(*", "  ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+         "Get", " ", "list", " ", "of", " ", "grades", " ", "of", " ", 
+          "terms", " ", "\n", "\t\t\t", "A", " ", "grade", " ", "of", " ", 
+          "zero", " ", "corresponds", " ", "to", " ", "a", " ", "non"}], "-", 
+         
+         RowBox[{
+         "zero", " ", "constant", " ", "term", " ", "as", " ", "first", " ", 
+          "term", " ", "in", " ", "list", "\n", "\t\t\t", "If", " ", "1", 
+          "st", " ", "term", " ", "has", " ", "grade", " ", "0"}]}], ",", " ", 
+        RowBox[{
+         RowBox[{"change", " ", "it", " ", "to"}], " ", "-", 
+         RowBox[{
+         "1", " ", "so", " ", "as", " ", "not", " ", "to", " ", "interfere", 
+          " ", "with", " ", "\n", "\t\t\t\t", "two", " ", "statements", " ", 
+          "below", " ", "after", " ", "\"\<Else\>\""}]}]}], "  ", "*)"}], 
+      "\n", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"p", ">", "0"}], ",", "\n", "\t\t", 
+        RowBox[{
+         RowBox[{"gradeParray", "=", 
+          RowBox[{"gradesClif", "/.", 
+           RowBox[{
+            RowBox[{"x_", "/;", 
+             RowBox[{"x", "\[NotEqual]", "p"}]}], "\[RuleDelayed]", "0"}]}]}],
+          ";", "  ", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"For", " ", "p"}], ">", "0"}], ",", " ", 
+           RowBox[{
+            RowBox[{"set", " ", "non"}], "-", 
+            RowBox[{
+            "grade", " ", "p", " ", "terms", " ", "to", " ", "0"}]}]}], " ", 
+          "*)"}], "\n", "\t\t", 
+         RowBox[{"gradeParray", "=", 
+          RowBox[{"gradeParray", "/", "p"}]}]}], " ", ",", " ", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "and", " ", "divide", " ", "the", " ", "grade", " ", "p", " ", 
+          "term", " ", "by", " ", "p", " ", "to", " ", "get", " ", "1"}], " ",
+          "*)"}], "\n", "\t", 
+        RowBox[{"(*", " ", "Else", " ", "*)"}], "\n", "\t\t", 
+        RowBox[{
+         RowBox[{"gradeParray", "=", 
+          RowBox[{"gradesClif", "/.", 
+           RowBox[{
+            RowBox[{"x_", "/;", 
+             RowBox[{"x", "\[NotEqual]", 
+              RowBox[{"-", "1"}]}]}], "\[RuleDelayed]", "0"}]}]}], ";", "  ", 
+         
+         RowBox[{"(*", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"For", " ", "p"}], "=", "0"}], ",", " ", 
+           RowBox[{
+            RowBox[{"set", " ", "non"}], "-", 
+            RowBox[{"constants", " ", "to", " ", "0"}]}]}], " ", "*)"}], "\n",
+          "\t\t", 
+         RowBox[{"gradeParray", "=", 
+          RowBox[{"-", "gradeParray"}]}]}]}], "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{
+         "and", " ", "change", " ", "the", " ", "constant", " ", "term", " ", 
+          "from"}], " ", "-", 
+         RowBox[{"1", " ", "to"}], " ", "+", "1"}], "  ", "*)"}], "\n", "\t", 
+       "]"}], ";", "\n", "\n", "\t", 
+      RowBox[{"clifList", "=", 
+       RowBox[{"ClifToListG", "[", "clif", "]"}]}], ";", "\n", "\n", "\t", 
+      RowBox[{"gradePclif", "=", 
+       RowBox[{"gradeParray", " ", "clifList"}]}], ";", "\n", "\t", 
+      RowBox[{"gradePclif", " ", "=", " ", 
+       RowBox[{"gradePclif", " ", "/.", " ", 
+        RowBox[{"List", "\[Rule]", "Plus"}]}]}], ";", "\n", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug4", ",", "\n", "\t\t", 
+        RowBox[{
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<List of grades of \>\"", ",", "clif", ",", "\n", "\t\t\t\t", 
+           "\"\< with constant (if any) set to -1: \>\"", ",", "gradesClif"}],
+           "]"}], ";", "\n", "\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Array, with 1's at grade \>\"", ",", "p", ",", 
+           "\"\< position(s) (if any) = \>\"", ",", "gradeParray"}], "]"}], 
+         ";", "\n", "\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<List of any grade \>\"", ",", "p", ",", "\"\< terms: \>\"", 
+           ",", "gradePclif", ",", "\"\<.  If grade > 0, 1st term\>\"", ",", 
+           "\n", "\t\t", 
+           "\"\< is 0. List is product of array with 1's and 0's with list of \
+the clif terms.\>\""}], "]"}], ";", "\n", "\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Clif term(s) of grade \>\"", ",", "p", ",", "\"\< = \>\"", ",",
+            "gradePclif"}], "]"}]}]}], "\n", "\t", "]"}], ";", "\n", "\n", 
+      "\t", "gradePclif"}]}], "\n", "\t", "]"}]}], "    ", 
+  RowBox[{"(*", "  ", 
+   RowBox[{"End", " ", "of", " ", "GradePpieceG", " ", "Module"}], "  ", 
+   "*)"}], "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InitializeG", "[", "clifInput_", "]"}], ":=", "    ", "\n", " ", 
+   RowBox[{"(*", "\n", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"INPUT", ":", "\n", "\t", "clifInput"}], " ", "=", " ", 
+      RowBox[{"A", " ", "multivector", "\n", "\n", 
+       RowBox[{"PROCESS", ":", "\n", "\t", 
+        RowBox[{
+        "Internal", " ", "function", " ", "called", " ", "only", " ", "by", 
+         " ", "ExpandG"}]}]}]}], ",", " ", 
+     RowBox[{
+     "which", " ", "in", " ", "turn", " ", "is", " ", "called", " ", "by", 
+      " ", "CollectG", "\n", "\t", "Modifies", " ", "multivector", " ", 
+      "clifInput", " ", "according", " ", "to", " ", 
+      RowBox[{"user", "'"}], "s", " ", "initialization", " ", "rules", " ", 
+      "for", " ", "terms", " ", 
+      SuperscriptBox[
+       SubscriptBox["e", "i"], "2"]}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{
+      "set", " ", "up", " ", "either", " ", "in", " ", "Palette", " ", "or", 
+       " ", "manually", "  ", "\n", "\t", 
+       RowBox[{"algebraType", ":", " ", "1"}]}], " ", "=", " ", 
+      RowBox[{"Grassmann", " ", "algebra"}]}], ",", "  ", 
+     RowBox[{"2", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"Clifford", " ", "algebra", "\n", "\t", 
+        RowBox[{"signatureType", ":", " ", 
+         RowBox[{"-", "1"}]}]}], " ", "=", " ", 
+       RowBox[{"Physicists", " ", "+", " ", 
+        RowBox[{"-", " ", 
+         RowBox[{"-", " ", "-"}]}]}]}]}], ",", "  ", 
+     RowBox[{"1", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"Mathematicians", " ", "-", " ", 
+        RowBox[{"+", " ", 
+         RowBox[{"+", " ", 
+          RowBox[{"+", "\n", "\t", "numTimelike"}]}]}]}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{"Number", " ", "of", " ", "timelike", " ", 
+         RowBox[{"dimensions", ".", " ", "\n", "\t\t", "0"}]}], " ", "=", " ", 
+        RowBox[{
+         RowBox[{"Pure", " ", "Space", "   ", "1"}], " ", "=", " ", 
+         RowBox[{
+         "Spacetime", "   ", "2", " ", "or", " ", "more", " ", "time", " ", 
+          "dimensions", " ", "are", " ", "allowed"}]}]}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "time", " ", "always", " ", "using", "\n", "\t\t", "the", " ", 
+        "lowest", " ", "ubscripts", "\n", "\n", 
+        RowBox[{"OUTPUT", ":", "  ", "clifOutput"}]}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{"Multivector", " ", "with", " ", "any", " ", "square", " ", 
+         SubscriptBox["e", "i"], " ", "terms", " ", 
+         RowBox[{"reduced", ":"}]}], "\n", "\t\t\t\t\t", "=", " ", 
+        RowBox[{"0", " ", "if", " ", "Grassmann", " ", "algebra"}]}]}], ";", 
+      "\n", "\t\t\t   ", 
+      RowBox[{"else", " ", "=", " ", 
+       RowBox[{
+        RowBox[{"signatureType", " ", "if", " ", "u"}], " ", "\[LessEqual]", 
+        " ", "numTimelike"}]}], ";", " ", "\n", "\t\t\t   ", 
+      RowBox[{"else", " ", "=", " ", 
+       RowBox[{"signatureType", "\n", "\t\t\t   ", "\n", "CONTEXT", " ", 
+        RowBox[{"SHADOWING", ":", "\n", "\t", 
+         RowBox[{
+         "The", " ", "context", " ", "of", " ", "this", " ", "package", " ", 
+          "is", " ", "GeomAlgPkg`", " ", "or", " ", "whatever", " ", "is", 
+          " ", "in", " ", "BeginPackage"}]}]}]}]}], ",", " ", 
+     RowBox[{
+     "above", "\n", "\t", "If", " ", "user", " ", "calls", " ", "this", " ", 
+      "package", " ", "from", " ", "his", " ", "environment", " ", "having", 
+      " ", "a", " ", "diffenet", " ", "context"}], ",", " ", 
+     RowBox[{"say", " ", "ContextUser`"}], ",", " ", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"then", " ", "e"}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+       "GeomAlgPkg`Private`e", " ", "but", " ", "we", " ", "need", " ", "e"}],
+        " ", "=", " ", 
+       RowBox[{
+        RowBox[{"ContextUser`e", " ", "in", " ", "order", " ", "for"}], " ", "/.", 
+        RowBox[{
+         SuperscriptBox[
+          SubscriptBox["e", "u_"], "2"], "\[Rule]", 
+         RowBox[{
+         "1", " ", "to", " ", "work", "\n", "\t", "The", " ", "user", " ", 
+          "only", " ", "enters", " ", "clif1", " ", 
+          RowBox[{"(", 
+           RowBox[{"and", " ", "possibly", " ", "clif2"}], ")"}]}]}]}]}]}], 
+     ",", " ", 
+     RowBox[{
+      RowBox[{"leading", " ", "here", " ", "to", " ", 
+       RowBox[{"clifInput", ".", " ", "He"}], " ", "does", " ", "not", " ", 
+       "input", " ", "\n", "\t\t", "either", " ", "e", " ", "or", " ", "his", 
+       " ", 
+       RowBox[{"context", ".", "\n", "\t", "Here"}], " ", "is", " ", "how", 
+       " ", "we", " ", "find", " ", 
+       RowBox[{"both", ":", " ", "\n", "\t\t", 
+        RowBox[{"Suppose", " ", "clifInput"}]}]}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"1", " ", "+", " ", 
+        RowBox[{"2", 
+         SubscriptBox["e", 
+          RowBox[{"1", " "}]]}], "+", " ", 
+        RowBox[{
+         SuperscriptBox[
+          SubscriptBox["e", "1"], "2"], 
+         SubscriptBox["e", "2"], "\n", "\t\t", "leaves"}]}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{"Level", "[", 
+         RowBox[{"clifInput", ",", 
+          RowBox[{"{", 
+           RowBox[{"-", "1"}], "}"}]}], "]"}], " ", "=", " ", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "2", ",", "e", ",", "1", ",", "e", ",", "1", ",", "2", ",",
+           "e", ",", "2"}], "}"}]}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"the", " ", "leaves", " ", 
+       RowBox[{"(", 
+        RowBox[{"or", " ", "atomic", " ", "elements"}], ")"}], " ", "of", " ",
+        "clifInput", "\n", "\t\t\t", "Note", " ", "1"}], ":", " ", 
+      RowBox[{
+      "The", " ", "leaves", " ", "list", " ", "memebers", " ", "have", " ", 
+       "context", " ", "ContextUser`"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"what", " ", "we", " ", "are", " ", 
+        RowBox[{"after", ".", "\n", "\t\t\t", "Note"}], " ", "2"}], ":", " ", 
+       
+       RowBox[{
+       "The", " ", "symbol", " ", "\"\<leaves\>\"", " ", "does", " ", 
+        RowBox[{"not", ".", " ", "It"}], " ", "has", " ", "context", " ", 
+        RowBox[{"GeomAlgPkg`Private`", ".", "\n", "\t\t", "symbols1"}]}]}], 
+      " ", "=", " ", 
+      RowBox[{
+       RowBox[{"Cases", "[", 
+        RowBox[{"leaves", ",", "_Symbol"}], "]"}], " ", "=", " ", 
+       RowBox[{"{", 
+        RowBox[{"e", ",", "e", ",", "e"}], "}"}]}]}], ",", " ", 
+     RowBox[{"lists", " ", "the", " ", "symbols"}], ",", " ", 
+     RowBox[{"if", " ", "any"}], ",", " ", 
+     RowBox[{
+      RowBox[{"among", " ", "the", " ", "leaves", "\n", "\t\t", "symbols2"}], 
+      " ", "=", " ", 
+      RowBox[{
+       RowBox[{"Append", "[", 
+        RowBox[{"symbols1", ",", "e"}], "]"}], "\t ", "=", " ", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"e", ",", "e", ",", "e", ",", "e"}], "}"}], " ", "appends", 
+        " ", "an", " ", "e", " ", "to", " ", "the", " ", "end", "\n", 
+        "\t\t\t", "The", " ", "appended", " ", "e", " ", "has", " ", 
+        "context", " ", "GeomAlgPkg`Private`"}]}]}], ",", " ", 
+     RowBox[{
+     "which", " ", "is", " ", "NOT", " ", "what", " ", "we", " ", "want", 
+      "\n", "\t\t\t", "However"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "the", " ", "appended", " ", "e", " ", "will", " ", "only", " ", "be", 
+       " ", "chosen", " ", "if", " ", "symbols1", " ", "is", " ", "an", " ", 
+       "empty", " ", "list"}], ";", " ", 
+      RowBox[{"that", " ", "is"}]}], ",", " ", 
+     RowBox[{"clifInput", " ", "\n", "\t\t\t", "has", " ", "no", " ", 
+      SubscriptBox["e", "i"], "terms", "\n", "\t\t\t\t", "If", " ", "ithere", 
+      " ", "are", " ", "no", " ", 
+      SubscriptBox["e", "i"], " ", "terms"}], ",", " ", 
+     RowBox[{
+      RowBox[{"then", " ", 
+       SuperscriptBox[
+        SubscriptBox["e", "i"], "2"]}], "\[Rule]", 
+      RowBox[{"1", " ", 
+       RowBox[{"doesn", "'"}], "t", " ", "do", " ", "anything"}]}], ",", " ", 
+     
+     RowBox[{"so", " ", "no", " ", "harm", " ", "occurs"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "but", " ", "\n", "\t\t\t\t", "also", " ", "no", " ", "warning", " ", 
+       "message", " ", "occurs", " ", "due", " ", "to", " ", "operating", " ",
+        "on", " ", "an", " ", "empty", " ", "symbols1", " ", 
+       RowBox[{"list", ".", "\n", "\t\t", "symbolA"}]}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"First", "[", "symbol2", "]"}], " ", "=", " ", 
+       RowBox[{"e", "\n", "\t\t\t", 
+        RowBox[{"Note", ":", " ", 
+         RowBox[{
+         "As", " ", "in", " ", "Notes", " ", "1", " ", "and", " ", 
+          "2"}]}]}]}]}], ",", " ", "above", ",", " ", 
+     RowBox[{
+      RowBox[{
+      "e", " ", "has", " ", "the", " ", "context", " ", "we", " ", "want"}], 
+      ";", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"symbolA", " ", "does", " ", 
+         RowBox[{"not", ".", "\n", "\t\t\t\t  ", "But"}]}], "..."}], " ", 
+       "the", " ", "rhs", " ", "e", " ", "is", " ", "not", " ", "available", 
+       " ", "for", " ", "processing"}], ";", " ", 
+      RowBox[{
+       RowBox[{
+       "we", " ", "only", " ", "have", " ", "access", " ", "to", " ", "lhs", 
+        " ", "symbolA", "\n", "\t\t", "e"}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{"Evaluate", "[", "symbolA", "]"}], "\n", "\t\t\t", "e", " ", 
+        "is", " ", "rhs", " ", "e", " ", 
+        RowBox[{"(", 
+         RowBox[{"of", " ", "symbolA"}], ")"}], " ", "and", " ", "has", " ", 
+        "the", " ", 
+        RowBox[{"user", "'"}], "s", " ", "context"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "the", " ", "one", " ", "we", " ", "want", "\n", "\t\t", 
+       "contextUser"}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"Context", "[", "symbolUser", "]"}], " ", "is", " ", "the", 
+       " ", 
+       RowBox[{"user", "'"}], "s", " ", "context", " ", "in", " ", "list", 
+       " ", "form", "\n", "\t\t", "Since", " ", "contextUser", " ", "is", " ",
+        "a", " ", "list"}]}], ",", " ", 
+     RowBox[{"eList", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"contextUser", "<>", "\"\<e\>\""}], " ", "is", " ", "a", " ", 
+       "list", " ", "containing", " ", 
+       RowBox[{"user", "'"}], "s", " ", "e"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"and", "\n", "\t\t", 
+       RowBox[{"ToExpression", "[", "eList", "]"}]}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"e", " ", "in", " ", 
+        RowBox[{"user", "'"}], "s", " ", "context", "\n", "\t\t", "\n", "\t", 
+        "The", " ", "3", " ", "init", " ", "symbols", " ", 
+        RowBox[{"(", 
+         RowBox[{"algebraType", ",", " ", "signatureType", ",", " ", 
+          RowBox[{"and", " ", "numTimelike"}]}], ")"}], " ", "similarly", " ",
+         "will", " ", "have", " ", "GeomAlgPkg`private`", " ", "\n", "\t\t", 
+        "context", " ", "the", " ", "first", " ", "time", " ", "InitializeG", 
+        " ", "is", " ", "called", " ", "within", " ", "a", " ", 
+        RowBox[{"session", ".", " ", "In"}], " ", "that", " ", "case", " ", 
+        "the", " ", "first", " ", "\"\<Head\>\"", "\n", "\t\t", "if"}], "-", 
+       RowBox[{
+       "test", " ", "will", " ", "be", " ", "true", " ", "and", " ", "the", 
+        " ", "ccontext", " ", "shadow", " ", "is", " ", "set", " ", "not", 
+        " ", "only", " ", "for", " ", "e", " ", "but", " ", "for", " ", "the",
+         " ", "init", " ", "symbols"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"also", ".", "\n", "\t", "The"}], " ", "user", " ", "may", " ", 
+      "or", " ", "may", " ", "not", " ", "have", " ", "previously", " ", 
+      "used", " ", "the", " ", "palette", " ", "to", " ", "set", " ", "the", 
+      " ", "init", " ", 
+      RowBox[{"symbols", ".", " ", "If"}], " ", "he", " ", 
+      RowBox[{"hasn", "'"}], "t"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "then", "\n", "\t\t", "the", " ", "2", "nd", " ", "\"\<Head\>\"", " ", 
+       "if"}], "-", 
+      RowBox[{
+      "test", " ", "will", " ", "be", " ", "true", " ", "and", " ", "default",
+        " ", "values", " ", "are", " ", 
+       RowBox[{"set", ".", "\n", "\t", "In"}], " ", "subsequent", " ", 
+       "calls", " ", "of", " ", "InitializeG", " ", "these", " ", "if"}], "-", 
+      RowBox[{
+      "tests", " ", "will", " ", "be", " ", "false", " ", "and", " ", "so", 
+       " ", "redundant", " ", "shadow", " ", "\n", "\t\t", "correcting", " ", 
+       "will", " ", "not", " ", 
+       RowBox[{"occur", ".", "\n", "\t", "Finally"}]}]}], ",", " ", 
+     RowBox[{
+     "we", " ", "need", " ", "e", " ", "and", " ", "contextUser", " ", "to", 
+      " ", "be", " ", "global", " ", "within", " ", "context", " ", 
+      "GeomPkg`Private`so", " ", "they", " ", "can", " ", "be", " ", "used", 
+      " ", "\n", "\t\t", "repeatedly", " ", "duricng", " ", "a", " ", 
+      "session", " ", "\n", "\t", "We", " ", "need", " ", "the", " ", "3", 
+      " ", "init", " ", "symbols", " ", "to", " ", "be", " ", "global", " ", 
+      "and", " ", "available", " ", "to", " ", "the", " ", 
+      RowBox[{"user", "'"}], "s", " ", "context", " ", "because", " ", "the", 
+      " ", "palette", "\n", "\t\t", "settings", " ", "are", " ", "dynamic", 
+      " ", "and", " ", "will", " ", "change", " ", "or", " ", "be", " ", 
+      "changed", " ", "in", " ", "sync", " ", "with", " ", "the", " ", "init",
+       " ", "symbols", " ", "here"}]}], "\n", "*)"}], "\n", "\n", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "algebraType", ",", "signatureType", ",", "numTimelike", ",", 
+       "clifOutput"}], "}"}], ",", "\n", "\n", "\t", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Head", "[", "signatureType", "]"}], "\[Equal]", "Symbol"}], 
+        ",", "  ", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+          RowBox[{"If", " ", "true"}], ",", " ", 
+          RowBox[{
+          "this", " ", "signatureType", " ", "symbol", " ", "has", " ", 
+           "GeomAlgPkg", " ", "context"}]}], " ", "*)"}], "\n", "\t\t", 
+        RowBox[{
+         RowBox[{"algebraType", "=", "Global`algebraType"}], ";", "\n", 
+         "\t\t", 
+         RowBox[{"signatureType", "=", "Global`signatureType"}], ";", "  ", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "Change", " ", "context", " ", "to", " ", "Global`", " ", "for", 
+           " ", "init", " ", "symbols"}], " ", "*)"}], "\n", "\t\t", 
+         RowBox[{"numTimelike", "=", "Global`numTimelike"}]}]}], "\n", "\t", 
+       "]"}], ";", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Head", "[", "signatureType", "]"}], "\[Equal]", "Symbol"}], 
+        ",", "  ", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+          RowBox[{"If", " ", "true"}], ",", " ", 
+          RowBox[{
+          "then", " ", "Global`", " ", "signatureType", " ", "has", " ", 
+           "not", " ", "yet", " ", "been", " ", "set"}]}], " ", "*)"}], "\n", 
+        "\t\t", 
+        RowBox[{
+         RowBox[{"Message", "[", 
+          RowBox[{"InitializeG", "::", "warning"}], "]"}], ";", "\n", "\t\t", 
+         
+         RowBox[{"Global`algebraType", "=", "2"}], ";", "  ", "\n", "\t\t\t", 
+         
+         RowBox[{"(*", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "\"\<Evaluate\>\"", " ", "causes", " ", "Global`algebraType"}], 
+            " ", "=", " ", "2"}], ";", " ", 
+           RowBox[{
+            RowBox[{
+            "else", " ", "would", " ", "set", " ", "GeomAlgPkg`algebraType"}],
+             " ", "=", " ", "2"}]}], " ", "*)"}], "\n", "\t\t", 
+         RowBox[{"Global`signatureType", "=", "1"}], ";", "  ", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "Set", " ", "values", " ", "for", " ", "init", " ", "variables"}], 
+          " ", "*)"}], "\n", "\t\t", 
+         RowBox[{"Global`numTimelike", "=", "0"}]}]}], "\t", "\n", "\t", 
+       "]"}], ";", " ", "\n", "\n", "\t", 
+      RowBox[{"clifOutput", "=", 
+       RowBox[{"clifInput", "/.", "\n", "\t\t", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["e", "u_", "2"], "/;", 
+            RowBox[{"algebraType", "==", "1"}]}], ":>", "0"}], ",", 
+          RowBox[{
+           RowBox[{
+            SubsuperscriptBox["e", "u_", "2"], "/;", 
+            RowBox[{"u", "\[LessEqual]", "numTimelike"}]}], ":>", 
+           RowBox[{"-", "signatureType"}]}], ",", 
+          RowBox[{
+           SubsuperscriptBox["e", "u_", "2"], ":>", "signatureType"}]}], 
+         "}"}]}]}], ";", "\n", "\t\t", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug1", ",", "\n", "\t\t", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", "\n", "\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<InitializeG: algebraType = \>\"", ",", "algebraType", ",", 
+           "\"\<, signatureType = \>\"", ",", "\n", "\t\t\t", "signatureType",
+            ",", "\"\<, and numTimelike = \>\"", ",", "numTimelike"}], "]"}], 
+         ";", "\n", "\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Context of e: \>\"", ",", 
+           RowBox[{"Context", "[", "e", "]"}]}], "]"}], ";", "\n", "\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Clif Input = \>\"", ",", "clifInput", ",", 
+           "\"\<, and Clif Ouput = \>\"", ",", "clifOutput"}], "]"}]}]}], 
+       "\n", "\t", "]"}], ";", "\n", "\t", "clifOutput"}]}], "\n", "]"}]}], 
+  "\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "InitializeG", " ", "function"}], "   ", 
+   "*)"}], "\t\t\t\t\t\t", "\n", "\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"ShadowSymbol", "[", "symbol_", "]"}], ":=", 
+    RowBox[{"ToExpression", "[", 
+     RowBox[{"contextUser", "<>", 
+      RowBox[{"ToString", "[", "symbol", "]"}]}], "]"}]}], " ", "*)"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"MaxDimG", "[", "clif_", "]"}], ":=", "    ", 
+  RowBox[{"(*", " ", "\n", "\t", 
+   RowBox[{
+    RowBox[{"INPUT", ":", " ", "clif"}], " ", "\[Dash]", " ", 
+    RowBox[{
+     RowBox[{"A", " ", "users", " ", 
+      RowBox[{"clif", ".", " ", "Coefficients"}], " ", "can", " ", "be", " ", 
+      "either", " ", "values", " ", "or", " ", "symbols", "\n", "\t", 
+      RowBox[{"PROCESS", ":", " ", 
+       RowBox[{
+       "Flatten", " ", "the", " ", "subscript", " ", "list", " ", "and", " ", 
+        "find", " ", "the", " ", "maximum", "\n", "\t", "OUTPUT"}], ":", " ", 
+       "maxDim"}]}], " ", "=", " ", 
+     RowBox[{
+     "largest", " ", "subscript", " ", "value", " ", "on", " ", "any", " ", 
+      RowBox[{
+       SubscriptBox["e", "i"], ".", " ", "Used"}], " ", "when", " ", 
+      "collecting", " ", "terms", " ", "in", " ", "clif", " ", "output"}]}]}],
+    "  ", "*)"}], "\n", "\t", "\n", "\t", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"flatSubscriptList", ",", "maxDim"}], "}"}], ",", "\n", "\t\t", 
+    RowBox[{
+     RowBox[{"flatSubscriptList", "=", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"SubscriptListG", "[", "clif", "]"}], "]"}]}], ";", " ", "\n", 
+     "\t\t\t", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Want", " ", "maxDim"}], " ", "\[GreaterEqual]", " ", 
+        RowBox[{"1.", " ", "Thus"}]}], ",", 
+       RowBox[{
+        RowBox[{
+        "c", " ", "use", " ", "clif", " ", "rather", " ", "than", " ", 
+         "clif"}], " ", "-", " ", "const"}]}], "  ", "*)"}], "\n", "\t\t", 
+     RowBox[{"maxDim", "=", 
+      RowBox[{"Max", "[", 
+       RowBox[{"1", ",", 
+        RowBox[{"Max", "[", "flatSubscriptList", "]"}]}], "]"}]}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+       "Extra", " ", "max", " ", "takes", " ", "care", " ", "of", " ", 
+        "clif"}], " ", "=", " ", "0"}], " ", "*)"}], "\n", "\n", "\t\t", 
+     RowBox[{"If", "[", 
+      RowBox[{"debug2", ",", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"Print", "[", "]"}], ";", "\n", "\t\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{
+         "\"\<MaxDim: Flattened list of subscripts = flatSubscriptList = \
+\>\"", ",", "\n", "\t\t\t\t", "flatSubscriptList"}], "]"}], ";", "\n", 
+        "\t\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{"\"\<Max dim = largest subscript = \>\"", ",", "maxDim"}], 
+         "]"}]}]}], "\n", "\t\t", "]"}], ";", "\n", "\t", "maxDim"}]}], "\n", 
+   "\t", "]"}], "     ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "MaxDimG", " ", "Module"}], "\t", 
+   "*)"}]}]}], "Code",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691072666710598*^9, 
+   3.6910730313977747`*^9, 3.691073072029634*^9, 3.691073593702551*^9, 
+   3.691073646277369*^9, 3.691073715183025*^9, 3.691073841869029*^9, 
+   3.691073879917136*^9, {3.6910742437762337`*^9, 3.691074246906845*^9}, 
+   3.691074290856971*^9, {3.69107437586687*^9, 3.691074402029483*^9}, {
+   3.691086119521948*^9, 3.6910861791913633`*^9}, {3.691087874687943*^9, 
+   3.6910878857564077`*^9}, {3.691106026077119*^9, 3.6911060448791103`*^9}, {
+   3.691106126194209*^9, 3.691106167168133*^9}, {3.69110725558745*^9, 
+   3.691107257249641*^9}, {3.691107328838606*^9, 3.691107366853805*^9}, {
+   3.691107406148611*^9, 3.691107551656928*^9}, {3.6911076492996187`*^9, 
+   3.6911076538262177`*^9}, {3.691108305707941*^9, 3.6911083336409807`*^9}, {
+   3.691108384830194*^9, 3.691108384844342*^9}, 3.69110855844882*^9, {
+   3.691162434128428*^9, 3.6911624376145887`*^9}, {3.691165259193399*^9, 
+   3.69116531333857*^9}, {3.691170784687316*^9, 3.691170784705866*^9}, {
+   3.6911844920771093`*^9, 3.691184506083955*^9}, {3.691184543087542*^9, 
+   3.691184869867704*^9}, {3.691184901517408*^9, 3.691184982453807*^9}, {
+   3.691185016936391*^9, 3.691185018542036*^9}, {3.691187000586645*^9, 
+   3.691187097367346*^9}, 3.691187352826626*^9, 3.691189678442358*^9, {
+   3.69118972529593*^9, 3.691189745896708*^9}, 3.6911899567312717`*^9, 
+   3.6911905329056892`*^9, {3.6911909041481037`*^9, 3.6911909272743473`*^9}, {
+   3.6911915032907*^9, 3.691191514376099*^9}, {3.691191655459311*^9, 
+   3.691191660905697*^9}, {3.691192459676022*^9, 3.691192461521668*^9}, 
+   3.6911926671532173`*^9, {3.691192732171939*^9, 3.6911927619791183`*^9}, {
+   3.691192797616927*^9, 3.69119281008963*^9}, {3.691193993454647*^9, 
+   3.69119401237532*^9}, {3.6912387141105213`*^9, 3.6912387504485483`*^9}, 
+   3.691238817725787*^9, {3.6913466447964983`*^9, 3.6913466976751204`*^9}, 
+   3.691346768195716*^9, {3.69134943074549*^9, 3.6913494761669807`*^9}, {
+   3.691619122347864*^9, 3.691619123545745*^9}, {3.6916191651113777`*^9, 
+   3.69161918110955*^9}, {3.691619213035741*^9, 3.6916192220318003`*^9}, {
+   3.691619265847233*^9, 3.6916193631557093`*^9}, {3.691619426715089*^9, 
+   3.691619582194633*^9}, {3.691619614032544*^9, 3.6916197616711206`*^9}, {
+   3.6916198074684134`*^9, 3.691619910760448*^9}, {3.6916200039828*^9, 
+   3.691620018617032*^9}, {3.691620209983103*^9, 3.691620355010838*^9}, {
+   3.691620387511203*^9, 3.691620638439378*^9}, {3.691620679537183*^9, 
+   3.691620698796571*^9}, {3.691620751729542*^9, 3.6916208157827*^9}, {
+   3.691620866223737*^9, 3.691620961955102*^9}, {3.691621031004074*^9, 
+   3.6916211140792437`*^9}, {3.691621202688745*^9, 3.691621258473289*^9}, {
+   3.6916213222679033`*^9, 3.6916214153633833`*^9}, {3.6916214685384502`*^9, 
+   3.69162206075952*^9}, {3.691622147402643*^9, 3.69162224402709*^9}, {
+   3.691622274629278*^9, 3.691622388117031*^9}, {3.691622430160095*^9, 
+   3.691622500040366*^9}, {3.691622530180078*^9, 3.69162263394518*^9}, {
+   3.69162272884077*^9, 3.691623095917878*^9}, {3.691623158182355*^9, 
+   3.691623341919158*^9}, {3.691623391454083*^9, 3.6916233933419228`*^9}, {
+   3.691690720130065*^9, 3.6916907410515213`*^9}, {3.691690784824985*^9, 
+   3.691690833517528*^9}, {3.691690865299103*^9, 3.691690866868834*^9}, {
+   3.6916909723980722`*^9, 3.6916910597160883`*^9}, {3.69169110430298*^9, 
+   3.6916911645396442`*^9}, {3.691691199216717*^9, 3.691691265862844*^9}, {
+   3.69169129756851*^9, 3.6916913005183907`*^9}, {3.691691341540779*^9, 
+   3.69169135698433*^9}, {3.691691404183031*^9, 3.691691444434626*^9}, {
+   3.6916915163852587`*^9, 3.6916915633269367`*^9}, {3.691691652545977*^9, 
+   3.691691700784278*^9}, {3.6916917389074497`*^9, 3.6916917910999737`*^9}, {
+   3.69169182652103*^9, 3.691691827208766*^9}, {3.6916918657321568`*^9, 
+   3.691692000055911*^9}, 3.691692037767359*^9, {3.6916968198093967`*^9, 
+   3.691696828432233*^9}, {3.691696866049502*^9, 3.691696876002838*^9}, {
+   3.691697448143045*^9, 3.691697450060754*^9}, {3.691698441982704*^9, 
+   3.691698449392152*^9}, 3.6916987260928373`*^9, {3.691698789716948*^9, 
+   3.691698793691825*^9}, {3.691699992073802*^9, 3.691700013303595*^9}, {
+   3.691700047221971*^9, 3.691700079996254*^9}, {3.691700399886589*^9, 
+   3.691700428999136*^9}, 3.691700804161604*^9, 3.6917009353888483`*^9, {
+   3.691701351975751*^9, 3.691701369638299*^9}, {3.6917014883701267`*^9, 
+   3.691701510245738*^9}, {3.691701758135697*^9, 3.691701823230007*^9}, {
+   3.691701877373101*^9, 3.691701889305971*^9}, {3.691702064899274*^9, 
+   3.691702144788375*^9}, {3.691702208491086*^9, 3.691702242845152*^9}, {
+   3.691702441731718*^9, 3.6917024609153*^9}, {3.691702608706099*^9, 
+   3.691702627814026*^9}, {3.691702814857513*^9, 3.6917028478114367`*^9}, {
+   3.69170296665366*^9, 3.6917029667966433`*^9}, 3.691703214638547*^9, {
+   3.69170338965217*^9, 3.691703408029749*^9}, {3.691703759969933*^9, 
+   3.691703910050005*^9}, {3.691704357315938*^9, 3.6917043629283247`*^9}, {
+   3.691704447481073*^9, 3.691704453551902*^9}, {3.691704665206128*^9, 
+   3.691704738393385*^9}, {3.6917047999154243`*^9, 3.69170481539505*^9}, {
+   3.6917049164256496`*^9, 3.6917049283960733`*^9}, {3.691705411845625*^9, 
+   3.691705435424432*^9}, {3.691706024312407*^9, 3.691706041410658*^9}, {
+   3.691706153025526*^9, 3.691706221979604*^9}, {3.6917063796902523`*^9, 
+   3.691706386177301*^9}, {3.691706485400827*^9, 3.6917064918957376`*^9}, {
+   3.691706552696*^9, 3.6917065970346947`*^9}, {3.691707045181465*^9, 
+   3.6917070952812977`*^9}, {3.691707357298399*^9, 3.691707366065022*^9}, {
+   3.6917074328103523`*^9, 3.691707519884851*^9}, 3.691707773869886*^9, {
+   3.6917078376290216`*^9, 3.691707846090167*^9}, {3.6917079194261503`*^9, 
+   3.691707960389214*^9}, {3.691708018393982*^9, 3.691708179234384*^9}, {
+   3.691708255101763*^9, 3.6917082753851423`*^9}, {3.691708310553988*^9, 
+   3.691708485330987*^9}, {3.691708516999538*^9, 3.691708527577738*^9}, {
+   3.691708574809896*^9, 3.691708808128983*^9}, {3.691708879399397*^9, 
+   3.691708881109161*^9}, {3.691708970608492*^9, 3.6917089825845613`*^9}, {
+   3.691709032735952*^9, 3.6917090451053057`*^9}, 3.69170909584676*^9, {
+   3.691709156997154*^9, 3.6917092328903427`*^9}, {3.691709283549612*^9, 
+   3.691709329577991*^9}, 3.691709597661519*^9, {3.691709917249571*^9, 
+   3.691709932840454*^9}, {3.691710099591851*^9, 3.69171016081443*^9}, {
+   3.6917813061747828`*^9, 3.691781336135394*^9}, {3.691781905893354*^9, 
+   3.6917819498885107`*^9}, {3.691782059373178*^9, 3.691782101720005*^9}, {
+   3.69178242980579*^9, 3.691782430658231*^9}, {3.691782577391872*^9, 
+   3.69178282845609*^9}, {3.6917828784155617`*^9, 3.69178296958751*^9}, {
+   3.691784157046929*^9, 3.691784171701013*^9}, {3.691784208250478*^9, 
+   3.691784268494217*^9}, {3.691784377345928*^9, 3.691784454260182*^9}, {
+   3.691785861241477*^9, 3.691785892399961*^9}, {3.6917859914297113`*^9, 
+   3.691786133609276*^9}, {3.691786761512298*^9, 3.691786769044132*^9}, {
+   3.69178680428154*^9, 3.6917868092656927`*^9}, {3.6917868457998743`*^9, 
+   3.691786876915346*^9}, {3.691786930445755*^9, 3.691787109905755*^9}, 
+   3.691787146076046*^9, {3.6917918903637133`*^9, 3.691791895028263*^9}, 
+   3.691864138465217*^9, {3.691864178447845*^9, 3.6918642614240294`*^9}, {
+   3.691864314280423*^9, 3.691864332848571*^9}, {3.6918643925883303`*^9, 
+   3.69186458447999*^9}, {3.6918855955672197`*^9, 3.691885609795807*^9}, {
+   3.691960235880624*^9, 3.691960277660583*^9}, {3.6919633488443203`*^9, 
+   3.6919634151352453`*^9}, 3.691963509289929*^9, {3.6919635560800323`*^9, 
+   3.691963849368895*^9}, {3.691963945335637*^9, 3.691963996758793*^9}, {
+   3.691964040598074*^9, 3.6919642480971746`*^9}, {3.691964299295141*^9, 
+   3.691964317756186*^9}, {3.6919643572271137`*^9, 3.691964371351062*^9}, {
+   3.691964462078627*^9, 3.691964469010771*^9}, {3.691964505473982*^9, 
+   3.691964551401105*^9}, {3.691964700147852*^9, 3.691964714270238*^9}, 
+   3.691964765354154*^9, {3.691964831982633*^9, 3.691964890580367*^9}, {
+   3.691964972427051*^9, 3.691965008273418*^9}, 3.691965390142434*^9, {
+   3.691965535683763*^9, 3.691965537218883*^9}, {3.6919656103465548`*^9, 
+   3.691965610471467*^9}, {3.691970494033272*^9, 3.691970501139757*^9}, {
+   3.691970547479467*^9, 3.691970586393201*^9}, {3.6919719830241423`*^9, 
+   3.691972033613818*^9}, {3.691972068593614*^9, 3.691972125039908*^9}, {
+   3.6919721823621273`*^9, 3.6919721904818363`*^9}, 3.69197230310515*^9, 
+   3.691972345728516*^9, {3.692447649289019*^9, 3.692447652326179*^9}, {
+   3.6924477230219927`*^9, 3.692447748856415*^9}, {3.6924479438283377`*^9, 
+   3.6924479687534647`*^9}, 3.692448006317865*^9, {3.6924480427328863`*^9, 
+   3.692448048644742*^9}, {3.692448154198873*^9, 3.6924482067484818`*^9}, {
+   3.6924482583554783`*^9, 3.6924483266802597`*^9}, {3.692448401142524*^9, 
+   3.6924484856254063`*^9}, {3.692448538640883*^9, 3.692448600442494*^9}, {
+   3.6924488015291157`*^9, 3.6924488221622334`*^9}, {3.692448917003429*^9, 
+   3.69244892148201*^9}, {3.692448962634309*^9, 3.692448966752129*^9}, {
+   3.692450329598258*^9, 3.692450332585291*^9}, {3.692450431174185*^9, 
+   3.692450432339942*^9}, {3.692450633974704*^9, 3.692450653681872*^9}, {
+   3.692453219042562*^9, 3.692453221491519*^9}, {3.692454068130411*^9, 
+   3.692454161563936*^9}, {3.692454199295353*^9, 3.692454203843739*^9}, {
+   3.6924575209524317`*^9, 3.692457533686472*^9}, {3.692465120733327*^9, 
+   3.6924651376721373`*^9}, 3.69246519779385*^9, {3.6924656719409323`*^9, 
+   3.692465675259336*^9}, {3.6924666409955397`*^9, 3.6924666574915943`*^9}, {
+   3.692466690692377*^9, 3.692466746394637*^9}, {3.69246796051506*^9, 
+   3.692468000105192*^9}, {3.6924680940805283`*^9, 3.692468103394847*^9}, {
+   3.692468209964491*^9, 3.692468224062688*^9}, {3.692485361788637*^9, 
+   3.692485379173468*^9}, {3.692552181343501*^9, 3.692552184742218*^9}, {
+   3.692552228991523*^9, 3.692552229606148*^9}, 3.692552311888756*^9, {
+   3.692552657818406*^9, 3.692552685619437*^9}, 3.692552720082074*^9, {
+   3.692553292259109*^9, 3.6925532946740313`*^9}, 3.692553825066975*^9, {
+   3.6925586614601297`*^9, 3.6925587042893333`*^9}, {3.692561916073111*^9, 
+   3.692561928257863*^9}, 3.692562208177814*^9, {3.692562735792757*^9, 
+   3.692562736287281*^9}, 3.6925628694393883`*^9, {3.692563056947425*^9, 
+   3.692563063850909*^9}, {3.6925633009036694`*^9, 3.692563338964587*^9}, 
+   3.692564592357628*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["6 List Operations and Support", "Chapter",
+ CellChangeTimes->{{3.691074300266736*^9, 3.691074310799621*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClifToListG", "[", "clif_", "]"}], ":=", "  ", "\n", 
+   RowBox[{"(*", "\n", "\t", 
+    RowBox[{
+     RowBox[{"INPUT", ":", " ", 
+      RowBox[{"A", " ", "clif", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"i", ".", "e"}], ",", " ", 
+         RowBox[{"a", " ", "multivector"}]}], ")"}], "\n", "\t", "PROCESS"}], 
+      ":", " ", 
+      RowBox[{
+      "If", " ", "clif", " ", "has", " ", "at", " ", "least", " ", "2", " ", 
+       "terms"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "it", " ", "has", " ", "head", " ", "\"\<plus\>\"", " ", "and", " ", 
+       "can", " ", "use", " ", "Plus"}], "\[Rule]", 
+      RowBox[{
+      "List", " ", "\n", "\t\t\t ", "Otherwise", " ", "just", " ", "make", 
+       " ", "a", " ", "list", " ", "with", " ", "the", " ", "one", " ", 
+       "term", "\n", "\t", 
+       RowBox[{"OUTPUT", ":", "  ", "clifList"}]}]}], ",", " ", 
+     RowBox[{
+     "a", " ", "list", " ", "of", " ", "the", " ", "separate", " ", 
+      "elements", " ", "of", " ", "the", " ", "clif", " ", "\n", "\t\t\t ", 
+      "Constant", " ", "terms", " ", 
+      RowBox[{"(", 
+       RowBox[{"if", " ", "any"}], ")"}], " ", "are", " ", "grouped", " ", 
+      "into", " ", "1", "st", " ", "term", " ", "of", " ", "list"}]}], "  ", 
+    "*)"}], "\n", "\n", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "clif1", ",", "const", ",", "clifList", ",", "clifFree", ",", 
+       "clifFreeList"}], "}"}], ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"clif1", "=", 
+       RowBox[{"Expand", "[", "clif", "]"}]}], ";", "\n", "\t", 
+      RowBox[{"const", "=", 
+       RowBox[{"ConstantG", "[", "clif1", "]"}]}], ";", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Constant", " ", "term", 
+        RowBox[{"(", "s", ")"}]}], " ", "*)"}], "\n", "\n", "\t", 
+      RowBox[{"clifFree", "=", 
+       RowBox[{"clif1", "-", "const"}]}], ";", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Non", "-", 
+         RowBox[{"constant", " ", "terms"}]}], ",", 
+        RowBox[{"if", " ", "any"}]}], " ", "*)"}], "\n", "\t", 
+      RowBox[{"clifFreeList", " ", "=", " ", 
+       RowBox[{"clifFree", " ", "/.", " ", 
+        RowBox[{"Plus", "\[Rule]", "List"}]}]}], ";", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Convert", " ", "clif", " ", "sans", " ", "constant", 
+        RowBox[{"(", "s", ")"}], " ", "to", " ", "a", " ", "list"}], " ", 
+       "*)"}], "\n", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"ListQ", "[", "clifFreeList", "]"}], ",", "Null", ",", 
+        RowBox[{"clifFreeList", "=", 
+         RowBox[{"List", "[", "clifFree", " ", "]"}]}]}], " ", "]"}], ";", 
+      "\n", "\t\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Plus", " ", "\[Rule]", " ", 
+        RowBox[{"List", " ", 
+         RowBox[{"doesn", "'"}], "t", " ", "work", " ", "if", " ", "there", 
+         " ", "is", " ", "just", " ", "one", " ", "term"}]}], " ", "*)"}], 
+      "\n", "\n", "\t", 
+      RowBox[{"clifList", "=", "clifFreeList"}], ";", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Initialize", " ", "list"}], " ", "*)"}], "\n", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"const", "===", "0"}], ",", "Null", ",", 
+        RowBox[{"PrependTo", "[", 
+         RowBox[{"clifList", ",", "const"}], "]"}]}], "]"}], ";", "\n", "\n", 
+      "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"clif1", "\[Equal]", "const"}], ",", 
+        RowBox[{"clifList", "=", 
+         RowBox[{"List", "[", "const", "]"}]}]}], "]"}], ";", "\n", "\n", 
+      "\t", "clifList"}]}], "\n", "]"}]}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "ClifToListG"}], "  ", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ConstantToListZeroG", "[", 
+    RowBox[{"clif_", ",", "list_"}], "]"}], ":=", " ", 
+   RowBox[{"(*", "\n", "\t", 
+    RowBox[{
+     RowBox[{"INPUT", ":", " ", 
+      RowBox[{
+       RowBox[{
+       "Clif", " ", "and", " ", "a", " ", "list", " ", "of", " ", "clif", " ",
+         "subscripts", " ", "or", " ", "e"}], "-", 
+       RowBox[{"subscripts", "\n", "\t", "OUTPUT"}]}], ":", " ", "list1"}], 
+     " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "clif", " ", "list", " ", "with", " ", "1", "st", " ", "term", " ", 
+        "replaced", " ", "by", " ", 
+        RowBox[{"{", "0", "}"}], " ", "if", " ", "either", " ", "constant", 
+        " ", "is", " ", "non"}], "-", 
+       RowBox[{"zero", " ", "or", " ", "Clif"}]}], " ", "=", " ", "0"}]}], 
+    "\n", "  ", "*)"}], "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "list1", "}"}], ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ConstantG", "[", "clif", "]"}], "===", "0"}], ",", 
+        RowBox[{"list1", "=", "list"}], ",", 
+        RowBox[{"list1", "=", 
+         RowBox[{"ReplacePart", "[", 
+          RowBox[{"list", ",", 
+           RowBox[{"1", "\[Rule]", 
+            RowBox[{"{", "0", "}"}]}]}], "]"}]}]}], "]"}], ";", "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"clif", "===", "0"}], ",", 
+        RowBox[{"list1", "=", 
+         RowBox[{"{", 
+          RowBox[{"{", "0", "}"}], "}"}]}]}], "]"}], ";", "\n", "\t", 
+      "list1"}]}], "]"}]}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Sends", " ", "constant", " ", "term", " ", "of", " ", "list"}], 
+    ",", " ", 
+    RowBox[{"if", " ", "any"}], ",", " ", 
+    RowBox[{"to", " ", 
+     RowBox[{"{", "0", "}"}]}]}], " ", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ConstantToZeroG", "[", 
+    RowBox[{"clif_", ",", "list_"}], "]"}], ":=", "  ", 
+   RowBox[{"(*", "\n", "\t", 
+    RowBox[{
+     RowBox[{"INPUT", ":", " ", 
+      RowBox[{
+       RowBox[{
+       "Clif", " ", "and", " ", "a", " ", "list", " ", "of", " ", "clif", " ",
+         "subscripts", " ", "or", " ", "e"}], "-", 
+       RowBox[{"subscripts", "\n", "\t", "OUTPUT"}]}], ":", " ", "list1"}], 
+     " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+      "Clif", " ", "list", " ", "with", " ", "1", "st", " ", "term", " ", 
+       "replaced", " ", "by", " ", "0", " ", "if", " ", "constant", " ", "is",
+        " ", "non"}], "-", "zero"}]}], "  ", "*)"}], "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "list1", "}"}], ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ConstantG", "[", "clif", "]"}], "===", "0"}], ",", 
+        RowBox[{"list1", "=", "list"}], ",", 
+        RowBox[{"list1", "=", 
+         RowBox[{"ReplacePart", "[", 
+          RowBox[{"list", ",", 
+           RowBox[{"1", "\[Rule]", "0"}]}], "]"}]}]}], "]"}], ";", "\n", "\t",
+       "list1"}]}], "]"}]}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Sends", " ", "constant", " ", "term", " ", "of", " ", "list"}], 
+    ",", " ", 
+    RowBox[{"if", " ", "any"}], ",", " ", 
+    RowBox[{"to", " ", "0"}]}], " ", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"eSubscriptListG", "[", "clif_", "]"}], ":=", " ", 
+   RowBox[{"(*", 
+    RowBox[{"\n", "\t", 
+     RowBox[{
+      RowBox[{"INPUT", ":", " ", 
+       RowBox[{"A", " ", "clif", "\n", "\t", "PROCESS"}], ":", " ", 
+       RowBox[{
+       "Called", " ", "by", " ", "PrdtBladeG", " ", "and", " ", "GradeListG", 
+        "\n", "\t\t\t ", "First"}]}], ",", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "clif", " ", "is", " ", "converted", " ", "to", " ", "a", " ", 
+           "list", " ", "of", " ", "its", " ", "terms", "\n", "\t\t\t ", 
+           "Then", " ", "products", " ", 
+           SubscriptBox["e", "i"], 
+           SubscriptBox["e", "j"], 
+           SubscriptBox["e", "k"]}], "..."}], " ", "are", " ", "replaced", 
+         " ", "by", " ", 
+         SubscriptBox["e", 
+          RowBox[{"i", ",", "j", ",", "k", ",", "..."}]], " ", "\n", 
+         "\t\t\t ", "Then", " ", "the", " ", "subscripts", " ", "of", " ", 
+         "each", " ", "e"}], "-", 
+        RowBox[{
+        "term", " ", "are", " ", "sorted", " ", "so", " ", "that", " ", 
+         "they", " ", "retain", " ", "the", " ", "natural", " ", "1"}], "-", 
+        "2", "-", 
+        RowBox[{"3", " ", "ordering", "  ", "\n", "\t", 
+         RowBox[{"OUTPUT", ":", " ", "eList"}]}]}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+           "List", " ", "of", " ", "Clif", " ", "terms", " ", "with", " ", 
+            "products", " ", 
+            SubscriptBox["e", "i"], 
+            SubscriptBox["e", "j"]}], "..."}], " ", "replace", " ", "by", " ", 
+          SubscriptBox["e", 
+           RowBox[{"i", ",", "j", ",", "..."}]], "\n", "\t\t\t", "1", "st", 
+          " ", "term", " ", "is", " ", "replaced", " ", "by", " ", 
+          RowBox[{"{", "0", "}"}], " ", "if", " ", "constant", " ", "is", " ",
+           "non"}], "-", 
+         RowBox[{"zero", " ", "\n", "\t\t\t", "eList"}]}], " ", "=", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", " ", "0", " ", "}"}], " ", "if", " ", "Clif"}], " ", 
+         "=", " ", 
+         RowBox[{
+          RowBox[{"0", "\n", "\t\t\t", 
+           RowBox[{"Example", ":", " ", 
+            RowBox[{"5", " ", "+", " ", 
+             RowBox[{"3", " ", 
+              SubscriptBox["e", "1"], 
+              SubscriptBox["e", "2"]}]}]}]}], " ", "\[Rule]", " ", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", " ", 
+            SubscriptBox["e", 
+             RowBox[{"1", ",", "2"}]]}]}]}]}]}]}]}], ")"}], "  ", "*)"}], 
+   "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"clifList", ",", "eList"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"clifList", "=", 
+       RowBox[{
+        RowBox[{"ClifToListG", "[", "clif", "]"}], "/.", 
+        RowBox[{
+         SuperscriptBox[
+          SubscriptBox["e", "u_"], "2"], "\[Rule]", 
+         SubscriptBox["e", 
+          RowBox[{"u", ",", "u"}]]}]}]}], ";", " ", "\n", "\t\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Reduce", " ", "square", " ", "terms"}], ",", " ", 
+        RowBox[{"if", " ", 
+         RowBox[{"any", ".", " ", 
+          RowBox[{"Example", ":", " ", 
+           RowBox[{
+            SubsuperscriptBox["e", "3", "2"], 
+            SubsuperscriptBox["e", "4", "2"], " ", "changes", " ", "to", " ", 
+            
+            SubscriptBox["e", 
+             RowBox[{"3", ",", "3"}]], " ", 
+            SubscriptBox["e", 
+             RowBox[{"4", ",", "4"}]], "  ", "\n", "\t\t\t", "Note"}], ":", 
+           " ", 
+           RowBox[{
+           "The", " ", "only", " ", "time", " ", "there", " ", "may", " ", 
+            "be", " ", "square", " ", "terms", " ", "is", " ", "during", " ", 
+            "computation", " ", "of", " ", "geometric", " ", 
+            "product"}]}]}]}]}], " ", "*)"}], "\n", "\t\t", 
+      RowBox[{"eList", "=", 
+       RowBox[{"ConstantToZeroG", "[", 
+        RowBox[{"clif", ",", 
+         RowBox[{"clifList", "\n", "\t\t\t", "//.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              SubscriptBox["e", "u__"], 
+              SubscriptBox["e", "v__"]}], "->", 
+             SubscriptBox["e", 
+              RowBox[{"u", ",", "v"}]]}], ",", 
+            RowBox[{
+             RowBox[{"w_", " ", 
+              SubscriptBox["e", "u__"]}], "\[Rule]", 
+             SubscriptBox["e", "u"]}], ",", 
+            RowBox[{
+             SubscriptBox["e", "u__"], "\[RuleDelayed]", 
+             RowBox[{"Subscript", "[", 
+              RowBox[{"e", ",", 
+               RowBox[{"Sequence", "@@", 
+                RowBox[{"Sort", "[", 
+                 RowBox[{"List", "[", "u", "]"}], "]"}]}]}], "]"}]}]}], 
+           "}"}]}]}], "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "The", " ", "repeated", " ", "replace", " ", "changes", " ", "clif",
+            " ", "list", " ", "into", " ", "a", " ", "e"}], "-", 
+          RowBox[{
+          "subscript", " ", "list", " ", "with", " ", "sorted", " ", 
+           "subscripts", "\n", "\t\t\t", "ConStantToZeroG", " ", "changees", 
+           " ", "the", " ", "1", "st", " ", "element", " ", "in", " ", "the", 
+           " ", "list", " ", "to", " ", "1", " ", "if", " ", "constant", " ", 
+           "term"}]}], " ", "\[NotEqual]", " ", 
+         RowBox[{"0", "  ", "\n", "\t\t\t", "See", " ", "OUTPUT"}]}], ",", 
+        " ", "above", ",", " ", 
+        RowBox[{"for", " ", "an", " ", "example"}]}], "  ", "*)"}], "\n", 
+      "\t\t", "eList"}]}], "\n", "\t", "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GradeListG", "[", "clif_", "]"}], ":=", "  ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"User", "'"}], "s", " ", "Clif", " ", "is", " ", 
+       SubscriptBox["c", "0"]}], " ", "+", " ", 
+      RowBox[{
+       SubscriptBox["c", "1"], " ", 
+       SubscriptBox["e", "1"]}], " ", "+", " ", 
+      RowBox[{
+       SubscriptBox["c", 
+        RowBox[{"1", ",", "2"}]], " ", 
+       SubscriptBox["e", "1"], 
+       SubscriptBox["e", "2"]}], " ", "+"}], " ", "..."}], "  ", "*)"}], "\n",
+    "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"INPUTS", ":", "\n", "\t", "clifC"}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"a", " ", "Clif", "\n", "\n", "\t", 
+        RowBox[{"PROCESS", ":", "\n", "\t", 
+         RowBox[{
+         "This", " ", "is", " ", "an", " ", "internal", " ", "function", " ", 
+          "called", " ", "by", " ", "GradePpieceG", " ", "and", " ", 
+          "ReverseG", "\n", "\t", "It", " ", "creates", " ", "a", " ", "list",
+           " ", "of", " ", "the", " ", "grades", " ", "of", " ", "the", " ", 
+          "terms", "\n", "\t", "The", " ", "process", " ", "starts", " ", 
+          "by", " ", "grabbing", " ", "the", " ", "subscript", " ", "list", 
+          " ", "using", " ", "SubscriptListG", "\n", "\t", "The", " ", 
+          "length", " ", "of", " ", 
+          SubscriptBox["e", 
+           RowBox[{"i", ",", "j", ",", "..."}]]}]}]}], " ", "=", " ", 
+       RowBox[{"1", " ", "+", " ", 
+        RowBox[{
+        "#", " ", "of", " ", "subscripts", " ", "since", " ", "base", " ", 
+         "e", " ", "is", " ", "part", " ", "of", " ", "the", " ", "length", 
+         "\n", "\t", "The", " ", "constant", " ", "term", 
+         RowBox[{"(", "s", ")"}], " ", "could", " ", "be", " ", "of", " ", 
+         "various", " ", "lengths"}]}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "so", " ", "its", " ", "grade", " ", "is", " ", "simply", " ", "set", 
+       " ", "to", " ", "zero", "\n", "\n", "\t", 
+       RowBox[{"OUTPUT", ":", "\n", "\t", "gradeList"}]}], " ", "=", " ", 
+      RowBox[{"A", " ", "list"}]}], ",", " ", 
+     RowBox[{"matching", " ", "the", " ", "ordering", " ", "of", " ", 
+      RowBox[{"ClifToListG", "[", "clif", "]"}]}], ",", " ", 
+     RowBox[{
+     "of", " ", "the", " ", "grades", " ", "of", " ", "\n", "\t\t\t\t", 
+      "each", " ", "term"}]}], "\n", "*)"}], "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"clif1", ",", "gradeList"}], "}"}], ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{"clif1", "=", 
+       RowBox[{"Expand", "[", "clif", "]"}]}], ";", "\n", "\t", 
+      RowBox[{"gradeList", "=", 
+       RowBox[{"ConstantToZeroG", "[", 
+        RowBox[{"clif1", ",", 
+         RowBox[{
+          RowBox[{"Length", "/@", 
+           RowBox[{"eSubscriptListG", "[", "clif1", "]"}]}], "-", "1"}]}], 
+        " ", "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"(*", "  ", 
+       RowBox[{
+       "List", " ", "of", " ", "grades", " ", "of", " ", "clif", " ", "terms",
+         " ", 
+        RowBox[{"(", 
+         RowBox[{"=", " ", 
+          RowBox[{
+          "number", " ", "of", " ", "subscripts", " ", "on", " ", "e", " ", 
+           "terms"}]}], ")"}], "\n", "\t\t\t", "Constant", " ", "1", "st", 
+        " ", "term", " ", 
+        RowBox[{"(", 
+         RowBox[{"if", " ", "any"}], ")"}], " ", "gets", " ", "assigned", " ",
+         "value", " ", "of", " ", "0", " \t\t", "\n", "\t\t\t", "For", " ", 
+        "other", " ", "terms", " ", "subtract", " ", "1", " ", "because", " ",
+         "Length", " ", "counts", " ", "base", " ", "e", " ", "along", " ", 
+        "with", " ", "\n", "\t\t\t\t", "subscripts"}], " ", "*)"}], "\n", 
+      "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug4", ",", 
+        RowBox[{"Print", "[", 
+         RowBox[{
+         "\"\<GradeListG: List of grades of terms of \>\"", ",", "clif1", 
+          ",", "\"\< = \>\"", ",", "gradeList"}], "]"}]}], "]"}], ";", "\n", 
+      "\n", "\t", "gradeList"}]}], "\n", "\t", "]"}]}], "     ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "GradeListG", " ", "Module"}], "  ", "*)"}],
+   "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ListToClifG", "[", "clifList_", "]"}], ":=", 
+   RowBox[{"clifList", "/.", 
+    RowBox[{"List", "\[Rule]", "Plus"}]}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SignatureG", "[", "list_", "]"}], ":=", "\n", 
+   RowBox[{"(*", "\n", "\t", 
+    RowBox[{
+     RowBox[{"INPUT", ":", " ", 
+      RowBox[{"A", " ", "list", " ", "of", " ", "integers"}]}], ",", " ", 
+     RowBox[{"letters", " ", "or", " ", "word"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "or", " ", "other", " ", "items", " ", "that", " ", "Mathematica", " ", 
+       "\n", "\t\t\t", "can", " ", "sort", " ", "by", " ", "structure", " ", 
+       "\n", "\n", "\t", 
+       RowBox[{"PROCESS", ":", "  ", 
+        RowBox[{
+         RowBox[{
+         "Find", " ", "the", " ", "list", " ", "of", " ", "permutations", " ",
+           "cycles", " ", "that", " ", "convert", " ", "this", " ", "list", 
+          " ", "to", " ", "an", " ", "ordered", " ", "one", "\n", "\t\t\t  ", 
+          "Replace", " ", "each", " ", "cycle", " ", "by", " ", "its", " ", 
+          "length", "\n", "\t\t\t  ", "Replace", " ", "even", " ", "lengths", 
+          " ", "with"}], " ", "-", 
+         RowBox[{"1", " ", "and", " ", "odd", " ", "lengths", " ", "with"}], 
+         " ", "+", 
+         RowBox[{
+          RowBox[{
+          "1", "\n", "\t\t\t  ", "The", " ", "signature", " ", "is", " ", 
+           "the", " ", "product", " ", "of", " ", "the"}], " ", 
+          "\[PlusMinus]", 
+          RowBox[{
+           RowBox[{"1", "'"}], "s", "\n", "\n", "\t", "OUTPUT"}]}]}], ":", 
+        " ", 
+        RowBox[{"The", " ", "signature", " ", "of", " ", "the", " ", 
+         RowBox[{"list", ":", "\n", "\t\t\t\t", 
+          RowBox[{"Let", " ", "n"}]}]}]}]}], " ", "=", " ", 
+      RowBox[{
+      "minimum", " ", "#", " ", "of", " ", "pairwise", " ", "permutations", 
+       " ", "required", " ", "to", " ", "put", " ", "the", " ", "list", " ", 
+       "\n", "\t\t\t\t\t", "in", " ", "order", "\n", "\t\t\t\t", 
+       RowBox[{"Note", ":", " ", 
+        RowBox[{"If", " ", "an", " ", "integer", " ", "repeats"}]}]}]}], ",", 
+     " ", 
+     RowBox[{
+      RowBox[{
+      "this", " ", "means", " ", "not", " ", "to", " ", "permute", " ", 
+       "adjacent", " ", "equal", " ", "items", "\n", "\t\t\t\t", 
+       "Signature"}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"+", "1"}], " ", "if", " ", "n", " ", "is", " ", "even", "\n",
+         "\t\t\t\t", "Signature"}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{"-", "1"}], " ", "if", " ", "n", " ", "is", " ", 
+        "odd"}]}]}]}], " ", "*)"}], "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "cycles", ",", "listOfCycles", ",", "permLength", ",", "evenOddLength", 
+       ",", "evenOddLength2", ",", "signature"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"cycles", "=", 
+       RowBox[{"FindPermutation", "[", "list", "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"(*", "  ", 
+       RowBox[{
+        RowBox[{
+        "We", " ", "desire", " ", "the", " ", "cycles", " ", "length", " ", 
+         "to", " ", "make", " ", "this", " ", "list", " ", 
+         RowBox[{"ordered", ".", "\n", "\t\t\t", "This"}], " ", "is", " ", 
+         "the", " ", "list", " ", "of", " ", "permutation", " ", "cycles", 
+         " ", "that", " ", "convert", " ", "this", " ", "list", " ", "to", 
+         " ", "an", " ", "ordered", " ", "one", "\n", "\t\t\t", 
+         RowBox[{"Note", ":", " ", "Technically"}]}], ",", " ", 
+        RowBox[{
+        "this", " ", "converts", " ", "an", " ", "ordered", " ", "list", " ", 
+         "into", " ", "this", " ", "one"}], ",", " ", 
+        RowBox[{
+        "but", " ", "the", " ", "\n", "\t\t\t\t", "result", " ", "is", " ", 
+         "the", " ", "same"}]}], "\n", "\t\t ", "*)"}], "\n", "\t\t", 
+      RowBox[{"listOfCycles", "=", 
+       RowBox[{
+        RowBox[{"List", "@@", "cycles"}], " ", "/.", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"{", 
+             RowBox[{"{", "u__", "}"}], "}"}], "}"}], "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"{", "u", "}"}], "}"}]}], ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "u__", "}"}], ",", "v__"}], "}"}], "}"}], 
+           "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "u", "}"}], ",", "v"}], "}"}]}]}], "}"}]}]}], ";", 
+      "\n", "\t\t\t", 
+      RowBox[{"(*", "  ", 
+       RowBox[{"Replace", " ", "head", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"i", ".", "e", "."}], ",", " ", "\"\<Cycles\>\""}], ")"}], 
+        " ", "with", " ", "\"\<List\>\"", "\n", "\t\t\t\t", "Then", " ", 
+        "reduce", " ", "one", " ", "level", " ", "of", " ", "braces"}], " ", 
+       "*)"}], "\n", "\t\t", 
+      RowBox[{"permLength", "=", 
+       RowBox[{
+        RowBox[{"Length", "/@", "listOfCycles"}], "/.", " ", 
+        RowBox[{
+         RowBox[{"u_", "/;", 
+          RowBox[{"u", "\[Equal]", "0"}]}], "\[Rule]", "1"}]}]}], ";", "\n", 
+      "\t\t\t", 
+      RowBox[{"(*", "  ", 
+       RowBox[{
+       "Find", " ", "the", " ", "lengths", " ", "of", " ", "the", " ", 
+        "cycles", " ", "in", " ", "the", " ", "list", "\n", "\t\t\t\t", 
+        RowBox[{"Note", ":", " ", 
+         RowBox[{
+         "null", " ", "cycles", " ", "map", " ", "to", " ", "zero", " ", "so",
+           " ", "we", " ", "change", " ", "them", " ", "to", " ", "1.", " ", 
+          "See", " ", "example"}]}]}], "   ", "*)"}], "\n", "\t\t", 
+      RowBox[{"evenOddLength", "=", 
+       RowBox[{
+        RowBox[{"2", 
+         RowBox[{"Mod", "[", 
+          RowBox[{"permLength", ",", "2"}], "]"}]}], "-", "1"}]}], ";", "\n", 
+      "\t\t\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Map", " ", "even", " ", "length", " ", "cycles", " ", "to"}],
+         " ", "-", 
+        RowBox[{
+        "1", " ", "and", " ", "odd", " ", "length", " ", "cycles", " ", 
+         "to"}], " ", "+", "1"}], " ", "*)"}], "\n", "\t\t", 
+      RowBox[{"signature", "=", 
+       RowBox[{"evenOddLength", "/.", " ", 
+        RowBox[{"List", "\[Rule]", "Times"}]}]}], ";", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{
+        "Remove", " ", "one", " ", "level", " ", "of", " ", "brackets", " ", 
+         "\n", "\n", "\t\t", 
+         RowBox[{"Ex", " ", ".", "   ", "list"}]}], "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", " ", "1", ",", " ", "2", ",", " ", "4"}], " ", 
+           "}"}], "   ", "This", " ", "list", " ", "shows", " ", "that", " ", 
+          "null", " ", "cycles", " ", "have", " ", "to", " ", "be", " ", 
+          "handled", "\n", "\t\t\t\t", "cycles"}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Cycles", "[", 
+            RowBox[{"{", "}"}], "]"}], "\n", "\t\t\t\t", "listOfCycles"}], 
+          " ", "=", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", " ", 
+             RowBox[{"{", " ", "}"}], " ", "}"}], "\n", "\t\t\t\t", 
+            "permLength"}], " ", "=", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", "1", "}"}], "\n", "\t\t\t\t", "evenOddLength"}], 
+            " ", "=", " ", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"{", "1", "}"}], "\n", "\t\t\t\t", "signature"}], " ", 
+             "=", " ", 
+             RowBox[{
+              RowBox[{"1", " ", "\n", "\n", "\t\t", "Ex", "      ", "list"}], 
+              "=", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                 "2", ",", " ", "3", ",", " ", "4", ",", " ", "1", ",", " ", 
+                  "2"}], " ", "}"}], "  ", "\n", "\t\t\t\t\t", "This", " ", 
+                "list", " ", "shows", " ", "that", " ", "a", " ", "simple", 
+                " ", "product", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SubscriptBox["e", "2"], 
+                  SubscriptBox["e", "3"], 
+                  RowBox[{
+                   SubscriptBox["e", "4"], "\[Wedge]", 
+                   SubscriptBox["e", "1"]}], 
+                  SubscriptBox["e", "2"]}], ")"}], "can", " ", "have", " ", 
+                "more", " ", "than", " ", "1", " ", "cycle", "\n", "\t\t\t\t",
+                 "cycles"}], " ", "=", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Cycles", "[", " ", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", " ", "4", ",", " ", "2"}], "}"}], ",", 
+                   " ", 
+                   RowBox[{"{", " ", 
+                    RowBox[{"3", ",", " ", "5"}], "}"}]}], " ", "]"}], "\n", 
+                 "\t\t\t\t", "listOfCycles"}], " ", "=", " ", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"{", " ", 
+                   RowBox[{
+                    RowBox[{"{", " ", 
+                    RowBox[{"1", ",", " ", "4", ",", " ", "2"}], "}"}], ",", 
+                    " ", 
+                    RowBox[{"{", " ", 
+                    RowBox[{"3", ",", " ", "5"}], "}"}]}], " ", "}"}], "\n", 
+                  "\t\t\t\t", "permLength"}], " ", "=", " ", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}], "\n", "\t\t\t\t", 
+                   "evenOddLength"}], " ", "=", " ", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], "\n", "\t\t\t\t", 
+                    "signature"}], " ", "=", " ", 
+                   RowBox[{"-", "1"}]}]}]}]}]}]}]}]}]}]}]}]}], " ", "\n", 
+       "*)"}], "\t", "\n", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug3", ",", "\n", "\t\t\t", 
+        RowBox[{
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<SignatureG: List of Product Blade = \>\"", ",", "list", ",", 
+           "\"\<,  Cycles of list: \>\"", ",", "cycles"}], "]"}], ";", "\n", 
+         "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Cycles sans head (Cycles): \>\"", ",", "listOfCycles", ",", 
+           "\"\<, Length of cycles: \>\"", ",", "permLength"}], "]"}], ";", 
+         "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Even cycle -> -1, odd -> +1: \>\"", ",", "evenOddLength", ",", 
+           "\"\<, Signature = Product of \[PlusMinus]1's: \>\"", ",", "\n", 
+           "\t\t\t\t", "signature"}], "]"}]}]}], "\t\t", "\n", "\t\t", "]"}], 
+      ";", "\n", "\t\t", "signature"}]}], "\t\t", "\n", "]"}]}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "SignatureG", " ", "Module"}], " ", "*)"}], 
+  "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"SubscriptListG", "[", "clif_", "]"}], ":=", "  ", 
+  RowBox[{"(*", 
+   RowBox[{"\n", "\t", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"INPUT", ":", " ", 
+       RowBox[{"A", " ", "CLIF", "\n", "\t", "OUTPUT"}], ":", " ", 
+       "subList"}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+       "List", " ", "of", " ", "the", " ", "subscripts", " ", "of", " ", 
+        "the", " ", "e"}], "-", "terms"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"with", " ", "a", " ", "1", "st", " ", "\n", "\t\t\t", "term"}],
+       " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", "0", "}"}], " ", "if", " ", "constant", " ", "is", " ", 
+         "non"}], "-", 
+        RowBox[{"zero", ".", " ", 
+         RowBox[{"Example", ":", " ", 
+          RowBox[{"5", " ", "+", " ", 
+           RowBox[{"3", " ", 
+            SubscriptBox["e", "1"], 
+            SubscriptBox["e", "2"]}]}]}]}]}], " ", "\[Rule]", " ", 
+       RowBox[{"{", " ", 
+        RowBox[{
+         RowBox[{"{", "0", "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2"}], "}"}]}], " "}]}]}]}], ")"}], " ", "*)"}], 
+  "\n", "\n", "\t", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "subList", "}"}], ",", "\n", "\t\t", 
+    RowBox[{
+     RowBox[{"subList", "=", 
+      RowBox[{"ConstantToListZeroG", "[", 
+       RowBox[{"clif", ",", 
+        RowBox[{
+         RowBox[{"eSubscriptListG", "[", "clif", "]"}], "/.", 
+         RowBox[{
+          SubscriptBox["e", "u__"], "\[Rule]", 
+          RowBox[{"{", "u", "}"}]}]}]}], "]"}]}], ";", "\n", "\t\t", 
+     "subList"}]}], "\n", "\t\t", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{" ", 
+       RowBox[{"The", " ", "/.", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"replace", " ", "all", " ", "changes", " ", "e"}], "-", 
+          RowBox[{
+          "subscript", " ", "list", " ", "into", " ", "a", " ", "list", " ", 
+           "of", " ", "subscripts", "\n", "\t\t\t", "ConstantToListZero", " ",
+            "changes", " ", "1", "st", " ", "element", " ", "of", " ", "list",
+            " ", "to", " ", 
+           RowBox[{"{", "0", "}"}], " ", "if", " ", "constant", " ", 
+           "term"}]}], " ", "\[NotEqual]", " ", "0"}]}], ")"}], " ", "\n", 
+      "\t\t\t", 
+      RowBox[{"Ex", ".", " ", 
+       RowBox[{"{", " ", 
+        RowBox[{
+         RowBox[{"{", "0", "}"}], ",", " ", 
+         RowBox[{"{", "1", "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "3"}], "}"}]}], " ", "}"}]}], " ", "corresponds", 
+      " ", "to", " ", "5"}], " ", "+", " ", 
+     SubscriptBox["e", "1"], " ", "-", " ", 
+     RowBox[{"3", 
+      SubscriptBox["e", "1"], 
+      SubscriptBox["e", "3"]}]}], "  ", "*)"}], "\n", "\t", "]"}]}]}], "Code",\
+
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691072666710598*^9, 
+   3.6910730313977747`*^9, 3.691073072029634*^9, 3.691073593702551*^9, 
+   3.691073646277369*^9, 3.691073715183025*^9, 3.691073841869029*^9, 
+   3.691073879917136*^9, {3.6910742437762337`*^9, 3.691074246906845*^9}, {
+   3.691074290856971*^9, 3.691074316518396*^9}, {3.6910744297152367`*^9, 
+   3.691074443783609*^9}, {3.691162438368594*^9, 3.691162439095743*^9}, {
+   3.691170784724188*^9, 3.691170784737091*^9}, {3.691172107600281*^9, 
+   3.69117210875049*^9}, {3.69117217676159*^9, 3.69117217756246*^9}, {
+   3.691186175811736*^9, 3.691186240509141*^9}, {3.6911863220181017`*^9, 
+   3.691186342619071*^9}, {3.691186860551017*^9, 3.691186885817286*^9}, {
+   3.6911869374333963`*^9, 3.691186957803356*^9}, {3.691187267589674*^9, 
+   3.691187269091288*^9}, 3.6911876076994667`*^9, 3.691194078836825*^9, {
+   3.69123905595233*^9, 3.691239088063758*^9}, {3.6912396252805967`*^9, 
+   3.6912396595078773`*^9}, {3.6913468213348417`*^9, 3.691346822963201*^9}, 
+   3.69134686343079*^9, {3.6919605972351103`*^9, 3.6919605985651608`*^9}, {
+   3.691964605845388*^9, 3.691964662916381*^9}, 3.691964821186797*^9, {
+   3.691965053055522*^9, 3.691965054206366*^9}, {3.691966447426881*^9, 
+   3.691966484567197*^9}, {3.691967520794083*^9, 3.6919675585617228`*^9}, {
+   3.6925522526829567`*^9, 3.692552262554408*^9}, {3.692552773240591*^9, 
+   3.692552773991585*^9}, {3.692552804201651*^9, 3.69255280513661*^9}, {
+   3.692558758533824*^9, 3.692558827881638*^9}, 3.692564762791512*^9, 
+   3.6925666114553967`*^9, {3.6925672580099583`*^9, 3.692567393184073*^9}, {
+   3.692567425965393*^9, 3.6925676479457617`*^9}, 3.692567720117198*^9, {
+   3.692567896272674*^9, 3.69256790928052*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "7 Secondary Geometric Algebra Operations:\n",
+ StyleBox["\tHodge Dual, Norm, Gorm, Reverse, Inverse", "Subchapter"]
+}], "Chapter",
+ CellChangeTimes->{{3.6910744651461782`*^9, 3.691074524520515*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"GormG", "[", "clif_", "]"}], ":=", 
+   RowBox[{"DotPrdtG", "[", 
+    RowBox[{
+     RowBox[{"ReverseG", "[", "clif", "]"}], ",", "clif"}], "]"}]}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"HodgeDualG", "[", 
+    RowBox[{"clif_", ",", "n_"}], "]"}], ":=", "  ", 
+   RowBox[{"(*", "\n", "\n", "\t", 
+    RowBox[{
+     RowBox[{"INPUTS", ":", " ", 
+      RowBox[{
+      "A", " ", "clif", " ", "and", " ", "space", " ", "dimension", " ", "n", 
+       "\n", "\n", "\t", "METHOD"}], ":", " ", 
+      RowBox[{"The", " ", "Hodge", " ", "Dual", " ", 
+       RowBox[{"(", 
+        RowBox[{"or", " ", "Hodge", " ", "Star"}], ")"}], " ", "of", " ", "a",
+        " ", "clif"}]}], ",", " ", "clif2", ",", " ", 
+     RowBox[{
+      RowBox[{"of", " ", "grade", " ", "p"}], " ", "\[LessEqual]", 
+      RowBox[{
+      "n", " ", "is", " ", "the", " ", "unique", " ", "\n", "\t", "clif"}]}], 
+     ",", " ", 
+     RowBox[{"\[Star]", "clif2"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"that", " ", "satisfies", "\n", "\t\t", 
+        RowBox[{"clif1", " ", "\[Wedge]"}]}], " ", "\[Star]", "clif2"}], " ", 
+      "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", " ", 
+         RowBox[{"clif1", " ", "\[CenterDot]", " ", "clif2"}], ")"}], " ", 
+        "\[SmallCircle]", " ", "i"}], "  ", "for", " ", "every", " ", "clif1",
+        " ", "of", " ", "same", " ", "grade", " ", "as", " ", "clif2"}]}], 
+     ",", "\n", "\t", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+         "where", " ", "i", " ", "is", " ", "the", " ", "PseudoScalar", " ", 
+          SubscriptBox["e", "1"], 
+          SubscriptBox["e", "2"]}], "..."}], 
+        SubscriptBox["e", "n"], "\n", "\t", "\n", "\t", "This", " ", 
+        "definition", " ", "extends", " ", "linearly", " ", "to", " ", "a", 
+        " ", "general", " ", "clif", " ", "of", " ", "dimension", " ", "n", 
+        " ", "which", "\n", "\t", "is", " ", "the", " ", "sum", " ", "of", 
+        " ", "clifs", " ", "of", " ", "grades", " ", "0"}], " ", "-", " ", 
+       RowBox[{
+        RowBox[{"n", ".", "\n", "\t", "\n", "\t", "This"}], " ", "package", 
+        " ", "can", " ", "be", " ", "used", " ", "to", " ", "check", " ", 
+        "that", " ", "the", " ", "following", " ", "definition", " ", 
+        "satisfies", " ", "\n", "\t", "the", " ", 
+        RowBox[{"condition", ":", "\n", "\t\t", 
+         RowBox[{"*", "clif2"}]}]}]}], " ", "=", " ", 
+      RowBox[{
+       RowBox[{"clif2", " ", "\[SmallCircle]", " ", "i"}], "\n", "\t", "\n", 
+       "\t", 
+       RowBox[{"Note", ":", " ", 
+        RowBox[{"i", " ", "\[SmallCircle]", " ", "clif2"}]}]}]}], ",", " ", 
+     RowBox[{
+      SuperscriptBox["i", 
+       RowBox[{"-", "1", " "}]], "\[SmallCircle]", " ", "clif2"}], ",", " ", 
+     RowBox[{"and", " ", 
+      RowBox[{"clif2", " ", "\[SmallCircle]", " ", 
+       SuperscriptBox["i", 
+        RowBox[{"-", "1"}]]}], " ", "all", " ", "fail", " ", "to", " ", 
+      "satisfy", " ", "this", " ", "condition", "\n", "\n", "\t", 
+      RowBox[{"OUTPUT", ":", " ", 
+       RowBox[{
+       "The", " ", "Hodge", " ", "Dual", " ", "of", " ", "clif"}]}]}]}], "  ",
+     "*)"}], "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"i", ",", "hodge"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"i", "=", 
+       RowBox[{"PseudoScalarG", "[", "n", "]"}]}], ";", "  ", 
+      RowBox[{"(*", " ", "PseudoScalar", " ", "*)"}], "\n", "\t\t", 
+      RowBox[{"hodge", "=", 
+       RowBox[{"clif", "\[SmallCircle]", "i"}]}], ";", "\n", "\t\t", 
+      "hodge"}]}], "\n", "\t", "]"}]}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "HodgeDualG"}], "  ", "*)"}], "\n"}], "\n", 
+
+ RowBox[{
+  RowBox[{
+   RowBox[{"HodgeDual2G", "[", 
+    RowBox[{"clif_", ",", "n_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"i", ",", "hodge"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"i", "=", 
+       RowBox[{"PseudoScalarG", "[", "n", "]"}]}], ";", 
+      RowBox[{"hodge", "=", 
+       RowBox[{"clif", "\[SmallCircle]", 
+        RowBox[{"InverseG", "[", "i", "]"}]}]}], ";", "hodge"}]}], "]"}]}], 
+  " ", "\n", "\t", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Alternate", " ", "version"}], " ", "*)"}], "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InverseG", "[", "clif_", "]"}], ":=", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"gormClif", ",", "clifInv"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"gormClif", "=", 
+       RowBox[{"GormG", "[", "clif", "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"gormClif", "===", "0"}], "&&", 
+         RowBox[{"NumberQ", "[", "gormClif", "]"}]}], ",", "\n", "\t\t\t", 
+        RowBox[{
+         RowBox[{"clifInv", "=", "1"}], ";", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Caution: Inverse of \>\"", ",", "clif", ",", 
+           "\"\< may not exist\>\""}], "]"}]}], ",", "\n", "\t\t\t", 
+        RowBox[{"clifInv", "=", 
+         RowBox[{"CollectG", "[", 
+          RowBox[{
+           RowBox[{"ReverseG", "[", "clif", "]"}], "/", "gormClif"}], 
+          "]"}]}]}], "\n", "\t\t", "]"}], ";", "\n", "\t\t", "clifInv"}]}], 
+    "\n", "\t", "]"}]}], "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NormG", "[", "clif_", "]"}], ":=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"Abs", "[", 
+     RowBox[{"GormG", "[", "clif", "]"}], "]"}], "]"}]}], "   ", 
+  RowBox[{"(*", 
+   RowBox[{"/;", 
+    RowBox[{
+     RowBox[{"NumberQ", "[", 
+      RowBox[{"GormG", "[", "clif", "]"}], "]"}], "\[Equal]", "True"}]}], 
+   "*)"}], "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"ReverseG", "[", "clif_", "]"}], ":=", "\n", 
+  RowBox[{"(*", "\n", "\t", 
+   RowBox[{"INPUT", ":", " ", 
+    RowBox[{"A", " ", "clif", "\n", "\t", "PROCESS"}], ":", "\n", "\t\t", 
+    RowBox[{
+     RowBox[{"Use", " ", "ClifToList", " ", "to", " ", "get", " ", "clif"}], 
+     "-", 
+     RowBox[{"free", " ", "list", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"i", ".", "e", "."}], ",", " ", 
+        RowBox[{"sans", " ", "any", " ", "constant", " ", "terms"}]}], ")"}], 
+      "\n", "\t\t", "Use", " ", "GradeListG", " ", "to", " ", "get", " ", 
+      "corresponding", " ", "list", " ", "of", " ", "grades", " ", "of", " ", 
+      "terms", "\n", "\t\t", "Set", " ", "even", " ", "grades", " ", "to"}], 
+     " ", "-", 
+     RowBox[{"1", " ", "and", " ", "odd", " ", "grades", " ", "to"}], " ", 
+     "+", 
+     RowBox[{
+      RowBox[{
+      "1", "\n", "\t\t", "Take", " ", "dot", " ", "product", " ", "of"}], " ",
+       "\[PlusMinus]", 
+      RowBox[{"1", " ", "list", " ", "with", " ", "clif"}]}], "-", 
+     RowBox[{
+     "free", " ", "list", " ", "and", " ", "add", " ", "constant", " ", 
+      "term", " ", "back", " ", "in", " ", "\n", "\t", 
+      RowBox[{"OUTPUT", ":", " ", 
+       RowBox[{"The", " ", "reverse", " ", "clif"}]}]}]}]}], "\n", "*)"}], 
+  "\n", "\t", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "const", ",", "clifFreeList", ",", "gradeFreeList", ",", "plusMinusList",
+       ",", "reverseClifFree", ",", "reverseClif"}], "}"}], ",", "\n", "\n", 
+    "\t\t", 
+    RowBox[{
+     RowBox[{"const", "=", 
+      RowBox[{"ConstantG", "[", "clif", "]"}]}], ";", "\n", "\t\t", 
+     RowBox[{"clifFreeList", "=", 
+      RowBox[{"ClifToListG", "[", 
+       RowBox[{"clif", "-", "const"}], "]"}]}], ";", "\n", "\t\t", 
+     RowBox[{"gradeFreeList", "=", 
+      RowBox[{"GradeListG", "[", 
+       RowBox[{"clif", "-", "const"}], "]"}]}], ";", "\n", "\t\t", 
+     RowBox[{"plusMinusList", "=", 
+      RowBox[{"gradeFreeList", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"u_", "/;", 
+           RowBox[{"EvenQ", "[", "u", "]"}]}], "\[Rule]", 
+          RowBox[{"-", "1"}]}], ",", 
+         RowBox[{
+          RowBox[{"u_", "/;", 
+           RowBox[{"OddQ", "[", "u", "]"}]}], "->", "1"}]}], "}"}]}]}], ";", 
+     "\n", "\t\t", 
+     RowBox[{"reverseClifFree", "=", 
+      RowBox[{
+       RowBox[{"plusMinusList", " ", "clifFreeList"}], "/.", 
+       RowBox[{"List", "\[Rule]", "Plus"}]}]}], ";", "\n", "\t\t", 
+     RowBox[{"reverseClif", "=", 
+      RowBox[{"const", "+", "reverseClifFree"}]}], ";", "\n", "\n", "\t\t", 
+     RowBox[{"If", "[", 
+      RowBox[{"debug7", ",", "\n", "\t\t\t", 
+       RowBox[{
+        RowBox[{"Print", "[", 
+         RowBox[{"\"\<Grade list = \>\"", ",", "gradeFreeList"}], "]"}], ";", 
+        "\n", "\t\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{"\"\<+/- list = \>\"", ",", "plusMinusList"}], "]"}], ";", 
+        "\n", "\t\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{
+         "\"\<Reverse of non-constant = \>\"", ",", "reverseClifFree"}], 
+         "]"}], ";", "\n", "\t\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{"\"\<Reverse of clif = \>\"", ",", "reverseClif"}], 
+         "]"}]}]}], "\n", "\t\t", "]"}], ";", "\n", "\t\t", "reverseClif"}]}],
+    "\n", "\t", "]"}], 
+  RowBox[{"(*", "  ", 
+   RowBox[{"End", " ", "of", " ", "ReverseG", " ", "Module"}], "  ", 
+   "*)"}]}]}], "Code",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691072666710598*^9, 
+   3.6910730313977747`*^9, 3.691073072029634*^9, 3.691073593702551*^9, 
+   3.691073646277369*^9, 3.691073715183025*^9, 3.691073841869029*^9, 
+   3.691073879917136*^9, {3.6910742437762337`*^9, 3.691074246906845*^9}, {
+   3.691074290856971*^9, 3.691074316518396*^9}, {3.6910744297152367`*^9, 
+   3.691074443783609*^9}, 3.691074602123973*^9, 3.6910746412377787`*^9, 
+   3.691162439749679*^9, 3.6911707847484303`*^9, {3.691239783051281*^9, 
+   3.6912398212811213`*^9}, {3.691239898618672*^9, 3.691239981128207*^9}, {
+   3.691346925733223*^9, 3.69134692898641*^9}, {3.691794215825245*^9, 
+   3.691794232320211*^9}, 3.6917943056426888`*^9, 3.6924783516797247`*^9, {
+   3.692486101079296*^9, 3.6924861300656633`*^9}, {3.692486225188567*^9, 
+   3.6924862592737827`*^9}, {3.6925522732831287`*^9, 3.692552287060831*^9}, {
+   3.692552820556539*^9, 3.69255283101068*^9}, {3.692552919113789*^9, 
+   3.692552935368544*^9}, {3.6927424583977413`*^9, 3.692742465620903*^9}, {
+   3.692751683652609*^9, 3.692751688801902*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "8 Geometric Algebra Operations\n",
+ StyleBox["\tGeometric Product, Dot Product, Wedge Product, \n\tLeft \
+Contraction", "Subchapter"]
+}], "Chapter",
+ CellChangeTimes->{{3.691074731420932*^9, 3.691074785577688*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"PrdtBladeG", "[", 
+    RowBox[{
+    "blade1_", ",", "blade2_", ",", "grade1_", ",", "grade2_", ",", 
+     "blade12_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"(*", " ", "\n", "\t", 
+    RowBox[{
+     RowBox[{"INPUTS", ":", " ", 
+      RowBox[{"2", " ", "blades"}], ":", " ", 
+      RowBox[{"blade1", " ", "and", " ", "blade2", "\n", "\t", 
+       RowBox[{"PROCESS", ":", " ", 
+        RowBox[{"Used", " ", "by", " ", "LeftContraction"}]}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "DotPrdtBladeG", " ", "and", " ", "WedgePrdtBladeG", " ", "\n", "\t", 
+       RowBox[{"OUTPUT", ":", " ", "\n", "\t\t", "blade12"}]}], " ", "=", " ", 
+      RowBox[{
+      "The", " ", "geometric", " ", "product", " ", "blade", "\n", "\t\t", 
+       "grade1"}]}], ",", " ", 
+     RowBox[{"grade2", ":", " ", 
+      RowBox[{"The", " ", "input", " ", "blade", " ", "grades"}]}]}], " ", 
+    "*)"}], "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"eSubscript1", ",", "eSubscript2", ",", "dotPrdt"}], "}"}], ",",
+      "\n", "\t\t", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Example", " ", "1"}], ":", " ", "blade1"}], " ", "=", " ", 
+       RowBox[{
+        SubscriptBox["a", 
+         RowBox[{"1", ",", "2", ",", "4"}]], " ", 
+        StyleBox[
+         SubscriptBox["e", "1"],
+         FontWeight->"Plain"], 
+        StyleBox[
+         SubscriptBox["e", "2"],
+         FontWeight->"Plain"], 
+        StyleBox[
+         SubscriptBox["e", "4"],
+         FontWeight->"Plain"], 
+        StyleBox[" ",
+         FontWeight->"Plain"], 
+        StyleBox["or",
+         FontWeight->"Plain"], 
+        StyleBox[" ",
+         FontWeight->"Plain"], 
+        StyleBox["perhaps",
+         FontWeight->"Plain"], 
+        StyleBox[" ",
+         FontWeight->"Plain"], 
+        StyleBox["5",
+         FontWeight->"Plain"], 
+        SqrtBox["3"], 
+        RowBox[{"Cos", "[", 
+         FractionBox["\[Pi]", "6"], "]"}], 
+        StyleBox[
+         SubscriptBox["e", "1"],
+         FontWeight->"Plain"], 
+        StyleBox[
+         SubscriptBox["e", "2"],
+         FontWeight->"Plain"], 
+        StyleBox[
+         SubscriptBox["e", "4"],
+         FontWeight->"Plain"]}]}], 
+      StyleBox["  ",
+       FontWeight->"Plain"], 
+      StyleBox["*)",
+       FontWeight->"Plain"]}], "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"eSubscript1", "=", 
+       RowBox[{
+        RowBox[{"eSubscriptListG", "[", "blade1", "]"}], "/.", 
+        RowBox[{"List", "\[Rule]", "Plus"}]}]}], ";", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Example", " ", "1"}], ":", " ", 
+        StyleBox[
+         RowBox[{
+          SubscriptBox["e", "1"], 
+          SubscriptBox["e", "2"], 
+          SubscriptBox["e", "4"]}],
+         FontWeight->"Plain"]}], 
+       StyleBox["  ",
+        FontWeight->"Plain"], 
+       StyleBox["*)",
+        FontWeight->"Plain"]}], "\n", "\t\t", 
+      RowBox[{"grade1", "=", 
+       RowBox[{"Max", "[", 
+        RowBox[{"0", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "eSubscript1", "]"}], "-", "1"}]}], "]"}]}], 
+      ";", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Example", " ", "1"}], ":", " ", 
+         RowBox[{"3", "  ", "\n", "\t\t\t", "Note"}], ":", " ", 
+         RowBox[{
+         "Grade", " ", "of", " ", "a", " ", "constant", " ", "is", " ", "0.", 
+          " ", "We", " ", "want", " ", "grade", " ", "to", " ", "be", " ", 
+          "zero"}]}], ";", " ", 
+        RowBox[{"hence", " ", "the", " ", "Max", " ", "function"}]}], " ", 
+       "*)"}], " ", "\n", "\t", "\n", "\t\t", 
+      RowBox[{"eSubscript2", "=", 
+       RowBox[{
+        RowBox[{"eSubscriptListG", "[", "blade2", "]"}], "/.", 
+        RowBox[{"List", "\[Rule]", "Plus"}]}]}], ";", "  \t", "\n", "\t\t", 
+      RowBox[{"grade2", "=", 
+       RowBox[{"Max", "[", 
+        RowBox[{"0", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "eSubscript2", "]"}], "-", "1"}]}], "]"}]}], 
+      ";", "\n", "\t", "\n", "\t\t", 
+      RowBox[{"blade12", "=", 
+       RowBox[{"GeomPrdtG", "[", 
+        RowBox[{"blade1", ",", "blade2"}], "]"}]}], ";", "\n", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"debug6", "||", "debug9"}], ",", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<PrdtBladeG: blade1 = \>\"", ",", "blade1", ",", 
+           "\"\<,  blade2 = \>\"", ",", "blade2"}], "]"}], ";", "\n", 
+         "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<e-subscripts: \>\"", ",", "eSubscript1", ",", "\"\< and \>\"", 
+           ",", "eSubscript2"}], "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Grades: = \>\"", ",", "grade1", ",", "\"\< and \>\"", ",", 
+           "grade2"}], "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Geometric product blade = \>\"", ",", "blade12"}], 
+          "]"}]}]}], "\n", "\t\t", "]"}]}]}], "\n", "\t", "]"}]}], "\n", 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DotPrdtBladeG", "[", 
+    RowBox[{"blade1_", ",", "blade2_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "minGrade12", ",", "blade12", ",", "grade1", ",", "grade2", ",", 
+       "dotPrdt"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"grade1", "=."}], ";", 
+      RowBox[{"grade2", "=."}], ";", 
+      RowBox[{"blade12", "=."}], ";", "\n", "\t\t", 
+      RowBox[{"PrdtBladeG", "[", 
+       RowBox[{
+       "blade1", ",", "blade2", ",", "grade1", ",", "grade2", ",", 
+        "blade12"}], "]"}], ";", "\n", "\t\t", 
+      RowBox[{"minGrade12", "=", 
+       RowBox[{"Abs", "[", 
+        RowBox[{"grade2", "-", "grade1"}], "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"dotPrdt", "=", 
+       RowBox[{"GradePpieceG", "[", 
+        RowBox[{"blade12", ",", "minGrade12"}], "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug9", ",", "\n", "\t\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{
+         "\"\<DotPrdtBladeG: Dot Product is the \>\"", ",", "minGrade12", 
+          ",", "\"\<-grade piece, \>\"", ",", "dotPrdt"}], "]"}]}], "\n", 
+       "\t\t", "]"}], ";", "\n", "\t\t", "dotPrdt"}]}], "\n", "\t", "]"}]}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DotPrdtG", "[", 
+    RowBox[{"clif1_", ",", "clif2_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"INPUTS", ":", "\n", "\t\t", 
+      RowBox[{
+      "The", " ", "two", " ", "clifs", " ", "whose", " ", "dot", " ", 
+       "product", " ", "is", " ", "to", " ", "be", " ", "taken", "\n", "\n", 
+       "\t  ", "PROCESS"}], ":", "\n", "\t\t", 
+      RowBox[{
+      "Use", " ", "Outer", " ", "to", " ", "take", " ", "the", " ", "Dot", 
+       " ", "Product", " ", "of", " ", "every", " ", "term", " ", "from", " ",
+        "clif1", " ", "with", " ", "every", " ", "term", " ", "from", " ", 
+       "clif2", "\n", "\t\t", 
+       RowBox[{"Note", ":", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "every", " ", "term", " ", "of", " ", "each", " ", "clif", " ", 
+           "is", " ", "a", " ", "simple", " ", "blade", " ", "a", " ", 
+           SubscriptBox["e", "1"], 
+           SubscriptBox["e", "2"]}], "..."}], 
+         SubscriptBox["e", "n"], "\n", "\t\t", "\n", "\t  ", "OUTPUT"}], ":", 
+        "\n", "\t\t", 
+        RowBox[{
+        "The", " ", "dot", " ", "product", " ", "of", " ", "the", " ", "two", 
+         " ", "clifs"}]}]}]}], ",", " ", 
+     RowBox[{
+     "defined", " ", "as", " ", "the", " ", "sum", " ", "of", " ", "the", " ",
+       "dot", " ", "products", " ", "of", " ", "\n", "\t\t", "every", " ", 
+      "term", " ", "from", " ", "clif1", " ", "with", " ", "every", " ", 
+      "term", " ", "from", " ", "clif2"}]}], "  ", "*)"}], "\n", "\t\t", "\n",
+    "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"clifList1", ",", "clifList2", ",", "dotPrdt"}], "}"}], ",", 
+     "\n", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"clifList1", "=", 
+       RowBox[{"ClifToListG", "[", "clif1", "]"}]}], ";", 
+      RowBox[{"clifList2", "=", 
+       RowBox[{"ClifToListG", "[", "clif2", "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug9", ",", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<DotPrdtG: clif lists: \>\"", ",", "clifList1", ",", 
+           "\"\<,  \>\"", ",", "clifList2"}], "]"}]}]}], "]"}], ";", "\n", 
+      "\t\t", 
+      RowBox[{"dotPrdt", "=", 
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Outer", "[", 
+          RowBox[{"DotPrdtBladeG", ",", "clifList1", ",", "clifList2"}], 
+          "]"}], "]"}], "/.", 
+        RowBox[{"List", "\[Rule]", "Plus"}]}]}], ";", "\n", "\t\t", 
+      RowBox[{"dotPrdt", "=", 
+       RowBox[{"CollectG", "[", "dotPrdt", "]"}]}], ";", "\n", "\t\t", 
+      "dotPrdt"}]}], "\t", "\n", "\t", "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"DotPrdtG", "[", 
+   RowBox[{"u_", ",", "v_", ",", "w__"}], "]"}], ":=", 
+  RowBox[{"DotPrdtG", "[", 
+   RowBox[{
+    RowBox[{"DotPrdtG", "[", 
+     RowBox[{"u", ",", "v"}], "]"}], ",", "w"}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"DotPrdtG", "[", 
+    RowBox[{"u_", ",", "v_"}], "]"}], ":=", 
+   RowBox[{"0", "/;", 
+    RowBox[{
+     RowBox[{"u", "\[Equal]", "0"}], "||", 
+     RowBox[{"v", "\[Equal]", "0"}]}]}]}], "\n", "\t", 
+  RowBox[{"(*", "  ", 
+   RowBox[{"End", " ", "of", " ", "DotPrdtG", " ", "Module"}], "  ", "*)"}], 
+  "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GeomPrdtBladeG", "[", 
+    RowBox[{"blade1_", ",", "blade2_"}], "]"}], ":=", " ", 
+   RowBox[{"(*", "\n", "\t", 
+    RowBox[{
+     RowBox[{"INPUTS", ":", " ", 
+      RowBox[{"2", " ", "simple", " ", "blades"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"blade1", " ", "&"}], " ", "bladd2", "  ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"e", ".", "g", ".", " ", "blade1"}], " ", "=", " ", 
+        StyleBox[
+         RowBox[{
+          SubscriptBox["e", "1"], 
+          SubscriptBox["e", "2"], 
+          SubscriptBox["e", "4"]}],
+         FontWeight->"Plain"]}], 
+       StyleBox[")",
+        FontWeight->"Plain"]}], 
+      StyleBox["\n",
+       FontWeight->"Plain"], 
+      StyleBox["\t",
+       FontWeight->"Plain"], 
+      StyleBox[
+       RowBox[{"PROCESS", ":", " ", "\n", "\t\t", 
+        RowBox[{
+        "Combine", " ", "the", " ", "2", " ", "subscript", " ", "lists"}]}],
+       FontWeight->"Plain"]}], 
+     StyleBox[",",
+      FontWeight->"Plain"], 
+     StyleBox[" ",
+      FontWeight->"Plain"], 
+     RowBox[{
+      RowBox[{
+       StyleBox["preserving",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["blade1",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["subscripts",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["before",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["blade2",
+        FontWeight->"Plain"], 
+       StyleBox["\n",
+        FontWeight->"Plain"], 
+       StyleBox["\t\t",
+        FontWeight->"Plain"], 
+       StyleBox["Use",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["SignatureG",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["to",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["get",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["the",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["signature",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["of",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["the",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["combined",
+        FontWeight->"Plain"], 
+       StyleBox[" ",
+        FontWeight->"Plain"], 
+       StyleBox["list",
+        FontWeight->"Plain"], 
+       StyleBox["\n",
+        FontWeight->"Plain"], 
+       StyleBox["\t",
+        FontWeight->"Plain"], 
+       RowBox[{
+        StyleBox["OUTPUT",
+         FontWeight->"Plain"], 
+        StyleBox[":",
+         FontWeight->"Plain"], 
+        StyleBox["\n",
+         FontWeight->"Plain"], 
+        StyleBox["\t",
+         FontWeight->"Plain"], "\t", "bladePrdt"}]}], " ", "=", " ", 
+      RowBox[{"algebraic", " ", "product", " ", "of", " ", "signature"}]}], 
+     ",", " ", "blade1", ",", " ", 
+     RowBox[{"and", " ", "blade", " ", "2", "\n", 
+      StyleBox["\t",
+       FontWeight->"Plain"], "\t", 
+      RowBox[{"Note", ":", " ", 
+       RowBox[{
+        SubsuperscriptBox["e", "i", "2"], " ", "terms", " ", "are", " ", 
+        "NOT", " ", "reduced", " ", "until", " ", "after", " ", "this", " ", 
+        "function", " ", "is", " ", "called", " ", "by", " ", 
+        "GeomPrdtG"}]}]}]}], 
+    StyleBox["\t",
+     FontWeight->"Plain"], "\t\t\t", "\n", "*)"}], "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "maxDim", ",", "subscriptList1", ",", "subscriptList2", ",", 
+       "subscriptList12", ",", "signature12", ",", "bladePrdt"}], "}"}], ",", 
+     "\n", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"subscriptList1", "=", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"SubscriptListG", "[", "blade1", "]"}], "]"}]}], ";", " ", 
+      "\n", "\t\t\t", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{" ", 
+         RowBox[{
+          RowBox[{"Example", ":", " ", 
+           RowBox[{"5", " ", "+", " ", 
+            RowBox[{"3", " ", 
+             SubscriptBox["e", "1"], 
+             SubscriptBox["e", "2"]}]}]}], " ", "\[Rule]", " ", 
+          RowBox[{"{", " ", 
+           RowBox[{
+            RowBox[{"{", "0", "}"}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]}], " "}]}], ")"}], " ", "\[Rule]",
+         " ", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", " ", "1", ",", " ", "2"}], "}"}]}], "  ", "*)"}], 
+      "\n", "\t\t", 
+      RowBox[{"maxDim", "=", 
+       RowBox[{"Max", "[", "subscriptList1", "]"}]}], ";", " ", 
+      RowBox[{"(*", "  ", 
+       RowBox[{
+        RowBox[{"Example", ":", " ", "maxDim"}], " ", "=", " ", "3"}], "  ", 
+       "*)"}], "\n", "\t\t", 
+      RowBox[{"subscriptList2", "=", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{
+         RowBox[{"SubscriptListG", "[", "blade2", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"u_", "/;", 
+           RowBox[{"u", "\[Equal]", "0"}]}], "\[Rule]", "maxDim"}]}], "]"}]}],
+       ";", " ", "\n", "\t\t\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Example", ":", "  ", "4"}], " ", "\[Rule]", " ", 
+        RowBox[{
+         RowBox[{"{", "0", "}"}], " ", "\[Rule]", " ", 
+         RowBox[{"{", "3", "}"}]}]}], "   ", "*)"}], "\n", "\n", "\t\t", 
+      RowBox[{"subscriptList12", "=", 
+       RowBox[{"Join", "[", 
+        RowBox[{"subscriptList1", ",", "subscriptList2"}], "]"}]}], ";", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Example", ":", " ", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "3", ",", "4"}], "}"}]}], "  ", "*)"}], "\n", 
+      "\t\t", 
+      RowBox[{"signature12", "=", 
+       RowBox[{"SignatureG", "[", "subscriptList12", "]"}]}], ";", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Example", ":", " ", "signature"}], " ", "=", " ", 
+        RowBox[{"+", "1"}]}], "  ", "*)"}], "\n", "\n", "\t\t", 
+      RowBox[{"bladePrdt", "=", 
+       RowBox[{"signature12", " ", "blade1", " ", "blade2"}]}], ";", "\n", 
+      "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug3", ",", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<GeomPrdtBLADEG: Blade1 = \>\"", ",", "blade1", ",", 
+           "\"\<, Blade2 = \>\"", ",", "blade2"}], "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Flattened list of Blade1 subscripts = \>\"", ",", " ", 
+           "subscriptList1", ",", 
+           "\"\<, Flattened list of Blade2 subscripts = \>\"", ",", 
+           "subscriptList2"}], "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Joined flatten subscript lists = \>\"", ",", "subscriptList12",
+            ",", "\"\<, Signature = \>\"", ",", "\n", "\t\t\t\t\t", 
+           "signature12", ",", "\"\<, product blade = \>\"", ",", 
+           "bladePrdt"}], "]"}]}]}], "\n", "\t\t", "]"}], ";", "\n", "\n", 
+      "\t\t", "bladePrdt"}]}], "\n", "\t", "]"}]}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GeomPrdtG", "[", 
+    RowBox[{"clif1_", ",", "clif2_"}], "]"}], ":=", "   ", 
+   RowBox[{"(*", " ", "\n", "\n", "\t", 
+    RowBox[{
+     RowBox[{"INPUTS", ":", "\n", "\t\t", "clif1"}], ",", " ", "clif2", " ", 
+     "\[Dash]", " ", 
+     RowBox[{"Users", " ", "input", " ", "clifs"}], ",", " ", 
+     RowBox[{
+     "with", " ", "either", " ", "numeric", " ", "or", " ", "symbolic", " ", 
+      "coefficients", "\n", "\t", 
+      RowBox[{"PROCESS", ":", " ", "\n", "\t\t", 
+       RowBox[{
+       "1.", " ", "Put", " ", "the", " ", "2", " ", "clifs", " ", "into", " ",
+         "lists", "\n", "\t\t", "2.", " ", "Take", " ", "outer", " ", 
+        "product", " ", "of", " ", "function", " ", "GeopmPrdtBladeG", " ", 
+        "applied", " ", "to", " ", "the", " ", "lists", " ", "to", " ", 
+        "create", " ", "the", " ", "\n", "\t\t\t", "list", " ", "of", " ", 
+        "geometric", " ", "products", " ", "between", " ", "all", " ", 
+        "terms", " ", 
+        RowBox[{"(", "blades", ")"}], " ", "of", " ", "clif1", " ", "with", 
+        " ", "all", " ", "terms", " ", "of", " ", "clif2", "\n", "\t\t", "3.",
+         " ", "Convert", " ", "the", " ", "list", " ", "back", " ", "to", " ",
+         "an", " ", "expression", " ", "\n", "\t\t", "4.", " ", "Use", " ", 
+        "CollectG", " ", "to", " ", "evaluate", " ", "all", " ", "terms", " ", 
+        SuperscriptBox[
+         SubscriptBox["e", "i"], "2"], " ", "and", " ", "to", " ", "collect", 
+        " ", "terms", " ", "by", " ", "blades", "\n", "\t", "OUPUT"}], ":", 
+       "\n", "\t ", "clif12", ":", " ", 
+       RowBox[{"The", " ", "geometric", " ", "product", " ", "clif"}]}]}]}], 
+    " ", "*)"}], "\n", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "clif1a", ",", "clif2a", ",", "clifList1", ",", "clifList2", ",", 
+       "clifList12", ",", "clif12"}], "}"}], ",", "\n", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"clif1a", "=", 
+       RowBox[{"Expand", "[", "clif1", "]"}]}], ";", 
+      RowBox[{"clif2a", "=", 
+       RowBox[{"Expand", "[", "clif2", "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"clifList1", "=", 
+       RowBox[{"ClifToListG", "[", "clif1a", "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"clifList2", "=", 
+       RowBox[{"ClifToListG", "[", "clif2a", "]"}]}], ";", "\t", "\n", "\n", 
+      "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug3", ",", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<GeomPrdtG: clif1 = \>\"", ",", "clif1a", ",", 
+           "\"\<, Clif2 = \>\"", ",", "clif2a"}], "]"}], ";", "\n", "\t\t\t", 
+         
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Clif1 List = \>\"", ",", "clifList1", ",", 
+           "\"\<,  Clif2 List = \>\"", ",", "clifList2"}], "]"}]}]}], "\n", 
+       "\t\t", "]"}], ";", "\n", "\n", "\t\t", 
+      RowBox[{"clifList12", "=", 
+       RowBox[{"Outer", "[", 
+        RowBox[{"GeomPrdtBladeG", ",", "clifList1", ",", "clifList2"}], 
+        "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"clif12", " ", "=", " ", 
+       RowBox[{"CollectG", "[", 
+        RowBox[{"clifList12", "/.", 
+         RowBox[{"List", "\[Rule]", "Plus"}]}], "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug3", ",", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<GeomPrdtG: Product clif list = \>\"", ",", "clifList12"}], 
+          "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Product clif = \>\"", ",", "clif12"}], "]"}], ";", 
+         RowBox[{"Print", "[", "]"}]}]}], "\n", "\t\t", "]"}], ";", "\n", 
+      "\t\t", "clif12"}]}], "\n", "\t", "]"}]}], "\n", "\t"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GeomPrdtG", "[", 
+    RowBox[{"u_", ",", "v_", ",", "w__"}], "]"}], ":=", 
+   RowBox[{"GeomPrdtG", "[", 
+    RowBox[{
+     RowBox[{"GeomPrdtG", "[", 
+      RowBox[{"u", ",", "v"}], "]"}], ",", "w"}], "]"}]}], "\n", "\t", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Enables", " ", "expressions", " ", "like", " ", 
+    RowBox[{"GeomPrdtG", "[", 
+     RowBox[{"x", ",", "y", ",", "z", ",", "u", ",", "v"}], "]"}]}], "  ", 
+   "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GeomPrdtG", "[", 
+    RowBox[{"u_", ",", "v_"}], "]"}], ":=", 
+   RowBox[{"0", "/;", 
+    RowBox[{
+     RowBox[{"u", "\[Equal]", "0"}], "||", 
+     RowBox[{"v", "\[Equal]", "0"}]}]}]}], "\n", "\n", "\t ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "GeomPrdtG", " ", "Module"}], "  ", "*)"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LeftContractionBladeG", "[", 
+    RowBox[{"blade1_", ",", "blade2_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "minGrade12", ",", "blade12", ",", "grade1", ",", "grade2", ",", 
+       "leftContraction"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"grade1", "=."}], ";", 
+      RowBox[{"grade2", "=."}], ";", 
+      RowBox[{"blade12", "=."}], ";", "\n", "\t\t", 
+      RowBox[{"PrdtBladeG", "[", 
+       RowBox[{
+       "blade1", ",", "blade2", ",", "grade1", ",", "grade2", ",", 
+        "blade12"}], "]"}], ";", "\n", "\t\t", 
+      RowBox[{"minGrade12", "=", 
+       RowBox[{"grade2", "-", "grade1"}]}], ";", "\n", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"minGrade12", "\[GreaterEqual]", "0"}], ",", "\n", "\t\t\t", 
+        RowBox[{"leftContraction", "=", 
+         RowBox[{"GradePpieceG", "[", 
+          RowBox[{"blade12", ",", "minGrade12"}], "]"}]}], ",", "\n", 
+        "\t\t\t", 
+        RowBox[{"leftContraction", "=", "0"}], ",", "\n", "\t\t\t", 
+        RowBox[{"leftContraction", "=", 
+         RowBox[{"GradePpieceG", "[", 
+          RowBox[{"blade12", ",", "minGrade12"}], "]"}]}]}], "\n", "\t\t", 
+       "]"}], ";", "\n", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug8", ",", "\n", "\t\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{
+         "\"\<LeftContractionBladeG: Left Contraction is the \>\"", ",", 
+          "minGrade12", ",", "\"\<\n\t\t\t\t-grade piece, \>\"", ",", 
+          "leftContraction", ",", "\"\< if \>\"", ",", "minGrade12", ",", 
+          "\"\< \[GreaterEqual] 0. Else it is zero\>\""}], "]"}]}], "\n", 
+       "\t\t", "]"}], ";", "\n", "\t\t", "leftContraction"}]}], "\n", "\t", 
+    "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LeftContractionG", "[", 
+    RowBox[{"clif1_", ",", "clif2_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"INPUTS", ":", "\n", "\t\t", 
+      RowBox[{
+      "The", " ", "two", " ", "clifs", " ", "whose", " ", "dot", " ", 
+       "product", " ", "is", " ", "to", " ", "be", " ", "taken", "\n", "\n", 
+       "\t  ", "PROCESS"}], ":", "\n", "\t\t", 
+      RowBox[{
+      "Use", " ", "Outer", " ", "to", " ", "take", " ", "the", " ", "Left", 
+       " ", "Contraction", " ", "of", " ", "every", " ", "term", " ", "from", 
+       " ", "clif1", " ", "with", " ", "every", " ", "term", " ", "from", " ",
+        "clif2", "\n", "\t\t", 
+       RowBox[{"Note", ":", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "every", " ", "term", " ", "of", " ", "each", " ", "clif", " ", 
+           "is", " ", "a", " ", "simple", " ", "blade", " ", "a", " ", 
+           SubscriptBox["e", "1"], 
+           SubscriptBox["e", "2"]}], "..."}], 
+         SubscriptBox["e", "n"], "\n", "\t\t", "\n", "\t  ", "OUTPUT"}], ":", 
+        "\n", "\t\t", 
+        RowBox[{
+        "The", " ", "Left", " ", "Contraction", " ", "of", " ", "the", " ", 
+         "two", " ", "clifs"}]}]}]}], ",", " ", 
+     RowBox[{
+     "defined", " ", "as", " ", "the", " ", "sum", " ", "of", " ", "the", " ",
+       "left", " ", "contractions", " ", "of", " ", "\n", "\t\t", "every", 
+      " ", "term", " ", "from", " ", "clif1", " ", "with", " ", "every", " ", 
+      "term", " ", "from", " ", "clif2"}]}], "  ", "*)"}], "\n", "\t\t", "\n",
+    "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"clifList1", ",", "clifList2", ",", "leftContraction"}], "}"}], 
+     ",", "\n", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"clifList1", "=", 
+       RowBox[{"ClifToListG", "[", "clif1", "]"}]}], ";", 
+      RowBox[{"clifList2", "=", 
+       RowBox[{"ClifToListG", "[", "clif2", "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug8", ",", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", "\n", "\t\t\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<LeftContractionG: clif lists: \>\"", ",", "clifList1", ",", 
+           "\"\<,  \>\"", ",", "clifList2"}], "]"}]}]}], "]"}], ";", "\n", 
+      "\t\t", 
+      RowBox[{"leftContraction", "=", 
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Outer", "[", 
+          RowBox[{
+          "LeftContractionBladeG", ",", "clifList1", ",", "clifList2"}], 
+          "]"}], "]"}], "/.", 
+        RowBox[{"List", "\[Rule]", "Plus"}]}]}], ";", "\n", "\t\t", 
+      RowBox[{"leftContraction", "=", 
+       RowBox[{"CollectG", "[", "leftContraction", "]"}]}], ";", "\n", "\t\t",
+       "leftContraction"}]}], "\t", "\n", "\t", "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"LeftContractionG", "[", 
+   RowBox[{"u_", ",", "v_", ",", "w__"}], "]"}], ":=", 
+  RowBox[{"LeftContractionG", "[", 
+   RowBox[{
+    RowBox[{"LeftContractionG", "[", 
+     RowBox[{"u", ",", "v"}], "]"}], ",", "w"}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LeftContractionG", "[", 
+    RowBox[{"u_", ",", "v_"}], "]"}], ":=", 
+   RowBox[{"0", "/;", 
+    RowBox[{
+     RowBox[{"u", "\[Equal]", "0"}], "||", 
+     RowBox[{"v", "\[Equal]", "0"}]}]}]}], "\n", "\t", 
+  RowBox[{"(*", " ", 
+   RowBox[{"End", " ", "of", " ", "Function", " ", "LeftContractionG"}], "  ",
+    "*)"}], "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"WedgePrdtBladeG", "[", 
+    RowBox[{"blade1_", ",", "blade2_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "maxGrade12", ",", "blade12", ",", "grade1", ",", "grade2", ",", 
+       "wedgePrdt"}], "}"}], ",", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"grade1", "=."}], ";", 
+      RowBox[{"grade2", "=."}], ";", 
+      RowBox[{"blade12", "=."}], ";", "\n", "\t\t", 
+      RowBox[{"PrdtBladeG", "[", 
+       RowBox[{
+       "blade1", ",", "blade2", ",", "grade1", ",", "grade2", ",", 
+        "blade12"}], "]"}], ";", "\n", "\t\t", 
+      RowBox[{"maxGrade12", "=", 
+       RowBox[{"grade1", "+", "grade2"}]}], ";", "\n", "\t\t", 
+      RowBox[{"wedgePrdt", "=", 
+       RowBox[{"GradePpieceG", "[", 
+        RowBox[{"blade12", ",", "maxGrade12"}], "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"debug6", "||", "debug9"}], ",", "\n", "\t\t\t", 
+        RowBox[{"Print", "[", 
+         RowBox[{
+         "\"\<WedgePrdtBladeG: Wedge Product is the \>\"", ",", "maxGrade12", 
+          ",", "\"\<-grade piece, \>\"", ",", "wedgePrdt"}], "]"}]}], "\n", 
+       "\t\t", "]"}], ";", "\n", "\t\t", "wedgePrdt"}]}], "\n", "\t", "]"}]}],
+   "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"WedgePrdtG", "[", 
+    RowBox[{"clif1_", ",", "clif2_"}], "]"}], ":=", "\n", "\t", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"INPUTS", ":", "\n", "\t\t", 
+      RowBox[{
+      "The", " ", "two", " ", "clifs", " ", "whose", " ", "Wedge", " ", 
+       "product", " ", "is", " ", "to", " ", "be", " ", "taken", "\n", "\n", 
+       "\t  ", "PROCESS"}], ":", "\n", "\t\t", 
+      RowBox[{
+      "Use", " ", "Outer", " ", "to", " ", "take", " ", "the", " ", "Wedge", 
+       " ", "Product", " ", "of", " ", "every", " ", "term", " ", "from", " ",
+        "clif1", " ", "with", " ", "every", " ", "term", " ", "from", " ", 
+       "clif2", "\n", "\t\t", 
+       RowBox[{"Note", ":", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "every", " ", "term", " ", "of", " ", "each", " ", "clif", " ", 
+           "is", " ", "a", " ", "simple", " ", "blade", " ", "a", " ", 
+           SubscriptBox["e", "1"], 
+           SubscriptBox["e", "2"]}], "..."}], 
+         SubscriptBox["e", "n"], "\n", "\t\t", "\n", "\t  ", "OUTPUT"}], ":", 
+        "\n", "\t\t", 
+        RowBox[{
+        "The", " ", "Wedge", " ", "product", " ", "of", " ", "the", " ", 
+         "two", " ", "clifs"}]}]}]}], ",", " ", 
+     RowBox[{
+     "defined", " ", "as", " ", "the", " ", "sum", " ", "of", " ", "the", " ",
+       "Wedge", " ", "products", " ", "of", " ", "\n", "\t\t", "every", " ", 
+      "term", " ", "from", " ", "clif1", " ", "with", " ", "every", " ", 
+      "term", " ", "from", " ", "clif2"}]}], "  ", "*)"}], "\n", "\t\t", "\n",
+    "\t", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"clifList1", ",", "clifList2", ",", "wedgePrdt"}], "}"}], ",", 
+     "\n", "\n", "\t\t", 
+     RowBox[{
+      RowBox[{"clifList1", "=", 
+       RowBox[{"ClifToListG", "[", "clif1", "]"}]}], ";", 
+      RowBox[{"clifList2", "=", 
+       RowBox[{"ClifToListG", "[", "clif2", "]"}]}], ";", "\n", "\t\t", 
+      RowBox[{"If", "[", 
+       RowBox[{"debug6", ",", "\n", "\t\t\t", 
+        RowBox[{
+         RowBox[{"Print", "[", "]"}], ";", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<WedgePrdtG: clif lists: \>\"", ",", "clifList1", ",", 
+           "\"\<,  \>\"", ",", "clifList2"}], "]"}]}]}], "]"}], ";", "\n", 
+      "\t\t", 
+      RowBox[{"wedgePrdt", "=", 
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Outer", "[", 
+          RowBox[{"WedgePrdtBladeG", ",", "clifList1", ",", "clifList2"}], 
+          "]"}], "]"}], "/.", 
+        RowBox[{"List", "\[Rule]", "Plus"}]}]}], ";", "\n", "\t\t", 
+      RowBox[{"wedgePrdt", "=", 
+       RowBox[{"CollectG", "[", "wedgePrdt", "]"}]}], ";", "\n", "\t\t", 
+      "wedgePrdt"}]}], "\t", "\n", "\t", "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"WedgePrdtG", "[", 
+   RowBox[{"u_", ",", "v_", ",", "w__"}], "]"}], ":=", 
+  RowBox[{"WedgePrdtG", "[", 
+   RowBox[{
+    RowBox[{"WedgePrdtG", "[", 
+     RowBox[{"u", ",", "v"}], "]"}], ",", "w"}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"WedgePrdtG", "[", 
+    RowBox[{"u_", ",", "v_"}], "]"}], ":=", 
+   RowBox[{"0", "/;", 
+    RowBox[{
+     RowBox[{"u", "\[Equal]", "0"}], "||", 
+     RowBox[{"v", "\[Equal]", "0"}]}]}]}], "\n", "\t", 
+  RowBox[{"(*", "  ", 
+   RowBox[{"End", " ", "of", " ", "WedgePrdtG", " ", "Module"}], "  ", "*)"}],
+   " \t\t\t\t\t \t\t\t\t\t ", "\n", 
+  "\t\t\t\t\t \t\t\t\t\t \t\t\t\t\t \t\t\t\t\t "}], "\n", 
+ RowBox[{"End", "[", "]"}], "\n", 
+ RowBox[{"EndPackage", "[", "]"}]}], "Code",
+ CellChangeTimes->{
+  3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
+   3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
+   3.690748724874229*^9}, 3.690748769560217*^9, {3.69074882554303*^9, 
+   3.6907488477566643`*^9}, {3.690748898478891*^9, 3.69074893641199*^9}, {
+   3.690749566683033*^9, 3.6907495675450068`*^9}, {3.6907496044403343`*^9, 
+   3.6907496441958847`*^9}, {3.6907497984815273`*^9, 3.690749801647601*^9}, {
+   3.690749851999959*^9, 3.690749853857938*^9}, {3.6907498945024633`*^9, 
+   3.690749904185855*^9}, {3.69075005859556*^9, 3.6907501027475843`*^9}, {
+   3.690750148212007*^9, 3.690750180370227*^9}, 3.6907502142192907`*^9, 
+   3.690750294122267*^9, {3.690750331922277*^9, 3.6907503341286507`*^9}, {
+   3.690750463120143*^9, 3.6907504722444353`*^9}, 3.690750512690455*^9, 
+   3.690750758023849*^9, {3.690750862902231*^9, 3.6907509050128117`*^9}, 
+   3.690750942834445*^9, {3.690751017213744*^9, 3.690751018396122*^9}, {
+   3.6907510636952963`*^9, 3.69075109579827*^9}, {3.690751366334424*^9, 
+   3.690751377820384*^9}, {3.690751492969201*^9, 3.690751499942731*^9}, {
+   3.690751613478297*^9, 3.690751631150628*^9}, {3.6910650969980907`*^9, 
+   3.691065104379283*^9}, {3.691068118576837*^9, 3.691068119447476*^9}, {
+   3.691068402882535*^9, 3.691068409242165*^9}, 3.691072198675054*^9, 
+   3.6910722815485487`*^9, 3.69107237755156*^9, 3.691072411380519*^9, 
+   3.691072484309104*^9, {3.691072537083869*^9, 3.691072551876346*^9}, {
+   3.691072610298726*^9, 3.691072636344965*^9}, 3.691072666710598*^9, 
+   3.6910730313977747`*^9, 3.691073072029634*^9, 3.691073593702551*^9, 
+   3.691073646277369*^9, 3.691073715183025*^9, 3.691073841869029*^9, 
+   3.691073879917136*^9, {3.6910742437762337`*^9, 3.691074246906845*^9}, {
+   3.691074290856971*^9, 3.691074316518396*^9}, {3.6910744297152367`*^9, 
+   3.691074443783609*^9}, 3.691074602123973*^9, 3.6910746412377787`*^9, 
+   3.691078543570036*^9, {3.691078683711162*^9, 3.691078684356325*^9}, {
+   3.6910792440833073`*^9, 3.6910793485492907`*^9}, 3.6910794263084793`*^9, {
+   3.691081666079866*^9, 3.6910816728022137`*^9}, {3.6910868127036037`*^9, 
+   3.691086816524938*^9}, {3.691086852695444*^9, 3.69108730079125*^9}, {
+   3.691088142246874*^9, 3.6910881473503942`*^9}, {3.69108965991323*^9, 
+   3.691089662772625*^9}, {3.691089703614811*^9, 3.691089726019471*^9}, {
+   3.691100163780356*^9, 3.691100163997772*^9}, 3.691101693441506*^9, 
+   3.691102054745184*^9, {3.69110253806456*^9, 3.691102544107403*^9}, {
+   3.69110274595408*^9, 3.691102762078927*^9}, {3.691162440635715*^9, 
+   3.6911624517511578`*^9}, {3.691170784773837*^9, 3.691170784904347*^9}, 
+   3.691185295493452*^9, 3.69118533205576*^9, {3.6911886933933*^9, 
+   3.6911888411366796`*^9}, {3.6911893583007402`*^9, 3.691189398266358*^9}, {
+   3.6911942603665857`*^9, 3.691194321427699*^9}, {3.691239331953326*^9, 
+   3.691239339112747*^9}, {3.691239389071517*^9, 3.6912394948334627`*^9}, 
+   3.691240061635374*^9, 3.691240098964525*^9, {3.6912401318490543`*^9, 
+   3.691240144289261*^9}, {3.691961346041582*^9, 3.691961536337552*^9}, {
+   3.691961568907075*^9, 3.691961575018796*^9}, {3.6925565196550093`*^9, 
+   3.692556599502963*^9}, {3.692556761181243*^9, 3.692556763923517*^9}, {
+   3.6925568629698*^9, 3.692556890676179*^9}, {3.692556928239348*^9, 
+   3.692556957796144*^9}, {3.692556993739172*^9, 3.692557017204183*^9}}],
+
+Cell[BoxData["\<\"GeomAlg2017Jan`Private`\"\>"], "Output",
+ CellChangeTimes->{3.692454299816475*^9, 3.692469463191181*^9, 
+  3.692553225137209*^9, 3.692553828643553*^9}]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{917, 1355},
+WindowMargins->{{Automatic, 398}, {-13, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 1433, 20, 92, "Title"],
+Cell[CellGroupData[{
+Cell[1880, 39, 93, 1, 65, "Chapter"],
+Cell[1976, 42, 2786, 42, 260, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4799, 89, 102, 1, 54, "Chapter"],
+Cell[4904, 92, 2427, 49, 452, "Code"],
+Cell[CellGroupData[{
+Cell[7356, 145, 1912, 27, 63, "Subchapter"],
+Cell[9271, 174, 3299, 63, 205, "Code"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[12607, 242, 161, 2, 47, "Subchapter"],
+Cell[12771, 246, 2559, 63, 303, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[15367, 314, 174, 2, 47, "Subchapter"],
+Cell[15544, 318, 10205, 234, 869, "Code"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[25798, 558, 127, 1, 54, "Chapter"],
+Cell[25928, 561, 2085, 30, 52, "Code"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[28050, 596, 129, 2, 54, "Chapter"],
+Cell[28182, 600, 4385, 95, 224, "Code"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[32604, 700, 295, 6, 135, "Chapter"],
+Cell[32902, 708, 29362, 737, 2823, "Code"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[62301, 1450, 116, 1, 54, "Chapter"],
+Cell[62420, 1453, 47515, 972, 4085, "Code"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[109972, 2430, 114, 1, 54, "Chapter"],
+Cell[110089, 2433, 33883, 782, 3306, "Code"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[144009, 3220, 216, 4, 91, "Chapter"],
+Cell[144228, 3226, 11817, 266, 1459, "Code"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[156082, 3497, 232, 5, 139, "Chapter"],
+Cell[CellGroupData[{
+Cell[156339, 3506, 35237, 862, 4302, "Code"],
+Cell[191579, 4370, 169, 2, 32, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

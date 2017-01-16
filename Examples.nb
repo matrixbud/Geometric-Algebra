@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    241520,       6366]
-NotebookOptionsPosition[    235133,       6202]
-NotebookOutlinePosition[    235493,       6218]
-CellTagsIndexPosition[    235450,       6215]
+NotebookDataLength[    229361,       6208]
+NotebookOptionsPosition[    222606,       6034]
+NotebookOutlinePosition[    222989,       6051]
+CellTagsIndexPosition[    222946,       6048]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -44,12 +44,16 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"Needs", "[", "\"\<GeomAlg2017Jan`\>\"", "]"}], "\n", "\n", 
    RowBox[{"(*", " ", 
-    RowBox[{"PRODUCTS", " ", "OF", " ", "4", " ", "MULTIVECTORS"}], " ", 
-    "*)"}], "\n", 
+    RowBox[{
+    "PRODUCTS", " ", "OF", " ", "3", " ", "OR", " ", "MORE", " ", 
+     "MULTIVECTORS"}], " ", "*)"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", "]"}], ";", 
-    RowBox[{"Print", "[", "\"\<PRODUCTS OF 3 MULTIVECTORS\>\"", "]"}], ";"}], 
-   "\n", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<PRODUCTS OF 3 OR MORE MULTIVECTORS\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"Bold", ",", "Blue"}], "}"}]}], "]"}], "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"clifA", "=", "3"}], ";", " ", 
     RowBox[{"clifB", "=", 
@@ -92,8 +96,8 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"clifD", "=", 
      RowBox[{
-     "clifA", " ", "\[CenterDot]", " ", "clifB", "\[CenterDot]", "clifC", 
-      "\[CenterDot]", "clifE"}]}], ";"}], "\n", 
+     "clifA", " ", "\[CircleDot]", " ", "clifB", "\[CircleDot]", "clifC", 
+      "\[CircleDot]", "clifE"}]}], ";"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", 
      RowBox[{
@@ -101,12 +105,34 @@ Cell[BoxData[
 \"", ",", "clifD"}], "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"clifF", "=", 
-     RowBox[{"clifC", " ", "\[CircleDot]", " ", "clifE"}]}], ";"}], "\n", 
+     RowBox[{
+     "clifC", " ", "\[SquareSuperset]", " ", "clifE", "\[SquareSuperset]", 
+      " ", "clifE"}]}], ";"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", 
      RowBox[{
-     "\"\<Left Contraction F = C \[CircleDot] E = \>\"", ",", "clifF"}], 
-     "]"}], ";", 
+     "\"\<Scalar Product H = A \[CenterDot] B \[CenterDot] C \[CenterDot] E = \
+\>\"", ",", "clifD"}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"clifH", "=", 
+     RowBox[{
+     "clifC", " ", "\[SquareSuperset]", " ", "clifE", "\[SquareSuperset]", 
+      " ", "clifE"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<Left Contraction F = C \[SquareSuperset] E \[SquareSuperset] E= \
+\>\"", ",", "clifF"}], "]"}], ";"}], " ", "\n", 
+   RowBox[{
+    RowBox[{"clifG", "=", 
+     RowBox[{
+     "clifC", " ", "\[SquareSubset]", " ", "clifE", "\[SquareSubset]", " ", 
+      "clifE"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<Right Contraction G = C \[SquareSubset] E \[SquareSubset] E = \>\"",
+       ",", "clifG"}], "]"}], ";", 
     RowBox[{"Print", "[", "]"}], ";"}], " ", "\n", "\n", 
    RowBox[{"(*", " ", 
     RowBox[{
@@ -221,8 +247,11 @@ Cell[BoxData[
     "*)"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", "]"}], ";", 
-    RowBox[{"Print", "[", "\"\<PRODUCTS OF 2 MULTIVECTORS\>\"", "]"}], ";"}], 
-   "\n", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<PRODUCTS OF 2 MULTIVECTORS\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"Bold", ",", "Blue"}], "}"}]}], "]"}], "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"clifListA", "=", 
      RowBox[{"{", 
@@ -462,12 +491,44 @@ Cell[BoxData[
        RowBox[{"{", 
         RowBox[{"i", ",", "len"}], "}"}], "}"}]}]}], ";"}], "\n", 
    RowBox[{
+    RowBox[{"u2", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"ScalarPrdtG", "[", 
+          RowBox[{
+           RowBox[{"clifListA", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"clifListB", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", "##"}], "]"}], 
+       "&"}], "@@", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "len"}], "}"}], "}"}]}]}], ";"}], "\n", 
+   RowBox[{
     RowBox[{"w2", "=", 
      RowBox[{
       RowBox[{
        RowBox[{"Table", "[", 
         RowBox[{
          RowBox[{"LeftContractionG", "[", 
+          RowBox[{
+           RowBox[{"clifListA", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"clifListB", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", "##"}], "]"}], 
+       "&"}], "@@", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "len"}], "}"}], "}"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"v2", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"RightContractionG", "[", 
           RowBox[{
            RowBox[{"clifListA", "[", 
             RowBox[{"[", "i", "]"}], "]"}], ",", 
@@ -512,8 +573,16 @@ Cell[BoxData[
          RowBox[{"z2", "[", 
           RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";", "\n", "\t", 
        RowBox[{"Print", "[", 
+        RowBox[{"\"\<Scalar Product = \>\"", ",", 
+         RowBox[{"u2", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";", "\n", "\t", 
+       RowBox[{"Print", "[", 
         RowBox[{"\"\<Left Contraction = \>\"", ",", 
          RowBox[{"w2", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";", "\n", "\t", 
+       RowBox[{"Print", "[", 
+        RowBox[{"\"\<Right Contraction = \>\"", ",", 
+         RowBox[{"v2", "[", 
           RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";", 
        RowBox[{"Print", "[", "]"}]}]}], "\n", "\t", "]"}], ";"}], " ", "\n", 
    "\n", 
@@ -522,9 +591,12 @@ Cell[BoxData[
      RowBox[{"GEOMETRIC", " ", "PRODUCT", " ", "SYMBOLIC", " ", "3"}], "-", 
      RowBox[{"DIMENSIONAL", " ", "FORMULA"}]}], " ", "*)"}], "\n", 
    RowBox[{
-    RowBox[{
-    "Print", "[", "\"\<GEOMETRIC PRODUCT SYMBOLIC 3-DIMENSIONAL FORMULA\>\"", 
-     "]"}], ";"}], "\n", " ", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+      "\"\<SYMBOLIC 3-DIMENSIONAL FORMULA FOR GEOMETRIC PRODUCT\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"Bold", ",", "Blue"}], "}"}]}], "]"}], "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"clifA", "=", 
      RowBox[{"nClifG", "[", 
@@ -554,10 +626,11 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"Print", "[", "]"}], ";"}], "\n", 
    RowBox[{
-    RowBox[{
-    "Print", "[", 
-     "\"\<These commands can simplify tedious keying in of long clifs\>\"", 
-     "]"}], ";"}], "\n", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<COMMANDS THAT SIMPLIFY TEDIOUS TYPING\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"Bold", ",", "Blue"}], "}"}]}], "]"}], "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", 
      RowBox[{
@@ -636,8 +709,7 @@ grade 2, 3, etc.\>\"", "]"}], ";"}], "\n",
      RowBox[{
      "\"\<This package attempts to generate 'collected' clifs but sometimes \
 the user \>\"", ",", "\n", "\t\t", 
-      "\"\<may need apply CollectG, or even Mathematica's Simplify, to his \
-results.\>\""}], "]"}], ";"}], "\n", 
+      "\"\<may need to fdo his own collection.\>\""}], "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", 
      RowBox[{
@@ -663,8 +735,10 @@ remain.\>\""}], "]"}], ";"}], "\n",
      "ROLL", " ", "ROTATION", " ", "OF", " ", "AN", " ", "AIRPLANE", " ", 
       "IN", " ", "3"}], "-", 
      RowBox[{
-     "SPACE", "\n", "Assume", " ", "airplane", " ", "is", " ", "flying", " ", 
-      "straight", " ", "and", " ", "level", " ", "along", " ", "x", " ", 
+      RowBox[{"SPACE", " ", "--"}], " ", "Clifford", " ", "algebra", " ", 
+      "example", "\n", "Assume", " ", "airplane", " ", "is", " ", "flying", 
+      " ", "straight", " ", "and", " ", "level", " ", "along", " ", "x", " ", 
+      
       RowBox[{"axis", ".", " ", "His"}], " ", "initial", " ", "heading", " ", 
       "vector", " ", "is", " ", "thus", " ", 
       RowBox[{
@@ -676,8 +750,15 @@ remain.\>\""}], "]"}], ";"}], "\n",
       RowBox[{"heading", "?"}]}]}], " ", "*)"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", "]"}], ";", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<PITCH-ROLL ROTATION OF AN AIRPLANE IN 3-SPACE\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"Bold", ",", "Blue"}], "}"}]}], "]"}], "]"}], ";"}], "\n", 
+   RowBox[{
     RowBox[{
-    "Print", "[", "\"\<PITCH-ROLL ROTATION OF AN AIRPLANE IN 3-SPACE\>\"", 
+    "Print", "[", 
+     "\"\<Only works with Clifford Algebra, not Grassmann Algebra.\>\"", 
      "]"}], ";", 
     RowBox[{"Print", "[", "]"}], ";"}], "\n", 
    RowBox[{
@@ -730,7 +811,10 @@ remain.\>\""}], "]"}], ";"}], "\n",
    "\n", 
    RowBox[{
     RowBox[{"Print", "[", 
-     RowBox[{"\"\<New heading after pitch-roll = \>\"", ",", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<New heading after pitch-roll = \>\"", ",", "Blue"}], 
+       "]"}], ",", 
       RowBox[{"pitchrollHeading", "=", 
        RowBox[{"Simplify", "[", 
         RowBox[{
@@ -755,7 +839,10 @@ remain.\>\""}], "]"}], ";"}], "\n",
        RowBox[{"ReverseG", "[", "rotorPR", "]"}]}]}], "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", 
-     RowBox[{"\"\<New heading after pitch-roll = \>\"", ",", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<New heading after pitch-roll = \>\"", ",", "Blue"}], 
+       "]"}], ",", 
       RowBox[{"pitchrollHeading2", "=", 
        RowBox[{"Simplify", "[", 
         RowBox[{
@@ -768,8 +855,9 @@ remain.\>\""}], "]"}], ";"}], "\n",
 by a 45\[Degree] pitch!! Try it.\>\"", "]"}], ";"}], "\n", "\n", 
    RowBox[{"(*", " ", 
     RowBox[{
-     RowBox[{"DEMONSTRATE", " ", "IDENTITIES", "\n", "\t", "v"}], ",", " ", 
-     "v1", ",", " ", 
+     RowBox[{
+     "DEMONSTRATE", " ", "CLIFFORD", " ", "ALGEBRA", " ", "IDENTITIES", "\n", 
+      "\t", "v"}], ",", " ", "v1", ",", " ", 
      RowBox[{
       RowBox[{
        RowBox[{"etc", ".", " ", "are"}], " ", "vectors", "\n", "\t", "B", " ",
@@ -782,12 +870,17 @@ by a 45\[Degree] pitch!! Try it.\>\"", "]"}], ";"}], "\n", "\n",
    "\n", 
    RowBox[{
     RowBox[{"Print", "[", "]"}], ";", 
-    RowBox[{"Print", "[", "\"\<DEMONSTRATE IDENTITIES\>\"", "]"}], ";", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<DEMONSTRATE CLIFFORD ALGEBRA IDENTITIES\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"Bold", ",", "Blue"}], "}"}]}], "]"}], "]"}], ";", 
     RowBox[{"Print", "[", "]"}], ";", 
-    RowBox[{
-    "Print", "[", 
-     "\"\<IDENTITY: v \[SmallCircle] B = v \[CenterDot] B + v \[Wedge] B \
-\>\"", "]"}], ";", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+      "\"\<IDENTITY: v \[SmallCircle] B = v \[CenterDot] B + v \[Wedge] B  \
+for vector v and blade B\>\"", ",", "Blue"}], "]"}], "]"}], ";", 
     RowBox[{"Print", "[", "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"vec1", "=", 
@@ -865,10 +958,12 @@ by a 45\[Degree] pitch!! Try it.\>\"", "]"}], ";"}], "\n", "\n",
    "\n", 
    RowBox[{
     RowBox[{"Print", "[", "]"}], ";", 
-    RowBox[{
-    "Print", "[", 
-     "\"\<IDENTITY: (v1 \[CenterDot] v2)\[Star] = v1 \[Wedge] (v2)\[Star]  \
-where \[Star] is the Hodge Dual\>\"", "]"}], ";"}], "\n", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+      "\"\<IDENTITY: (v1 \[CenterDot] v2)\[Star] = v1 \[Wedge] (v2)\[Star]  \
+where \[Star] is the Hodge Dual and v1 and v2 are vectors\>\"", ",", "Blue"}],
+       "]"}], "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", "]"}], ";"}], "\n", 
    RowBox[{
@@ -896,50 +991,35 @@ where \[Star] is the Hodge Dual\>\"", "]"}], ";"}], "\n",
             RowBox[{"HodgeDualG", "[", 
              RowBox[{
               RowBox[{"vec1", "\[CenterDot]", "vec2a"}], ",", 
-              RowBox[{"i", "+", "2"}]}], "]"}], "]"}]}], "]"}], ";", "\n", 
-         "\t", 
-         RowBox[{"Print", "[", 
-          RowBox[{"\"\<  Vector1 \[Wedge] Vector2\[Star] = \>\"", ",", 
-           RowBox[{"Expand", "[", 
-            RowBox[{"vec1", "\[Wedge]", 
-             RowBox[{"HodgeDualG", "[", 
-              RowBox[{"vec2a", ",", 
-               RowBox[{"i", "+", "2"}]}], "]"}]}], "]"}]}], "]"}], ";", 
+              RowBox[{"i", "+", "2"}]}], "]"}], "]"}]}], "]"}], ";", 
+         RowBox[{"c", "\n", "\t", 
+          RowBox[{"Print", "[", 
+           RowBox[{"\"\<  Vector1 \[Wedge] Vector2\[Star] = \>\"", ",", 
+            RowBox[{"Expand", "[", 
+             RowBox[{"vec1", "\[Wedge]", 
+              RowBox[{"HodgeDualG", "[", 
+               RowBox[{"vec2a", ",", 
+                RowBox[{"i", "+", "2"}]}], "]"}]}], "]"}]}], "]"}]}], ";", 
          RowBox[{"Print", "[", "]"}]}], "\n", "\t", ",", "##"}], "]"}], "&"}],
       "@@", 
      RowBox[{"{", 
       RowBox[{"{", 
        RowBox[{"i", ",", "4"}], "}"}], "}"}]}], ";"}], "  ", "\n", "\n", 
-   RowBox[{"(*", " ", "\n", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"Show", " ", "that", "  ", 
-       RowBox[{"(", 
-        RowBox[{"clif1", " ", "\[Wedge]", " ", "v2"}], ")"}]}], "\[Star]"}], 
-     " ", "=", " ", 
-     RowBox[{
-      RowBox[{"clif1", " ", "\[CenterDot]", 
-       RowBox[{"(", "v2", ")"}]}], "\[Star]", "  ", "where", " ", "\[Star]", 
-      " ", 
-      RowBox[{
-      "is", " ", "the", " ", "Hodge", " ", "Dual", " ", "*", "\n", "   ", 
-       RowBox[{"Note", ":", " ", 
-        RowBox[{
-        "Can", " ", "also", " ", "show", " ", "that", " ", "this", " ", 
-         "fails", " ", "if", " ", "v2", " ", "is", " ", "replaced", " ", "by",
-          " ", "a", " ", "more", " ", "general", " ", "blade"}]}]}]}]}], "  ",
-     "*)"}], "\n", 
    RowBox[{
     RowBox[{"Print", "[", "]"}], ";", 
-    RowBox[{
-    "Print", "[", 
-     "\"\<IDENTITY: (clif1 \[Wedge] v2)\[Star] = clif1 \
-\[CenterDot](v2)\[Star]  where \[Star] is the Hodge Dual\>\"", "]"}], ";"}], 
-   "\n", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+      "\"\<IDENTITY: (clif1 \[Wedge] v2)\[Star] = clif1 \[CenterDot](v2)\
+\[Star]  where \[Star] is the Hodge Dual, v2 is a vector, and clif1 is a \
+multivector\>\"", ",", "Blue"}], "]"}], "]"}], ";"}], "\n", 
    RowBox[{
-    RowBox[{
-    "Print", "[", "\"\<THIS HOLDS FOR DIM 1-3 AND FAILS IN DIM 4. \>\"", 
-     "]"}], ";", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Style", "[", 
+      RowBox[{
+      "\"\<Exercise: Show that this can fail if v2 is replaced by a \
+blade\>\"", ",", "Red"}], "]"}], "]"}], ";"}], "\n", 
+   RowBox[{
     RowBox[{"Print", "[", "]"}], ";"}], "\n", 
    RowBox[{
     RowBox[{"i", "=."}], ";"}], " ", "\n", 
@@ -1044,24 +1124,55 @@ where \[Star] is the Hodge Dual\>\"", "]"}], ";"}], "\n",
    3.6917963733836308`*^9}, 3.691796404600459*^9, {3.691796454122301*^9, 
    3.6917965516147614`*^9}, {3.691796678851096*^9, 3.691796740766961*^9}, {
    3.691796855528926*^9, 3.691796892171255*^9}, {3.691796987576591*^9, 
-   3.691797032982177*^9}, {3.69274349456287*^9, 3.692743508074369*^9}, {
-   3.692743544814004*^9, 3.692743600769*^9}}],
+   3.691797032982177*^9}, {3.692453859202342*^9, 3.692453885048246*^9}, {
+   3.692453926305232*^9, 3.6924539289186277`*^9}, {3.692457424975395*^9, 
+   3.6924574596608477`*^9}, {3.6924575739745913`*^9, 
+   3.6924576062487507`*^9}, {3.6924773932584553`*^9, 3.692477410449428*^9}, {
+   3.6924785553813887`*^9, 3.6924785620676813`*^9}, {3.692488674682468*^9, 
+   3.6924886817773857`*^9}, {3.692488860261879*^9, 3.692488864763163*^9}, {
+   3.6924899079935017`*^9, 3.692489914281906*^9}, {3.692490247389106*^9, 
+   3.692490289386368*^9}, {3.6924904226064167`*^9, 3.6924904278204613`*^9}, {
+   3.6924905926357737`*^9, 3.692490635581942*^9}, {3.692490740669169*^9, 
+   3.692490789625798*^9}, {3.692551910949458*^9, 3.69255191261945*^9}, 
+   3.692554172799078*^9, {3.6925545115555696`*^9, 3.692554547135942*^9}, {
+   3.692554634360718*^9, 3.6925546432314777`*^9}, {3.692563489679717*^9, 
+   3.692563513338214*^9}, {3.692568383579458*^9, 3.6925685107731047`*^9}, {
+   3.693093612485487*^9, 3.6930936149847383`*^9}, {3.693093672185524*^9, 
+   3.6930937006032867`*^9}, {3.693095410489447*^9, 3.6930954609621143`*^9}, {
+   3.69317920940917*^9, 3.6931792497083883`*^9}, {3.693179316346052*^9, 
+   3.693179326697338*^9}, {3.6931793721220503`*^9, 3.693179428968123*^9}, {
+   3.693179613607718*^9, 3.693179614386579*^9}, {3.693336123116955*^9, 
+   3.693336133730608*^9}, {3.693336495401746*^9, 3.693336502081484*^9}, {
+   3.693337004427883*^9, 3.693337005012443*^9}, {3.6933371289292383`*^9, 
+   3.693337159258051*^9}, {3.693341876095378*^9, 3.693341990699004*^9}, {
+   3.693342205057317*^9, 3.693342237216135*^9}, {3.693342340722723*^9, 
+   3.6933425753840647`*^9}, 3.693346451463406*^9, 3.6933465036374063`*^9, {
+   3.693346563866735*^9, 3.693346578623946*^9}, {3.693346656226343*^9, 
+   3.693346658283823*^9}, {3.6933469081302013`*^9, 3.6933469157058*^9}, {
+   3.693346954936757*^9, 3.693347029107787*^9}, 3.693347093955044*^9, {
+   3.6933472204056883`*^9, 3.6933473155911922`*^9}, {3.693347384097149*^9, 
+   3.693347398986084*^9}, {3.693347431416932*^9, 3.693347460257492*^9}, 
+   3.693347535807674*^9, {3.693347724030569*^9, 3.693347800101053*^9}, {
+   3.6933479258256483`*^9, 3.6933479438599*^9}, {3.693351470868264*^9, 
+   3.6933515172216988`*^9}, {3.693351568834773*^9, 3.6933516206655397`*^9}, {
+   3.693351660083521*^9, 3.693351677394825*^9}, {3.693502046572974*^9, 
+   3.693502055827489*^9}, {3.6935021234519157`*^9, 3.693502125780283*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796902967331*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020609026937`*^9}],
 
-Cell[BoxData["\<\"PRODUCTS OF 3 MULTIVECTORS\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796902973907*^9}],
+Cell[BoxData[
+ StyleBox["\<\"PRODUCTS OF 3 OR MORE MULTIVECTORS\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontWeight->Bold,
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060910735*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1079,16 +1190,12 @@ Cell[BoxData[
    "\[InvisibleSpace]", 
    SubscriptBox["e", "5"]}],
   SequenceForm[
-  "A = ", 3, ", B = ", 3^Rational[1, 4] Subscript[$CellContext`e, 2], 
-   ", C = ", 4 - Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4], 
-   ", E = ", 
-   Subscript[$CellContext`e, 5]],
+  "A = ", 3, ", B = ", 3^Rational[1, 4] Subscript[GeomAlg2017Jan`e, 2], 
+   ", C = ", 4 - Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4], ", E = ", 
+   Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796902980914*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060919323*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1109,16 +1216,12 @@ Cell[BoxData[
      SubscriptBox["e", "5"]}]}]}],
   SequenceForm[
   "Geometric Product P = A \[SmallCircle] B \[SmallCircle] C \[SmallCircle] E \
-= ", 12 3^Rational[1, 4] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 5] - 3 3^Rational[1, 4] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 4] Subscript[$CellContext`e, 5]],
+= ", 12 3^Rational[1, 4] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 5] - 3 3^Rational[1, 4] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4] Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796902986465*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060925116*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1139,16 +1242,12 @@ Cell[BoxData[
      SubscriptBox["e", "5"]}]}]}],
   SequenceForm[
   "Wedge Product W = A \[Wedge] B \[Wedge] C \[Wedge] E = ", 
-   12 3^Rational[1, 4] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 5] - 3 3^Rational[1, 4] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 4] Subscript[$CellContext`e, 5]],
+   12 3^Rational[1, 4] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 5] - 3 3^Rational[1, 4] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4] Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796902991337*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060930847*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1157,34 +1256,37 @@ Cell[BoxData[
   SequenceForm[
   "Dot Product D = A \[CenterDot] B \[CenterDot] C \[CenterDot] E = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796902996065*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060936529*^9}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"Left Contraction F = C \[CircleDot] E = \"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"4", " ", 
-    SubscriptBox["e", "5"]}]}],
+  RowBox[{"\<\"Scalar Product H = A \[CenterDot] B \[CenterDot] C \
+\[CenterDot] E = \"\>", "\[InvisibleSpace]", "0"}],
   SequenceForm[
-  "Left Contraction F = C \[CircleDot] E = ", 4 Subscript[$CellContext`e, 5]],
-  
+  "Scalar Product H = A \[CenterDot] B \[CenterDot] C \[CenterDot] E = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969030008297`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060941914*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Left Contraction F = C \[SquareSuperset] E \[SquareSuperset] \
+E= \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm[
+  "Left Contraction F = C \[SquareSuperset] E \[SquareSuperset] E= ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060947611*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Right Contraction G = C \[SquareSubset] E \[SquareSubset] E = \
+\"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "Right Contraction G = C \[SquareSubset] E \[SquareSubset] E = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060952927*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903005364*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060958346*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1192,11 +1294,7 @@ Cell[BoxData[
    "\[InvisibleSpace]", "0"}],
   SequenceForm["<B\!\(\*SubscriptBox[\(>\), \(0\)]\) = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969030100527`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060964389*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1208,13 +1306,9 @@ Cell[BoxData[
     SubscriptBox["e", "2"]}]}],
   SequenceForm[
   "<B\!\(\*SubscriptBox[\(>\), \(1\)]\) = ", 3^Rational[1, 4] 
-   Subscript[$CellContext`e, 2]],
+   Subscript[GeomAlg2017Jan`e, 2]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969030147448`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060969976*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1222,11 +1316,7 @@ Cell[BoxData[
    "\[InvisibleSpace]", "0"}],
   SequenceForm["<B\!\(\*SubscriptBox[\(>\), \(2\)]\) = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690301945*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060975514*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1234,11 +1324,7 @@ Cell[BoxData[
    "\[InvisibleSpace]", "0"}],
   SequenceForm["<W\!\(\*SubscriptBox[\(>\), \(0\)]\) = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903024177*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502060981203*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1246,11 +1332,7 @@ Cell[BoxData[
    "\[InvisibleSpace]", "0"}],
   SequenceForm["<W\!\(\*SubscriptBox[\(>\), \(1\)]\) = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969030288343`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020609867*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1263,13 +1345,9 @@ Cell[BoxData[
     SubscriptBox["e", "5"]}]}],
   SequenceForm[
   "<W\!\(\*SubscriptBox[\(>\), \(2\)]\) = ", 12 3^Rational[1, 4] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 5]],
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969030335283`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.69350206099227*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1277,11 +1355,7 @@ Cell[BoxData[
    "\[InvisibleSpace]", "0"}],
   SequenceForm["<W\!\(\*SubscriptBox[\(>\), \(3\)]\) = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969030382147`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020609977417`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1297,14 +1371,10 @@ Cell[BoxData[
     SubscriptBox["e", "5"]}]}],
   SequenceForm[
   "<W\!\(\*SubscriptBox[\(>\), \(4\)]\) = ", (-3) 3^Rational[1, 4] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 4] Subscript[$CellContext`e, 5]],
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4] Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903043294*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061003533*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1312,11 +1382,7 @@ Cell[BoxData[
    "\[InvisibleSpace]", "0"}],
   SequenceForm["<P\!\(\*SubscriptBox[\(>\), \(0\)]\) = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903048737*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061009129*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1324,11 +1390,7 @@ Cell[BoxData[
    "\[InvisibleSpace]", "0"}],
   SequenceForm["<P\!\(\*SubscriptBox[\(>\), \(1\)]\) = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690305336*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061014642*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1341,13 +1403,9 @@ Cell[BoxData[
     SubscriptBox["e", "5"]}]}],
   SequenceForm[
   "<P\!\(\*SubscriptBox[\(>\), \(2\)]\) = ", 12 3^Rational[1, 4] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 5]],
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903057822*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061020996*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1355,11 +1413,7 @@ Cell[BoxData[
    "\[InvisibleSpace]", "0"}],
   SequenceForm["<P\!\(\*SubscriptBox[\(>\), \(3\)]\) = ", 0],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903062749*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061026572*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1375,28 +1429,24 @@ Cell[BoxData[
     SubscriptBox["e", "5"]}]}],
   SequenceForm[
   "<P\!\(\*SubscriptBox[\(>\), \(4\)]\) = ", (-3) 3^Rational[1, 4] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 4] Subscript[$CellContext`e, 5]],
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4] Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969030677*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061032222*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903072452*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061038061*^9}],
 
-Cell[BoxData["\<\"PRODUCTS OF 2 MULTIVECTORS\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903076951*^9}],
+Cell[BoxData[
+ StyleBox["\<\"PRODUCTS OF 2 MULTIVECTORS\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontWeight->Bold,
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061043758*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1411,11 +1461,7 @@ Cell[BoxData[
 \(1\)]\)+(1+\!\(\*SqrtBox[\(Pi\)]\))\!\(\*SubscriptBox[\(e\), \
 \(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)+Sin[Pi/4]"],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969032376423`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020612224693`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1428,11 +1474,7 @@ Cell[BoxData[
    " \!\(\*SubscriptBox[\(e\), \(2\)]\)+\!\(\*SubscriptBox[\(e\), \(1\)]\)+\!\
 \(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \(4\)]\)"],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969032685013`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061254691*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1490,22 +1532,18 @@ Cell[BoxData[
      SubscriptBox["e", "4"]}]}]}],
   SequenceForm[
   "Geometric Product = ", -1 + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 1] + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 2] - Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 2] + (-1 - Pi^Rational[1, 2]) 
-    Subscript[$CellContext`e, 3] + (1 + Pi^Rational[1, 2]) 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] - 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 4] + (-1 - Pi^Rational[1, 2]) 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4]],
+    Subscript[GeomAlg2017Jan`e, 1] + (Rational[19, 5] + 2^Rational[-1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 2] - Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 2] + (-1 - Pi^Rational[1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 3] + (1 + Pi^Rational[1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] + (Rational[19, 5] + 2^Rational[-1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] - 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 4] + (-1 - Pi^Rational[1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969032738323`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061258562*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1549,20 +1587,16 @@ Cell[BoxData[
      SubscriptBox["e", "4"]}]}]}],
   SequenceForm[
   "Wedge Product = ", (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 1] + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 2] - Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 2] + (1 + Pi^Rational[1, 2]) 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] - 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 4]],
+    Subscript[GeomAlg2017Jan`e, 1] + (Rational[19, 5] + 2^Rational[-1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 2] - Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 2] + (1 + Pi^Rational[1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] + (Rational[19, 5] + 2^Rational[-1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] - 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690327936*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020612626266`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1599,16 +1633,20 @@ Cell[BoxData[
      SubscriptBox["e", "4"]}]}]}],
   SequenceForm[
   "Dot Product = ", -1 + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 1] + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 2] + (-1 - Pi^Rational[1, 2]) 
-    Subscript[$CellContext`e, 3] + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4]],
+    Subscript[GeomAlg2017Jan`e, 1] + (Rational[19, 5] + 2^Rational[-1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 2] + (-1 - Pi^Rational[1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 3] + (Rational[19, 5] + 2^Rational[-1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903282961*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061266633*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Scalar Product = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm["Scalar Product = ", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020612700253`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1639,22 +1677,31 @@ Cell[BoxData[
      SubscriptBox["e", "4"]}]}]}],
   SequenceForm[
   "Left Contraction = ", -1 + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 1] + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 2] + (Rational[19, 5] + 2^Rational[-1, 2]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4]],
+    Subscript[GeomAlg2017Jan`e, 1] + (Rational[19, 5] + 2^Rational[-1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 2] + (Rational[19, 5] + 2^Rational[-1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969032861347`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020612733107`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Right Contraction = \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "-", 
+       SqrtBox["\[Pi]"]}], ")"}], " ", 
+     SubscriptBox["e", "3"]}]}]}],
+  SequenceForm[
+  "Right Contraction = ", -1 + (-1 - Pi^Rational[1, 2]) 
+    Subscript[GeomAlg2017Jan`e, 3]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061276846*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903288939*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020612800407`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1666,11 +1713,7 @@ Cell[BoxData[
    "p+r \!\(\*SubscriptBox[\(e\), \(1\)]\)+s \!\(\*SubscriptBox[\(e\), \(2\)]\
 \)"],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969032914953`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061283043*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1688,11 +1731,7 @@ Cell[BoxData[
 \!\(\*SubscriptBox[\(e\), \(2\)]\)+\!\(\*SubscriptBox[\(e\), \(3\)]\) \
 \!\(\*SubscriptBox[\(e\), \(4\)]\) \!\(\*SubscriptBox[\(b\), \(3, 4\)]\)"],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903294189*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020612863417`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1754,26 +1793,24 @@ Cell[BoxData[
     Subscript[$CellContext`b, 2] + ($CellContext`r 
       Subscript[$CellContext`b, 0] + $CellContext`p 
       Subscript[$CellContext`b, 1]) 
-    Subscript[$CellContext`e, 1] + ($CellContext`s 
+    Subscript[
+     GeomAlg2017Jan`e, 1] + ($CellContext`s 
       Subscript[$CellContext`b, 0] + $CellContext`p 
       Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 2] + (-$CellContext`s 
+    Subscript[
+     GeomAlg2017Jan`e, 2] + (-$CellContext`s 
       Subscript[$CellContext`b, 1] + $CellContext`r 
-      Subscript[$CellContext`b, 2]) Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] + $CellContext`p 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+      Subscript[$CellContext`b, 2]) Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] + $CellContext`p 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + $CellContext`r 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + $CellContext`s 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 3, 4]],
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903297738*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061290468*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1829,26 +1866,24 @@ Cell[BoxData[
     Subscript[$CellContext`b, 0] + ($CellContext`r 
       Subscript[$CellContext`b, 0] + $CellContext`p 
       Subscript[$CellContext`b, 1]) 
-    Subscript[$CellContext`e, 1] + ($CellContext`s 
+    Subscript[
+     GeomAlg2017Jan`e, 1] + ($CellContext`s 
       Subscript[$CellContext`b, 0] + $CellContext`p 
       Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 2] + (-$CellContext`s 
+    Subscript[
+     GeomAlg2017Jan`e, 2] + (-$CellContext`s 
       Subscript[$CellContext`b, 1] + $CellContext`r 
-      Subscript[$CellContext`b, 2]) Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] + $CellContext`p 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+      Subscript[$CellContext`b, 2]) Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] + $CellContext`p 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + $CellContext`r 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + $CellContext`s 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 3, 4]],
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903301156*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061294433*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1888,18 +1923,33 @@ Cell[BoxData[
     Subscript[$CellContext`b, 2] + ($CellContext`r 
       Subscript[$CellContext`b, 0] + $CellContext`p 
       Subscript[$CellContext`b, 1]) 
-    Subscript[$CellContext`e, 1] + ($CellContext`s 
+    Subscript[
+     GeomAlg2017Jan`e, 1] + ($CellContext`s 
       Subscript[$CellContext`b, 0] + $CellContext`p 
       Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 2] + $CellContext`p 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 2] + $CellContext`p 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903304422*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061298143*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Scalar Product = \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"p", " ", 
+     SubscriptBox["b", "0"]}], "+", 
+    RowBox[{"r", " ", 
+     SubscriptBox["b", "1"]}], "+", 
+    RowBox[{"s", " ", 
+     SubscriptBox["b", "2"]}]}]}],
+  SequenceForm[
+  "Scalar Product = ", $CellContext`p 
+    Subscript[$CellContext`b, 0] + $CellContext`r 
+    Subscript[$CellContext`b, 1] + $CellContext`s 
+    Subscript[$CellContext`b, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061301478*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1928,24 +1978,43 @@ Cell[BoxData[
     Subscript[$CellContext`b, 1] + $CellContext`s 
     Subscript[$CellContext`b, 2] + $CellContext`p 
     Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 1] + $CellContext`p 
+    Subscript[GeomAlg2017Jan`e, 1] + $CellContext`p 
     Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 2] + $CellContext`p 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 2] + $CellContext`p 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033072987`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061304832*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Right Contraction = \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"p", " ", 
+     SubscriptBox["b", "0"]}], "+", 
+    RowBox[{"r", " ", 
+     SubscriptBox["b", "1"]}], "+", 
+    RowBox[{"s", " ", 
+     SubscriptBox["b", "2"]}], "+", 
+    RowBox[{"r", " ", 
+     SubscriptBox["b", "0"], " ", 
+     SubscriptBox["e", "1"]}], "+", 
+    RowBox[{"s", " ", 
+     SubscriptBox["b", "0"], " ", 
+     SubscriptBox["e", "2"]}]}]}],
+  SequenceForm[
+  "Right Contraction = ", $CellContext`p 
+    Subscript[$CellContext`b, 0] + $CellContext`r 
+    Subscript[$CellContext`b, 1] + $CellContext`s 
+    Subscript[$CellContext`b, 2] + $CellContext`r 
+    Subscript[$CellContext`b, 0] 
+    Subscript[GeomAlg2017Jan`e, 1] + $CellContext`s 
+    Subscript[$CellContext`b, 0] Subscript[GeomAlg2017Jan`e, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061308268*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903310198*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.69350206131146*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1963,11 +2032,7 @@ Cell[BoxData[
 \!\(\*SubscriptBox[\(e\), \(2\)]\)+\!\(\*SubscriptBox[\(e\), \(1\)]\) \
 \!\(\*SubscriptBox[\(e\), \(2\)]\) \!\(\*SubscriptBox[\(a\), \(1, 2\)]\)"],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903313484*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061314376*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1985,11 +2050,7 @@ Cell[BoxData[
 \!\(\*SubscriptBox[\(e\), \(2\)]\)+\!\(\*SubscriptBox[\(e\), \(3\)]\) \
 \!\(\*SubscriptBox[\(e\), \(4\)]\) \!\(\*SubscriptBox[\(b\), \(3, 4\)]\)"],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033166513`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061318008*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2082,36 +2143,33 @@ Cell[BoxData[
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 0] + 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] + 
-   Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] (-Subscript[$CellContext`a, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[
+     GeomAlg2017Jan`e, 2] (-Subscript[$CellContext`a, 2] 
       Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2] + 
      Subscript[$CellContext`b, 0] Subscript[$CellContext`a, 1, 2]) + 
-   Subscript[$CellContext`e, 2] (
+   Subscript[GeomAlg2017Jan`e, 2] (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 2] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 1, 2]) + 
-   Subscript[$CellContext`e, 1] (
+   Subscript[GeomAlg2017Jan`e, 1] (
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 2]) + 
-   Subscript[$CellContext`a, 0] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 0] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 3, 4] + 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`a, 1, 2] Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903320531*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061322358*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2191,32 +2249,29 @@ Cell[BoxData[
     Subscript[$CellContext`b, 0] + (
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1]) 
-    Subscript[$CellContext`e, 1] + (
+    Subscript[GeomAlg2017Jan`e, 1] + (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] (-Subscript[$CellContext`a, 2] 
+    Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[
+     GeomAlg2017Jan`e, 2] (-Subscript[$CellContext`a, 2] 
       Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2] + 
      Subscript[$CellContext`b, 0] Subscript[$CellContext`a, 1, 2]) + 
-   Subscript[$CellContext`a, 0] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 0] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 3, 4] + 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`a, 1, 2] Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033243303`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061326798*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2275,24 +2330,41 @@ Cell[BoxData[
   "Dot Product = ", Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 0] + 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] + 
-   Subscript[$CellContext`b, 0] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`a, 1, 2] + 
-   Subscript[$CellContext`e, 2] (
+   Subscript[$CellContext`b, 0] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[$CellContext`a, 1, 2] + 
+   Subscript[GeomAlg2017Jan`e, 2] (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 2] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 1, 2]) + 
-   Subscript[$CellContext`e, 1] (
+   Subscript[GeomAlg2017Jan`e, 1] (
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 2]) + 
-   Subscript[$CellContext`a, 0] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 3, 4]],
+   Subscript[$CellContext`a, 0] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903328055*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061330824*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Scalar Product = \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["a", "0"], " ", 
+     SubscriptBox["b", "0"]}], "+", 
+    RowBox[{
+     SubscriptBox["a", "1"], " ", 
+     SubscriptBox["b", "1"]}], "+", 
+    RowBox[{
+     SubscriptBox["a", "2"], " ", 
+     SubscriptBox["b", "2"]}]}]}],
+  SequenceForm[
+  "Scalar Product = ", 
+   Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 0] + 
+   Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020613344107`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2327,32 +2399,84 @@ Cell[BoxData[
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 1] + 
+    Subscript[GeomAlg2017Jan`e, 1] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 0] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 3, 4]],
+    Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 0] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903331245*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020613377047`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Right Contraction = \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["a", "0"], " ", 
+     SubscriptBox["b", "0"]}], "+", 
+    RowBox[{
+     SubscriptBox["a", "1"], " ", 
+     SubscriptBox["b", "1"]}], "+", 
+    RowBox[{
+     SubscriptBox["a", "2"], " ", 
+     SubscriptBox["b", "2"]}], "+", 
+    RowBox[{
+     SubscriptBox["b", "0"], " ", 
+     SubscriptBox["e", "1"], " ", 
+     SubscriptBox["e", "2"], " ", 
+     SubscriptBox["a", 
+      RowBox[{"1", ",", "2"}]]}], "+", 
+    RowBox[{
+     SubscriptBox["e", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["a", "2"], " ", 
+        SubscriptBox["b", "0"]}], "-", 
+       RowBox[{
+        SubscriptBox["b", "1"], " ", 
+        SubscriptBox["a", 
+         RowBox[{"1", ",", "2"}]]}]}], ")"}]}], "+", 
+    RowBox[{
+     SubscriptBox["e", "1"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["a", "1"], " ", 
+        SubscriptBox["b", "0"]}], "+", 
+       RowBox[{
+        SubscriptBox["b", "2"], " ", 
+        SubscriptBox["a", 
+         RowBox[{"1", ",", "2"}]]}]}], ")"}]}]}]}],
+  SequenceForm[
+  "Right Contraction = ", 
+   Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 0] + 
+   Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] + 
+   Subscript[$CellContext`b, 0] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[$CellContext`a, 1, 2] + 
+   Subscript[GeomAlg2017Jan`e, 2] (
+     Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 0] - 
+     Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 1, 2]) + 
+   Subscript[GeomAlg2017Jan`e, 1] (
+     Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 0] + 
+     Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 2])],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061341412*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033340883`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061344668*^9}],
 
-Cell[BoxData["\<\"GEOMETRIC PRODUCT SYMBOLIC 3-DIMENSIONAL FORMULA\"\>"], \
-"Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033365593`*^9}],
+Cell[BoxData[
+ StyleBox["\<\"SYMBOLIC 3-DIMENSIONAL FORMULA FOR GEOMETRIC PRODUCT\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontWeight->Bold,
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020613476257`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2391,23 +2515,19 @@ Cell[BoxData[
       RowBox[{"1", ",", "2", ",", "3"}]]}]}]}],
   SequenceForm[
   "A = ", Subscript[$CellContext`a, 0] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`a, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 1, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 2, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`a, 1, 2, 3]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`a, 1, 2, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903339478*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061350893*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2446,30 +2566,22 @@ Cell[BoxData[
       RowBox[{"1", ",", "2", ",", "3"}]]}]}]}],
   SequenceForm[
   "B = ", Subscript[$CellContext`b, 0] + 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`b, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`b, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`b, 1, 2, 3]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`b, 1, 2, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033425903`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020613543177`*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033455057`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061357565*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2777,8 +2889,8 @@ Cell[BoxData[
    Subscript[$CellContext`a, 1, 3] Subscript[$CellContext`b, 1, 3] - 
    Subscript[$CellContext`a, 2, 3] Subscript[$CellContext`b, 2, 3] - 
    Subscript[$CellContext`a, 1, 2, 3] Subscript[$CellContext`b, 1, 2, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] (
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] (
      Subscript[$CellContext`b, 3] Subscript[$CellContext`a, 1, 2] - 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 3] + 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 3] + 
@@ -2787,8 +2899,9 @@ Cell[BoxData[
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2, 3] + 
      Subscript[$CellContext`b, 0] Subscript[$CellContext`a, 1, 2, 3] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1, 2, 3]) + 
-   Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] (-Subscript[$CellContext`a, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[
+     GeomAlg2017Jan`e, 3] (-Subscript[$CellContext`a, 3] 
       Subscript[$CellContext`b, 2] + 
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 3] + 
      Subscript[$CellContext`b, 0] Subscript[$CellContext`a, 2, 3] + 
@@ -2797,8 +2910,9 @@ Cell[BoxData[
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 2, 3] + 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 1, 2, 3] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1, 2, 3]) + 
-   Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 3] (-Subscript[$CellContext`a, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[
+     GeomAlg2017Jan`e, 3] (-Subscript[$CellContext`a, 3] 
       Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 3] + 
      Subscript[$CellContext`b, 0] Subscript[$CellContext`a, 1, 3] - 
@@ -2807,8 +2921,9 @@ Cell[BoxData[
      Subscript[$CellContext`a, 1, 2] Subscript[$CellContext`b, 2, 3] - 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 2, 3] - 
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1, 2, 3]) + 
-   Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] (-Subscript[$CellContext`a, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[
+     GeomAlg2017Jan`e, 2] (-Subscript[$CellContext`a, 2] 
       Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2] + 
      Subscript[$CellContext`b, 0] Subscript[$CellContext`a, 1, 2] + 
@@ -2817,7 +2932,7 @@ Cell[BoxData[
      Subscript[$CellContext`a, 1, 3] Subscript[$CellContext`b, 2, 3] + 
      Subscript[$CellContext`b, 3] Subscript[$CellContext`a, 1, 2, 3] + 
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 1, 2, 3]) + 
-   Subscript[$CellContext`e, 3] (
+   Subscript[GeomAlg2017Jan`e, 3] (
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 3] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 1, 3] - 
@@ -2826,7 +2941,7 @@ Cell[BoxData[
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2, 3] - 
      Subscript[$CellContext`b, 1, 2] Subscript[$CellContext`a, 1, 2, 3] - 
      Subscript[$CellContext`a, 1, 2] Subscript[$CellContext`b, 1, 2, 3]) + 
-   Subscript[$CellContext`e, 2] (
+   Subscript[GeomAlg2017Jan`e, 2] (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 2] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 1, 2] + 
@@ -2835,7 +2950,7 @@ Cell[BoxData[
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 2, 3] + 
      Subscript[$CellContext`b, 1, 3] Subscript[$CellContext`a, 1, 2, 3] + 
      Subscript[$CellContext`a, 1, 3] Subscript[$CellContext`b, 1, 2, 3]) + 
-   Subscript[$CellContext`e, 1] (
+   Subscript[GeomAlg2017Jan`e, 1] (
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 0] + 
      Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 2] + 
@@ -2845,26 +2960,21 @@ Cell[BoxData[
      Subscript[$CellContext`b, 2, 3] Subscript[$CellContext`a, 1, 2, 3] - 
      Subscript[$CellContext`a, 2, 3] Subscript[$CellContext`b, 1, 2, 3])],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033504763`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020613632812`*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690335497*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020613685627`*^9}],
 
-Cell[BoxData["\<\"These commands can simplify tedious keying in of long clifs\
-\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033574677`*^9}],
+Cell[BoxData[
+ StyleBox["\<\"COMMANDS THAT SIMPLIFY TEDIOUS TYPING\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontWeight->Bold,
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061371767*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2878,15 +2988,11 @@ vectors: \"\>", "\[InvisibleSpace]",
     SubscriptBox["e", "5"]}]}],
   SequenceForm[
   "Simple blades, like pseudoscalars, are products of basis vectors: ", 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-   Subscript[$CellContext`e, 5]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033601017`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061375*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2898,14 +3004,10 @@ Cell[BoxData[
     SubscriptBox["e", "6"]}]}],
   SequenceForm[
   "We can generate other simple blades, like BladeG[2,4,6] = ", 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] 
-   Subscript[$CellContext`e, 6]],
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 6]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903362783*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061378454*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2923,15 +3025,11 @@ Cell[BoxData[
      SubscriptBox["e", "3"]}]}]}],
   SequenceForm[
   "nVectorG[a,3] is a linear combination of basis vectors: ", 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3]],
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033655853`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061382619*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2954,34 +3052,22 @@ Cell[BoxData[
       RowBox[{"2", ",", "3"}]]}]}]}],
   SequenceForm[
   "BiVectorG[a,3] = ", 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`a, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 1, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 2, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903368451*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020613859367`*^9}],
 
 Cell[BoxData["\<\"BiVectors, TriVectors, etc, are (not necessarily simple) \
 blades of grade 2, 3, etc.\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690337111*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061389122*^9}],
 
 Cell[BoxData["\<\"Rather than define TrivectorG or QuadVectorG we define \
 pBladeG: \"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903373788*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061392117*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3005,18 +3091,14 @@ Cell[BoxData[
       RowBox[{"2", ",", "3"}]]}]}]}],
   SequenceForm[
   "pBladeG[a,2,3] is our bivector, above: ", 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`a, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 1, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 2, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903376761*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061395317*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3048,20 +3130,16 @@ Cell[BoxData[
       RowBox[{"2", ",", "3", ",", "4"}]]}]}]}],
   SequenceForm[
   "pBladeG[a,3,4] is a trivector: ", 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`a, 1, 2, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`a, 1, 2, 4] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`a, 1, 3, 4] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`a, 2, 3, 4]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`a, 1, 2, 3] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`a, 1, 2, 4] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`a, 1, 3, 4] + 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`a, 2, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903379858*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061398788*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3102,23 +3180,19 @@ clif): \"\>", "\[InvisibleSpace]",
   SequenceForm[
   "nClifG[a,3] is a generic n-dimensional multivector (a.k.a. clif): ", 
    Subscript[$CellContext`a, 0] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`a, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 1, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 2, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`a, 1, 2, 3]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`a, 1, 2, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903383059*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061402388*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3135,16 +3209,12 @@ Cell[BoxData[
    "\[InvisibleSpace]", "\<\" is an example of expanded multivector output.\"\
 \>"}],
   SequenceForm[
-  "A = ", 5 Subscript[$CellContext`e, 1] - 11^Rational[1, 2] 
-   Subscript[$CellContext`e, 1] + 
-   7 Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3], 
+  "A = ", 5 Subscript[GeomAlg2017Jan`e, 1] - 11^Rational[1, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] + 
+   7 Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3], 
    " is an example of expanded multivector output."],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903386468*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020614059153`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3161,14 +3231,10 @@ readability: \"\>", "\[InvisibleSpace]",
      SubscriptBox["e", "3"]}]}]}],
   SequenceForm[
   "Use CollectG[A] to collect the terms of A for better readability: ", (5 - 
-     11^Rational[1, 2]) Subscript[$CellContext`e, 1] + 
-   7 Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3]],
+     11^Rational[1, 2]) Subscript[GeomAlg2017Jan`e, 1] + 
+   7 Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903389427*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061409212*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3179,11 +3245,7 @@ sometimes the user \"\>",
   "This package attempts to generate 'collected' clifs but sometimes the user \
 ", "may need to fdo his own collection."],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969033922043`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061412548*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3199,11 +3261,7 @@ and thus",
    "can collect terms by blades. Before collecting, it also first reduces ", 
    "powers of \!\(\*SubscriptBox[\(e\), \(i\)]\) should any remain."],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903394837*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020614156933`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3228,18 +3286,14 @@ Cell[BoxData[
      SubscriptBox["e", "2"], " ", 
      SubscriptBox["e", "3"]}]}]}],
   SequenceForm[
-  "Reverse[ ", 5 Subscript[$CellContext`e, 1] - 11^Rational[1, 2] 
-   Subscript[$CellContext`e, 1] + 
-   7 Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3], " ]  =  ", 
-   5 Subscript[$CellContext`e, 1] - 11^Rational[1, 2] 
-   Subscript[$CellContext`e, 1] - 7 Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 3]],
+  "Reverse[ ", 5 Subscript[GeomAlg2017Jan`e, 1] - 11^Rational[1, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] + 
+   7 Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3], " ]  =  ",
+    5 Subscript[GeomAlg2017Jan`e, 1] - 11^Rational[1, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] - 7 Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690339804*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061419181*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3254,51 +3308,39 @@ Cell[BoxData[
      SubscriptBox["e", "5"]}]}]}],
   SequenceForm[
   "RotorG[2,5,\[Theta]] = ", Cos[Rational[1, 2] $CellContext`\[Theta]] + 
-   Sin[Rational[1, 2] $CellContext`\[Theta]] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 5]],
+   Sin[Rational[1, 2] $CellContext`\[Theta]] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969034009027`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061422616*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690340379*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.69350206142577*^9}],
 
-Cell[BoxData["\<\"PITCH-ROLL ROTATION OF AN AIRPLANE IN 3-SPACE\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903406446*^9}],
+Cell[BoxData[
+ StyleBox["\<\"PITCH-ROLL ROTATION OF AN AIRPLANE IN 3-SPACE\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontWeight->Bold,
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061428853*^9}],
+
+Cell[BoxData["\<\"Only works with Clifford Algebra, not Grassmann \
+Algebra.\"\>"], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061431848*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903409121*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061434801*^9}],
 
 Cell[BoxData["\<\"New heading = reverse rotor \[SmallCircle] initial heading \
 \[SmallCircle] rotor, computed below.\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903411779*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061437812*^9}],
 
 Cell[BoxData["\<\"Initial heading: \\!\\(\\*SubscriptBox[\\(e\\), \\(1\\)]\\)\
 \"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903414391*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061440796*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3313,14 +3355,10 @@ Cell[BoxData[
      SubscriptBox["e", "3"]}]}]}],
   SequenceForm[
   "Pitch Rotor = ", Cos[Rational[1, 8] Pi] + 
-   Sin[Rational[1, 8] Pi] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 3]],
+   Sin[Rational[1, 8] Pi] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903417152*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061444243*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3335,13 +3373,9 @@ Cell[BoxData[
      SubscriptBox["e", "3"]}]}]}],
   SequenceForm[
   "Reverse Pitch Rotor = ", Cos[Rational[1, 8] Pi] - Sin[Rational[1, 8] Pi] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903420024*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061447525*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3356,14 +3390,10 @@ Cell[BoxData[
      SubscriptBox["e", "2"]}]}]}],
   SequenceForm[
   "Roll Rotor = ", Cos[Rational[1, 8] Pi] + 
-   Sin[Rational[1, 8] Pi] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2]],
+   Sin[Rational[1, 8] Pi] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690342282*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020614506683`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3378,13 +3408,9 @@ Cell[BoxData[
      SubscriptBox["e", "2"]}]}]}],
   SequenceForm[
   "Reverse Roll Rotor = ", Cos[Rational[1, 8] Pi] - Sin[Rational[1, 8] Pi] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903426188*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061453882*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3396,18 +3422,21 @@ Cell[BoxData[
     SqrtBox["2"]]}],
   SequenceForm[
   "New heading after pitch = ", 
-   2^Rational[-1, 2] (Subscript[$CellContext`e, 1] + 
-    Subscript[$CellContext`e, 3])],
+   2^Rational[-1, 2] (Subscript[GeomAlg2017Jan`e, 1] + 
+    Subscript[GeomAlg2017Jan`e, 3])],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903429905*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061457049*^9}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"New heading after pitch-roll = \"\>", "\[InvisibleSpace]", 
+  RowBox[{
+   StyleBox["\<\"New heading after pitch-roll = \"\>",
+    StripOnInput->False,
+    LineColor->RGBColor[0, 0, 1],
+    FrontFaceColor->RGBColor[0, 0, 1],
+    BackFaceColor->RGBColor[0, 0, 1],
+    GraphicsColor->RGBColor[0, 0, 1],
+    FontColor->RGBColor[0, 0, 1]], "\[InvisibleSpace]", 
    RowBox[{
     FractionBox["1", "2"], " ", 
     RowBox[{"(", 
@@ -3418,24 +3447,17 @@ Cell[BoxData[
        SqrtBox["2"], " ", 
        SubscriptBox["e", "3"]}]}], ")"}]}]}],
   SequenceForm[
-  "New heading after pitch-roll = ", 
-   Rational[1, 2] (Subscript[$CellContext`e, 1] + 
-    Subscript[$CellContext`e, 2] + 
-    2^Rational[1, 2] Subscript[$CellContext`e, 3])],
+   Style["New heading after pitch-roll = ", 
+    RGBColor[0, 0, 1]], 
+   Rational[1, 2] (Subscript[GeomAlg2017Jan`e, 1] + 
+    Subscript[GeomAlg2017Jan`e, 2] + 
+    2^Rational[1, 2] Subscript[GeomAlg2017Jan`e, 3])],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903432704*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020614605207`*^9}],
 
 Cell[BoxData["\<\"This heading can also be computed using a single, combined, \
 rotor: \"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690343547*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020614636717`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3468,17 +3490,14 @@ Cell[BoxData[
   SequenceForm[
   "Composite Rotor = rotorR \[SmallCircle] rotorP =", 
    Cos[Rational[1, 8] Pi]^2 + 
-   Cos[Rational[1, 8] Pi] Sin[Rational[1, 8] Pi] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] + 
-   Cos[Rational[1, 8] Pi] Sin[Rational[1, 8] Pi] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 3] - Sin[Rational[1, 8] Pi]^2 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3]],
+   Cos[Rational[1, 8] Pi] Sin[Rational[1, 8] Pi] 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] + 
+   Cos[Rational[1, 8] Pi] Sin[Rational[1, 8] Pi] 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] - 
+   Sin[Rational[1, 8] Pi]^2 Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690343849*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061467037*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3509,22 +3528,25 @@ Cell[BoxData[
      SubscriptBox["e", "3"]}]}]}],
   SequenceForm[
   "Reverse composite rotor = ", Cos[Rational[1, 8] Pi]^2 - 
-   Cos[Rational[1, 8] Pi] Sin[Rational[1, 8] Pi] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 2] - Cos[Rational[1, 8] Pi] 
-   Sin[Rational[1, 8] Pi] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 3] + 
-   Sin[Rational[1, 8] Pi]^2 Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3]],
+   Cos[Rational[1, 8] Pi] Sin[Rational[1, 8] Pi] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] - 
+   Cos[Rational[1, 8] Pi] Sin[Rational[1, 8] Pi] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] + 
+   Sin[Rational[1, 8] Pi]^2 Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.69179690344174*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061470682*^9}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"New heading after pitch-roll = \"\>", "\[InvisibleSpace]", 
+  RowBox[{
+   StyleBox["\<\"New heading after pitch-roll = \"\>",
+    StripOnInput->False,
+    LineColor->RGBColor[0, 0, 1],
+    FrontFaceColor->RGBColor[0, 0, 1],
+    BackFaceColor->RGBColor[0, 0, 1],
+    GraphicsColor->RGBColor[0, 0, 1],
+    FontColor->RGBColor[0, 0, 1]], "\[InvisibleSpace]", 
    RowBox[{
     FractionBox["1", "2"], " ", 
     RowBox[{"(", 
@@ -3535,60 +3557,48 @@ Cell[BoxData[
        SubscriptBox["e", "2"]}], "+", 
       SubscriptBox["e", "3"]}], ")"}]}]}],
   SequenceForm[
-  "New heading after pitch-roll = ", 
-   Rational[1, 2] (Subscript[$CellContext`e, 1] + 
-    2^Rational[1, 2] Subscript[$CellContext`e, 2] + 
-    Subscript[$CellContext`e, 3])],
+   Style["New heading after pitch-roll = ", 
+    RGBColor[0, 0, 1]], 
+   Rational[1, 2] (Subscript[GeomAlg2017Jan`e, 1] + 
+    2^Rational[1, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+    Subscript[GeomAlg2017Jan`e, 3])],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903444667*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061474395*^9}],
 
-Cell[BoxData["\<\"Notice that the heading is not the same as a roll followed \
-by pitch!! Try it.\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903447421*^9}],
+Cell[BoxData["\<\"Notice this heading is not the same as a 45\[Degree] roll \
+followed by a 45\[Degree] pitch!! Try it.\"\>"], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061477797*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903451509*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061483437*^9}],
 
-Cell[BoxData["\<\"DEMONSTRATE IDENTITIES\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969034540577`*^9}],
-
-Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903456709*^9}],
-
-Cell[BoxData["\<\"IDENTITY: v \[SmallCircle] B = v \[CenterDot] B + v \
-\[Wedge] B \"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969034593678`*^9}],
+Cell[BoxData[
+ StyleBox["\<\"DEMONSTRATE CLIFFORD ALGEBRA IDENTITIES\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontWeight->Bold,
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061486537*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903462944*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061489664*^9}],
+
+Cell[BoxData[
+ StyleBox["\<\"IDENTITY: v \[SmallCircle] B = v \[CenterDot] B + v \[Wedge] B \
+ for vector v and blade B\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020614926558`*^9}],
+
+Cell[BoxData["\<\"\"\>"], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061495811*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3608,16 +3618,12 @@ Cell[BoxData[
     SubscriptBox["b", "1"], " ", 
     SubscriptBox["e", "1"]}]}],
   SequenceForm[
-  "Vector = ", Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3], "   blade = ", 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1]],
+  "Vector = ", Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3], "   blade = ",
+    Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903465667*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061498999*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3641,15 +3647,11 @@ Cell[BoxData[
   "                 Vector \[SmallCircle] blade = ", 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] - 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] - 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] - 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 1] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903468801*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061502565*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3673,22 +3675,14 @@ Cell[BoxData[
   "Vector \[CenterDot] blade + Vector \[Wedge] blade = ", 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] - 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] - 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] - 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 1] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903471918*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061506195*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969034746103`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061509411*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3712,17 +3706,13 @@ Cell[BoxData[
      SubscriptBox["b", "2"], " ", 
      SubscriptBox["e", "2"]}]}]}],
   SequenceForm[
-  "Vector = ", Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3], "   blade = ", 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2]],
+  "Vector = ", Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3], "   blade = ",
+    Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903477408*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615126667`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3760,19 +3750,15 @@ Cell[BoxData[
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] - 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] + 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] - 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] - 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 1] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] - 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] - 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 2] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3]],
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969034804993`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615169487`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3810,26 +3796,18 @@ Cell[BoxData[
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] - 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] + 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] - 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] - 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 1] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] - 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] - 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 2] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3]],
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903483695*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061520657*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969034865217`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061523904*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3862,21 +3840,17 @@ Cell[BoxData[
      SubscriptBox["b", 
       RowBox[{"2", ",", "3"}]]}]}]}],
   SequenceForm[
-  "Vector = ", Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3], "   blade = ", 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+  "Vector = ", Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3], "   blade = ",
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969034893017`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615271587`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3937,31 +3911,27 @@ Cell[BoxData[
       RowBox[{"2", ",", "3"}]]}]}]}],
   SequenceForm[
   "                 Vector \[SmallCircle] blade = ", -
-    Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 1] 
+    Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 1] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 2] - Subscript[$CellContext`a, 3] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[$CellContext`b, 1, 3] + 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 3] - Subscript[$CellContext`a, 2] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`b, 1, 3] - 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`b, 1, 3] - 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 2] 
    Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969034925623`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615310287`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4022,38 +3992,30 @@ Cell[BoxData[
       RowBox[{"2", ",", "3"}]]}]}]}],
   SequenceForm[
   "Vector \[CenterDot] blade + Vector \[Wedge] blade = ", -
-    Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 1] 
+    Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 1] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 2] - Subscript[$CellContext`a, 3] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[$CellContext`b, 1, 3] + 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 3] - Subscript[$CellContext`a, 2] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`b, 1, 3] - 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`b, 1, 3] - 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 2] 
    Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903496093*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615350323`*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903499114*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061538557*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4101,27 +4063,23 @@ Cell[BoxData[
      SubscriptBox["b", 
       RowBox[{"3", ",", "4"}]]}]}]}],
   SequenceForm[
-  "Vector = ", Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3], "   blade = ", 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+  "Vector = ", Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3], "   blade = ",
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 1, 4] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 2, 4] + 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903501965*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615419903`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4239,52 +4197,48 @@ Cell[BoxData[
       RowBox[{"3", ",", "4"}]]}]}]}],
   SequenceForm[
   "                 Vector \[SmallCircle] blade = ", -
-    Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 1] 
+    Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 1] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 2] - Subscript[$CellContext`a, 3] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[$CellContext`b, 1, 3] + 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 3] - Subscript[$CellContext`a, 2] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`b, 1, 3] + 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 1, 4] - Subscript[$CellContext`a, 2] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 1, 4] - 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 1, 4] - 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
    Subscript[$CellContext`b, 1, 4] - Subscript[$CellContext`a, 3] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[$CellContext`b, 2, 3] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 2, 4] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 2, 4] - Subscript[$CellContext`a, 3] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 2, 4] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 2, 4] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035060997`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.69350206154676*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4402,81 +4356,68 @@ Cell[BoxData[
       RowBox[{"3", ",", "4"}]]}]}]}],
   SequenceForm[
   "Vector \[CenterDot] blade + Vector \[Wedge] blade = ", -
-    Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 1] 
+    Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 1] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`b, 1, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 2] - Subscript[$CellContext`a, 3] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[$CellContext`b, 1, 3] + 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 1, 3] - Subscript[$CellContext`a, 2] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`b, 1, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`b, 1, 3] + 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 1, 4] - Subscript[$CellContext`a, 2] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-   Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 1, 4] - 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+   Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 1, 4] - 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
    Subscript[$CellContext`b, 1, 4] - Subscript[$CellContext`a, 3] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[$CellContext`b, 2, 3] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`b, 2, 3] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 2, 4] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 2, 4] - Subscript[$CellContext`a, 3] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 4] Subscript[$CellContext`b, 2, 4] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`b, 2, 4] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`b, 3, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035107527`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615519342`*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903514366*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061555955*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035169*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615590353`*^9}],
 
-Cell[BoxData["\<\"IDENTITY: (v1 \[CenterDot] v2)\[Star] = v1 \[Wedge] (v2)\
-\[Star]  where \[Star] is the Hodge Dual\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035197573`*^9}],
+Cell[BoxData[
+ StyleBox["\<\"IDENTITY: (v1 \[CenterDot] v2)\[Star] = v1 \[Wedge] \
+(v2)\[Star]  where \[Star] is the Hodge Dual and v1 and v2 are vectors\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.69350206156211*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903522771*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615653963`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4496,16 +4437,13 @@ Cell[BoxData[
      SubscriptBox["b", "3"], " ", 
      SubscriptBox["e", "3"]}]}]}],
   SequenceForm[
-  "Vector1 = ", Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1], 
-   "   Vector2 = ", Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`b, 3] Subscript[$CellContext`e, 3]],
+  "Vector1 = ", Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1], 
+   "   Vector2 = ", 
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`b, 3] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035256968`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615684443`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4519,14 +4457,10 @@ Cell[BoxData[
     SubscriptBox["e", "3"]}]}],
   SequenceForm[
   " (Vector1 \[CenterDot] Vector2)\[Star] = ", Subscript[$CellContext`a, 1] 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3]],
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035286283`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061571711*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4539,21 +4473,13 @@ Cell[BoxData[
     SubscriptBox["e", "3"]}]}],
   SequenceForm[
   "  Vector1 \[Wedge] Vector2\[Star] = ", Subscript[$CellContext`a, 1] 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3]],
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903531496*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061576926*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035341187`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061580345*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4580,18 +4506,15 @@ Cell[BoxData[
      SubscriptBox["b", "4"], " ", 
      SubscriptBox["e", "4"]}]}]}],
   SequenceForm[
-  "Vector1 = ", Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2], "   Vector2 = ",
-    Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`b, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`b, 4] Subscript[$CellContext`e, 4]],
+  "Vector1 = ", Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2], 
+   "   Vector2 = ", 
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`b, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[$CellContext`b, 4] Subscript[GeomAlg2017Jan`e, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903537627*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061584494*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4615,17 +4538,13 @@ Cell[BoxData[
   SequenceForm[
   " (Vector1 \[CenterDot] Vector2)\[Star] = ", 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4]],
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903540802*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020615880547`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4648,24 +4567,16 @@ Cell[BoxData[
   SequenceForm[
   "  Vector1 \[Wedge] Vector2\[Star] = ", 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4]],
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903543796*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061666573*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035464487`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061702314*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4698,20 +4609,17 @@ Cell[BoxData[
      SubscriptBox["b", "5"], " ", 
      SubscriptBox["e", "5"]}]}]}],
   SequenceForm[
-  "Vector1 = ", Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3], "   Vector2 = ",
-    Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`b, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`b, 4] Subscript[$CellContext`e, 4] + 
-   Subscript[$CellContext`b, 5] Subscript[$CellContext`e, 5]],
+  "Vector1 = ", Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3], 
+   "   Vector2 = ", 
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`b, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[$CellContext`b, 4] Subscript[GeomAlg2017Jan`e, 4] + 
+   Subscript[$CellContext`b, 5] Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903549341*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061705616*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4745,23 +4653,19 @@ Cell[BoxData[
   SequenceForm[
   " (Vector1 \[CenterDot] Vector2)\[Star] = ", 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] + 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 3] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5]],
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903552525*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061709379*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4794,30 +4698,22 @@ Cell[BoxData[
   SequenceForm[
   "  Vector1 \[Wedge] Vector2\[Star] = ", 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] + 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 3] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5]],
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969035557327`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061713564*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903558515*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.69350206171692*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4856,22 +4752,19 @@ Cell[BoxData[
      SubscriptBox["b", "6"], " ", 
      SubscriptBox["e", "6"]}]}]}],
   SequenceForm[
-  "Vector1 = ", Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`a, 4] Subscript[$CellContext`e, 4], "   Vector2 = ",
-    Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`b, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`b, 4] Subscript[$CellContext`e, 4] + 
-   Subscript[$CellContext`b, 5] Subscript[$CellContext`e, 5] + 
-   Subscript[$CellContext`b, 6] Subscript[$CellContext`e, 6]],
+  "Vector1 = ", Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[$CellContext`a, 4] Subscript[GeomAlg2017Jan`e, 4], 
+   "   Vector2 = ", 
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`b, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[$CellContext`b, 4] Subscript[GeomAlg2017Jan`e, 4] + 
+   Subscript[$CellContext`b, 5] Subscript[GeomAlg2017Jan`e, 5] + 
+   Subscript[$CellContext`b, 6] Subscript[GeomAlg2017Jan`e, 6]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903561273*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061720108*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4917,27 +4810,23 @@ Cell[BoxData[
   SequenceForm[
   " (Vector1 \[CenterDot] Vector2)\[Star] = ", 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] Subscript[$CellContext`e, 6] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] Subscript[GeomAlg2017Jan`e, 6] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] Subscript[$CellContext`e, 6] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] Subscript[GeomAlg2017Jan`e, 6] + 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 3] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] Subscript[$CellContext`e, 6] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] Subscript[GeomAlg2017Jan`e, 6] + 
    Subscript[$CellContext`a, 4] Subscript[$CellContext`b, 4] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] Subscript[$CellContext`e, 6]],
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] Subscript[GeomAlg2017Jan`e, 6]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903628294*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020617238817`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -4982,63 +4871,54 @@ Cell[BoxData[
   SequenceForm[
   "  Vector1 \[Wedge] Vector2\[Star] = ", 
    Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] Subscript[$CellContext`e, 6] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] Subscript[GeomAlg2017Jan`e, 6] + 
    Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 2] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] Subscript[$CellContext`e, 6] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] Subscript[GeomAlg2017Jan`e, 6] + 
    Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 3] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] Subscript[$CellContext`e, 6] + 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] Subscript[GeomAlg2017Jan`e, 6] + 
    Subscript[$CellContext`a, 4] Subscript[$CellContext`b, 4] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] Subscript[$CellContext`e, 6]],
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] Subscript[GeomAlg2017Jan`e, 6]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903653914*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061727728*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969036571083`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061731289*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969036596537`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061734271*^9}],
 
-Cell[BoxData["\<\"IDENTITY: (clif1 \[Wedge] v2)\[Star] = clif1 \
-\[CenterDot](v2)\[Star]  where \[Star] is the Hodge Dual\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903662299*^9}],
+Cell[BoxData[
+ StyleBox["\<\"IDENTITY: (clif1 \[Wedge] v2)\[Star] = clif1 \[CenterDot](v2)\
+\[Star]  where \[Star] is the Hodge Dual, v2 is a vector, and clif1 is a \
+multivector\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontColor->RGBColor[0, 0, 1]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061737414*^9}],
 
-Cell[BoxData["\<\"THIS HOLDS FOR DIM 1-3 AND FAILS IN DIM 4. \"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903664963*^9}],
+Cell[BoxData[
+ StyleBox["\<\"Show that this can fail if v2 is replaced by a blade\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 0],
+  FrontFaceColor->RGBColor[1, 0, 0],
+  BackFaceColor->RGBColor[1, 0, 0],
+  GraphicsColor->RGBColor[1, 0, 0],
+  FontColor->RGBColor[1, 0, 0]]], "Print",
+ CellChangeTimes->{3.6935019717147818`*^9, 3.69350206174058*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903667528*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061743655*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5054,14 +4934,11 @@ Cell[BoxData[
     SubscriptBox["e", "1"]}]}],
   SequenceForm[
   "Clif1 = ", Subscript[$CellContext`a, 0] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1], "   Vector2 = ",
-    Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1]],
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1], 
+   "   Vector2 = ", Subscript[$CellContext`b, 1] 
+   Subscript[GeomAlg2017Jan`e, 1]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903670343*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061746854*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5073,13 +4950,9 @@ Cell[BoxData[
     SubscriptBox["e", "2"]}]}],
   SequenceForm[
   " (Clif1 \[Wedge] Vector2)\[Star] = ", Subscript[$CellContext`a, 0] 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 2]],
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 2]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969036731243`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061750107*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5091,20 +4964,12 @@ Cell[BoxData[
     SubscriptBox["e", "2"]}]}],
   SequenceForm[
   "  Clif1 \[CenterDot] Vector2\[Star] = ", Subscript[$CellContext`a, 0] 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 2]],
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 2]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903676182*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020617533293`*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903678875*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020617563057`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5132,18 +4997,14 @@ Cell[BoxData[
      SubscriptBox["e", "2"]}]}]}],
   SequenceForm[
   "Clif1 = ", Subscript[$CellContext`a, 0] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`a, 1, 2], "   Vector2 = ", 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2]],
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903681655*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020617594957`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5174,17 +5035,13 @@ Cell[BoxData[
   " (Clif1 \[Wedge] Vector2)\[Star] = ", (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] - 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 3] - Subscript[$CellContext`a, 0] 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 3] + 
+    Subscript[GeomAlg2017Jan`e, 3] - Subscript[$CellContext`a, 0] 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 3] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3]],
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903684778*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020617629347`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5215,24 +5072,16 @@ Cell[BoxData[
   "  Clif1 \[CenterDot] Vector2\[Star] = ", (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] - 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 3] - Subscript[$CellContext`a, 0] 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 3] + 
+    Subscript[GeomAlg2017Jan`e, 3] - Subscript[$CellContext`a, 0] 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 3] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3]],
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903687838*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061766499*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903690668*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020617698393`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5282,26 +5131,23 @@ Cell[BoxData[
      SubscriptBox["e", "3"]}]}]}],
   SequenceForm[
   "Clif1 = ", Subscript[$CellContext`a, 0] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`a, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 1, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 2, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`a, 1, 2, 3], 
-   "   Vector2 = ", Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`b, 3] Subscript[$CellContext`e, 3]],
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`a, 1, 2, 3], 
+   "   Vector2 = ", 
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`b, 3] Subscript[GeomAlg2017Jan`e, 3]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969036936283`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061773181*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5381,33 +5227,31 @@ Cell[BoxData[
   " (Clif1 \[Wedge] Vector2)\[Star] = ", (
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 2] - 
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 3]) 
-    Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 4] + (-Subscript[$CellContext`a, 3] 
+    Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[
+     GeomAlg2017Jan`e, 4] + (-Subscript[$CellContext`a, 3] 
       Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 3]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] + 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 3] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 4] + (
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 4] + (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] - 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] - 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] - 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 2] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 4] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] + 
-   Subscript[$CellContext`e, 4] (-Subscript[$CellContext`b, 3] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] + 
+   Subscript[
+     GeomAlg2017Jan`e, 4] (-Subscript[$CellContext`b, 3] 
       Subscript[$CellContext`a, 1, 2] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 3] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 3])],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903716502*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061777367*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5487,40 +5331,34 @@ Cell[BoxData[
   "  Clif1 \[CenterDot] Vector2\[Star] = ", (
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 2] - 
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 3]) 
-    Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 4] + (-Subscript[$CellContext`a, 3] 
+    Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[
+     GeomAlg2017Jan`e, 4] + (-Subscript[$CellContext`a, 3] 
       Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 3]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] + 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 3] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 4] + (
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 4] + (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] - 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] - 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] - 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 2] 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 4] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 4] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] + 
-   Subscript[$CellContext`e, 4] (-Subscript[$CellContext`b, 3] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] + 
+   Subscript[
+     GeomAlg2017Jan`e, 4] (-Subscript[$CellContext`b, 3] 
       Subscript[$CellContext`a, 1, 2] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 3] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 3])],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903763981*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020617818413`*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903767499*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061785705*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5616,43 +5454,39 @@ Cell[BoxData[
      SubscriptBox["e", "4"]}]}]}],
   SequenceForm[
   "Clif1 = ", Subscript[$CellContext`a, 0] + 
-   Subscript[$CellContext`a, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`a, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`a, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`a, 4] Subscript[$CellContext`e, 4] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
+   Subscript[$CellContext`a, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`a, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`a, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[$CellContext`a, 4] Subscript[GeomAlg2017Jan`e, 4] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
     Subscript[$CellContext`a, 1, 2] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 1, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`a, 1, 4] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
     Subscript[$CellContext`a, 2, 3] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`a, 2, 4] + 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`a, 3, 4] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`a, 1, 2, 3] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`a, 1, 2, 4] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`a, 1, 3, 4] + 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`a, 2, 3, 4] + 
-   Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[$CellContext`a, 1, 2, 3] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`a, 1, 2, 4] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`a, 1, 3, 4] + 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[$CellContext`a, 2, 3, 4] + 
+   Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
     Subscript[$CellContext`a, 1, 2, 3, 4], "   Vector2 = ", 
-   Subscript[$CellContext`b, 1] Subscript[$CellContext`e, 1] + 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 2] + 
-   Subscript[$CellContext`b, 3] Subscript[$CellContext`e, 3] + 
-   Subscript[$CellContext`b, 4] Subscript[$CellContext`e, 4]],
+   Subscript[$CellContext`b, 1] Subscript[GeomAlg2017Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 2] + 
+   Subscript[$CellContext`b, 3] Subscript[GeomAlg2017Jan`e, 3] + 
+   Subscript[$CellContext`b, 4] Subscript[GeomAlg2017Jan`e, 4]],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796903770975*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.6935020617895737`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -5855,72 +5689,73 @@ Cell[BoxData[
   " (Clif1 \[Wedge] Vector2)\[Star] = ", (
      Subscript[$CellContext`a, 4] Subscript[$CellContext`b, 3] - 
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 4]) 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 5] + (-Subscript[$CellContext`a, 4] 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[
+     GeomAlg2017Jan`e, 5] + (-Subscript[$CellContext`a, 4] 
       Subscript[$CellContext`b, 2] + 
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 4]) 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 5] + (
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 5] + (
      Subscript[$CellContext`a, 4] Subscript[$CellContext`b, 1] - 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 4]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 5] - Subscript[$CellContext`a, 0] 
-   Subscript[$CellContext`b, 4] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 5] + (
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 5] - Subscript[$CellContext`a, 0] 
+   Subscript[$CellContext`b, 4] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[
+    GeomAlg2017Jan`e, 5] + (
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 2] - 
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 3]) 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + (-Subscript[$CellContext`a, 3] 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[
+     GeomAlg2017Jan`e, 5] + (-Subscript[$CellContext`a, 3] 
       Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 3]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 3] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + (
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] + (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] - 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] - Subscript[$CellContext`a, 0] 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-   Subscript[$CellContext`e, 5] + 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] - Subscript[$CellContext`a, 0] 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 5] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`e, 5] + 
-   Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] (-Subscript[$CellContext`b, 3] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[GeomAlg2017Jan`e, 5] + 
+   Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[
+     GeomAlg2017Jan`e, 5] (-Subscript[$CellContext`b, 3] 
       Subscript[$CellContext`a, 1, 2] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 3] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 3]) + 
-   Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 5] (
+   Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 5] (
      Subscript[$CellContext`b, 4] Subscript[$CellContext`a, 1, 2] - 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 4] + 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 4]) + 
-   Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 5] (-Subscript[$CellContext`b, 4] 
+   Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[
+     GeomAlg2017Jan`e, 5] (-Subscript[$CellContext`b, 4] 
       Subscript[$CellContext`a, 1, 3] + 
      Subscript[$CellContext`b, 3] Subscript[$CellContext`a, 1, 4] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 3, 4]) + 
-   Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 5] (
+   Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 5] (
      Subscript[$CellContext`b, 4] Subscript[$CellContext`a, 2, 3] - 
      Subscript[$CellContext`b, 3] Subscript[$CellContext`a, 2, 4] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 3, 4]) + 
-   Subscript[$CellContext`e, 5] (
+   Subscript[GeomAlg2017Jan`e, 5] (
      Subscript[$CellContext`b, 4] Subscript[$CellContext`a, 1, 2, 3] - 
      Subscript[$CellContext`b, 3] Subscript[$CellContext`a, 1, 2, 4] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 3, 4] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 3, 4])],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969038940697`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061868819*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -6123,85 +5958,83 @@ Cell[BoxData[
   "  Clif1 \[CenterDot] Vector2\[Star] = ", (
      Subscript[$CellContext`a, 4] Subscript[$CellContext`b, 3] - 
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 4]) 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 5] + (-Subscript[$CellContext`a, 4] 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[
+     GeomAlg2017Jan`e, 5] + (-Subscript[$CellContext`a, 4] 
       Subscript[$CellContext`b, 2] + 
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 4]) 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 5] + (
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 5] + (
      Subscript[$CellContext`a, 4] Subscript[$CellContext`b, 1] - 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 4]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 5] - Subscript[$CellContext`a, 0] 
-   Subscript[$CellContext`b, 4] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-   Subscript[$CellContext`e, 5] + (
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 5] - Subscript[$CellContext`a, 0] 
+   Subscript[$CellContext`b, 4] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+   Subscript[
+    GeomAlg2017Jan`e, 5] + (
      Subscript[$CellContext`a, 3] Subscript[$CellContext`b, 2] - 
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 3]) 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + (-Subscript[$CellContext`a, 3] 
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[
+     GeomAlg2017Jan`e, 5] + (-Subscript[$CellContext`a, 3] 
       Subscript[$CellContext`b, 1] + 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 3]) 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 3] 
-    Subscript[$CellContext`e, 1] Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] + (
+    Subscript[GeomAlg2017Jan`e, 1] Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] + (
      Subscript[$CellContext`a, 2] Subscript[$CellContext`b, 1] - 
      Subscript[$CellContext`a, 1] Subscript[$CellContext`b, 2]) 
-    Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] - Subscript[$CellContext`a, 0] 
-   Subscript[$CellContext`b, 2] Subscript[$CellContext`e, 1] 
-   Subscript[$CellContext`e, 3] Subscript[$CellContext`e, 4] 
-   Subscript[$CellContext`e, 5] + 
+    Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[GeomAlg2017Jan`e, 5] - Subscript[$CellContext`a, 0] 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2017Jan`e, 1] 
+   Subscript[GeomAlg2017Jan`e, 3] Subscript[GeomAlg2017Jan`e, 4] 
+   Subscript[GeomAlg2017Jan`e, 5] + 
    Subscript[$CellContext`a, 0] Subscript[$CellContext`b, 1] 
-    Subscript[$CellContext`e, 2] Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 4] Subscript[$CellContext`e, 5] + 
-   Subscript[$CellContext`e, 4] 
-    Subscript[$CellContext`e, 5] (-Subscript[$CellContext`b, 3] 
+    Subscript[GeomAlg2017Jan`e, 2] Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 4] Subscript[GeomAlg2017Jan`e, 5] + 
+   Subscript[GeomAlg2017Jan`e, 4] 
+    Subscript[
+     GeomAlg2017Jan`e, 5] (-Subscript[$CellContext`b, 3] 
       Subscript[$CellContext`a, 1, 2] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 3] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 3]) + 
-   Subscript[$CellContext`e, 3] 
-    Subscript[$CellContext`e, 5] (
+   Subscript[GeomAlg2017Jan`e, 3] 
+    Subscript[GeomAlg2017Jan`e, 5] (
      Subscript[$CellContext`b, 4] Subscript[$CellContext`a, 1, 2] - 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 4] + 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 4]) + 
-   Subscript[$CellContext`e, 2] 
-    Subscript[$CellContext`e, 5] (-Subscript[$CellContext`b, 4] 
+   Subscript[GeomAlg2017Jan`e, 2] 
+    Subscript[
+     GeomAlg2017Jan`e, 5] (-Subscript[$CellContext`b, 4] 
       Subscript[$CellContext`a, 1, 3] + 
      Subscript[$CellContext`b, 3] Subscript[$CellContext`a, 1, 4] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 3, 4]) + 
-   Subscript[$CellContext`e, 1] 
-    Subscript[$CellContext`e, 5] (
+   Subscript[GeomAlg2017Jan`e, 1] 
+    Subscript[GeomAlg2017Jan`e, 5] (
      Subscript[$CellContext`b, 4] Subscript[$CellContext`a, 2, 3] - 
      Subscript[$CellContext`b, 3] Subscript[$CellContext`a, 2, 4] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 3, 4]) + 
-   Subscript[$CellContext`e, 5] (
+   Subscript[GeomAlg2017Jan`e, 5] (
      Subscript[$CellContext`b, 4] Subscript[$CellContext`a, 1, 2, 3] - 
      Subscript[$CellContext`b, 3] Subscript[$CellContext`a, 1, 2, 4] + 
      Subscript[$CellContext`b, 2] Subscript[$CellContext`a, 1, 3, 4] - 
      Subscript[$CellContext`b, 1] Subscript[$CellContext`a, 2, 3, 4])],
   Editable->False]], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.6917969040262423`*^9}],
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061988976*^9}],
 
 Cell[BoxData["\<\"\"\>"], "Print",
- CellChangeTimes->{
-  3.691794723733851*^9, 3.691795193343946*^9, 3.6917953086425858`*^9, 
-   3.6917958886656027`*^9, 3.691796182962129*^9, {3.691796394723239*^9, 
-   3.691796405788196*^9}, 3.6917965695957937`*^9, 3.691796742885841*^9, 
-   3.691796904031391*^9}]
+ CellChangeTimes->{3.6935019717147818`*^9, 3.693502061993881*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{848, 1306},
-WindowMargins->{{618, Automatic}, {Automatic, 0}},
+WindowMargins->{{Automatic, 617}, {Automatic, 0}},
+CellContext->Notebook,
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -6221,150 +6054,159 @@ Cell[CellGroupData[{
 Cell[580, 22, 95, 1, 64, "Section"],
 Cell[678, 25, 668, 12, 41, InheritFromParent],
 Cell[CellGroupData[{
-Cell[1371, 41, 39018, 1006, 3570, "Input"],
+Cell[1371, 41, 44227, 1117, 3885, "Input"],
 Cell[CellGroupData[{
-Cell[40414, 1051, 297, 5, 24, "Print"],
-Cell[40714, 1058, 323, 5, 24, "Print"],
-Cell[41040, 1065, 1021, 25, 25, "Print"],
-Cell[42064, 1092, 1179, 28, 25, "Print"],
-Cell[43246, 1122, 1139, 28, 25, "Print"],
-Cell[44388, 1152, 534, 11, 24, "Print"],
-Cell[44925, 1165, 568, 14, 24, "Print"],
-Cell[45496, 1181, 297, 5, 24, "Print"],
-Cell[45796, 1188, 491, 10, 24, "Print"],
-Cell[46290, 1200, 642, 16, 25, "Print"],
-Cell[46935, 1218, 488, 10, 24, "Print"],
-Cell[47426, 1230, 489, 10, 24, "Print"],
-Cell[47918, 1242, 491, 10, 24, "Print"],
-Cell[48412, 1254, 719, 17, 25, "Print"],
-Cell[49134, 1273, 491, 10, 24, "Print"],
-Cell[49628, 1285, 868, 21, 25, "Print"],
-Cell[50499, 1308, 489, 10, 24, "Print"],
-Cell[50991, 1320, 488, 10, 24, "Print"],
-Cell[51482, 1332, 717, 17, 25, "Print"],
-Cell[52202, 1351, 489, 10, 24, "Print"],
-Cell[52694, 1363, 866, 21, 25, "Print"],
-Cell[53563, 1386, 297, 5, 24, "Print"],
-Cell[53863, 1393, 323, 5, 24, "Print"],
-Cell[54189, 1400, 836, 17, 36, "Print"],
-Cell[55028, 1419, 752, 15, 24, "Print"],
-Cell[55783, 1436, 2510, 71, 76, "Print"],
-Cell[58296, 1509, 1964, 55, 40, "Print"],
-Cell[60263, 1566, 1521, 44, 40, "Print"],
-Cell[61787, 1612, 1315, 37, 40, "Print"],
-Cell[63105, 1651, 297, 5, 24, "Print"],
-Cell[63405, 1658, 606, 14, 24, "Print"],
-Cell[64014, 1674, 1078, 20, 27, "Print"],
-Cell[65095, 1696, 2920, 79, 47, "Print"],
-Cell[68018, 1777, 2690, 73, 47, "Print"],
-Cell[70711, 1852, 1771, 49, 27, "Print"],
-Cell[72485, 1903, 1409, 37, 27, "Print"],
-Cell[73897, 1942, 297, 5, 24, "Print"],
-Cell[74197, 1949, 1078, 20, 27, "Print"],
-Cell[75278, 1971, 1080, 20, 27, "Print"],
-Cell[76361, 1993, 4457, 120, 49, "Print"],
-Cell[80821, 2115, 3774, 103, 47, "Print"],
-Cell[84598, 2220, 2779, 74, 27, "Print"],
-Cell[87380, 2296, 1635, 43, 27, "Print"],
-Cell[89018, 2341, 299, 5, 24, "Print"],
-Cell[89320, 2348, 349, 6, 24, "Print"],
-Cell[89672, 2356, 1991, 53, 27, "Print"],
-Cell[91666, 2411, 1993, 53, 27, "Print"],
-Cell[93662, 2466, 299, 5, 24, "Print"],
-Cell[93964, 2473, 14207, 378, 181, "Print"],
-Cell[108174, 2853, 296, 5, 24, "Print"],
-Cell[108473, 2860, 360, 6, 24, "Print"],
-Cell[108836, 2868, 867, 20, 24, "Print"],
-Cell[109706, 2890, 719, 17, 24, "Print"],
-Cell[110428, 2909, 967, 24, 24, "Print"],
-Cell[111398, 2935, 1180, 32, 27, "Print"],
-Cell[112581, 2969, 381, 6, 24, "Print"],
-Cell[112965, 2977, 363, 6, 24, "Print"],
-Cell[113331, 2985, 1228, 33, 27, "Print"],
-Cell[114562, 3020, 1764, 43, 27, "Print"],
-Cell[116329, 3065, 2121, 55, 47, "Print"],
-Cell[118453, 3122, 932, 24, 24, "Print"],
-Cell[119388, 3148, 889, 22, 27, "Print"],
-Cell[120280, 3172, 640, 13, 44, "Print"],
-Cell[120923, 3187, 905, 18, 44, "Print"],
-Cell[121831, 3207, 1273, 34, 24, "Print"],
-Cell[123107, 3243, 838, 20, 35, "Print"],
-Cell[123948, 3265, 296, 5, 24, "Print"],
-Cell[124247, 3272, 342, 5, 24, "Print"],
-Cell[124592, 3279, 297, 5, 24, "Print"],
-Cell[124892, 3286, 395, 6, 24, "Print"],
-Cell[125290, 3294, 358, 6, 24, "Print"],
-Cell[125651, 3302, 774, 20, 34, "Print"],
-Cell[126428, 3324, 785, 19, 34, "Print"],
-Cell[127216, 3345, 771, 20, 34, "Print"],
-Cell[127990, 3367, 783, 19, 34, "Print"],
-Cell[128776, 3388, 652, 17, 36, "Print"],
-Cell[129431, 3407, 832, 22, 36, "Print"],
-Cell[130266, 3431, 365, 6, 24, "Print"],
-Cell[130634, 3439, 1593, 41, 33, "Print"],
-Cell[132230, 3482, 1544, 40, 33, "Print"],
-Cell[133777, 3524, 832, 22, 36, "Print"],
-Cell[134612, 3548, 376, 6, 24, "Print"],
-Cell[134991, 3556, 297, 5, 24, "Print"],
-Cell[135291, 3563, 321, 5, 24, "Print"],
-Cell[135615, 3570, 297, 5, 24, "Print"],
-Cell[135915, 3577, 364, 6, 24, "Print"],
-Cell[136282, 3585, 297, 5, 24, "Print"],
-Cell[136582, 3592, 1087, 27, 24, "Print"],
-Cell[137672, 3621, 1211, 30, 24, "Print"],
-Cell[138886, 3653, 1221, 30, 24, "Print"],
-Cell[140110, 3685, 299, 5, 24, "Print"],
-Cell[140412, 3692, 1253, 32, 24, "Print"],
-Cell[141668, 3726, 1925, 48, 24, "Print"],
-Cell[143596, 3776, 1933, 48, 24, "Print"],
-Cell[145532, 3826, 299, 5, 24, "Print"],
-Cell[145834, 3833, 1701, 45, 27, "Print"],
-Cell[147538, 3880, 3145, 83, 47, "Print"],
-Cell[150686, 3965, 3153, 83, 47, "Print"],
-Cell[153842, 4050, 297, 5, 24, "Print"],
-Cell[154142, 4057, 2443, 66, 27, "Print"],
-Cell[156588, 4125, 6157, 161, 71, "Print"],
-Cell[162748, 4288, 6167, 161, 71, "Print"],
-Cell[168918, 4451, 297, 5, 24, "Print"],
-Cell[169218, 4458, 295, 5, 24, "Print"],
-Cell[169516, 4465, 397, 6, 24, "Print"],
-Cell[169916, 4473, 297, 5, 24, "Print"],
-Cell[170216, 4480, 1095, 27, 24, "Print"],
-Cell[171314, 4509, 815, 19, 24, "Print"],
-Cell[172132, 4530, 799, 18, 24, "Print"],
-Cell[172934, 4550, 299, 5, 24, "Print"],
-Cell[173236, 4557, 1408, 36, 24, "Print"],
-Cell[174647, 4595, 1318, 32, 24, "Print"],
-Cell[175968, 4629, 1304, 31, 24, "Print"],
-Cell[177275, 4662, 299, 5, 24, "Print"],
-Cell[177577, 4669, 1706, 44, 24, "Print"],
-Cell[179286, 4715, 1940, 48, 24, "Print"],
-Cell[181229, 4765, 1928, 47, 24, "Print"],
-Cell[183160, 4814, 297, 5, 24, "Print"],
-Cell[183460, 4821, 2004, 52, 24, "Print"],
-Cell[185467, 4875, 2680, 64, 24, "Print"],
-Cell[188150, 4941, 2666, 63, 24, "Print"],
-Cell[190819, 5006, 299, 5, 24, "Print"],
-Cell[191121, 5013, 299, 5, 24, "Print"],
-Cell[191423, 5020, 400, 6, 24, "Print"],
-Cell[191826, 5028, 340, 5, 24, "Print"],
-Cell[192169, 5035, 297, 5, 24, "Print"],
-Cell[192469, 5042, 860, 21, 24, "Print"],
-Cell[193332, 5065, 673, 16, 24, "Print"],
-Cell[194008, 5083, 677, 16, 24, "Print"],
-Cell[194688, 5101, 297, 5, 24, "Print"],
-Cell[194988, 5108, 1423, 37, 27, "Print"],
-Cell[196414, 5147, 1488, 39, 24, "Print"],
-Cell[197905, 5188, 1494, 39, 24, "Print"],
-Cell[199402, 5229, 297, 5, 24, "Print"],
-Cell[199702, 5236, 2544, 67, 27, "Print"],
-Cell[202249, 5305, 3832, 104, 47, "Print"],
-Cell[206084, 5411, 3838, 104, 47, "Print"],
-Cell[209925, 5517, 297, 5, 24, "Print"],
-Cell[210225, 5524, 4966, 130, 69, "Print"],
-Cell[215194, 5656, 9795, 266, 88, "Print"],
-Cell[224992, 5924, 9801, 266, 88, "Print"],
-Cell[234796, 6192, 297, 5, 24, "Print"]
+Cell[45623, 1162, 102, 1, 24, "Print"],
+Cell[45728, 1165, 362, 9, 24, "Print"],
+Cell[46093, 1176, 832, 21, 25, "Print"],
+Cell[46928, 1199, 994, 24, 25, "Print"],
+Cell[47925, 1225, 954, 24, 25, "Print"],
+Cell[48882, 1251, 337, 7, 24, "Print"],
+Cell[49222, 1260, 343, 7, 24, "Print"],
+Cell[49568, 1269, 335, 7, 24, "Print"],
+Cell[49906, 1278, 331, 7, 24, "Print"],
+Cell[50240, 1287, 100, 1, 24, "Print"],
+Cell[50343, 1290, 292, 6, 24, "Print"],
+Cell[50638, 1298, 445, 12, 25, "Print"],
+Cell[51086, 1312, 292, 6, 24, "Print"],
+Cell[51381, 1320, 292, 6, 24, "Print"],
+Cell[51676, 1328, 290, 6, 24, "Print"],
+Cell[51969, 1336, 523, 13, 25, "Print"],
+Cell[52495, 1351, 294, 6, 24, "Print"],
+Cell[52792, 1359, 679, 17, 25, "Print"],
+Cell[53474, 1378, 292, 6, 24, "Print"],
+Cell[53769, 1386, 292, 6, 24, "Print"],
+Cell[54064, 1394, 524, 13, 25, "Print"],
+Cell[54591, 1409, 292, 6, 24, "Print"],
+Cell[54886, 1417, 679, 17, 25, "Print"],
+Cell[55568, 1436, 100, 1, 24, "Print"],
+Cell[55671, 1439, 354, 9, 24, "Print"],
+Cell[56028, 1450, 639, 13, 36, "Print"],
+Cell[56670, 1465, 553, 11, 24, "Print"],
+Cell[57226, 1478, 2341, 67, 76, "Print"],
+Cell[59570, 1547, 1794, 51, 40, "Print"],
+Cell[61367, 1600, 1334, 40, 40, "Print"],
+Cell[62704, 1642, 258, 6, 24, "Print"],
+Cell[62965, 1650, 1126, 33, 40, "Print"],
+Cell[64094, 1685, 500, 15, 27, "Print"],
+Cell[64597, 1702, 102, 1, 24, "Print"],
+Cell[64702, 1705, 407, 10, 24, "Print"],
+Cell[65112, 1717, 883, 16, 27, "Print"],
+Cell[65998, 1735, 2759, 77, 47, "Print"],
+Cell[68760, 1814, 2529, 71, 47, "Print"],
+Cell[71292, 1887, 1588, 46, 27, "Print"],
+Cell[72883, 1935, 572, 16, 24, "Print"],
+Cell[73458, 1953, 1218, 33, 27, "Print"],
+Cell[74679, 1988, 937, 25, 24, "Print"],
+Cell[75619, 2015, 99, 1, 24, "Print"],
+Cell[75721, 2018, 881, 16, 27, "Print"],
+Cell[76605, 2036, 881, 16, 27, "Print"],
+Cell[77489, 2054, 4298, 117, 49, "Print"],
+Cell[81790, 2173, 3613, 100, 47, "Print"],
+Cell[85406, 2275, 2594, 70, 27, "Print"],
+Cell[88003, 2347, 688, 19, 24, "Print"],
+Cell[88694, 2368, 1448, 39, 27, "Print"],
+Cell[90145, 2409, 1974, 55, 27, "Print"],
+Cell[92122, 2466, 100, 1, 24, "Print"],
+Cell[92225, 2469, 382, 9, 24, "Print"],
+Cell[92610, 2480, 1818, 49, 27, "Print"],
+Cell[94431, 2531, 1820, 49, 27, "Print"],
+Cell[96254, 2582, 100, 1, 24, "Print"],
+Cell[96357, 2585, 14052, 377, 181, "Print"],
+Cell[110412, 2964, 102, 1, 24, "Print"],
+Cell[110517, 2967, 365, 9, 24, "Print"],
+Cell[110885, 2978, 675, 16, 24, "Print"],
+Cell[111563, 2996, 528, 13, 24, "Print"],
+Cell[112094, 3011, 774, 20, 24, "Print"],
+Cell[112871, 3033, 997, 28, 27, "Print"],
+Cell[113871, 3063, 185, 2, 24, "Print"],
+Cell[114059, 3067, 166, 2, 24, "Print"],
+Cell[114228, 3071, 1043, 29, 27, "Print"],
+Cell[115274, 3102, 1591, 39, 27, "Print"],
+Cell[116868, 3143, 1948, 51, 47, "Print"],
+Cell[118819, 3196, 745, 20, 24, "Print"],
+Cell[119567, 3218, 698, 18, 27, "Print"],
+Cell[120268, 3238, 441, 9, 44, "Print"],
+Cell[120712, 3249, 710, 14, 44, "Print"],
+Cell[121425, 3265, 1093, 30, 24, "Print"],
+Cell[122521, 3297, 643, 16, 35, "Print"],
+Cell[123167, 3315, 99, 1, 24, "Print"],
+Cell[123269, 3318, 373, 9, 24, "Print"],
+Cell[123645, 3329, 158, 2, 24, "Print"],
+Cell[123806, 3333, 100, 1, 24, "Print"],
+Cell[123909, 3336, 198, 2, 24, "Print"],
+Cell[124110, 3340, 161, 2, 24, "Print"],
+Cell[124274, 3344, 581, 16, 34, "Print"],
+Cell[124858, 3362, 592, 15, 34, "Print"],
+Cell[125453, 3379, 581, 16, 34, "Print"],
+Cell[126037, 3397, 590, 15, 34, "Print"],
+Cell[126630, 3414, 459, 13, 36, "Print"],
+Cell[127092, 3429, 897, 26, 36, "Print"],
+Cell[127992, 3457, 171, 2, 24, "Print"],
+Cell[128166, 3461, 1413, 38, 33, "Print"],
+Cell[129582, 3501, 1360, 36, 33, "Print"],
+Cell[130945, 3539, 895, 26, 36, "Print"],
+Cell[131843, 3567, 201, 2, 24, "Print"],
+Cell[132047, 3571, 100, 1, 24, "Print"],
+Cell[132150, 3574, 367, 9, 24, "Print"],
+Cell[132520, 3585, 100, 1, 24, "Print"],
+Cell[132623, 3588, 400, 9, 24, "Print"],
+Cell[133026, 3599, 100, 1, 24, "Print"],
+Cell[133129, 3602, 898, 23, 24, "Print"],
+Cell[134030, 3627, 1022, 26, 24, "Print"],
+Cell[135055, 3655, 1032, 26, 24, "Print"],
+Cell[136090, 3683, 100, 1, 24, "Print"],
+Cell[136193, 3686, 1068, 28, 24, "Print"],
+Cell[137264, 3716, 1744, 44, 24, "Print"],
+Cell[139011, 3762, 1752, 44, 24, "Print"],
+Cell[140766, 3808, 100, 1, 24, "Print"],
+Cell[140869, 3811, 1522, 41, 27, "Print"],
+Cell[142394, 3854, 2978, 79, 47, "Print"],
+Cell[145375, 3935, 2988, 79, 47, "Print"],
+Cell[148366, 4016, 100, 1, 24, "Print"],
+Cell[148469, 4019, 2278, 62, 27, "Print"],
+Cell[150750, 4083, 6029, 157, 71, "Print"],
+Cell[156782, 4242, 6042, 157, 71, "Print"],
+Cell[162827, 4401, 100, 1, 24, "Print"],
+Cell[162930, 4404, 102, 1, 24, "Print"],
+Cell[163035, 4407, 431, 9, 24, "Print"],
+Cell[163469, 4418, 102, 1, 24, "Print"],
+Cell[163574, 4421, 910, 24, 24, "Print"],
+Cell[164487, 4447, 622, 15, 24, "Print"],
+Cell[165112, 4464, 608, 14, 24, "Print"],
+Cell[165723, 4480, 100, 1, 24, "Print"],
+Cell[165826, 4483, 1227, 33, 24, "Print"],
+Cell[167056, 4518, 1139, 28, 24, "Print"],
+Cell[168198, 4548, 1123, 27, 24, "Print"],
+Cell[169324, 4577, 100, 1, 24, "Print"],
+Cell[169427, 4580, 1529, 41, 24, "Print"],
+Cell[170959, 4623, 1773, 44, 24, "Print"],
+Cell[172735, 4669, 1759, 43, 24, "Print"],
+Cell[174497, 4714, 99, 1, 24, "Print"],
+Cell[174599, 4717, 1831, 49, 24, "Print"],
+Cell[176433, 4768, 2533, 60, 24, "Print"],
+Cell[178969, 4830, 2517, 59, 24, "Print"],
+Cell[181489, 4891, 100, 1, 24, "Print"],
+Cell[181592, 4894, 100, 1, 24, "Print"],
+Cell[181695, 4897, 457, 10, 44, "Print"],
+Cell[182155, 4909, 359, 8, 24, "Print"],
+Cell[182517, 4919, 100, 1, 24, "Print"],
+Cell[182620, 4922, 671, 18, 24, "Print"],
+Cell[183294, 4942, 476, 12, 24, "Print"],
+Cell[183773, 4956, 484, 12, 24, "Print"],
+Cell[184260, 4970, 102, 1, 24, "Print"],
+Cell[184365, 4973, 1240, 33, 27, "Print"],
+Cell[185608, 5008, 1303, 35, 24, "Print"],
+Cell[186914, 5045, 1307, 35, 24, "Print"],
+Cell[188224, 5082, 102, 1, 24, "Print"],
+Cell[188329, 5085, 2379, 64, 27, "Print"],
+Cell[190711, 5151, 3679, 102, 47, "Print"],
+Cell[194393, 5255, 3687, 102, 47, "Print"],
+Cell[198083, 5359, 100, 1, 24, "Print"],
+Cell[198186, 5362, 4843, 126, 69, "Print"],
+Cell[203032, 5490, 9711, 267, 88, "Print"],
+Cell[212746, 5759, 9717, 267, 88, "Print"],
+Cell[222466, 6028, 100, 1, 24, "Print"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

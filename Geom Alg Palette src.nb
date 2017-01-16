@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     70627,       1220]
-NotebookOptionsPosition[     69720,       1187]
-NotebookOutlinePosition[     70371,       1209]
-CellTagsIndexPosition[     70328,       1206]
+NotebookDataLength[     71497,       1228]
+NotebookOptionsPosition[     70591,       1195]
+NotebookOutlinePosition[     71242,       1217]
+CellTagsIndexPosition[     71199,       1214]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -325,8 +325,10 @@ Cell[BoxData[
                     "\"\<\!\(\*SubscriptBox[\(e\), \(3\)]\)\>\"", ",", 
                     "\"\<\!\(\*SubscriptBox[\(e\), \(4\)]\)\>\"", ",", 
                     "\"\<\[SmallCircle]\>\"", ",", "\"\<\[Wedge]\>\"", ",", 
-                    "\"\<\[CenterDot]\>\"", ",", "\"\<\[CircleDot]\>\""}], 
-                    "}"}]}], ",", " ", "\n", "\t\t     ", 
+                    "\"\<\[CenterDot]\>\"", ",", "\"\<\[CircleDot]\>\"", ",", 
+                    "\"\<\[SquareSuperset]\>\"", ",", 
+                    "\"\<\[SquareSubset]\>\""}], "}"}]}], ",", " ", "\n", 
+                    "\t\t     ", 
                     RowBox[{"tips", "=", "\n", "\t ", 
                     RowBox[{"{", 
                     RowBox[{
@@ -335,17 +337,18 @@ Cell[BoxData[
                     "\t   ", "\"\<   Keyboard: e \[ControlKey] _ 3\>\"", ",", 
                     "\"\<  Keyboard: e \[ControlKey] _ 4\>\"", ",", "\n", 
                     "\t   ", 
-                    "\"\<   Geometric Product,  Keyboard: Esc sc Esc \>\"", 
-                    ",", "\n", "\t   ", 
+                    "\"\<   Geometric Product (small circle),  Keyboard: Esc \
+sc Esc \>\"", ",", "\n", "\t   ", 
                     "\"\<   Wedge (or Exterior) Product,  Keyboard: Esc ^ Esc \
 \>\"", ",", "\n", "\t   ", 
                     "\"\<   Dot (or Interior) Product,  Keyboard: Esc . Esc \
 \>\"", ",", "\n", "\t   ", 
-                    RowBox[{
-                    "\"\<   Left Contraction. Usual symbol not usable in \
-Mathematica, \>\"", "\n", "\t\t\t", "<>", 
-                    "\"\<so use \[CircleDot]. Keyboard: Esc c. Esc\>\""}]}], 
-                    "}"}]}]}], "}"}], ",", "\n", "\t", 
+                    "\"\<   Scalar (or Grade 0) Product,  Keyboard: Esc c. \
+Esc (circle dot)\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Left Contraction (SquareSuperset), Keyboard: Esc \
+slc Esc\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Right Contraction(SquareSubset), Keyboard: Esc  \
+src  Esc\>\""}], "}"}]}]}], "\n", "\t  ", "}"}], ",", "\n", "\t", 
                   RowBox[{"Grid", "[", "\n", "\t\t", 
                    RowBox[{
                     RowBox[{"{", 
@@ -425,7 +428,6 @@ FontWeight->\"Plain\"]\)\>\"", ",", "\n", "\t\t\t",
 4\)]\)+\!\(\*SubscriptBox[\(e\), \(3\)]\) \!\(\*SubscriptBox[\(e\), \(4\)]\) \
 \!\(\*SubscriptBox[\(a\), \(3, 4\)]\)\>\"", ",", "\n", "\t\t\t", 
                     "\"\<nClifG[b, 3]\>\"", ",", 
-                    
                     "\"\<\!\(\*SubscriptBox[\(b\), \
 \(0\)]\)+\!\(\*SubscriptBox[\(b\), \(1\)]\) \!\(\*SubscriptBox[\(e\), \
 \(1\)]\)+\!\(\*SubscriptBox[\(b\), \(2\)]\) \!\(\*SubscriptBox[\(e\), \
@@ -557,34 +559,42 @@ the \!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \
                     "\"\<GeomPrdtG[clif1,clif2]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<WedgePrdtG[clif1, clif2]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<DotPrdtG[clif1, clif2]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<ScalarPrdtG[clif1, clif2]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<LeftContractionG[clif1,clif2]\>\"", ",", "\n", 
-                    "\t\t\t", "\"\<HodgeDualG[clif, n]\>\"", ",", "\n", 
+                    "\t\t\t", "\"\<RightContractionG[clif1,clif2]\>\"", ",", 
+                    "\n", "\t\t\t", "\"\<HodgeDualG[clif, n]\>\"", ",", "\n", 
                     "\t\t\t", "\"\<HodgeDual2G[clif, n]\>\"", ",", "\n", 
                     "\t\t\t", "\"\<GormG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<NormG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<ReverseG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<InverseG[clif]\>\""}], "}"}]}], ",", "\n", "\t\t", 
                     "\n", "\t\t     ", 
-                    RowBox[{"tips", "=", "\n", "\t  ", 
+                    RowBox[{"tips", "=", "\n", "\t ", 
                     RowBox[{"{", 
                     RowBox[{
                     "\"\<   Geometric Product of 2 multivectors (sometimes \
 called clifs)\>\"", ",", "\n", "\t   ", 
                     "\"\<   Wedge (or Exterior) Product of 2 multivectors: \
-<clif1 \[Diamond] clif2\!\(\*SubscriptBox[\(>\), \(p + q\)]\)\>\"", ",", "\n",
-                     "\t   ", 
+<clif1 \[SmallCircle] clif2\!\(\*SubscriptBox[\(>\), \(p + q\)]\)\>\"", ",", 
+                    "\n", "\t   ", 
                     "\"\<   Dot (or Inner) Product of 2 multivectors: <clif1 \
-\[Diamond] clif2\!\(\*SubscriptBox[\(>\), \(\(|\)\(\\\ \)\(p - \\\ q\)\(\\\ \
-\)\(|\)\)]\)\>\"", ",", "\n", "\t   ", 
+\[SmallCircle] clif2>\!\(\*SubscriptBox[\(\\\ \), \(\(\\\ \)\(Abs\\\ p\\\  - \
+\\\ q\)\)]\)\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Scalar (or Grade Zero) Product of 2 multivectors: \
+<clif1 \[SmallCircle] clif2>\!\(\*SubscriptBox[\(\\\ \), \(0\)]\)\>\"", ",", 
+                    "\n", "\t   ", 
                     "\"\<   Left Contraction of 2 multivectors. Similar to \
-Dot Product: <clif1 \[Diamond] clif2\!\(\*SubscriptBox[\(>\), \(q\\\  - \\\ p\
-\)]\)\>\"", ",", "\n", "\t   ", 
+Dot Product: <clif1 \[SmallCircle] clif2\!\(\*SubscriptBox[\(>\), \(q\\\  - \
+\\\ p\)]\)\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Right Contraction of 2 multivectors. Similar to \
+Dot Product: <clif1 \[SmallCircle] clif2\!\(\*SubscriptBox[\(>\), \(p\\\  - \
+\\\ q\)]\)\>\"", ",", "\n", "\t   ", 
                     "\"\<   Hodge dual of multivector in n-space (clif \
-\[Diamond] i)\>\"", ",", "\n", "\t   ", 
+\[SmallCircle] i)\>\"", ",", "\n", "\t   ", 
                     RowBox[{
                     "\"\<   Alternative-definiition Hodge dual of multivector \
 in n-space \>\"", "\n", "\t\t\t", "<>", 
-                    "\"\< (clif \[Diamond] \!\(\*SuperscriptBox[\(i\), \
+                    "\"\< (clif \[SmallCircle] \!\(\*SuperscriptBox[\(i\), \
 \(-1\)]\))\>\""}], ",", "\n", "\t   ", 
                     RowBox[{
                     "\"\<   Gorm of a multivector clif = \
@@ -739,15 +749,11 @@ cases\>\"", ",", "\n", "\t   ",
                     "\"\<   Generate a list of clif's subscripts\>\"", ",", 
                     "\n", "\t   ", 
                     RowBox[{"\"\<   Generate a \!\(\*
+StyleBox[\(\*
 StyleBox[\"l\",
-FontWeight->\"Plain\"]\)\!\(\*
-StyleBox[SubscriptBox[\"e\", \"1\"],
-FontWeight->\"Plain\"]\)\!\(\*
-StyleBox[SubscriptBox[\"e\", \"2\"],
-FontWeight->\"Plain\"]\)\!\(\*
-StyleBox[SubscriptBox[\"e\", \"4\"],
-FontWeight->\"Plain\"]\)ist of integers that represent the grades of terms \>\
-\"", "\n", "\t\t\t", "<>", "\"\<in multivector)\>\""}], ",", "\n", "\t   ", 
+FontWeight->\"Plain\"]ist\)]\) of integers that represent the grades of terms \
+\>\"", "\n", "\t\t\t", "<>", "\"\<in multivector)\>\""}], ",", "\n", "\t   ", 
+                    
                     RowBox[{
                     "\"\<   Find Signature: +1 if number of adjacent \
 transpositions to\>\"", "<>", 
@@ -1156,37 +1162,39 @@ transpositions to\>\"", "<>",
    3.692752501444865*^9}, 3.692794507981735*^9, {3.692794549663088*^9, 
    3.692794556122015*^9}, {3.692794588461462*^9, 3.692794642409189*^9}, 
    3.692794732264187*^9, {3.692794860929879*^9, 3.692794865842362*^9}, {
-   3.692794955499894*^9, 3.692794964687771*^9}}],
+   3.692794955499894*^9, 3.692794964687771*^9}, {3.693083165744124*^9, 
+   3.693083226643886*^9}, {3.693085101761002*^9, 3.6930851018280363`*^9}, {
+   3.693086584083787*^9, 3.69308659278692*^9}, {3.693086679141934*^9, 
+   3.693086680418721*^9}, {3.6930867297704363`*^9, 3.693086736512493*^9}, {
+   3.693086772907606*^9, 3.693086798992792*^9}, {3.6930868687875547`*^9, 
+   3.693086878944084*^9}, {3.69308690906618*^9, 3.693086922136504*^9}, 
+   3.693091897477697*^9, {3.6930920120811987`*^9, 3.693092053636527*^9}, {
+   3.693092093494689*^9, 3.6930920981370773`*^9}, {3.693092304304015*^9, 
+   3.6930923059018173`*^9}, {3.693092434966921*^9, 3.693092494424026*^9}, 
+   3.69309277235843*^9, 3.693092826335663*^9, 3.6930930451051598`*^9, {
+   3.6933517899845047`*^9, 3.693351843087275*^9}, {3.6933518785226173`*^9, 
+   3.693351900214216*^9}, {3.693351930725284*^9, 3.6933520390284767`*^9}, {
+   3.6933521204834843`*^9, 3.6933521498251743`*^9}, 3.6933522391479883`*^9, {
+   3.69335229795052*^9, 3.693352304015525*^9}, 3.693523984049128*^9}],
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["6qjgv_shm", 3, 1]],44,
-   "FrontEndObject[LinkObject[\"6qjgv_shm\", 3, 1]]","44",
+    LinkObject["e9qgh_shm", 3, 1]],30,
+   "FrontEndObject[LinkObject[\"e9qgh_shm\", 3, 1]]","30",
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
- CellChangeTimes->{
-  3.692650433204015*^9, 3.6926504780213346`*^9, 3.692650579197184*^9, 
-   3.692650633832429*^9, 3.6926506964976873`*^9, 3.692651152864571*^9, {
-   3.692651336805542*^9, 3.692651352960987*^9}, 3.692651525819014*^9, 
-   3.692651658009453*^9, 3.692651752564857*^9, 3.6926519460570993`*^9, 
-   3.6926521534641438`*^9, 3.692652262307705*^9, 3.692652430308475*^9, 
-   3.6926525617421093`*^9, 3.69265260885955*^9, 3.692652651059757*^9, 
-   3.692652994894278*^9, 3.692653037361898*^9, 3.692653103040956*^9, {
-   3.692653137769824*^9, 3.692653151029162*^9}, 3.6926535287485533`*^9, 
-   3.692654360032187*^9, 3.692654415700389*^9, 3.692654525124193*^9, 
-   3.692654659790626*^9, 3.692654696538129*^9, 3.692656216139679*^9, 
-   3.692656384303426*^9, 3.692659234940976*^9, 3.692659558260861*^9, 
-   3.692660134497712*^9, 3.692663760301876*^9, 3.6926639879516563`*^9, 
-   3.692664056621738*^9, 3.692664921528417*^9, 3.69274733117443*^9, 
-   3.692752521359301*^9, 3.6927947633354816`*^9, 3.692794871695714*^9, 
-   3.6927949709314423`*^9}]
+ CellChangeTimes->{3.693086884113002*^9, 3.693086926842958*^9, 
+  3.693091917593213*^9, 3.693092016433762*^9, 3.6930920567937393`*^9, 
+  3.693092101161237*^9, 3.69309233786309*^9, 3.693092506086178*^9, 
+  3.693092569246519*^9, 3.693092838868844*^9, 3.6933520569015017`*^9, 
+  3.693352163231875*^9, 3.6933523165949593`*^9, 3.693524005275923*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{3.6892777323136377`*^9, 3.690042680484747*^9}]
 },
 WindowSize->{875, 1241},
-WindowMargins->{{Automatic, 130}, {Automatic, 9}},
+WindowMargins->{{Automatic, 205}, {Automatic, 0}},
 SpellingDictionaries->{"CorrectWords"->{"aaa", "Windowsize"}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
@@ -1211,10 +1219,10 @@ Notebook[{
 Cell[400, 13, 881, 31, 35, "Input"],
 Cell[1284, 46, 11299, 161, 1690, "Text"],
 Cell[CellGroupData[{
-Cell[12608, 211, 55736, 947, 4480, "Input"],
-Cell[68347, 1160, 1262, 21, 41, "Output"]
+Cell[12608, 211, 57307, 966, 4607, "Input"],
+Cell[69918, 1179, 562, 10, 41, "Output"]
 }, Open  ]],
-Cell[69624, 1184, 92, 1, 32, "Input"]
+Cell[70495, 1192, 92, 1, 32, "Input"]
 }
 ]
 *)

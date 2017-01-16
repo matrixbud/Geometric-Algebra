@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      7279,        154]
-NotebookOptionsPosition[      6779,        130]
-NotebookOutlinePosition[      7141,        146]
-CellTagsIndexPosition[      7098,        143]
+NotebookDataLength[      7724,        162]
+NotebookOptionsPosition[      7224,        138]
+NotebookOutlinePosition[      7586,        154]
+CellTagsIndexPosition[      7543,        151]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -18,17 +18,19 @@ Cell["Installation Instructions", "Section",
   3.6927453520328007`*^9, 3.6927453678261213`*^9}}],
 
 Cell[TextData[{
- "\n1.  Open the notebook \[OpenCurlyDoubleQuote]Geom Alg Palette src , \
-scroll down past the Palette Creation Notes, and place the cursor anywhere in \
-the code. Press enter to run the code. A palette should be created. Move it \
-to where you would like it. (You can always move it later. It will \
-\[OpenCurlyDoubleQuote]remember\[CloseCurlyDoubleQuote] the location as well \
-as which triangles are open and closed). From the Palette menu, select \
-Install Palette. In the Source drop-down menu select Geometric Algebra \
-Palette. In the Install Name box, type Geometric Algebra. Click OK. That \
-should install the palette. To check, click the red circle to put away the \
-palette. Then click on the Palette menu to verify there is a new palette, \
-Geometric Algebra Palette. Close the source file.\n\n",
+ "\n1.  Open the notebook \[OpenCurlyDoubleQuote]Geom Alg Palette src. Double \
+click on the 2nd bracket to the left on the right hand side of Begin Package. \
+That opens the next level of documentation which, in this case, is some code. \
+Place you cursor anywhere in the code and press enter to run the code. A \
+palette should be created. Move it to where you would like it. (You can \
+always move it later. It will \[OpenCurlyDoubleQuote]remember\
+\[CloseCurlyDoubleQuote] the location as well as which triangles are open and \
+closed). From the Palette menu, select Install Palette. In the Source \
+drop-down menu select Geometric Algebra Palette. In the Install Name box, \
+type Geometric Algebra. Click OK. That should install the palette. To check, \
+click the red circle to put away the palette. Then click on the Palette menu \
+to verify there is a new palette, Geometric Algebra Palette. Close the source \
+file.\n\n",
  StyleBox["Note",
   FontWeight->"Bold"],
  ": On a Mac, the default location for the installed palette is \
@@ -78,7 +80,10 @@ package\n\n",
 with many packages\n\n",
  StyleBox["Quick Start",
   FontWeight->"Bold"],
- " - Quick Start guide (Microsoft Word and Mathematica Notebook)\n\n"
+ " - Quick Start guide (Microsoft Word and Mathematica Notebook)\n\n",
+ StyleBox["Read Me",
+  FontWeight->"Bold"],
+ " - Overview and 1st file to read. Then read this file.\n"
 }],
  CellChangeTimes->{{3.690220627457881*^9, 3.690221159129568*^9}, {
    3.690221214249576*^9, 3.690221647753193*^9}, {3.6902217987675743`*^9, 
@@ -123,7 +128,10 @@ with many packages\n\n",
    3.692747074902236*^9}, 3.6927987829456863`*^9, {3.6927988496712437`*^9, 
    3.6927988648178*^9}, {3.692798968353957*^9, 3.692798971318684*^9}, {
    3.692799124108643*^9, 3.6927992189524508`*^9}, {3.692803731016676*^9, 
-   3.692803733881216*^9}},
+   3.692803733881216*^9}, {3.693096029297351*^9, 3.693096143036935*^9}, {
+   3.6930961813225737`*^9, 3.693096183774012*^9}, {3.693096265342083*^9, 
+   3.693096283907476*^9}, 3.693096314172701*^9, {3.693525474492897*^9, 
+   3.693525478437147*^9}},
  FontFamily->"Arial",
  FontSize->14]
 }, Open  ]]
@@ -147,7 +155,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 163, 2, 64, "Section"],
-Cell[588, 19, 6175, 108, 777, InheritFromParent]
+Cell[588, 19, 6620, 116, 811, InheritFromParent]
 }, Open  ]]
 }
 ]

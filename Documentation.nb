@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     24841,        484]
-NotebookOptionsPosition[     24340,        460]
-NotebookOutlinePosition[     24701,        476]
-CellTagsIndexPosition[     24658,        473]
+NotebookDataLength[     24712,        479]
+NotebookOptionsPosition[     24211,        455]
+NotebookOutlinePosition[     24572,        471]
+CellTagsIndexPosition[     24529,        468]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -119,8 +119,7 @@ is,\n\n\tA \[Wedge] B = [ A \[SmallCircle] B ",
   FormBox[
    SubscriptBox[
     RowBox[{"]", " "}], 
-    RowBox[{"p", "+", "q"}]], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    RowBox[{"p", "+", "q"}]], TraditionalForm]]],
  " where p = Grade [A] and q = Grade [B].\n\nSimilarly,\n\n\tA \[CenterDot] B \
 = [ A \[SmallCircle] B ",
  Cell[BoxData[
@@ -128,26 +127,22 @@ is,\n\n\tA \[Wedge] B = [ A \[SmallCircle] B ",
    SubscriptBox[
     RowBox[{"]", " "}], 
     RowBox[{"Abs", " ", "[", 
-     RowBox[{"p", "\[Dash]", "q"}], "]"}]], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+     RowBox[{"p", "\[Dash]", "q"}], "]"}]], TraditionalForm]]],
  "  (Dot Product)\n\tA \[SquareSuperset] B =  [ A \[SmallCircle] B ",
  Cell[BoxData[
   FormBox[
    SubscriptBox[
     RowBox[{"]", " "}], 
-    RowBox[{"q", "\[Dash]", "p"}]], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    RowBox[{"q", "\[Dash]", "p"}]], TraditionalForm]]],
  "     (Left Contraction)\n\tA \[SquareSubset] B =  [ A \[SmallCircle] B ",
  Cell[BoxData[
   FormBox[
    SubscriptBox[
     RowBox[{"]", " "}], 
-    RowBox[{"p", "\[Dash]", "q"}]], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    RowBox[{"p", "\[Dash]", "q"}]], TraditionalForm]]],
  "     (Right Contraction)\n\tA ",
  Cell[BoxData[
-  FormBox["\[CircleDot]", TraditionalForm]],
-  FormatType->"TraditionalForm"],
+  FormBox["\[CircleDot]", TraditionalForm]]],
  Cell[BoxData[
   FormBox[
    RowBox[{" ", 
@@ -158,8 +153,7 @@ is,\n\n\tA \[Wedge] B = [ A \[SmallCircle] B ",
        FormBox[
         SubscriptBox[
          RowBox[{"]", " "}], "0"],
-        TraditionalForm]}]}]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+        TraditionalForm]}]}]}]}], TraditionalForm]]],
  "             (Scalar Product)\n\nThere are several different definitions \
 given in current literature for the Hodge Dual so I have provided a couple of \
 functions to allow the user freedom of choice. The equations defining the two \
@@ -257,7 +251,7 @@ during antisymmetrization operations. For example, ",
   FormBox[
    SubscriptBox["e", "2"], TraditionalForm]]],
  " in 2-space in a + + Clifford algebra.\n\n",
- StyleBox["Cautions", "Text",
+ StyleBox["Cautions and Work-arounds", "Text",
   FontSize->16,
   FontColor->RGBColor[0, 0, 1]],
  "\n   1. If you receive a warning about context shadowing or if you notice \
@@ -453,7 +447,8 @@ reopen the palette and use section 1 to re-initialize your GA.\n\n"
    3.6935245525910673`*^9}, {3.693524611547266*^9, 3.6935246143142757`*^9}, {
    3.693524649809154*^9, 3.693524685270125*^9}, {3.69352486177422*^9, 
    3.693524863414918*^9}, {3.6935249444146748`*^9, 3.693524945037766*^9}, {
-   3.6935250106479797`*^9, 3.693525055131514*^9}},
+   3.6935250106479797`*^9, 3.693525055131514*^9}, {3.6935743219118137`*^9, 
+   3.693574331815793*^9}},
  FontFamily->"Arial",
  FontSize->14]
 }, Open  ]]
@@ -477,7 +472,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 196, 3, 64, "Section"],
-Cell[621, 20, 23703, 437, 2462, InheritFromParent]
+Cell[621, 20, 23574, 432, 2462, InheritFromParent]
 }, Open  ]]
 }
 ]

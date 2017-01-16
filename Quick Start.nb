@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      7946,        145]
-NotebookOptionsPosition[      7448,        121]
-NotebookOutlinePosition[      7809,        137]
-CellTagsIndexPosition[      7766,        134]
+NotebookDataLength[      8019,        146]
+NotebookOptionsPosition[      7521,        122]
+NotebookOutlinePosition[      7882,        138]
+CellTagsIndexPosition[      7839,        135]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,10 +24,8 @@ statement Needs [\[OpenCurlyDoubleQuote]GeomAlg2017Jan`\
 <<\[CloseCurlyDoubleQuote]GeomAlg2017Jan`\[CloseCurlyDoubleQuote]. If you \
 open a 2nd notebook later, it also must begin with the \
 \[OpenCurlyDoubleQuote]Needs\[CloseCurlyDoubleQuote] statement. You can use \
-the palette to quickly enter the needs statement. If Mathematica 10 or later \
-gives you \[OpenCurlyDoubleQuote]shadow\[CloseCurlyDoubleQuote] errors, you \
-may wish to read the cautions in the main documentation.\n\nThe palette has \
-been designed as an instrumental part of this package and should be installed \
+the palette to quickly enter the needs statement. \n\nThe palette has been \
+designed as an instrumental part of this package and should be installed \
 before proceeding. Simply open the notebook Geom Alg Palette.nb, run it \
 (i.e., put the cursor anywhere within the code and press ENTER) to display \
 the palette, move it to your preferred default location, and select Install \
@@ -59,10 +57,12 @@ only 1-line of code to control the results of ",
     SubscriptBox["e", "i"], "2"], TraditionalForm]]],
  " for every i, it was expedient to enable Grassmann operations. However, \
 many of the built-in operations may not be relevant for Grassmann algebras.\n\
-\n* This package was developed and tested only on a Mac. Windows users may \
-need to install a font that recognizes the binary operator symbols \
-SmallCircle, Wedge, CenterDot, and Square Superset, and SquareSubset, shown \
-here:\n\t",
+\nCaution: If Mathematica 10 or later displays the \
+\[OpenCurlyDoubleQuote]shadow errors\[CloseCurlyDoubleQuote] bug, you may \
+wish to read the work-around in the main documentation.\n\n* This package was \
+developed and tested only on a Mac. Windows users may need to install a font \
+that recognizes the binary operator symbols SmallCircle, Wedge, CenterDot, \
+and Square Superset, and SquareSubset, shown here:\n\t",
  StyleBox["  \[SmallCircle]  \[Wedge]  \[CenterDot]  \[SquareSuperset]  \
 \[SquareSubset]  ",
   Background->RGBColor[0.88, 1, 0.88]],
@@ -114,7 +114,8 @@ here:\n\t",
    3.6929682691985703`*^9, {3.6929683702850733`*^9, 3.692968375419038*^9}, {
    3.693093876111334*^9, 3.6930939750837727`*^9}, {3.693518317496154*^9, 
    3.693518318539097*^9}, {3.693518393483604*^9, 3.693518395754081*^9}, {
-   3.693523444780924*^9, 3.6935234536050673`*^9}, 3.6935235458429613`*^9},
+   3.693523444780924*^9, 3.6935234536050673`*^9}, 3.6935235458429613`*^9, {
+   3.693574231701192*^9, 3.693574244578782*^9}},
  FontFamily->"Arial",
  FontSize->14]
 }, Open  ]]
@@ -138,7 +139,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 95, 1, 64, "Section"],
-Cell[520, 18, 6912, 100, 723, InheritFromParent]
+Cell[520, 18, 6985, 101, 757, InheritFromParent]
 }, Open  ]]
 }
 ]

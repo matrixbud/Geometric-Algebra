@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      8019,        146]
-NotebookOptionsPosition[      7521,        122]
-NotebookOutlinePosition[      7882,        138]
-CellTagsIndexPosition[      7839,        135]
+NotebookDataLength[      8115,        147]
+NotebookOptionsPosition[      7617,        123]
+NotebookOutlinePosition[      7978,        139]
+CellTagsIndexPosition[      7935,        136]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -19,9 +19,9 @@ Cell["QuickStart", "Section",
 Cell[TextData[{
  "\nInstall* the package using the instructions in the Installation Guide. \
 Then, to use the package, open a notebook and start your session with the \
-statement Needs [\[OpenCurlyDoubleQuote]GeomAlg2017Jan`\
+statement Needs [\[OpenCurlyDoubleQuote]GeomAlg2017Feb`\
 \[CloseCurlyDoubleQuote]] or, equivalently, \
-<<\[CloseCurlyDoubleQuote]GeomAlg2017Jan`\[CloseCurlyDoubleQuote]. If you \
+<<\[CloseCurlyDoubleQuote]GeomAlg2017Feb`\[CloseCurlyDoubleQuote]. If you \
 open a 2nd notebook later, it also must begin with the \
 \[OpenCurlyDoubleQuote]Needs\[CloseCurlyDoubleQuote] statement. You can use \
 the palette to quickly enter the needs statement. \n\nThe palette has been \
@@ -115,7 +115,8 @@ and Square Superset, and SquareSubset, shown here:\n\t",
    3.693093876111334*^9, 3.6930939750837727`*^9}, {3.693518317496154*^9, 
    3.693518318539097*^9}, {3.693518393483604*^9, 3.693518395754081*^9}, {
    3.693523444780924*^9, 3.6935234536050673`*^9}, 3.6935235458429613`*^9, {
-   3.693574231701192*^9, 3.693574244578782*^9}},
+   3.693574231701192*^9, 3.693574244578782*^9}, {3.696969524942666*^9, 
+   3.696969536079556*^9}, {3.696969596133312*^9, 3.696969597166718*^9}},
  FontFamily->"Arial",
  FontSize->14]
 }, Open  ]]
@@ -139,7 +140,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 95, 1, 64, "Section"],
-Cell[520, 18, 6985, 101, 757, InheritFromParent]
+Cell[520, 18, 7081, 102, 757, InheritFromParent]
 }, Open  ]]
 }
 ]

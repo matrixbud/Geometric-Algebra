@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2723,         68]
-NotebookOptionsPosition[      2464,         54]
-NotebookOutlinePosition[      2825,         70]
-CellTagsIndexPosition[      2782,         67]
+NotebookDataLength[      3312,         76]
+NotebookOptionsPosition[      3053,         62]
+NotebookOutlinePosition[      3414,         78]
+CellTagsIndexPosition[      3371,         75]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,27 +22,33 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"(*", " ", 
    RowBox[{"Names", " ", "File"}], " ", "*)"}], "\n", "\n", 
-  RowBox[{"DeclarePackage", "[", 
-   RowBox[{"\"\<GeomAlg2017Jan`\>\"", ",", 
-    RowBox[{"{", 
-     RowBox[{
-     "\"\<e\>\"", ",", "\"\<algebraType\>\"", ",", "\"\<signatureType\>\"", 
-      ",", "\"\<numTimelike\>\"", ",", "\"\<GeomPrdtG\>\"", ",", 
-      "\"\<WedgePrdtG\>\"", ",", "\"\<DotPrdtG\>\"", ",", 
-      "\"\<ScalarPrdtG\>\"", ",", "\"\<HodgeDualG\>\"", ",", 
-      "\"\<HodgeDual2G\>\"", ",", "\"\<LeftContractionG\>\"", ",", 
-      "\"\<RightContractionG\>\"", ",", "\"\<GormG\>\"", ",", "\"\<NormG\>\"",
-       ",", "\"\<ReverseG\>\"", ",", "\"\<InverseG\>\"", ",", 
-      "\"\<nVectorG\>\"", ",", "\"\<BiVectorG\>\"", ",", "\"\<BladeG\>\"", 
-      ",", "\"\<PseudoScalarG\>\"", ",", "\"\<pBladeG\>\"", ",", 
-      "\"\<nClifG\>\"", ",", "\"\<RotorG\>\"", ",", "\"\<ComplexG\>\"", ",", 
-      "\"\<QuaternionG\>\"", ",", "\"\<ClifFormatG\>\"", ",", 
-      "\"\<ExpandG\>\"", ",", "\"\<CollectG\>\"", ",", "\"\<GradePpieceG\>\"",
-       ",", "\"\<MaxDimG\>\"", ",", "\"\<ConstantG\>\"", ",", 
-      "\"\<InitializeG\>\"", ",", "\"\<ClifToListG\>\"", ",", 
-      "\"\<ListToClifG\>\"", ",", "\"\<eSubscriptListG\>\"", ",", 
-      "\"\<SubscriptListG\>\"", ",", "\"\<GradeListG\>\"", ",", 
-      "\"\<SignatureG\>\""}], "}"}]}], "]"}]}]], "Input",
+  RowBox[{
+   RowBox[{"DeclarePackage", "[", 
+    RowBox[{"\"\<GeomAlg2017Feb`\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<BiVectorG\>\"", ",", "\"\<BladeG\>\"", ",", "\"\<ClifFormatG\>\"", 
+       ",", "\"\<ClifToListG\>\"", ",", "\"\<CollectG\>\"", ",", 
+       "\"\<ComplexG\>\"", ",", "\"\<ConstantG\>\"", ",", 
+       "\"\<ConstantToListZeroG\>\"", ",", "\"\<ConstantToZeroG\>\"", ",", 
+       "\"\<debug1\>\"", ",", "\"\<debug2\>\"", ",", "\"\<debug3\>\"", ",", 
+       "\"\<debug4\>\"", ",", "\"\<debug5\>\"", ",", "\"\<debug6\>\"", ",", 
+       "\"\<debug7\>\"", ",", "\"\<debug8\>\"", ",", "\"\<debug9\>\"", ",", 
+       "\"\<DotPrdtG\>\"", ",", "\"\<e\>\"", ",", "\"\<EijTermG\>\"", ",", 
+       "\"\<eSubscriptListG\>\"", ",", "\"\<EvenClifG\>\"", ",", 
+       "\"\<ExpandG\>\"", ",", "\"\<FreeTermG\>\"", ",", 
+       "\"\<GeomPrdtBladeG\>\"", ",", "\"\<GeomPrdtG\>\"", ",", 
+       "\"\<GormG\>\"", ",", "\"\<GradeListG\>\"", ",", "\"\<GradePTermG\>\"",
+        ",", "\"\<HodgeDual2G\>\"", ",", "\"\<HodgeDualG\>\"", ",", 
+       "\"\<InitializeG\>\"", ",", "\"\<InverseG\>\"", ",", 
+       "\"\<LeftContractionG\>\"", ",", "\"\<ListToClifG\>\"", ",", 
+       "\"\<MaxDimG\>\"", ",", "\"\<nClifG\>\"", ",", "\"\<NormG\>\"", ",", 
+       "\"\<nVectorG\>\"", ",", "\"\<pBladeG\>\"", ",", "\"\<PrdtG\>\"", ",", 
+       "\"\<PseudoScalarG\>\"", ",", "\"\<QuaternionG\>\"", ",", 
+       "\"\<ReverseG\>\"", ",", "\"\<RightContractionG\>\"", ",", 
+       "\"\<RotorG\>\"", ",", "\"\<ScalarPrdtG\>\"", ",", 
+       "\"\<SignatureG\>\"", ",", "\"\<SubscriptListG\>\"", ",", 
+       "\"\<WedgePrdtG\>\""}], "}"}]}], "]"}], "\n"}]}]], "Input",
  CellChangeTimes->{{3.690556855123518*^9, 3.690556965392563*^9}, {
    3.690557020890552*^9, 3.690557314676291*^9}, {3.690557752614789*^9, 
    3.690557845029039*^9}, {3.692793396756822*^9, 3.692793401171687*^9}, {
@@ -50,10 +56,12 @@ Cell[BoxData[
    3.6927935963627577`*^9}, {3.692793651138321*^9, 3.6927936558608847`*^9}, {
    3.692795919464995*^9, 3.692795924727254*^9}, 3.692796788849413*^9, 
    3.6927972581334476`*^9, {3.693525572605453*^9, 3.693525610278083*^9}, 
-   3.693525697557034*^9}]
+   3.693525697557034*^9, {3.696969644487919*^9, 3.696969646889311*^9}, {
+   3.696969742027465*^9, 3.696969742562262*^9}, {3.6969710242356577`*^9, 
+   3.696971081703553*^9}, 3.69697175101267*^9, 3.696971797992914*^9}]
 },
-WindowSize->{771, 381},
-WindowMargins->{{465, Automatic}, {Automatic, 294}},
+WindowSize->{794, 679},
+WindowMargins->{{Automatic, 503}, {Automatic, 266}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -69,7 +77,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1902, 32, 222, "Input"]
+Cell[558, 20, 2491, 40, 285, "Input"]
 }
 ]
 *)

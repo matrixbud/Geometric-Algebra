@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      7724,        162]
-NotebookOptionsPosition[      7224,        138]
-NotebookOutlinePosition[      7586,        154]
-CellTagsIndexPosition[      7543,        151]
+NotebookDataLength[      8092,        170]
+NotebookOptionsPosition[      7593,        146]
+NotebookOutlinePosition[      7954,        162]
+CellTagsIndexPosition[      7911,        159]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -58,6 +58,13 @@ you need to reinstall.\n\n\n\n",
  StyleBox["Examples",
   FontWeight->"Bold"],
  " - Sample file demonstrating usage of many of the functions\n\n",
+ StyleBox["g-1fg Example ",
+  FontWeight->"Bold"],
+ "- A complex GA example involving 4 equations in 4 unknowns\n\n",
+ StyleBox["Example Formatted Output",
+  FontWeight->"Bold"],
+ " - Shows how function EijTermG can be used to format output in a table \
+format\n\n",
  StyleBox["GeomAlg2017Jan src",
   FontWeight->"Bold"],
  " - Source file for package\n\n",
@@ -131,13 +138,14 @@ with many packages\n\n",
    3.692803733881216*^9}, {3.693096029297351*^9, 3.693096143036935*^9}, {
    3.6930961813225737`*^9, 3.693096183774012*^9}, {3.693096265342083*^9, 
    3.693096283907476*^9}, 3.693096314172701*^9, {3.693525474492897*^9, 
-   3.693525478437147*^9}},
+   3.693525478437147*^9}, {3.6969692968333063`*^9, 3.696969313850265*^9}, {
+   3.6969734907428617`*^9, 3.6969735698070917`*^9}},
  FontFamily->"Arial",
  FontSize->14]
 }, Open  ]]
 },
 WindowSize->{808, 1044},
-WindowMargins->{{Automatic, 343}, {Automatic, 159}},
+WindowMargins->{{Automatic, 393}, {Automatic, 31}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -155,7 +163,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 163, 2, 64, "Section"],
-Cell[588, 19, 6620, 116, 811, InheritFromParent]
+Cell[588, 19, 6989, 124, 879, InheritFromParent]
 }, Open  ]]
 }
 ]

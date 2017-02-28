@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    267471,       5914]
-NotebookOptionsPosition[    265270,       5831]
-NotebookOutlinePosition[    265653,       5848]
-CellTagsIndexPosition[    265610,       5845]
+NotebookDataLength[    271200,       6005]
+NotebookOptionsPosition[    269000,       5922]
+NotebookOutlinePosition[    269382,       5939]
+CellTagsIndexPosition[    269339,       5936]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -709,7 +709,7 @@ Cell[BoxData[
    3.691170901550271*^9, 3.691170931919511*^9, 3.691191012184572*^9, {
    3.691346372215829*^9, 3.691346379937498*^9}, {3.69134830962848*^9, 
    3.691348380261441*^9}, {3.691618877779533*^9, 3.691618892258176*^9}}]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -2047,36 +2047,119 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{"INPUTS", ":", "\n", "\t", "clif"}], " ", "=", " ", 
       RowBox[{
-       RowBox[{"a", " ", "multivector", "\n", "\t", "eij"}], " ", "=", " ", 
-       RowBox[{
-        RowBox[{"a", " ", "product", " ", "like", " ", 
-         SubscriptBox["e", "2"], " ", "or", " ", 
-         SubscriptBox["e", "3"], 
-         SubscriptBox["e", "4"], " ", "or", " ", 
-         SubscriptBox["e", "1"], 
-         SubscriptBox["e", "3"], 
-         SubscriptBox["e", "4"], 
-         SubscriptBox["e", "5"], " ", "or", " ", "else", " ", "the", " ", 
-         "constant", " ", "1", "\n", 
-         RowBox[{"PROCESS", ":", "\n", "\t", 
+       RowBox[{"a", " ", 
+        RowBox[{"multivector", ".", "  ", 
+         RowBox[{"Example", ":", " ", 
           RowBox[{
-          "Convert", " ", "clif", " ", "to", " ", "a", " ", "list", "\n", 
-           "\t", "Use", " ", "Cases", " ", "to", " ", "find", " ", "the", " ",
-            "sublist", " ", "of", " ", "members", " ", "containing", " ", 
-           "the", " ", "product", " ", "eij", "\n", "\t", "Change", " ", 
-           "the", " ", "list", " ", "to", " ", "an", " ", "expression", "\n", 
-           "OUTPUT"}], ":", "\n", "\t", "eijPart"}]}], " ", "=", " ", 
-        RowBox[{
-        "sum", " ", "of", " ", "components", " ", "of", " ", "clif"}]}]}]}], 
-     ",", " ", 
+           RowBox[{
+            SubscriptBox["e", "1"], 
+            SubscriptBox["e", "2"]}], " ", "+", " ", 
+           RowBox[{"2", 
+            SubscriptBox["e", "1"], 
+            SubscriptBox["e", "2"], 
+            SubscriptBox["e", "3"]}], " ", "+", " ", 
+           RowBox[{"3", 
+            SubscriptBox["e", "1"], 
+            SubscriptBox["e", "2"], 
+            SubscriptBox["e", "3"], 
+            SubscriptBox["e", "4"], "\n", "\t", "eij"}]}]}]}]}], " ", "=", 
+       " ", 
+       RowBox[{"a", " ", "product", " ", "like", " ", 
+        SubscriptBox["e", "2"], " ", "or", " ", 
+        SubscriptBox["e", "3"], 
+        SubscriptBox["e", "4"], " ", "or", " ", 
+        SubscriptBox["e", "1"], 
+        SubscriptBox["e", "3"], 
+        SubscriptBox["e", "4"], 
+        SubscriptBox["e", "5"], " ", "or", " ", "else", " ", "the", " ", 
+        "constant", " ", "1.", "  ", 
+        RowBox[{"Example", ":", " ", 
+         RowBox[{
+          SubscriptBox["e", "1"], 
+          SubscriptBox["e", "2"], 
+          SubscriptBox["e", "3"], "\n", "PROCESS"}], ":", "\n", "\t", 
+         RowBox[{"Convert", " ", "clif", " ", "to", " ", "a", " ", 
+          RowBox[{"list", ".", "  ", 
+           RowBox[{"Example", ":", " ", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["e", "1"], 
+                SubscriptBox["e", "2"]}], ",", " ", 
+               RowBox[{"2", 
+                SubscriptBox["e", "1"], 
+                SubscriptBox["e", "2"], 
+                SubscriptBox["e", "3"]}], ",", " ", 
+               RowBox[{"3", 
+                SubscriptBox["e", "1"], 
+                SubscriptBox["e", "2"], 
+                SubscriptBox["e", "3"], 
+                SubscriptBox["e", "4"]}]}], "}"}], " ", "\n", "\t", "Use", 
+             " ", "Cases", " ", "to", " ", "find", " ", "the", " ", "sublist",
+              " ", "of", " ", "members", " ", "containing", " ", "the", " ", 
+             "product", " ", 
+             RowBox[{"eij", ".", " ", "\n", "\t\t", "Example"}]}], ":", " ", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", 
+                SubscriptBox["e", "1"], 
+                SubscriptBox["e", "2"], 
+                SubscriptBox["e", "3"]}], ",", " ", 
+               RowBox[{"3", 
+                SubscriptBox["e", "1"], 
+                SubscriptBox["e", "2"], 
+                SubscriptBox["e", "3"], 
+                SubscriptBox["e", "4"]}]}], "}"}], "\n", "\t", "Change", " ", 
+             "list", " ", "back", " ", "to", " ", "an", " ", 
+             RowBox[{"expression", ".", "  ", 
+              RowBox[{"Example", ":", " ", 
+               RowBox[{
+                RowBox[{"2", 
+                 SubscriptBox["e", "1"], 
+                 SubscriptBox["e", "2"], 
+                 SubscriptBox["e", "3"]}], " ", "+", " ", 
+                RowBox[{"3", 
+                 SubscriptBox["e", "1"], 
+                 SubscriptBox["e", "2"], 
+                 SubscriptBox["e", "3"], 
+                 SubscriptBox["e", "4"], "\n", "\t", 
+                 "If"}]}]}]}]}]}]}]}]}]}]}]}], ",", " ", 
+     RowBox[{"in", " ", "the", " ", "epxression"}], ",", " ", 
+     RowBox[{
+     "the", " ", "eij", " ", "term", " ", "has", " ", "one", " ", "or", " ", 
+      "more", " ", 
+      SubscriptBox["e", "i"], " ", "factors"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "set", " ", "those", " ", "terms", " ", "to", " ", "0", "\n", "\t\t", 
+        RowBox[{"Example", ":", " ", 
+         RowBox[{"3", 
+          SubscriptBox["e", "1"], 
+          SubscriptBox["e", "2"], 
+          SubscriptBox["e", "3"], 
+          SubscriptBox["e", "4"]}]}]}], " ", "\[Rule]", " ", 
+       RowBox[{"0", "  ", "leading", " ", "to", " ", "2", 
+        SubscriptBox["e", "1"], 
+        SubscriptBox["e", "2"], 
+        SubscriptBox["e", "3"], "\n", "\t", "Find", " ", "the", " ", "eij", 
+        " ", "coefficient", " ", "by", " ", "dividing", " ", "out", " ", 
+        RowBox[{"eij", ".", "  ", 
+         RowBox[{"Example", ":", " ", 
+          RowBox[{"2", "\n", "OUTPUT"}], ":", "\n", "\t", "eijPart"}]}]}]}], 
+      " ", "=", " ", 
+      RowBox[{"eij", " ", "coefficients"}]}], ",", " ", 
      RowBox[{"if", " ", "any"}], ",", " ", 
      RowBox[{
       RowBox[{
-      "that", " ", "contain", " ", "eij", "\n", "\t", "In", " ", "the", " ", 
-       "case", " ", "eij"}], " ", "=", " ", "1"}], ",", " ", 
+      "in", " ", "clif", "\n", "\t", "In", " ", "the", " ", "case", " ", 
+       "eij"}], " ", "=", " ", "1"}], ",", " ", 
      RowBox[{
      "eijPart", " ", "is", " ", "just", " ", "the", " ", "constant", " ", 
-      "term"}]}], "  ", "*)"}], "\n", "\t", "\n", "\t", 
+      "term", " ", "of", " ", "clif"}]}], "  ", "*)"}], "\n", "\t", "\n", 
+   "\t", 
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
@@ -2093,11 +2176,14 @@ Cell[BoxData[{
            RowBox[{"___", " ", "eij"}]}], "]"}], "/.", 
          RowBox[{"List", "\[Rule]", "Plus"}]}], "]"}]}], ";", "\n", "\t\t", 
       RowBox[{"eijPart", "=", 
-       RowBox[{"eijPart1", "/.", 
-        RowBox[{
-         RowBox[{
-          SubscriptBox["e", "u_"], "eij"}], "\[Rule]", "0"}]}]}], ";", "\n", 
-      "\t\t", "eijPart"}]}], "\n", "\t", "]"}]}], "  ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"eijPart1", "/.", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["e", "u_"], "eij"}], "\[Rule]", "0"}]}], ")"}], "/", 
+        "eij"}]}], ";", "\n", "\t\t", "eijPart"}]}], "\n", "\t", "]"}]}], 
+  "  ", 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "EijTermG"}], "  ", "*)"}], "\n", 
   "\n"}], "\n", 
@@ -3069,7 +3155,12 @@ the clif terms.\>\""}], "]"}], ";", "\n", "\t\t",
    3.6967908156977253`*^9, {3.696790956020483*^9, 3.696790956680894*^9}, {
    3.6968847354827547`*^9, 3.696884746209524*^9}, {3.696894089292087*^9, 
    3.696894143580604*^9}, {3.69696789058985*^9, 3.696967894045889*^9}, {
-   3.696967948443387*^9, 3.696967967404077*^9}}]
+   3.696967948443387*^9, 3.696967967404077*^9}, {3.697230069727665*^9, 
+   3.697230073941134*^9}, {3.69723011026936*^9, 3.697230137287163*^9}, {
+   3.6972308359207697`*^9, 3.697230893763961*^9}, {3.6972309541055737`*^9, 
+   3.697230967004733*^9}, {3.6972310034883423`*^9, 3.697231296211484*^9}, {
+   3.6972313316303368`*^9, 3.69723137974903*^9}, {3.6972314203040247`*^9, 
+   3.697231507246801*^9}, {3.697231568613351*^9, 3.69723157213583*^9}}]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -5831,7 +5922,7 @@ multivectors in a consistent way \n"
 },
 CellGrouping->Manual,
 WindowSize->{845, 1355},
-WindowMargins->{{334, Automatic}, {Automatic, 18}},
+WindowMargins->{{Automatic, 263}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -5876,9 +5967,9 @@ Cell[20059, 395, 12319, 276, 907, "Code"]
 Cell[CellGroupData[{
 Cell[32427, 677, 127, 1, 65, "Chapter"],
 Cell[32557, 680, 2085, 30, 52, "Code"]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[34679, 715, 129, 2, 65, "Chapter"],
+Cell[34679, 715, 129, 2, 54, "Chapter"],
 Cell[34811, 719, 5443, 114, 262, "Code"]
 }, Closed]],
 Cell[CellGroupData[{
@@ -5887,27 +5978,27 @@ Cell[40589, 846, 42365, 1050, 3737, "Code"]
 }, Closed]],
 Cell[CellGroupData[{
 Cell[82991, 1901, 116, 1, 54, "Chapter"],
-Cell[83110, 1904, 57266, 1167, 5066, "Code"]
+Cell[83110, 1904, 60996, 1258, 5142, "Code"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[140413, 3076, 114, 1, 54, "Chapter"],
-Cell[140530, 3079, 52115, 1117, 4249, "Code"]
+Cell[144143, 3167, 114, 1, 54, "Chapter"],
+Cell[144260, 3170, 52115, 1117, 4249, "Code"]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[192694, 4202, 216, 4, 102, "Chapter"],
-Cell[192913, 4208, 15131, 327, 1440, "Code"]
+Cell[196424, 4293, 216, 4, 102, "Chapter"],
+Cell[196643, 4299, 15131, 327, 1440, "Code"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[208081, 4540, 232, 5, 128, "Chapter"],
+Cell[211811, 4631, 232, 5, 128, "Chapter"],
 Cell[CellGroupData[{
-Cell[208338, 4549, 52249, 1186, 4417, "Code"],
-Cell[260590, 5737, 249, 4, 32, "Output"]
+Cell[212068, 4640, 52249, 1186, 4417, "Code"],
+Cell[264320, 5828, 249, 4, 32, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[260888, 5747, 102, 1, 36, "Subsection"],
-Cell[260993, 5750, 4261, 78, 771, "Text"]
+Cell[264618, 5838, 102, 1, 36, "Subsection"],
+Cell[264723, 5841, 4261, 78, 771, "Text"]
 }, Closed]]
 }
 ]

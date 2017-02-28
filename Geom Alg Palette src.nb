@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     76495,       1307]
-NotebookOptionsPosition[     75545,       1272]
-NotebookOutlinePosition[     76196,       1294]
-CellTagsIndexPosition[     76153,       1291]
+NotebookDataLength[     76699,       1310]
+NotebookOptionsPosition[     75749,       1275]
+NotebookOutlinePosition[     76400,       1297]
+CellTagsIndexPosition[     76357,       1294]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -689,11 +689,10 @@ mulitvector\>\"", ",", "\n", "\t   ",
                     "\"\<   Generate the grade-p terms of the \
 multivector\>\"", ",", "\n", "\t   ", 
                     RowBox[{
-                    "\"\<   Find any terms of the multivector that match \
-blade eij... Ex. eij\>\"", "<>", "\n", "\t\t\t", 
-                    "\"\< = \!\(\*SubscriptBox[\(e\), \(2\)]\) \
-\!\(\*SubscriptBox[\(e\), \(3\)]\) \!\(\*SubscriptBox[\(e\), \
-\(5\)]\)\>\""}]}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t", 
+                    "\"\<   Find coefficients of terms,if any, of the \
+multivector that contain the\>\"", "\n", "\t               ", "<>", 
+                    "\"\< blade eij\>\""}]}], "}"}]}]}], "}"}], ",", "\n", 
+                  "\n", "\t", 
                   RowBox[{"Grid", "[", 
                    RowBox[{
                     RowBox[{"Partition", "[", "\n", "\t\t", 
@@ -1215,19 +1214,23 @@ transpositions to\>\"", "<>",
    3.696896980355843*^9, 3.696897017557314*^9}, {3.6968970677934237`*^9, 
    3.696897187178694*^9}, {3.696897246594244*^9, 3.696897263643352*^9}, {
    3.696979060083156*^9, 3.6969790941725082`*^9}, {3.696980093631905*^9, 
-   3.6969800946450357`*^9}}],
+   3.6969800946450357`*^9}, {3.6972321245522327`*^9, 3.69723213045686*^9}, {
+   3.697232221784883*^9, 3.6972323952664137`*^9}, {3.697232432937317*^9, 
+   3.697232454720545*^9}, {3.697232486787394*^9, 3.697232586764126*^9}, {
+   3.697232626161882*^9, 3.6972327341685257`*^9}}],
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["gq6d4_shm", 3, 1]],213,
-   "FrontEndObject[LinkObject[\"gq6d4_shm\", 3, 1]]","213",
+    LinkObject["sr3q8_shm", 3, 1]],32,
+   "FrontEndObject[LinkObject[\"sr3q8_shm\", 3, 1]]","32",
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->{3.6968926991271*^9, 3.696892752662866*^9, 
   3.696892862084207*^9, 3.696892962591312*^9, 3.696893075892116*^9, 
   3.6968934385940647`*^9, 3.6968935620969467`*^9, 3.696893658270856*^9, 
   3.6968937153184013`*^9, 3.696893765564087*^9, 3.696897025590026*^9, 
-  3.696897206716537*^9, 3.6969790179334383`*^9, 3.696979230207197*^9}]
+  3.696897206716537*^9, 3.6969790179334383`*^9, 3.696979230207197*^9, 
+  3.697232760345858*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1295,12 +1298,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[400, 13, 11299, 161, 1690, "Text"],
 Cell[CellGroupData[{
-Cell[11724, 178, 61915, 1039, 4884, "Input"],
-Cell[73642, 1219, 565, 10, 41, "Output"]
+Cell[11724, 178, 62096, 1041, 4884, "Input"],
+Cell[73823, 1221, 588, 11, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[74244, 1234, 186, 3, 44, "Subsection"],
-Cell[74433, 1239, 1096, 30, 184, "Text"]
+Cell[74448, 1237, 186, 3, 44, "Subsection"],
+Cell[74637, 1242, 1096, 30, 184, "Text"]
 }, Closed]]
 }
 ]

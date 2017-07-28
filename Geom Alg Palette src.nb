@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     76699,       1310]
-NotebookOptionsPosition[     75749,       1275]
-NotebookOutlinePosition[     76400,       1297]
-CellTagsIndexPosition[     76357,       1294]
+NotebookDataLength[     76743,       1310]
+NotebookOptionsPosition[     75793,       1275]
+NotebookOutlinePosition[     76444,       1297]
+CellTagsIndexPosition[     76401,       1294]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -280,7 +280,7 @@ Cell[BoxData[
                     RowBox[{"PasteButton", "[", 
                     RowBox[{
                     RowBox[{"Defer", "[", 
-                    RowBox[{"<<", "GeomAlg2017Feb`"}], "]"}], ",", 
+                    RowBox[{"<<", "GeomAlg2017June`"}], "]"}], ",", 
                     RowBox[{"ImageSize", "\[Rule]", "200"}]}], "]"}], "}"}]}],
                     "\n", "\n", "}"}], ",", 
                   RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]}], "}"}], 
@@ -1217,12 +1217,12 @@ transpositions to\>\"", "<>",
    3.6969800946450357`*^9}, {3.6972321245522327`*^9, 3.69723213045686*^9}, {
    3.697232221784883*^9, 3.6972323952664137`*^9}, {3.697232432937317*^9, 
    3.697232454720545*^9}, {3.697232486787394*^9, 3.697232586764126*^9}, {
-   3.697232626161882*^9, 3.6972327341685257`*^9}}],
+   3.697232626161882*^9, 3.6972327341685257`*^9}, 3.705945624372466*^9}],
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["sr3q8_shm", 3, 1]],32,
-   "FrontEndObject[LinkObject[\"sr3q8_shm\", 3, 1]]","32",
+    LinkObject["n63d8_shm", 3, 1]],69,
+   "FrontEndObject[LinkObject[\"n63d8_shm\", 3, 1]]","69",
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->{3.6968926991271*^9, 3.696892752662866*^9, 
@@ -1230,7 +1230,7 @@ Cell[BoxData[
   3.6968934385940647`*^9, 3.6968935620969467`*^9, 3.696893658270856*^9, 
   3.6968937153184013`*^9, 3.696893765564087*^9, 3.696897025590026*^9, 
   3.696897206716537*^9, 3.6969790179334383`*^9, 3.696979230207197*^9, 
-  3.697232760345858*^9}]
+  3.705945821393771*^9, 3.70594599740173*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1274,7 +1274,7 @@ and made those the defaults\n\n"
 }, Closed]]
 },
 WindowSize->{875, 1241},
-WindowMargins->{{Automatic, 221}, {Automatic, 0}},
+WindowMargins->{{Automatic, 638}, {Automatic, 7}},
 SpellingDictionaries->{"CorrectWords"->{"aaa", "Windowsize"}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 21, 2016)",
@@ -1298,12 +1298,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[400, 13, 11299, 161, 1690, "Text"],
 Cell[CellGroupData[{
-Cell[11724, 178, 62096, 1041, 4884, "Input"],
-Cell[73823, 1221, 588, 11, 41, "Output"]
+Cell[11724, 178, 62119, 1041, 4884, "Input"],
+Cell[73846, 1221, 609, 11, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[74448, 1237, 186, 3, 44, "Subsection"],
-Cell[74637, 1242, 1096, 30, 184, "Text"]
+Cell[74492, 1237, 186, 3, 44, "Subsection"],
+Cell[74681, 1242, 1096, 30, 184, "Text"]
 }, Closed]]
 }
 ]

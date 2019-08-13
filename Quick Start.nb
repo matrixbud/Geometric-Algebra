@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      8115,        147]
-NotebookOptionsPosition[      7617,        123]
-NotebookOutlinePosition[      7978,        139]
-CellTagsIndexPosition[      7935,        136]
+NotebookDataLength[      8932,        162]
+NotebookOptionsPosition[      8298,        137]
+NotebookOutlinePosition[      8682,        154]
+CellTagsIndexPosition[      8639,        151]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -14,14 +14,18 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["QuickStart", "Section",
- CellChangeTimes->{{3.690220594031942*^9, 3.690220603131773*^9}}],
+ CellChangeTimes->{{3.690220594031942*^9, 
+  3.690220603131773*^9}},ExpressionUUID->"952567d1-b041-42fc-90c1-\
+0d8f7eab655e"],
 
 Cell[TextData[{
- "\nInstall* the package using the instructions in the Installation Guide. \
-Then, to use the package, open a notebook and start your session with the \
-statement Needs [\[OpenCurlyDoubleQuote]GeomAlg2017Feb`\
+ "\nInstall* the package using the instructions in the ",
+ StyleBox["Installation Guide",
+  FontColor->RGBColor[1, 0, 1]],
+ ". Then, to use the package, open a notebook and start your session with the \
+statement Needs [\[OpenCurlyDoubleQuote]GeomAlg2017June`\
 \[CloseCurlyDoubleQuote]] or, equivalently, \
-<<\[CloseCurlyDoubleQuote]GeomAlg2017Feb`\[CloseCurlyDoubleQuote]. If you \
+<<\[CloseCurlyDoubleQuote]GeomAlg2017June`\[CloseCurlyDoubleQuote]. If you \
 open a 2nd notebook later, it also must begin with the \
 \[OpenCurlyDoubleQuote]Needs\[CloseCurlyDoubleQuote] statement. You can use \
 the palette to quickly enter the needs statement. \n\nThe palette has been \
@@ -42,19 +46,26 @@ shorter than multivector and helps keep the palette narrower). The palette \
 not only shows you all the available commands, it illustrates many of them \
 and has tooltips for all of them. Thus, it is your on-screen documentation \
 center as well as your user interface. Click on the triangles to \
-expand/contract sections. \n\nThe file \[OpenCurlyDoubleQuote]Examples\
-\[CloseCurlyDoubleQuote] can be examined to see how most of the operations \
-work. I recommend you first run it using the default initialization of \n\t\
-Clifford Algebra\n\tMathematicians\n\t0 Time dimensions\nEspecially, the \
-airplane rotation example is meant for using a Clifford algebra in pure \
-space.\n\nThis package was designed primarily for Clifford algebras but basic \
-Grassmann algebra operations such as dot and wedge products follow the same \
-rules except for what happens when basis elements are squared. Thus, by using \
-only 1-line of code to control the results of ",
+expand/contract sections. \n\nThe ",
+ StyleBox["file \[OpenCurlyDoubleQuote]Examples\[CloseCurlyDoubleQuote]",
+  FontColor->RGBColor[1, 0, 1]],
+ " can be examined to see how most of the operations work. I recommend you \
+first run it using the default initialization of \n \tClifford Algebra\n\t\
+Mathematicians\n\t0 Time dimensions\nEspecially, the airplane rotation \
+example is meant for using a Clifford algebra in pure space. The ",
+ StyleBox["file \[OpenCurlyDoubleQuote]Documentation\[CloseCurlyDoubleQuote]",
+  
+  FontColor->RGBColor[1, 0, 1]],
+ " is quite short and provides numerous important tips.\n\n\nThis package was \
+designed primarily for Clifford algebras but basic Grassmann algebra \
+operations such as dotc and wedge products follow the same rules except for \
+what happens when basis elements are squared. Thus, by using only 1-line of \
+code to control the results of ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox[
-    SubscriptBox["e", "i"], "2"], TraditionalForm]]],
+    SubscriptBox["e", "i"], "2"], TraditionalForm]],ExpressionUUID->
+  "d0313504-7ed8-4a20-abf8-d770fa4080db"],
  " for every i, it was expedient to enable Grassmann operations. However, \
 many of the built-in operations may not be relevant for Grassmann algebras.\n\
 \nCaution: If Mathematica 10 or later displays the \
@@ -116,15 +127,19 @@ and Square Superset, and SquareSubset, shown here:\n\t",
    3.693518318539097*^9}, {3.693518393483604*^9, 3.693518395754081*^9}, {
    3.693523444780924*^9, 3.6935234536050673`*^9}, 3.6935235458429613`*^9, {
    3.693574231701192*^9, 3.693574244578782*^9}, {3.696969524942666*^9, 
-   3.696969536079556*^9}, {3.696969596133312*^9, 3.696969597166718*^9}},
+   3.696969536079556*^9}, {3.696969596133312*^9, 3.696969597166718*^9}, {
+   3.713455548953783*^9, 3.713455549382483*^9}, {3.713455581804789*^9, 
+   3.713455582378517*^9}, {3.7134804453159437`*^9, 3.7134804483869343`*^9}, 
+   3.774127942047607*^9, {3.774128064999469*^9, 3.7741280966751347`*^9}},
  FontFamily->"Arial",
- FontSize->14]
+ FontSize->14,ExpressionUUID->"ee8102e5-0e84-4ae6-a873-601ec5c15b47"]
 }, Open  ]]
 },
 WindowSize->{808, 951},
-WindowMargins->{{349, Automatic}, {Automatic, 118}},
-FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-21, 2016)",
+WindowMargins->{{Automatic, 442}, {Automatic, 6}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -139,8 +154,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[422, 15, 95, 1, 64, "Section"],
-Cell[520, 18, 7081, 102, 757, InheritFromParent]
+Cell[422, 15, 155, 3, 101, "Section",ExpressionUUID->"952567d1-b041-42fc-90c1-0d8f7eab655e"],
+Cell[580, 20, 7702, 114, 1522, InheritFromParent,ExpressionUUID->"ee8102e5-0e84-4ae6-a873-601ec5c15b47"]
 }, Open  ]]
 }
 ]

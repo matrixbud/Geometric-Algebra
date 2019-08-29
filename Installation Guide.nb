@@ -3,47 +3,54 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      8092,        170]
-NotebookOptionsPosition[      7593,        146]
-NotebookOutlinePosition[      7954,        162]
-CellTagsIndexPosition[      7911,        159]
+NotebookDataLength[      8717,        180]
+NotebookOptionsPosition[      8112,        156]
+NotebookOutlinePosition[      8468,        172]
+CellTagsIndexPosition[      8425,        169]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Installation Instructions", "Section",
+Cell["\<\
+Installation Instructions
+\
+\>", "Section",
  CellChangeTimes->{{3.690220594031942*^9, 3.690220603131773*^9}, {
-  3.6927453520328007`*^9, 3.6927453678261213`*^9}}],
+  3.6927453520328007`*^9, 3.6927453678261213`*^9}, {3.775821415277379*^9, 
+  3.775821416635161*^9}, {3.775822582652567*^9, 
+  3.775822584145812*^9}},ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-\
+9541db189946"],
 
 Cell[TextData[{
- "\n1.  Open the notebook \[OpenCurlyDoubleQuote]Geom Alg Palette src. Double \
-click on the 2nd bracket to the left on the right hand side of Begin Package. \
-That opens the next level of documentation which, in this case, is some code. \
-Place you cursor anywhere in the code and press enter to run the code. A \
-palette should be created. Move it to where you would like it. (You can \
-always move it later. It will \[OpenCurlyDoubleQuote]remember\
-\[CloseCurlyDoubleQuote] the location as well as which triangles are open and \
-closed). From the Palette menu, select Install Palette. In the Source \
-drop-down menu select Geometric Algebra Palette. In the Install Name box, \
-type Geometric Algebra. Click OK. That should install the palette. To check, \
-click the red circle to put away the palette. Then click on the Palette menu \
-to verify there is a new palette, Geometric Algebra Palette. Close the source \
-file.\n\n",
- StyleBox["Note",
-  FontWeight->"Bold"],
- ": On a Mac, the default location for the installed palette is \
-Library/Mathematica/SystemFiles/FrontEnd/Palettes/Geometric Algebra.nb\nin \
-your home folder\n \n2.  Open the notebook GeomAlg2017Jan src. Save it as a \
+ StyleBox["1. Open the notebook \[OpenCurlyDoubleQuote]Geom Alg Palette src\
+\[CloseCurlyDoubleQuote]. Double click on the 2nd bracket to the left on the \
+right hand side of Begin Package. That opens the next level of documentation \
+which, in this case, is some code. Place you cursor anywhere in the code and \
+press enter to run the code. A palette should be created. Move it to where \
+you would like it. (You can move it again later. It will \
+\[OpenCurlyDoubleQuote]remember\[CloseCurlyDoubleQuote] the location as well \
+as which triangles are open and closed). From the Palette menu, select \
+Install Palette. In the Source drop-down menu select Geometric Algebra \
+Palette. In the Install Name box, type Geometric Algebra. Click OK. That \
+should install the palette. To check, click the red circle to put away the \
+palette. Then click on the Palette menu to verify the new palette, Geometric \
+Algebra Palette, is there. Close the source file.\n\nNote: On a Mac, the \
+default location for the installed palette is \
+Library/Mathematica/SystemFiles/FrontEnd/Palettes/Geometric Algebra.nb in \
+your home folder\n\n2. Open the notebook GeomAlg2019JAug src. Save it as a \
 type .m Mathematica file (that is, a Wolfram Mathematica Package) in the \
 Applications folder of your  $UserBaseDirectory. Do not change its name. On a \
 Macintosh, for example, one would select SAVE AS from the file menu, navigate \
 to Library/Mathematica/Applications in your user folder, and select Wolfram \
-Notebook (*.nb) from the Format drop-down menu near the bottom of the SAVE AS \
-dialog box, and press the SAVE button. Close the source file.\n\n3.  This is \
-a 1-time operation. You might save the source files for future use in case \
-you need to reinstall.\n\n\n\n",
+Mathematica Package (*.nb) from the Format drop-downc menu near the bottom of \
+the SAVE AS dialog box, and press the SAVE button. You can close the source \
+file or copy it to a working folder in case you later wish to examine or \
+modify it.\n\n3. This is a 1-time operation. Next read Quick Start.",
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ "\n\n\n\n",
  StyleBox["Files:",
   FontSize->18,
   FontWeight->"Bold",
@@ -65,7 +72,7 @@ you need to reinstall.\n\n\n\n",
   FontWeight->"Bold"],
  " - Shows how function EijTermG can be used to format output in a table \
 format\n\n",
- StyleBox["GeomAlg2017Jan src",
+ StyleBox["GeomAlg2019Aug src",
   FontWeight->"Bold"],
  " - Source file for package\n\n",
  StyleBox["Geom Alg Palette src",
@@ -88,7 +95,7 @@ with many packages\n\n",
  StyleBox["Quick Start",
   FontWeight->"Bold"],
  " - Quick Start guide (Microsoft Word and Mathematica Notebook)\n\n",
- StyleBox["Read Me",
+ StyleBox["Read Me First",
   FontWeight->"Bold"],
  " - Overview and 1st file to read. Then read this file.\n"
 }],
@@ -139,15 +146,18 @@ with many packages\n\n",
    3.6930961813225737`*^9, 3.693096183774012*^9}, {3.693096265342083*^9, 
    3.693096283907476*^9}, 3.693096314172701*^9, {3.693525474492897*^9, 
    3.693525478437147*^9}, {3.6969692968333063`*^9, 3.696969313850265*^9}, {
-   3.6969734907428617`*^9, 3.6969735698070917`*^9}},
+   3.6969734907428617`*^9, 3.6969735698070917`*^9}, {3.775822548039892*^9, 
+   3.775822572102229*^9}, {3.775822626408019*^9, 3.775822628964769*^9}, {
+   3.775822687155693*^9, 3.775822721498004*^9}, {3.775822799437646*^9, 
+   3.775822815989765*^9}},
  FontFamily->"Arial",
- FontSize->14]
+ FontSize->14,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 },
-WindowSize->{808, 1044},
-WindowMargins->{{Automatic, 393}, {Automatic, 31}},
-FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-21, 2016)",
+WindowSize->{835, 1188},
+WindowMargins->{{Automatic, 366}, {Automatic, 31}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -162,8 +172,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[422, 15, 163, 2, 64, "Section"],
-Cell[588, 19, 6989, 124, 879, InheritFromParent]
+Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
+Cell[752, 25, 7344, 128, 845, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]

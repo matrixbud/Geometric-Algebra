@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     87091,       1457]
-NotebookOptionsPosition[     85876,       1422]
-NotebookOutlinePosition[     86517,       1444]
-CellTagsIndexPosition[     86474,       1441]
+NotebookDataLength[     87198,       1459]
+NotebookOptionsPosition[     85983,       1424]
+NotebookOutlinePosition[     86624,       1446]
+CellTagsIndexPosition[     86581,       1443]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,7 +31,7 @@ Moreover, in the MapThread approach, when ",
   FormBox[
    SubscriptBox["e", "i"], TraditionalForm]],ExpressionUUID->
   "3d9051ee-1f2b-4c1e-bbda-a30b7248fc8d"],
- " is selected, it prints as a subscript box unless RawBoxes \nare used.\n\n \
+ " is selected, it prints as a subscript box unless RawBoxes \nare used.c\n\n \
 4. Insert TextCell just after CreatePalette in order to insert a narrow row \
 so first text is not jammed against the top of the palette.\n\n 5. Used \
 Spacings->{0,1.5} to give 1.5 vertical spacing between palette triangles \
@@ -185,8 +185,9 @@ dialog example for OpenerView), just inside the last opener bracket ]. "
    3.775423386021002*^9}, {3.77559672352139*^9, 3.775596724914591*^9}, {
    3.775651247888043*^9, 3.775651316988593*^9}, {3.7756514657191677`*^9, 
    3.775651533835217*^9}, {3.775651579984418*^9, 3.775651784350485*^9}, {
-   3.7760162816172323`*^9, 
-   3.776016283022601*^9}},ExpressionUUID->"969d602e-3133-4ac8-b153-\
+   3.7760162816172323`*^9, 3.776016283022601*^9}, 3.776108118940318*^9, {
+   3.776108461607402*^9, 
+   3.776108462832945*^9}},ExpressionUUID->"969d602e-3133-4ac8-b153-\
 3e8836467719"],
 
 Cell[CellGroupData[{
@@ -417,8 +418,13 @@ src  Esc\>\"", ",", "\n", "\t   ", "\"\<\>\"", ",", "\"\<\>\"", ",",
                     RowBox[{"chrs", "=", 
                     RowBox[{"{", "\n", "\t\t\t", 
                     RowBox[{
-                    "\"\<nVectorG[x,3]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<AtomG[1,2,4]\>\"", ",", "\n", "\t\t\t", 
                     
+                    "\"\<\!\(\*StyleBox[SubscriptBox[\"e\", \
+\"1\"],FontWeight->\"Plain\"]\)\!\(\*StyleBox[SubscriptBox[\"e\", \
+\"2\"],FontWeight->\"Plain\"]\)\!\(\*StyleBox[SubscriptBox[\"e\", \
+\"4\"],FontWeight->\"Plain\"]\)\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<nVectorG[x,3]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<\!\(\*SubscriptBox[\(e\), \
 \(1\)]\)\!\(\*SubscriptBox[\(x\), \(1\)]\) + \!\(\*SubscriptBox[\(e\), \(2\)]\
 \)\!\(\*SubscriptBox[\(x\), \(2\)]\) + \!\(\*SubscriptBox[\(e\), \(3\)]\)\!\(\
@@ -434,38 +440,23 @@ src  Esc\>\"", ",", "\n", "\t   ", "\"\<\>\"", ",", "\"\<\>\"", ",",
 \(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\) + (-\!\(\*SubscriptBox[\(a\), \
 \(3\)]\)\!\(\*SubscriptBox[\(b\), \(2\)]\) + \!\(\*SubscriptBox[\(a\), \(2\)]\
 \)\!\(\*SubscriptBox[\(b\), \(3\)]\))\!\(\*SubscriptBox[\(e\), \
-\(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<BiVectorG[a,3]                 \>\"", ",", "\n", 
-                    "\t\t\t", 
-                    "\"\<\!\(\*SubscriptBox[\(e\), \
-\(1\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(a\), \(1, 2\)]\
-\) + \!\(\*SubscriptBox[\(e\), \(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\!\(\
-\*SubscriptBox[\(a\), \(1, 3\)]\) + \!\(\*SubscriptBox[\(e\), \
-\(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\!\(\*SubscriptBox[\(a\), \(2, 3\)]\
-\)\>\"", ",", "\n", "\t\t\t", "\"\<AtomG[1,2,4]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<\!\(\*StyleBox[SubscriptBox[\"e\", \
-\"1\"],FontWeight->\"Plain\"]\)\!\(\*StyleBox[SubscriptBox[\"e\", \
-\"2\"],FontWeight->\"Plain\"]\)\!\(\*StyleBox[SubscriptBox[\"e\", \
-\"4\"],FontWeight->\"Plain\"]\)\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<PseudoScalarG[5]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<\!\(\*SubscriptBox[\(e\), \
-\(1\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \
-\(3\)]\)\!\(\*SubscriptBox[\(e\), \(4\)]\)\!\(\*SubscriptBox[\(e\), \
-\(5\)]\)\>\"", ",", "\t\t", 
+\(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\>\"", ",", "\n", "\t", 
                     "\"\<pBladeG[2,3]                                         \
                                          \>\"", ",", 
                     "\"\<(-\!\(\*SubscriptBox[\(a\), \
-\(2\)]\)\!\(\*SubscriptBox[\(b\), \(1\)]\) + \!\(\*SubscriptBox[\(a\), \(1\)]\
-\)\!\(\*SubscriptBox[\(b\), \(2\)]\)) \!\(\*SubscriptBox[\(e\), \
-\(1\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\) + (-\!\(\*SubscriptBox[\(a\), \
-\(3\)]\)\!\(\*SubscriptBox[\(b\), \(1\)]\) + \!\(\*SubscriptBox[\(a\), \(1\)]\
-\)\!\(\*SubscriptBox[\(b\), \(3\)]\)) \!\(\*SubscriptBox[\(e\), \
-\(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\) + (-\!\(\*SubscriptBox[\(a\), \
-\(3\)]\)\!\(\*SubscriptBox[\(b\), \(2\)]\) + \!\(\*SubscriptBox[\(a\), \(2\)]\
-\)\!\(\*SubscriptBox[\(b\), \(3\)]\)) \!\(\*SubscriptBox[\(e\), \
-\(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\>\"", ",", "\t\t", "\n", "\t\t\t", 
-                    "\"\<pBladeG[a,2,4]                                       \
-                             \>\"", ",", 
+\(2\)]\)\!\(\*SubscriptBox[\(b\), \(1\)]\)+ \!\(\*SubscriptBox[\(a\), \
+\(1\)]\)\!\(\*SubscriptBox[\(b\), \(2\)]\)\!\(\*SubscriptBox[\()\), \(\\\ \)]\
+\)\!\(\*SubscriptBox[\(e\), \(1\)]\)\!\(\*SubscriptBox[SubscriptBox[\(e\), \
+\(2\)], \(\\\ \)]\)+ (-\!\(\*SubscriptBox[\(a\), \
+\(3\)]\)\!\(\*SubscriptBox[\(b\), \(1\)]\)+\!\(\*SubscriptBox[\(a\), \(1\)]\)\
+\!\(\*SubscriptBox[\(b\), \(3\)]\)\!\(\*SubscriptBox[\()\), \(\\\ \
+\)]\)\!\(\*SubscriptBox[\(e\), \(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\) + \
+(-\!\(\*SubscriptBox[\(a\), \(3\)]\)\!\(\*SubscriptBox[\(b\), \(2\)]\) + \!\(\
+\*SubscriptBox[\(a\), \(2\)]\)\!\(\*SubscriptBox[\(b\), \(3\)]\)) \
+\!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\>\"", 
+                    ",", "\t\t", "\n", "\t\t\t", 
+                    "\"\<SliceG[a,2,4]                                        \
+                                    \>\"", ",", 
                     "\"\<\!\(\*SubscriptBox[\(e\), \
 \(1\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(a\), \(1, 2\)]\
 \) + \!\(\*SubscriptBox[\(e\), \(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\!\(\
@@ -497,6 +488,11 @@ src  Esc\>\"", ",", "\n", "\t   ", "\"\<\>\"", ",", "\"\<\>\"", ",",
 \)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\!\(\*SubscriptBox[\(c\), \(1, 3\)]\) \
 + \!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \
 \(3\)]\)\!\(\*SubscriptBox[\(c\), \(2, 3\)]\)\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<PseudoScalarG[5]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<\!\(\*SubscriptBox[\(e\), \
+\(1\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \
+\(3\)]\)\!\(\*SubscriptBox[\(e\), \(4\)]\)\!\(\*SubscriptBox[\(e\), \
+\(5\)]\)\>\"", ",", "\t\t", "\n", "\t\t\t", 
                     "\"\<RotorG[2, 4, \!\(\*FractionBox[\(\[Pi]\), \
 \(2\)]\)]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<Cos[\!\(\*FractionBox[\(\[Pi]\), \(4\)]\)] + \
@@ -527,32 +523,25 @@ Sin[\!\(\*FractionBox[\(\[Pi]\), \(4\)]\)] \!\(\*SubscriptBox[\(e\), \(2\)]\)\
                     "\"\<a + b i + c j + d k\>\""}]}], "\n", "\t\t", "}"}]}], 
                     ",", "\n", "\n", "\t\t     ", 
                     RowBox[{"tips", "=", "\n", "\n", "\t ", 
-                    RowBox[{"{", 
+                    RowBox[{"{", " ", 
                     RowBox[{
-                    "\"\<   Generates a general 3-vector (i.e., a vector in \
-3-sapce) with \!\(\*SubscriptBox[\(x\), \(i\)]\) coefficients\>\"", ",", "\n",
-                     "\t   ", "\"\<   Key in the nVector output}\>\"", ",", 
-                    "\n", "\t  ", 
+                    "\"\<  Generates a 3-'atom' with subscripts 1,2,and \
+4\>\"", ",", "\n", "\t   ", "\"\<   Key in the AtomG output\>\"", ",", "\n", 
+                    "  ", "\"\<   Generates a general 3-vector (i.e., a \
+vector in 3-sapce) with \!\(\*SubscriptBox[\(x\), \(i\)]\) coefficients\>\"", 
+                    ",", "\n", "\t   ", 
+                    "\"\<   Key in the nVector output}\>\"", ",", "\n", 
+                    "\t  ", 
                     "\"\<   Generates a general bivector in 3-spacec from two \
 3-vectors\>\"", ",", "\n", "\t   ", "\"\<   Key in the BiVectorG output\>\"", 
-                    ",", "\n", "\t   ", 
-                    "\"\<   Generates a general grade-2 expression in 3-space \
-with \!\(\*SubscriptBox[\(a\), \(i, j\)]\) coefficients\>\"", ",", "\n", 
-                    "\t   ", "\"\<   Key in the BiVectorG output\>\"", ",", 
-                    "\n", "\t  ", 
-                    "\"\<   Generates a 3-'atom' with subscripts 1,2,and \
-4\>\"", ",", "\n", "\t   ", "\"\<   Key in the AtomG output\>\"", ",", "\n", 
-                    "\t   ", 
-                    "\"\<   Generate the dimension 5 pseudocalar\>\"", ",", 
-                    "\n", "\t   ", 
-                    "\"\<   Key in the pseudoscalar output\>\"", ",", "\n", 
+                    ",", "\n", 
                     "\"\<   Generates a general 2-blade (i.e., bivector) in \
 3-space as geometric product of two 3-vectors\>\"", ",", "\n", "\t   ", 
                     "\"\<   Key in the pBladeG output\>\"", ",", "\n", 
                     "\t   ", 
                     "\"\<   Generates a general grade-2 expression in 4-space \
 with coefficients \!\(\*SubscriptBox[\(a\), \(i, j\)]\)\>\"", ",", "\n", 
-                    "\t   ", "\"\<   Key in the pBladeG output\>\"", ",", 
+                    "\t   ", "\"\<   Key in the SliceG output\>\"", ",", 
                     "\n", "\"\<   Generates a general multivector (a.k.a. \
 clif) in 3-space with coefficients \!\(\*SubscriptBox[\(b\), \(i, j,  ... \)]\
 \)\>\"", ",", "\n", "\t   ", "\"\<   Key in the nClifG output\>\"", ",", "\n",
@@ -560,7 +549,11 @@ clif) in 3-space with coefficients \!\(\*SubscriptBox[\(b\), \(i, j,  ... \)]\
                     "\"\<   Generates an even multivector in 3-space with \
 coefficients \!\(\*SubscriptBox[\(c\), \(i, j,  ... \)]\)\>\"", ",", "\n", 
                     "\t   ", "\"\<   Key in the EvenClifG output\>\"", ",", 
-                    "\n", "\t  ", 
+                    "\n", "\t   ", 
+                    "\"\<   Generate the dimension 5 pseudocalar\>\"", ",", 
+                    "\n", "\t   ", 
+                    "\"\<   Key in the pseudoscalar output\>\"", ",", "\n", 
+                    "\t  ", 
                     "\"\<   Generates rotor to rotate entire space by \
 spinning the \!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \
 \(4\)]\)-plane CCW 90\[Degree]\>\"", ",", "\n", "\t   ", 
@@ -1346,14 +1339,20 @@ transpositions to\>\"", "<>",
    3.776016740081669*^9, {3.7760168995387983`*^9, 3.776016967158503*^9}, {
    3.7760170526371737`*^9, 3.776017053481675*^9}, {3.7760247542221937`*^9, 
    3.776024832163616*^9}, 3.7760248747227793`*^9, 3.7760249238165197`*^9, 
-   3.7760250669420433`*^9, {3.776029742300359*^9, 3.776029742973024*^9}},
+   3.7760250669420433`*^9, {3.776029742300359*^9, 3.776029742973024*^9}, 
+   3.7761081420051203`*^9, {3.7761081825451097`*^9, 3.7761081863429823`*^9}, 
+   3.77610861612813*^9, 3.776108672465569*^9, {3.776116396513867*^9, 
+   3.7761164129613667`*^9}, {3.776116446576084*^9, 3.7761164495343323`*^9}, {
+   3.7761165195808077`*^9, 3.7761165522530937`*^9}, {3.776116592940563*^9, 
+   3.776116640616798*^9}, 3.7761166843316317`*^9, 3.77611711614585*^9, {
+   3.77611715145807*^9, 3.776117362649941*^9}, 3.776117554177074*^9},
  CellLabel->
-  "In[465]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+  "In[1795]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["iwiat_shm", 3, 1]],160,
-   "FrontEndObject[LinkObject[\"iwiat_shm\", 3, 1]]","160",
+    LinkObject["zjcyv_shm", 3, 1]],263,
+   "FrontEndObject[LinkObject[\"zjcyv_shm\", 3, 1]]","263",
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->{3.775650048003703*^9, 3.7756507416325417`*^9, 
@@ -1362,9 +1361,11 @@ Cell[BoxData[
   3.775924360313631*^9, 3.7759244671293592`*^9, 3.776016782893303*^9, 
   3.776016980457424*^9, 3.776017067799651*^9, 3.7760248563060417`*^9, 
   3.776024937130802*^9, 3.7760251078958807`*^9, 3.776028330311851*^9, 
-  3.776029777572772*^9},
+  3.776029777572772*^9, 3.7761087870128107`*^9, 3.77611646181579*^9, 
+  3.7761165666996813`*^9, 3.7761166481572657`*^9, 3.776116697838913*^9, 
+  3.776117372294469*^9, 3.776117564032345*^9},
  CellLabel->
-  "Out[466]=",ExpressionUUID->"3e3c1723-1d04-4e58-80de-822b8640e39b"]
+  "Out[1796]=",ExpressionUUID->"0fe46f90-cbd7-4a26-a288-d13181c27df7"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1380,9 +1381,9 @@ Cell[TextData[{
   FontWeight->"Bold",
   FontColor->GrayLevel[0]],
  StyleBox["Updated Needs Statement\nRenamed:\n        EijTermG -> AtomCoef,   \
-SliverG -> AtomG,   GradePTermG -> pSliceG\nAdded BiVectorG with only 1 \
-parameter and pBladeG with only 2 parameters\nImproved several tooltips\n\
-Improved box sizes in typing aids to almost match size of output boxes",
+SliverG -> AtomG,   GradePTermG -> pSliceG\nAdded  SliceG and pSliceG\n\
+Improved several tooltips\nImproved box sizes in typing aids to almost match \
+size of output boxes",
   FontColor->GrayLevel[0]],
  StyleBox["\n\nversion 21\n",
   FontWeight->"Bold",
@@ -1416,12 +1417,13 @@ and made those the defaults\n\n"
    3.696979123031178*^9, 3.696979177158291*^9}, {3.775420099366865*^9, 
    3.775420136030253*^9}, {3.7760163207043867`*^9, 3.776016531313657*^9}, {
    3.776016751889803*^9, 3.776016755376318*^9}, {3.7760289812879763`*^9, 
-   3.7760290432061367`*^9}},ExpressionUUID->"4a3489c9-27cd-41f6-b43d-\
+   3.7760290432061367`*^9}, {3.7761086851896133`*^9, 
+   3.776108757751987*^9}},ExpressionUUID->"4a3489c9-27cd-41f6-b43d-\
 5798658675ac"]
 }, Open  ]]
 },
 WindowSize->{875, 1241},
-WindowMargins->{{Automatic, 138}, {Automatic, 0}},
+WindowMargins->{{Automatic, 114}, {Automatic, 0}},
 SpellingDictionaries->{"CorrectWords"->{"aaa", "Windowsize"}},
 FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
 2018)",
@@ -1443,14 +1445,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[400, 13, 12088, 176, 2131, "Text",ExpressionUUID->"969d602e-3133-4ac8-b153-3e8836467719"],
+Cell[400, 13, 12161, 177, 2131, "Text",ExpressionUUID->"969d602e-3133-4ac8-b153-3e8836467719"],
 Cell[CellGroupData[{
-Cell[12513, 193, 70500, 1157, 5231, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
-Cell[83016, 1352, 744, 14, 43, "Output",ExpressionUUID->"3e3c1723-1d04-4e58-80de-822b8640e39b"]
+Cell[12586, 194, 70363, 1155, 5207, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+Cell[82952, 1351, 910, 16, 43, "Output",ExpressionUUID->"0fe46f90-cbd7-4a26-a288-d13181c27df7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[83797, 1371, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
-Cell[84043, 1377, 1817, 42, 403, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
+Cell[83899, 1372, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
+Cell[84145, 1378, 1822, 43, 403, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
 }, Open  ]]
 }
 ]

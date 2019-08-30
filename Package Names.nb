@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3435,         79]
-NotebookOptionsPosition[      3126,         65]
-NotebookOutlinePosition[      3482,         81]
-CellTagsIndexPosition[      3439,         78]
+NotebookDataLength[      3623,         81]
+NotebookOptionsPosition[      3314,         67]
+NotebookOutlinePosition[      3670,         83]
+CellTagsIndexPosition[      3627,         80]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,30 +24,30 @@ Cell[BoxData[
    RowBox[{"Names", " ", "File"}], " ", "*)"}], "\n", "\n", 
   RowBox[{
    RowBox[{"DeclarePackage", "[", 
-    RowBox[{"\"\<GeomAlg20179Aug`\>\"", ",", 
+    RowBox[{"\"\<GeomAlg2019Aug`\>\"", ",", 
      RowBox[{"{", 
       RowBox[{
-      "\"\<BiVectorG\>\"", ",", "\"\<ClifFormatG\>\"", ",", 
-       "\"\<ClifToListG\>\"", ",", "\"\<CollectG\>\"", ",", 
-       "\"\<ComplexG\>\"", ",", "\"\<ConstantG\>\"", ",", "\"\<debug1\>\"", 
-       ",", "\"\<debug2\>\"", ",", "\"\<debug3\>\"", ",", "\"\<debug4\>\"", 
-       ",", "\"\<debug5\>\"", ",", "\"\<debug6\>\"", ",", "\"\<debug7\>\"", 
-       ",", "\"\<debug8\>\"", ",", "\"\<debug9\>\"", ",", "\"\<DotPrdtG\>\"", 
-       ",", "\"\<e\>\"", ",", "\"\<EijTermG\>\"", ",", 
+      "\"\<AtomCoefG\>\"", ",", "\"\<AtomG\>\"", ",", "\"\<BiVectorG\>\"", 
+       ",", "\"\<ClifFormatG\>\"", ",", "\"\<ClifToListG\>\"", ",", 
+       "\"\<CollectG\>\"", ",", "\"\<ComplexG\>\"", ",", "\"\<ConstantG\>\"", 
+       ",", "\"\<debug1\>\"", ",", "\"\<debug2\>\"", ",", "\"\<debug3\>\"", 
+       ",", "\"\<debug4\>\"", ",", "\"\<debug5\>\"", ",", "\"\<debug6\>\"", 
+       ",", "\"\<debug7\>\"", ",", "\"\<debug8\>\"", ",", "\"\<debug9\>\"", 
+       ",", "\"\<DotPrdtG\>\"", ",", "\"\<e\>\"", ",", 
        "\"\<eSubscriptListG\>\"", ",", "\"\<EvenClifG\>\"", ",", 
        "\"\<ExpandG\>\"", ",", "\"\<FreeTermG\>\"", ",", 
        "\"\<GeomPrdtBladeG\>\"", ",", "\"\<GeomPrdtG\>\"", ",", 
-       "\"\<GormG\>\"", ",", "\"\<GradeListG\>\"", ",", "\"\<GradePTermG\>\"",
-        ",", "\"\<GradesListG\>\"", ",", "\"\<HodgeDual2G\>\"", ",", 
-       "\"\<HodgeDualG\>\"", ",", "\"\<InitializeG\>\"", ",", 
-       "\"\<InverseG\>\"", ",", "\"\<LeftContractionG\>\"", ",", 
-       "\"\<ListToClifG\>\"", ",", "\"\<MaxDimG\>\"", ",", "\"\<nClifG\>\"", 
-       ",", "\"\<NormG\>\"", ",", "\"\<nVectorG\>\"", ",", "\"\<pBladeG\>\"", 
-       ",", "\"\<PrdtG\>\"", ",", "\"\<PseudoScalarG\>\"", ",", 
+       "\"\<GormG\>\"", ",", "\"\<GradesListG\>\"", ",", 
+       "\"\<HodgeDual2G\>\"", ",", "\"\<HodgeDualG\>\"", ",", 
+       "\"\<InitializeG\>\"", ",", "\"\<InverseG\>\"", ",", 
+       "\"\<LeftContractionG\>\"", ",", "\"\<ListToClifG\>\"", ",", 
+       "\"\<MaxDimG\>\"", ",", "\"\<nClifG\>\"", ",", "\"\<NormG\>\"", ",", 
+       "\"\<nVectorG\>\"", ",", "\"\<pBladeG\>\"", ",", "\"\<PrdtG\>\"", ",", 
+       "\"\<PseudoScalarG\>\"", ",", "\"\<pSliceG\>\"", ",", 
        "\"\<QuaternionG\>\"", ",", "\"\<ReverseG\>\"", ",", 
        "\"\<RightContractionG\>\"", ",", "\"\<RotorG\>\"", ",", 
        "\"\<ScalarPrdtG\>\"", ",", "\"\<SignatureG\>\"", ",", 
-       "\"\<SliverG\>\"", ",", "\"\<SubscriptListG\>\"", ",", 
+       "\"\<SliceG\>\"", ",", "\"\<SubscriptListG\>\"", ",", 
        "\"\<WedgePrdtG\>\""}], "}"}]}], "]"}], "\n"}]}]], "Input",
  CellChangeTimes->{{3.690556855123518*^9, 3.690556965392563*^9}, {
    3.690557020890552*^9, 3.690557314676291*^9}, {3.690557752614789*^9, 
@@ -59,8 +59,10 @@ Cell[BoxData[
    3.693525697557034*^9, {3.696969644487919*^9, 3.696969646889311*^9}, {
    3.696969742027465*^9, 3.696969742562262*^9}, {3.6969710242356577`*^9, 
    3.696971081703553*^9}, 3.69697175101267*^9, 3.696971797992914*^9, {
-   3.775821275905314*^9, 
-   3.775821295728775*^9}},ExpressionUUID->"d2a9a9b9-1ea8-43a8-9192-\
+   3.775821275905314*^9, 3.775821295728775*^9}, {3.776112993423449*^9, 
+   3.776113019990157*^9}, {3.776113098969489*^9, 3.7761130993401403`*^9}, {
+   3.776113142538651*^9, 3.7761131453003273`*^9}, {3.776113191241105*^9, 
+   3.7761132211010227`*^9}},ExpressionUUID->"d2a9a9b9-1ea8-43a8-9192-\
 29b9f4376055"]
 },
 WindowSize->{794, 679},
@@ -80,7 +82,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2564, 43, 283, "Input",ExpressionUUID->"d2a9a9b9-1ea8-43a8-9192-29b9f4376055"]
+Cell[558, 20, 2752, 45, 283, "Input",ExpressionUUID->"d2a9a9b9-1ea8-43a8-9192-29b9f4376055"]
 }
 ]
 *)

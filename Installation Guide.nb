@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      8717,        180]
-NotebookOptionsPosition[      8112,        156]
-NotebookOutlinePosition[      8468,        172]
-CellTagsIndexPosition[      8425,        169]
+NotebookDataLength[      9218,        186]
+NotebookOptionsPosition[      8613,        162]
+NotebookOutlinePosition[      8969,        178]
+CellTagsIndexPosition[      8926,        175]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,8 +28,8 @@ Cell[TextData[{
 \[CloseCurlyDoubleQuote]. Double click on the 2nd bracket to the left on the \
 right hand side of Begin Package. That opens the next level of documentation \
 which, in this case, is some code. Place you cursor anywhere in the code and \
-press enter to run the code. A palette should be created. Move it to where \
-you would like it. (You can move it again later. It will \
+press shift-enter to run the code. A palette should be created. Move it to \
+where you would like it. (You can move it again later. It will \
 \[OpenCurlyDoubleQuote]remember\[CloseCurlyDoubleQuote] the location as well \
 as which triangles are open and closed). From the Palette menu, select \
 Install Palette. In the Source drop-down menu select Geometric Algebra \
@@ -39,12 +39,12 @@ palette. Then click on the Palette menu to verify the new palette, Geometric \
 Algebra Palette, is there. Close the source file.\n\nNote: On a Mac, the \
 default location for the installed palette is \
 Library/Mathematica/SystemFiles/FrontEnd/Palettes/Geometric Algebra.nb in \
-your home folder\n\n2. Open the notebook GeomAlg2019JAug src. Save it as a \
+your home folder\n\n2. Open the notebook GeomAlg2019Oct src. Save it as a \
 type .m Mathematica file (that is, a Wolfram Mathematica Package) in the \
 Applications folder of your  $UserBaseDirectory. Do not change its name. On a \
 Macintosh, for example, one would select SAVE AS from the file menu, navigate \
 to Library/Mathematica/Applications in your user folder, and select Wolfram \
-Mathematica Package (*.nb) from the Format drop-downc menu near the bottom of \
+Mathematica Package (*.nb) from the Format drop-down menu near the bottom of \
 the SAVE AS dialog box, and press the SAVE button. You can close the source \
 file or copy it to a working folder in case you later wish to examine or \
 modify it.\n\n3. This is a 1-time operation. Next read Quick Start.",
@@ -67,12 +67,15 @@ modify it.\n\n3. This is a 1-time operation. Next read Quick Start.",
  " - Sample file demonstrating usage of many of the functions\n\n",
  StyleBox["g-1fg Example ",
   FontWeight->"Bold"],
- "- A complex GA example involving 4 equations in 4 unknowns\n\n",
+ "- A step-by-step example on how to use this package (actually, on how to \
+use Mathematica) to solve equations by examining the output, deciding how to \
+simplify it and executing that step, deciding how to further simplify and \
+executing that step, and so on until the simplest answer is reached.\n\n",
  StyleBox["Example Formatted Output",
   FontWeight->"Bold"],
- " - Shows how function EijTermG can be used to format output in a table \
-format\n\n",
- StyleBox["GeomAlg2019Aug src",
+ " - Shows how function AtomCoefG can be used to format output to line up in \
+a table format\n\n",
+ StyleBox["GeomAlg2019Oct src",
   FontWeight->"Bold"],
  " - Source file for package\n\n",
  StyleBox["Geom Alg Palette src",
@@ -149,7 +152,10 @@ with many packages\n\n",
    3.6969734907428617`*^9, 3.6969735698070917`*^9}, {3.775822548039892*^9, 
    3.775822572102229*^9}, {3.775822626408019*^9, 3.775822628964769*^9}, {
    3.775822687155693*^9, 3.775822721498004*^9}, {3.775822799437646*^9, 
-   3.775822815989765*^9}},
+   3.775822815989765*^9}, {3.779835086958438*^9, 3.779835128330909*^9}, {
+   3.779835208087369*^9, 3.779835208893663*^9}, {3.779878470853633*^9, 
+   3.779878686675172*^9}, {3.7798788031874437`*^9, 3.7798788062744017`*^9}, {
+   3.77988248573372*^9, 3.779882492935033*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
@@ -173,7 +179,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
-Cell[752, 25, 7344, 128, 845, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
+Cell[752, 25, 7845, 134, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]

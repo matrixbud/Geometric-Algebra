@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     91403,       1519]
-NotebookOptionsPosition[     90187,       1484]
-NotebookOutlinePosition[     90829,       1506]
-CellTagsIndexPosition[     90786,       1503]
+NotebookDataLength[     91926,       1524]
+NotebookOptionsPosition[     90710,       1489]
+NotebookOutlinePosition[     91352,       1511]
+CellTagsIndexPosition[     91309,       1508]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -783,6 +783,8 @@ in a multivector\>\""}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t",
                     "\"\<AtomListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<SubscriptListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<EijListG[clif]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<AtomListToEijListG[list]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<EijListToAtomListG[list]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<GradeListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<SignatureG[list]\>\""}], "}"}]}], ",", "\n", "\t\t", 
                     "\n", "\t\t     ", 
@@ -804,6 +806,11 @@ ClifToListG\>\"", ",", "\n", "\t   ",
 of ClifToListG\>\"", ",", "\n", "\t   ", 
                     "\"\<   Generate a list of \!\(\*SubscriptBox[\(e\), \(i, \
 j, k,  ... \)]\) matching the order of ClifToListG\>\"", ",", "\n", "\t   ", 
+                    
+                    "\"\<   Convert a list of atoms to a matching list of \
+\!\(\*SubscriptBox[\(e\), \(i, j, k,  ... \)]\)\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Convert a list of \!\(\*SubscriptBox[\(e\), \(i, \
+j, k,  ... \)]\) to a matching list of atoms\>\"", ",", "\n", "\t   ", 
                     "\"\<   Generate a list of grades matching the order of \
 ClifToListG\>\"", ",", "\n", "\t   ", 
                     RowBox[{
@@ -1377,28 +1384,26 @@ numbers, letters, words, \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\) or\>\"",
    3.779826373701027*^9}, {3.779826444059369*^9, 3.779826528012375*^9}, 
    3.779826606254877*^9, {3.779826673428419*^9, 3.779826681903653*^9}, {
    3.779826711916541*^9, 3.77982672655689*^9}, {3.779826843825583*^9, 
-   3.779826848838347*^9}},
- CellLabel->
-  "In[154]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+   3.779826848838347*^9}, {3.779981792930224*^9, 3.779981938474167*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["i6jtk_shm", 3, 1]],97,
-   "FrontEndObject[LinkObject[\"i6jtk_shm\", 3, 1]]","97",
+    LinkObject["vdb4z_shm", 3, 1]],60,
+   "FrontEndObject[LinkObject[\"vdb4z_shm\", 3, 1]]","60",
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGDQB+IwOQaFasU3jidst5SB6DS7jW0g2o/vzDwQLVC+6wSI
+1:eJxTTMoPSmVkYGAwAOIwOQaFasU3jidst5SB6DS7jW0g2o/vzDwQLVC+6wSI
 njVNL7gGSKv8Uc4H0V5b5v9hUHrj6MLJJcgIpLcpp8iB6A9T7xjqAWmLxX1e
 IHrftMpQEC1xmlPZCEh36Kvogmi+1TVOIHr9L8+rxkBaLcSoywRIf8pIkIsG
 0l+kdt2NA9Knkq+9AtFBHKxfQXTCDavfINorp9M/Hkj/4GhMB9EOb5n/n1J9
 42jUvnTDaSCtdJxrJ4i+apT8fYraG0cu0a//QPQO8ecsU4F0ne6dkOlAev2b
 Vs6VQHr3w/9Zp4H0j2WsxSA652E182f1N47fji5XBdFNaac3g+iSANUf34B0
 SIAo406NN45xt+sUQLTUio1MXppvHGe8UtYB0W9lOoSSgLTHndT8IiC9Nzmn
-G0Q3tGycBqIB5ciuHQ==
+G0Q3tGycBqJrJD/77wPSAGnmsgk=
   "],
- CellLabel->
-  "Out[155]=",ExpressionUUID->"74d8ff8c-8231-46a1-a759-ba82d4249378"]
+ CellLabel->"Out[2]=",ExpressionUUID->"dbecb04a-f0a9-4f81-a90c-dfa309b3da86"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1483,7 +1488,7 @@ and made those the defaults\n\n"
 }, Open  ]]
 },
 WindowSize->{875, 1241},
-WindowMargins->{{Automatic, 133}, {73, Automatic}},
+WindowMargins->{{Automatic, 253}, {Automatic, 42}},
 SpellingDictionaries->{"CorrectWords"->{"aaa", "Windowsize"}},
 FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
 2018)",
@@ -1507,12 +1512,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[400, 13, 12214, 178, 2131, "Text",ExpressionUUID->"969d602e-3133-4ac8-b153-3e8836467719"],
 Cell[CellGroupData[{
-Cell[12639, 195, 73070, 1186, 5251, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
-Cell[85712, 1383, 791, 17, 43, "Output",ExpressionUUID->"74d8ff8c-8231-46a1-a759-ba82d4249378"]
+Cell[12639, 195, 73590, 1192, 5339, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+Cell[86232, 1389, 794, 16, 43, "Output",ExpressionUUID->"dbecb04a-f0a9-4f81-a90c-dfa309b3da86"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[86540, 1405, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
-Cell[86786, 1411, 3385, 70, 725, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
+Cell[87063, 1410, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
+Cell[87309, 1416, 3385, 70, 725, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
 }, Open  ]]
 }
 ]

@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     43857,        916]
-NotebookOptionsPosition[     43263,        892]
-NotebookOutlinePosition[     43618,        908]
-CellTagsIndexPosition[     43575,        905]
+NotebookDataLength[     43757,        902]
+NotebookOptionsPosition[     43163,        878]
+NotebookOutlinePosition[     43518,        894]
+CellTagsIndexPosition[     43475,        891]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -41,33 +41,34 @@ notebook you open. \n\nIn the 2nd section of the palette, ",
  ", click on ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "1"], TraditionalForm]],ExpressionUUID->
   "51d4279e-febc-4433-92ac-dd27ced9641d"],
  ", then ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "2"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "2"], TraditionalForm]],ExpressionUUID->
   "138363f0-d7ee-4955-8bb9-dc85d2403868"],
- ". Hover over the 6 operators (geometric, wedge, scalar, and dot products \
-and right and left contractions) until you find the small circle that \
-represents geometric product, and click it. Then click on e1 again and press \
-\[EnterKey] on the number pad or Shift-\[EnterKey] on the key pad to evaluate \
-the expression. Try other examples and use the wedge and dot operators to \
-examine the results. Observe that the tooltips explain how to enter the \
-operators from the keyboard. If you find the operator symbols too small to \
-see, click on a magnification icon at the bottom of the palette. Zoom back \
-when you wish to restore a smaller palette.\n\nCaution. When in doubt, use \
-parentheses in your operations. For example, ",
+ ". Hover over the 6 operators (geometric, wedge/exterior, scalar, and dot \
+products and right and left contractions) until you find the small diamond \
+that represents geometric product, and click it. Then click on ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["e", "1"], TraditionalForm]],ExpressionUUID->
+  "5ec3b417-45e7-4735-a377-b2c0cd65f0c7"],
+ " again and press \[EnterKey] on the number pad or Shift-\[EnterKey] on the \
+key pad to evaluate the expression. Try other examples and use the \
+wedge(a.k.a. exterior) and dot operators to examine the results. Observe that \
+the tooltips explain how to enter the operators from the keyboard. If you \
+find the operator symbols too small to see, click on a magnification icon at \
+the bottom of the palette. Zoom back when you wish to restore a smaller \
+palette.\n\nCaution. Always use parentheses in your operations. For example, ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
     RowBox[{
-     SubscriptBox["e", "2"], "\[SmallCircle]", 
-     SubscriptBox["e", "2"]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+     SubscriptBox["e", "2"], "\[Diamond]", 
+     SubscriptBox["e", "2"]}]}], TraditionalForm]],ExpressionUUID->
   "4e7da499-b419-4a67-bd09-d752b3dcfb6f"],
  " is not the same as (",
  Cell[BoxData[
@@ -76,7 +77,7 @@ parentheses in your operations. For example, ",
     SubscriptBox["e", "1"], 
     SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "fd673aae-cb33-49a7-b543-21b648d51614"],
- ") \[SmallCircle] ",
+ ") \[Diamond] ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["e", "2"], TraditionalForm]],ExpressionUUID->
@@ -85,15 +86,14 @@ parentheses in your operations. For example, ",
  Cell[BoxData[
   FormBox["\[Wedge]", TraditionalForm]],ExpressionUUID->
   "68e2be36-74f8-4bb7-bb6d-c807811b5f9a"],
- ") is associative so you are safe when you enter x \[SmallCircle] y \
-\[SmallCircle] z, but not when you enter \nx \[CenterDot] y \[CenterDot] z,  \
-x ",
+ ") is associative so you are safe when you enter x \[Diamond] y \[Diamond] \
+z, but not when you enter x \[CenterDot] y \[CenterDot] z,  x ",
  Cell[BoxData[
-  FormBox["\[CircleDot]", TraditionalForm]],ExpressionUUID->
+  FormBox["\[Star]", TraditionalForm]],ExpressionUUID->
   "ac9a40c1-6574-4605-a4b8-a199c5992aef"],
  " y ",
  Cell[BoxData[
-  FormBox["\[CircleDot]", TraditionalForm]],ExpressionUUID->
+  FormBox["\[Star]", TraditionalForm]],ExpressionUUID->
   "908a571d-c7e3-44ff-90c1-4a8e079c563b"],
  " z, etc. For convenience, all the operators have been given default \
 definitions mirroring the following example:\n\n\tx \[CenterDot] y \
@@ -121,8 +121,7 @@ Quaternions. The complex numbers are the Clifford subalgebra {a + b i} with i \
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "2"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "f7c0ddb4-f781-4f2c-a3f9-6e815bca838b"],
  " and a and b are reals. Quaternions are the Clifford subalgebra of elements \
 {a + b i + c j + d k} where a, b, c, & d are real numbers and i, j, and k are \
@@ -138,24 +137,21 @@ e2e3 for i, -",
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "3"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "3"]}], TraditionalForm]],ExpressionUUID->
   "cd8fc1c2-a55c-40c1-b8cc-62640b8d96c9"],
  "for j, and ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "2"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "d068506e-cea4-402a-83ab-71404192a400"],
  " for k. If you wish you can define i to be ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "2"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "e4170762-eb1b-4fa5-88f7-e919332113c6"],
  " , etc. in order to enter your equations using i, j, and k. In order to see \
 your output in terms of i, j, and k, append the rule below to your last \
@@ -164,16 +160,14 @@ haven\[CloseCurlyQuote]t previously assigned values to i, j, or k)\n   \
 ruleQ={ ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "1"], TraditionalForm]],ExpressionUUID->
   "f56039b5-4531-4381-a704-f5b425d6f49d"],
  " ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "2"], "\[Rule]", "k"}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "3d686dab-425f-4c05-9a0b-31764e47f981"],
+  ExpressionUUID->"3d686dab-425f-4c05-9a0b-31764e47f981"],
  ", ",
  Cell[BoxData[
   FormBox[
@@ -182,8 +176,7 @@ ruleQ={ ",
      RowBox[{
       SubscriptBox["e", "2"], 
       SubscriptBox["e", "3"]}], "\[Rule]", "i"}], ","}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "ec85b1cd-74ba-410d-bfba-48b6adae4899"],
+  ExpressionUUID->"ec85b1cd-74ba-410d-bfba-48b6adae4899"],
  " ",
  Cell[BoxData[
   FormBox[
@@ -191,48 +184,42 @@ ruleQ={ ",
     RowBox[{
      SubscriptBox["e", "1"], 
      SubscriptBox["e", "3"]}], "\[Rule]", 
-    RowBox[{"-", "j"}]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    RowBox[{"-", "j"}]}], TraditionalForm]],ExpressionUUID->
   "bbd6c7d8-17c2-4f8b-a00e-d629a34b483b"],
  " }   (- j because j = ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "3"], 
-    SubscriptBox["e", "1"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "1"]}], TraditionalForm]],ExpressionUUID->
   "73e36bf7-ca94-428f-b167-5849f321e38b"],
  " and Mathematica uses ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "3"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "3"]}], TraditionalForm]],ExpressionUUID->
   "4d010107-c350-4075-a9ea-58192999d895"],
  ")\n   Example. a + d ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "2"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "eb60c15a-d631-4abe-984d-5a4a4b0994e6"],
  " - c ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "3"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "3"]}], TraditionalForm]],ExpressionUUID->
   "0c148da6-f6cf-4436-9cef-64cda5ffb476"],
  " + b ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "2"], 
-    SubscriptBox["e", "3"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "3"]}], TraditionalForm]],ExpressionUUID->
   "aceddacd-39f2-40f3-b876-9b58e5a861cc"],
  " //.ruleQ\n\nFYI. Octonions are non-associative and so cannot be \
 represented using geometric products.\n\nThere are a few things I wish to \
@@ -251,36 +238,31 @@ your clifs and the operations take care of dimension for you. \n\nA 3rd item \
 is that of basis. For vectors, the basis used is clear: ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "1"], TraditionalForm]],ExpressionUUID->
   "59aeccdd-fe3a-40bd-888b-12d5ebeb29c7"],
  " , ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "2"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "2"], TraditionalForm]],ExpressionUUID->
   "a454159e-2d27-4711-b39f-92500f43640c"],
  " , ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "3"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "3"], TraditionalForm]],ExpressionUUID->
   "b244c5eb-ef2f-4f13-ad09-2f8b3cea031d"],
  " , \[Ellipsis] But, for grade 2 I do not find any need to define which of  ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "2"], 
-    SubscriptBox["e", "4"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "4"]}], TraditionalForm]],ExpressionUUID->
   "e6ef9d30-cea4-477a-a7bd-7fdb8bcf6939"],
  "  or ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["e", "4"], 
-    SubscriptBox["e", "2"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "9167d173-35e3-4434-9baa-c98998234676"],
  "  is in the basis. When the palette generates a general multivector it uses \
 the Mathematica default of numerical order. That is, it uses ",
@@ -288,8 +270,7 @@ the Mathematica default of numerical order. That is, it uses ",
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "2"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "eb4d35f2-5fa0-4c2a-b116-7daaad318dd4"],
  ". But this package doesn\[CloseCurlyQuote]t use or manipulate bases. It \
 simply computes things like ",
@@ -297,27 +278,25 @@ simply computes things like ",
   FormBox[
    RowBox[{
     SubscriptBox["e", "1"], 
-    SubscriptBox["e", "2"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "aa6813d1-3c6e-42d6-9abf-2e416601680a"],
- " \[SmallCircle]",
+ " \[Diamond]",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "3"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "3"], TraditionalForm]],ExpressionUUID->
   "c9c6319c-1ba1-431d-b81b-bbcf63ce9801"],
  " so bases are never mentioned. \n\nI apologize for not using the standard \
 symbols for left and right contractions, but those symbols are not set up in \
 Mathematica for use as binary operators. It is possible to utilize the \
 correct symbols but is a lot of work. \n\nFinally, the geometric product is \
-usually represented by juxtaposition but the \[SmallCircle] operator is used \
-in this package since Mathematica already uses juxtaposition for regular \
+usually represented by juxtaposition but the \[Diamond] operator is used in \
+this package since Mathematica already uses juxtaposition for regular \
 multiplication.\n\nIn the 3rd section of the palette, ",
  StyleBox["Typing Aids, Multivector Generators",
   FontColor->RGBColor[1, 0, 1]],
- ", you may nceed to click the triangle to expand the section. (Click it \
-again to hide the section.) In the 1st column enter a command by selecting \
-it. In the workbook, press \[EnterKey]. The output should be the same as the \
+ ", you may need to click the triangle to expand the section. (Click it again \
+to hide the section.) In the 1st column enter a command by selecting it. In \
+the workbook, press \[EnterKey]. The output should be the same as the \
 corresponding entry in the right-hand column of the palette. Now modify some \
 parameters of the formula you just inputted, say, change the letter a to the \
 letter b, or dimension 3 to dimension 4, and press \[EnterKey] again. Next, \
@@ -328,7 +307,7 @@ more information. These functions have been provided to hopefully simplify \
 typing by providing inputs that you modify rather than having to type all \
 inputs from scratch.\n\nThe 4rd section of the palette contains the main \
 Geometric Algebra (GA) operations. The Geometric Product can be entered using \
-the first command in this section, or by using the \[SmallCircle] ymbol, \
+the first command in this section, or by using the \[Diamond] symbol, \
 entering from the palette manually typing. Some texts restrict the Geometric \
 Product to homogenous multivectors; that is, multivectors whose terms are all \
 of the same grade. These texts then discuss \[OpenCurlyDoubleQuote]extensions\
@@ -339,8 +318,11 @@ of any two (or more) multivectors, whether or not homogeneous.\n\nThe same \
 thing goes for Wedge, Dot, and Scalar products and Contractions. The user can \
 enter homogeneous or non-homogeneous multivectors. The Wedge Product of 2 \
 multivectors is computed by taking the terms of the Geometric Product whose \
-grade is the sum of the grades of its factors. That is,\n\n\tA \[Wedge] B = [ \
-A \[SmallCircle] B ",
+grade is the sum of the grades of its factors. That is,\n\n\tA ",
+ Cell[BoxData[
+  FormBox["\[Wedge]", TraditionalForm]],ExpressionUUID->
+  "c2b2c9ba-ee4f-4bfb-92f9-d81049329fe4"],
+ " B = [ A \[Diamond] B ",
  Cell[BoxData[
   FormBox[
    SubscriptBox[
@@ -348,7 +330,7 @@ A \[SmallCircle] B ",
     RowBox[{"p", "+", "q"}]], TraditionalForm]],ExpressionUUID->
   "6454723f-6a42-483d-9561-b8bb4a8c3b88"],
  " where p = Grade [A] and q = Grade [B].\n\nSimilarly,\n\n\tA \[CenterDot] B \
-= [ A \[SmallCircle] B ",
+= [ A \[Diamond] B ",
  Cell[BoxData[
   FormBox[
    SubscriptBox[
@@ -356,14 +338,14 @@ A \[SmallCircle] B ",
     RowBox[{"Abs", " ", "[", 
      RowBox[{"p", "\[Dash]", "q"}], "]"}]], TraditionalForm]],ExpressionUUID->
   "8c60064e-b280-4d71-a365-06b95785771a"],
- "  (Dot Product)\n\tA \[SquareSuperset] B =  [ A \[SmallCircle] B ",
+ "  (Dot Product)\n\tA \[LeftTee] B =  [ A \[Diamond] B ",
  Cell[BoxData[
   FormBox[
    SubscriptBox[
     RowBox[{"]", " "}], 
     RowBox[{"q", "\[Dash]", "p"}]], TraditionalForm]],ExpressionUUID->
   "4c636176-6c6f-4e72-92a7-9798d8db4523"],
- "     (Left Contraction)\n\tA \[SquareSubset] B =  [ A \[SmallCircle] B ",
+ "     (Left Contraction)\n\tA \[RightTee] B =  [ A \[Diamond] B ",
  Cell[BoxData[
   FormBox[
    SubscriptBox[
@@ -372,26 +354,24 @@ A \[SmallCircle] B ",
   "f13037dd-bb91-44f2-815d-57f88541098f"],
  "     (Right Contraction)\n\tA ",
  Cell[BoxData[
-  FormBox["\[CircleDot]", TraditionalForm]],ExpressionUUID->
+  FormBox["\[Star]", TraditionalForm]],ExpressionUUID->
   "4747f6ad-92df-4e06-83ca-8006fe9a1491"],
  Cell[BoxData[
   FormBox[
    RowBox[{" ", 
-    RowBox[{"B", " ", "=", " ", 
-     RowBox[{"[", 
+    RowBox[{"B", " ", "=", "  ", 
+     SubscriptBox[
       RowBox[{
-       RowBox[{"A", "\[SmallCircle]", "B"}], 
-       FormBox[
-        SubscriptBox[
-         RowBox[{"]", " "}], "0"],
-        TraditionalForm]}]}]}]}], TraditionalForm]],ExpressionUUID->
+       RowBox[{"[", " ", 
+        RowBox[{"A", " ", "\[Diamond]", " ", "B"}], " ", "]"}], " "}], 
+      "0"]}]}], TraditionalForm]],ExpressionUUID->
   "9544360a-5235-4bfa-81aa-7ab928557ee9"],
- "             (Scalar Product)\n\nThere are several different definitions \
-given in current literature for the Hodge Dual so I have provided a couple of \
-Hodge functions to allow the user freedom of choice. The equations defining \
-the two I have chosen are shown in the tooltips (hover the mouse over the \
-palette). The first definition is consistent with the implicit definition \
-that the Hodge Dual is the unique operator that satisfies clif2 ",
+ "         (Scalar Product)\n\nThere are several different definitions given \
+in current literature for the Hodge Dual so I have provided a couple of Hodge \
+functions to allow the user freedom of choice. The equations defining the two \
+I have chosen are shown in the tooltips (hover the mouse over the palette). \
+The first definition is consistent with the implicit definition that the \
+Hodge Dual is the unique operator that satisfies clif2 ",
  Cell[BoxData[
   FormBox["\[Wedge]", TraditionalForm]],ExpressionUUID->
   "38948c43-5d77-4420-ad1e-a037442c8480"],
@@ -401,19 +381,16 @@ that the Hodge Dual is the unique operator that satisfies clif2 ",
     RowBox[{
      RowBox[{"Hodge", "[", " ", "clif", " ", "]"}], "  ", "=", " "}]}], 
    TraditionalForm]],ExpressionUUID->"57b87fb1-245b-43fc-aab0-9273d3c9c08d"],
- "( clif \[CenterDot] clif2 ) \[SmallCircle] i  for all multivectors clif2 \
-and where i is the pseudoscalar. By using this package I was able to \
+ "( clif \[CenterDot] clif2 ) \[Diamond] i  for all multivectors clif2 and \
+where i is the pseudoscalar. By using this package I was able to \
 experimentally verify that the simple explicit definition I use in function \
 HodgeDualG satisfies this definition. The HodgeDual2G definition does NOT \
 satisfy the implicit equations but does have nice geometric properties and \
 seems to be pretty commonly used. Hover your mouse over the palette to view \
 these definitions in the tooltips.\n\nGorm is basically the square of the \
-norm. The Examples file illustrates both of these. Inverse computes the \
-inverse of a multivector but you have to use caution. \n\nInverseG computes \
-the inverse of a multivector, but be aware that InverseG always provides a \
-result, even if the multivector doesn\[CloseCurlyQuote]t actually have an \
-inverse. You can always geometrically multiply InverseG[ x ] with x to see if \
-you get unity. \n\nThe reverse of ",
+norm. The Examples file illustrates both of these. \n\nInverseG computes the \
+inverse of a multivector. If the inverse does not exist, an error message is \
+given and a value of 0 is returned.\n\nThe reverse of ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -488,21 +465,17 @@ organization in the toolbar.\n\nMost of the operators in the 5th section, ",
   FontColor->RGBColor[1, 0, 1]],
  ", facilitate extracting portions of a multivector. ConstantG will pick out \
 the constant term or terms, if any, in a multivector. Similarly, FreeTermG \
-will pick out the non-constant term or terms, if any. ConstantG will pick out \
-the constant term or terms, if any, in a multivector. Similarly, FreeTermG \
-will pick out the non-constant term or terms, if any. \n\nGradePTerm will \
-pick out the grade p term(s), if any, of a multivector. EijTermG is even more \
+will pick out the non-constant term or terms, if any. \n\npSliceG will pick \
+out the grade p term(s), if any, of a multivector. EijTermG is even more \
 selective. It will pick out only the terms, if any, that have ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "ij"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "ij"], TraditionalForm]],ExpressionUUID->
   "15b580f6-2e54-48ec-bf1d-19926a415f06"],
  " as a factor, where ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "ij"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "ij"], TraditionalForm]],ExpressionUUID->
   "d172f851-8f10-463c-806d-3175e58a0582"],
  " is a blade such as 1, ",
  Cell[BoxData[
@@ -537,13 +510,12 @@ similarly to Mathematica\[CloseCurlyQuote]s Expand and Collect commands \
 except these are blade-aware, able to expand and collect with respect to ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["e", "i"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["e", "i"], TraditionalForm]],ExpressionUUID->
   "b471f634-6d32-41f3-b634-bc9f0a6ec71c"],
- " terms. \n\nInitializeG is used internally to reduce squares of basis \
-elements. In the event that the user creates his own products, not using the \
-GA operators, InitializeG can be used to reduce the squares according to the \
-GA initialization specified by the user in step 1. c\n\nMaxDimG will find the \
+ " terms. \n\nReduceG is used internally to reduce squares of basis elements. \
+In the event that the user creates his own products, not using the GA \
+operators, ReduceG can be used to reduce the squares according to the GA \
+initialization specified by the user in step 1. c\n\nMaxDimG will find the \
 highest basis subscript among the terms of a multivector. \n\nIt is not \
 necessary to revert to lists in order to perform most operations. This \
 package allows straight-forward operation on the multivectors themselves \
@@ -565,8 +537,8 @@ multivector terms. For example, SubscriptListG[ 2 + ",
     SubscriptBox["e", "1"], 
     SubscriptBox["e", "4"]}], TraditionalForm]],ExpressionUUID->
   "2bee365d-7ce8-4c50-901d-21d833f6194b"],
- "] = { {0}, {1,4} }. eSubscriptListG generates a similar list but with the \
-subscripts represented as e-subscripts. For example, eSubscriptListG[ 2 + ",
+ "] = { {0}, {1,4} }. EijListG generates a similar list but with the \
+subscripts represented as e-subscripts. For example, EijListG[ 2 + ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -576,7 +548,7 @@ subscripts represented as e-subscripts. For example, eSubscriptListG[ 2 + ",
   FormBox[
    SubscriptBox["e", "4"], TraditionalForm]],ExpressionUUID->
   "efcff134-694e-4224-964b-6965271472b8"],
- "] = \n{ 0,  ",
+ "] = { 0,  ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["e", 
@@ -676,7 +648,7 @@ palette). For example, you must enter (2 ",
     SubscriptBox["e", "2"]}], TraditionalForm]],ExpressionUUID->
   "dbfb443a-cc81-4a11-912f-2b42e5723d92"],
  " then \[CapitalAlpha] \[CenterDot] \[CapitalBeta] is \[CapitalOmicron]\
-\[CapitalKappa]. So is \nDotPrdtG [ ",
+\[CapitalKappa]. So is DotPrdtG [ ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -702,27 +674,26 @@ not by converting back and forth to lists (though lists are supported)\n   3. \
 The function definitions are generally very short, self-documented, and easy \
 to follow, thus easily modified or extended\n   4. The palette greatly \
 simplifies typing input, entering sample multivectors that can quickly be \
-edited \n   5. Because symbolic equations are handled (as well as numeric), \
-it is easy to generate generic formulas and to test hypotheses such as \
-whether an identity works in dimensions higher than, say, 3 or whether an \
+edited \n   5. Because symbolic coefficients are handled (as well as \
+numeric), it is easy to generate generic formulas and to test hypotheses such \
+as whether an identity works in dimensions higher than, say, 3 or whether an \
 identity can be expanded from vectors to blades or beyond.\n   6. The numeric \
 capabilities allow you to instantly carry out computations that would require \
 an extensive amount of time and tedium to do manually\n  7. One can quickly \
-configure, or switch between, spatial dimensions, space and space-time, and \
-Clifford and Grassmann.\n  8. Except for printouts (which can be pages long \
-in higher dimensions) most operations compute instantly even in higher \
-dimensions. The definitions are written entirely without inefficient \
-\[OpenCurlyDoubleQuote]for loops\[CloseCurlyDoubleQuote] and other such \
-constructs.\n\nFinally, the author is retired and built this package working \
-in a vacuum as a way of teaching himself both GA and Mathematica. If you are \
-using this package, consider yourself a beta-tester. Let me know of any bugs \
-you find. I might find time to correct them. I have thoroughly tested - + + + \
-and somewhat tested + - - - Clifford algebras, but haven\[CloseCurlyQuote]t \
-much tested Grassmann algebras as of yet. Contact me at \
-budsimrin@sbcglobal.net.\n\n\n* You can use the notebook as is or else \
-implement a private notebook context. Private cell contexts have not been \
-tested but are likely compatible. The issue is that the author has had to \
-take great care to manage the context of the symbol e used in the basis ",
+configure, or switch between, spatial dimensions and space and space-time.\n  \
+8. Except for printouts (which can be pages long in higher dimensions) most \
+operations compute instantly even in higher dimensions. The definitions are \
+written entirely without inefficient \[OpenCurlyDoubleQuote]for loops\
+\[CloseCurlyDoubleQuote] and other such constructs.\n\nFinally, the author is \
+retired and built this package working in a vacuum as a way of teaching \
+himself both GA and Mathematica. If you are using this package, consider \
+yourself a beta-tester. Let me know of any bugs you find. I might find time \
+to correct them. I have thoroughly tested - + + + and somewhat tested + - - - \
+Clifford algebras. Contact me at uvw@sbcglobal.net.\n\n\n* You can use the \
+notebook as is or else implement a private notebook context. Private cell \
+contexts have not been tested but are likely compatible. The issue is that \
+the author has had to take great care to manage the context of the symbol e \
+used in the basis ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -743,7 +714,7 @@ different context than the notebook \[OpenCurlyDoubleQuote]e\
 performing any package operations. Otherwise the context of e will not be \
 preserved and those computations will fail dramatically. If you forget and \
 try to execute a function in the package, then you need to quit the kernel \
-and then execute Needs [\[OpenCurlyDoubleQuote]GeomAlg2017Feb`\
+and then execute Needs [\[OpenCurlyDoubleQuote]GeomAlg201pOct`\
 \[CloseCurlyDoubleQuote]] as soon as you see the failure. And, as mentioned \
 earlier, you must also close and reopen the palette and use section 1 to \
 re-initialize your GA.\n\n"
@@ -885,13 +856,28 @@ re-initialize your GA.\n\n"
    3.775836742760491*^9, 3.775836745465225*^9}, {3.775836781627335*^9, 
    3.7758367868291807`*^9}, {3.7758368186863956`*^9, 3.775836846357375*^9}, {
    3.775836898400977*^9, 3.775836940715334*^9}, {3.775836986628243*^9, 
-   3.775836993461475*^9}},
+   3.775836993461475*^9}, {3.777908096918542*^9, 3.7779081168891993`*^9}, {
+   3.777909070429467*^9, 3.777909117485179*^9}, {3.77790917420744*^9, 
+   3.7779091862662277`*^9}, {3.778338075798194*^9, 3.7783380768274117`*^9}, {
+   3.778338141921815*^9, 3.77833814401296*^9}, {3.77833823058384*^9, 
+   3.778338232075305*^9}, {3.778338373405718*^9, 3.778338378411518*^9}, {
+   3.7783406933517303`*^9, 3.7783407150352592`*^9}, {3.779827225557349*^9, 
+   3.779827274084942*^9}, {3.7798273698751793`*^9, 3.779827394161108*^9}, 
+   3.7798275524402*^9, {3.779827685376893*^9, 3.779827703652396*^9}, {
+   3.779827830280714*^9, 3.779827880451159*^9}, {3.7798280074281607`*^9, 
+   3.77982801351567*^9}, {3.779828100086512*^9, 3.779828123914197*^9}, 
+   3.77991390110331*^9, {3.7799142835384007`*^9, 3.779914308789319*^9}, {
+   3.779914369748817*^9, 3.779914432514009*^9}, {3.779914978704814*^9, 
+   3.779914980432913*^9}, 3.779915200376697*^9, 3.779915462348751*^9, 
+   3.779915509554006*^9, {3.779915588039569*^9, 3.779915591716434*^9}, {
+   3.779915631971335*^9, 3.779915632479529*^9}, {3.779915712382256*^9, 
+   3.779915713940271*^9}, {3.77991586978188*^9, 3.779915879443565*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
 }, Open  ]]
 },
-WindowSize->{807, 1204},
-WindowMargins->{{Automatic, 121}, {Automatic, 5}},
+WindowSize->{710, 1162},
+WindowMargins->{{Automatic, 298}, {Automatic, 1}},
 FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
 2018)",
 StyleDefinitions->"Default.nb"
@@ -909,7 +895,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 253, 4, 67, "Section",ExpressionUUID->"17a443f8-29fb-439e-bb35-2523a67c3a7a"],
-Cell[678, 21, 42569, 868, 4527, "Text",ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
+Cell[678, 21, 42469, 854, 4873, "Text",ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
 }, Open  ]]
 }
 ]

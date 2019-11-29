@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     94170,       1560]
-NotebookOptionsPosition[     92955,       1525]
-NotebookOutlinePosition[     93596,       1547]
-CellTagsIndexPosition[     93553,       1544]
+NotebookDataLength[     95368,       1580]
+NotebookOptionsPosition[     94152,       1545]
+NotebookOutlinePosition[     94794,       1567]
+CellTagsIndexPosition[     94751,       1564]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -513,11 +513,12 @@ Sin[\!\(\*FractionBox[\(\[Pi]\), \(4\)]\)] \!\(\*SubscriptBox[\(e\), \(2\)]\)\
                     RowBox[{"{", " ", 
                     RowBox[{
                     "\"\<  Generates a 3-'atom' with subscripts 1,2,and \
-4\>\"", ",", "\n", "\t   ", "\"\<   Key in the AtomG output\>\"", ",", "\n", 
-                    "  ", "\"\<   Generates a standard vector in 3 dimensions \
-with \!\(\*SubscriptBox[\(x\), \(i\)]\) coefficients\>\"", ",", "\n", 
-                    "\t   ", "\"\<   Key in the nVector output}\>\"", ",", 
-                    "\n", "\t  ", 
+4\>\"", ",", "\n", "\t   ", "\"\<   Key in the AtomG output\>\"", ",", 
+                    "\[IndentingNewLine]", "\n", "  ", 
+                    "\"\<   Generates a standard vector in 3 dimensions with \
+\!\(\*SubscriptBox[\(x\), \(i\)]\) coefficients\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Key in the nVector output}\>\"", ",", "\n", 
+                    "\t  ", 
                     "\"\<   Generates a general bivector in 3 dimensions from \
 two vectors\>\"", ",", "\n", "\t   ", 
                     "\"\<   Key in the BiVectorG output\>\"", ",", "\n", 
@@ -803,17 +804,26 @@ in a multivector\>\""}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t",
                     RowBox[{
                     RowBox[{
                     "\"\<   Convert multivector to an ordered list of its \
-terms. An Atom is listed \>\"", "<>", 
-                    "\"\<multiple times if has multiple coefficients\>\""}], 
-                    ",", "\n", "\t   ", 
+terms. Each atom is listed \>\"", "<>", 
+                    "\"\<just once and multiple coefficients, if any, are \
+combined\>\""}], ",", "\n", "\t   ", 
                     "\"\<   Convert a clif list back to a matching \
 multivector\>\"", ",", "\n", "\t   ", 
+                    RowBox[{
                     "\"\<   Generate a list of coefficients matching the \
-order of ClifToListG\>\"", ",", "\n", "\t   ", 
+order of ClifToListG.\>\"", "<>", 
+                    "\"\< Multiple coefficients of same atom, if any, are \
+combined\>\""}], ",", 
+                    RowBox[{
                     "\"\<   Generate a list of atoms matching the order of \
-ClifToListG\>\"", ",", "\n", "\t   ", 
+ClifToListG.\>\"", "<>", "\"\< Constant, if any, is listed as 1\>\""}], ",", 
+                    "\n", "\t ", 
+                    RowBox[{
                     "\"\<   Generate a list of subscripts matching the order \
-of ClifToListG\>\"", ",", "\n", "\t   ", 
+of \>\"", "<>", 
+                    "\"\<ClifToListG. Each subscript, like {1,2,3}, is listed \
+just once. \>\"", "<>", "\"\<Constant, if any, is listed as {0}\>\""}], ",", 
+                    "\n", "\t   ", 
                     "\"\<   Generate a list of \!\(\*SubscriptBox[\(e\), \(i, \
 j, k,  ... \)]\) matching the order of ClifToListG\>\"", ",", "\n", "\t   ", 
                     "\"\<   Convert a list of atoms to a matching list of \
@@ -1407,28 +1417,38 @@ triples, etc.\>\"", ",", "\n", "\t  ", "\"\<\>\""}], "}"}]}]}], "}"}], ",",
    3.7829471883382797`*^9, 3.7829473572016773`*^9}, {3.7829474555022793`*^9, 
    3.782947508752727*^9}, {3.782947542264287*^9, 3.782947646010668*^9}, {
    3.7829477544832773`*^9, 3.78294777231136*^9}, {3.782947914635634*^9, 
-   3.782947915547578*^9}},
+   3.782947915547578*^9}, {3.7832734439851103`*^9, 3.783273453562277*^9}, {
+   3.783273595870283*^9, 3.783273693922117*^9}, {3.783273734175857*^9, 
+   3.783273759284747*^9}, {3.783273923472571*^9, 3.783273945184299*^9}, {
+   3.783274068776572*^9, 3.783274108911419*^9}, {3.7832741398468933`*^9, 
+   3.783274181403346*^9}, {3.783274237862726*^9, 3.783274266790393*^9}, {
+   3.783274318571753*^9, 3.783274377437768*^9}, {3.7832744773318872`*^9, 
+   3.783274479605874*^9}, {3.78327504983664*^9, 3.7832750585347843`*^9}, {
+   3.783275213191202*^9, 3.783275235681683*^9}, {3.783275305589953*^9, 
+   3.78327530748286*^9}, {3.783275375852132*^9, 3.783275376202354*^9}, 
+   3.783275414131118*^9, {3.783275842780149*^9, 3.7832758919038773`*^9}},
  CellLabel->
-  "In[3093]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+  "In[102]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["57s28_shm", 3, 1]],97,
-   "FrontEndObject[LinkObject[\"57s28_shm\", 3, 1]]","97",
+    LinkObject["7yxdg_shm", 3, 1]],40,
+   "FrontEndObject[LinkObject[\"7yxdg_shm\", 3, 1]]","40",
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGAwAuIwOQaFasU3jidst5SB6DS7jW0g2o/vzDwQLVC+6wSI
-njVNL7gGSKv8Uc4H0V5b5v9hUHrj6MLJJcgIpLcpp8iB6A9T7xjqAWmLxX1e
-IHrftMpQEC1xmlPZCEh36Kvogmi+1TVOIHr9L8+rxkBaLcSoywRIf8pIkIsG
-0l+kdt2NA9Knkq+9AtFBHKxfQXTCDavfINorp9M/Hkj/4GhMB9EOb5n/n1J9
-42jUvnTDaSCtdJxrJ4i+apT8fYraG0cu0a//QPQO8ecsU4F0ne6dkOlAev2b
-Vs6VQHr3w/9Zp4H0j2WsxSA652E182f1N47fji5XBdFNaac3g+iSANUf34B0
-SIAo406NN45xt+sUQLTUio1MXppvHGe8UtYB0W9lOoSSgLTHndT8IiC9Nzmn
-G0Q3tGycBqJrJD/77wPS0y0WVabpv3G8dXHlBBANANPVul0=
+1:eJwVzk0ow3EYwPH/vLUtCSUsLTbzUmyMtJSXvxzYwTTjokZms1it0KSthbyL
+HGyTw9TEyGEWychu2tpcHCYxByeln5LZLJZ5nsO3z/VbMqSXqxkURTVAfVyq
+2FhCaH/TmQHVNLsX0a6sWzuaPXXpR3eswh4TWJrg61Hp2W6C4hG6ncXOYYDn
+/GEu+mEJ1wpByd6GFPVap3vRgiCLLwaXRaXVaNaxqQ11/XSG6sAyhXi1HvzU
+DnL7wS/O5bMSDKju31A5Mz2KDj40/qJS3YpsAIwzZ0fQ1vfUZEBAaPHS/kkQ
+5PnYHjQkVn1vlRGanRf9Qy/yX9MsoLk6rLCBLrLAOgKvXpKjQTB+kD6B6l6M
+qZFyQsdunAJ0ThM8RSe7BfEYqOjOY3gqCK18MhejnEN3irSS0Ntv/Cr0vWg5
+dwjsCKv14+C1SreGzsy7raipMCLzgjaJY1ojIvTj3dEm6lBVKTNq4HvMp0Wd
+LesGdD7TfoL+AwP/x7I=
   "],
  CellLabel->
-  "Out[3094]=",ExpressionUUID->"d89b7701-9991-430a-850a-46e93d638849"]
+  "Out[103]=",ExpressionUUID->"d33f1512-0275-4bb5-adb7-0c31335f0612"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1524,7 +1544,7 @@ and made those the defaults\n\n"
 }, Open  ]]
 },
 WindowSize->{875, 1241},
-WindowMargins->{{Automatic, 239}, {Automatic, 3}},
+WindowMargins->{{Automatic, 128}, {11, Automatic}},
 SpellingDictionaries->{"CorrectWords"->{"aaa", "Windowsize"}},
 FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
 2018)",
@@ -1548,12 +1568,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[400, 13, 12214, 178, 2131, "Text",ExpressionUUID->"969d602e-3133-4ac8-b153-3e8836467719"],
 Cell[CellGroupData[{
-Cell[12639, 195, 75206, 1216, 5591, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
-Cell[87848, 1413, 820, 17, 43, "Output",ExpressionUUID->"d89b7701-9991-430a-850a-46e93d638849"]
+Cell[12639, 195, 76371, 1235, 5696, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+Cell[89013, 1432, 852, 18, 43, "Output",ExpressionUUID->"d33f1512-0275-4bb5-adb7-0c31335f0612"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[88705, 1435, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
-Cell[88951, 1441, 3988, 81, 840, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
+Cell[89902, 1455, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
+Cell[90148, 1461, 3988, 81, 840, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
 }, Open  ]]
 }
 ]

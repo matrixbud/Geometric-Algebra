@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9270,        187]
-NotebookOptionsPosition[      8665,        163]
-NotebookOutlinePosition[      9021,        179]
-CellTagsIndexPosition[      8978,        176]
+NotebookDataLength[      9321,        187]
+NotebookOptionsPosition[      8716,        163]
+NotebookOutlinePosition[      9072,        179]
+CellTagsIndexPosition[      9029,        176]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,12 +24,12 @@ Installation Instructions
 9541db189946"],
 
 Cell[TextData[{
- StyleBox["1. Open the notebook \[OpenCurlyDoubleQuote]Geom Alg Palette src\
-\[CloseCurlyDoubleQuote]. Double click on the 2nd bracket to the left on the \
-right hand side of Begin Package. That opens the next level of documentation \
-which, in this case, is some code. Place you cursor anywhere in the code and \
-press shift-enter to run the code. A palette should be created. Move it to \
-where you would like it. (You can move it again later. It will \
+ StyleBox["1. Open the notebook \[OpenCurlyDoubleQuote]Geom Alg Palette \
+2019Dec\[CloseCurlyDoubleQuote]. Double click on the 2nd bracket to the left \
+on the right hand side of Begin Package. That opens the next level of \
+documentation which, in this case, is some code. Place you cursor anywhere in \
+the code and press shift-enter to run the code. A palette should be created. \
+Move it to where you would like it. (You can move it again later. It will \
 \[OpenCurlyDoubleQuote]remember\[CloseCurlyDoubleQuote] the location as well \
 as which triangles are open and closed). From the Palette menu, select \
 Install Palette. In the Source drop-down menu select Geometric Algebra \
@@ -156,13 +156,13 @@ with many packages\n\n",
    3.779835208087369*^9, 3.779835208893663*^9}, {3.779878470853633*^9, 
    3.779878686675172*^9}, {3.7798788031874437`*^9, 3.7798788062744017`*^9}, {
    3.77988248573372*^9, 3.779882492935033*^9}, {3.7847536957756033`*^9, 
-   3.784753696498743*^9}},
+   3.784753696498743*^9}, {3.78476373370385*^9, 3.7847637380443163`*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 },
 WindowSize->{835, 1188},
-WindowMargins->{{Automatic, 366}, {Automatic, 31}},
+WindowMargins->{{Automatic, 189}, {55, Automatic}},
 FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
 2018)",
 StyleDefinitions->"Default.nb"
@@ -180,7 +180,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
-Cell[752, 25, 7897, 135, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
+Cell[752, 25, 7948, 135, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]

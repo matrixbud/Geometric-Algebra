@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9218,        186]
-NotebookOptionsPosition[      8613,        162]
-NotebookOutlinePosition[      8969,        178]
-CellTagsIndexPosition[      8926,        175]
+NotebookDataLength[      9270,        187]
+NotebookOptionsPosition[      8665,        163]
+NotebookOutlinePosition[      9021,        179]
+CellTagsIndexPosition[      8978,        176]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -75,7 +75,7 @@ executing that step, and so on until the simplest answer is reached.\n\n",
   FontWeight->"Bold"],
  " - Shows how function AtomCoefG can be used to format output to line up in \
 a table format\n\n",
- StyleBox["GeomAlg2019Oct src",
+ StyleBox["GeomAlg2019Dec src",
   FontWeight->"Bold"],
  " - Source file for package\n\n",
  StyleBox["Geom Alg Palette src",
@@ -155,7 +155,8 @@ with many packages\n\n",
    3.775822815989765*^9}, {3.779835086958438*^9, 3.779835128330909*^9}, {
    3.779835208087369*^9, 3.779835208893663*^9}, {3.779878470853633*^9, 
    3.779878686675172*^9}, {3.7798788031874437`*^9, 3.7798788062744017`*^9}, {
-   3.77988248573372*^9, 3.779882492935033*^9}},
+   3.77988248573372*^9, 3.779882492935033*^9}, {3.7847536957756033`*^9, 
+   3.784753696498743*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
@@ -179,7 +180,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
-Cell[752, 25, 7845, 134, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
+Cell[752, 25, 7897, 135, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]

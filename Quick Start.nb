@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9137,        163]
-NotebookOptionsPosition[      8502,        138]
-NotebookOutlinePosition[      8887,        155]
-CellTagsIndexPosition[      8844,        152]
+NotebookDataLength[      9307,        165]
+NotebookOptionsPosition[      8672,        140]
+NotebookOutlinePosition[      9057,        157]
+CellTagsIndexPosition[      9014,        154]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,9 +23,9 @@ Cell[TextData[{
  StyleBox["Installation Guide",
   FontColor->RGBColor[1, 0, 1]],
  ". Then, to use the package, open a notebook and start your session with the \
-statement Needs [\[OpenCurlyDoubleQuote]GeomAlg2019Oct`\
+statement Needs [\[OpenCurlyDoubleQuote]GeomAlg2019Dec`\
 \[CloseCurlyDoubleQuote]] or, equivalently, \
-<<\[CloseCurlyDoubleQuote]GeomAlg2019Oct`\[CloseCurlyDoubleQuote]. If you \
+<<\[CloseCurlyDoubleQuote]GeomAlg2019Deec`\[CloseCurlyDoubleQuote]. If you \
 open a 2nd notebook later, it also must begin with the \
 \[OpenCurlyDoubleQuote]Needs\[CloseCurlyDoubleQuote] statement. You can use \
 the palette to quickly enter the needs statement. \n\nThe palette has been \
@@ -52,17 +52,18 @@ it is your on-screen documentation center as well as your user interface. \
 Click on the triangles to expand/contract sections. \n\nThe ",
  StyleBox["file \[OpenCurlyDoubleQuote]Examples\[CloseCurlyDoubleQuote]",
   FontColor->RGBColor[1, 0, 1]],
- " can be examined to see how most of the operations work. The ",
+ " is your best single document for learning about this package.  It \
+illustrates most of the available operations. \n\nThe ",
  StyleBox["file \[OpenCurlyDoubleQuote]Documentation\[CloseCurlyDoubleQuote]",
   
   FontColor->RGBColor[1, 0, 1]],
- " is quite short and provides numerous important tips.\n\nCaution: If \
-Mathematica 10 or later displays the \[OpenCurlyDoubleQuote]shadow errors\
-\[CloseCurlyDoubleQuote] bug, you may wish to read the work-around in the \
-main documentation.\n\n* This package was developed and tested only on a Mac. \
-Windows users may need to install a font that recognizes the binary operator \
-symbols Diamond, Wedge, CenterDot, Star, LeftTee, and RightTee, shown here:\n\
-\t",
+ " is quite short and provides additional numerous important tips.\n\n\
+Caution: If Mathematica 10 or later displays the \
+\[OpenCurlyDoubleQuote]shadow errors\[CloseCurlyDoubleQuote] bug, you may \
+wish to read the work-around in the main documentation.\n\n* This package was \
+developed and tested only on a Mac. Windows users may need to install a font \
+that recognizes the binary operator symbols Diamond, Wedge, CenterDot, Star, \
+LeftTee, and RightTee, shown here:\n\t",
  StyleBox["  \[Diamond]  \[Wedge]  \[CenterDot]  \[Star]  \[LeftTee]  \
 \[RightTee]  ",
   Background->RGBColor[0.88, 1, 0.88]],
@@ -131,7 +132,8 @@ is required.\n\n\n\n\n"
    3.779881057996583*^9, 3.779881107909547*^9}, {3.779881310520997*^9, 
    3.779881315119638*^9}, {3.779881368901724*^9, 3.779881395147271*^9}, {
    3.7798814273443203`*^9, 3.7798814287711678`*^9}, {3.779882217374022*^9, 
-   3.7798822191646223`*^9}},
+   3.7798822191646223`*^9}, {3.784754217982523*^9, 3.784754326611499*^9}, {
+   3.784754487259582*^9, 3.784754488058587*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"ee8102e5-0e84-4ae6-a873-601ec5c15b47"]
 }, Open  ]]
@@ -156,7 +158,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 155, 3, 101, "Section",ExpressionUUID->"952567d1-b041-42fc-90c1-0d8f7eab655e"],
-Cell[580, 20, 7906, 115, 1309, InheritFromParent,ExpressionUUID->"ee8102e5-0e84-4ae6-a873-601ec5c15b47"]
+Cell[580, 20, 8076, 117, 1389, InheritFromParent,ExpressionUUID->"ee8102e5-0e84-4ae6-a873-601ec5c15b47"]
 }, Open  ]]
 }
 ]

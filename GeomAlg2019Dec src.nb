@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    513052,      10823]
-NotebookOptionsPosition[    507711,      10714]
-NotebookOutlinePosition[    508677,      10743]
-CellTagsIndexPosition[    508634,      10740]
+NotebookDataLength[    513511,      10819]
+NotebookOptionsPosition[    508172,      10710]
+NotebookOutlinePosition[    509138,      10739]
+CellTagsIndexPosition[    509095,      10736]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -271,7 +271,7 @@ Cell[BoxData[
    3.782913971580585*^9, 3.782913998207828*^9}, {3.784222108906064*^9, 
    3.78422211369767*^9}},
  CellLabel->
-  "In[220]:=",ExpressionUUID->"c65fb9e5-a372-4be3-a098-944901ffd52b"]
+  "In[2651]:=",ExpressionUUID->"c65fb9e5-a372-4be3-a098-944901ffd52b"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -443,7 +443,7 @@ Cell[BoxData[{
    3.779641803674849*^9}, {3.783949393465641*^9, 3.7839494318444967`*^9}, {
    3.784312661615201*^9, 3.78431269565631*^9}},
  CellLabel->
-  "In[222]:=",ExpressionUUID->"b2bdf740-d97a-4118-9aa7-49a73fe5e38a"]
+  "In[2653]:=",ExpressionUUID->"b2bdf740-d97a-4118-9aa7-49a73fe5e38a"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -1024,9 +1024,9 @@ of multivectors x, y, ..., z\>\""}], ";"}]}], "Code",
    3.784736631865334*^9, 3.784736771285516*^9}, {3.784755111157077*^9, 
    3.7847551314624853`*^9}, 3.784847028923971*^9, {3.784847187655232*^9, 
    3.7848472430564203`*^9}, {3.784898131610187*^9, 3.784898173525095*^9}, {
-   3.784898239270535*^9, 
-   3.784898289389098*^9}},ExpressionUUID->"bb95fb8d-d9f3-4598-863d-\
-ce86f7c663a4"],
+   3.784898239270535*^9, 3.784898289389098*^9}},
+ CellLabel->
+  "In[2665]:=",ExpressionUUID->"bb95fb8d-d9f3-4598-863d-ce86f7c663a4"],
 
 Cell[BoxData["\<\"GeomAlg2019Dec`\"\>"], "Output",
  CellChangeTimes->{
@@ -1089,9 +1089,10 @@ Cell[BoxData["\<\"GeomAlg2019Dec`\"\>"], "Output",
    3.78475514348879*^9, {3.7847583548226023`*^9, 3.7847583552820807`*^9}, {
    3.784759322334984*^9, 3.7847593228776007`*^9}, {3.784759793754876*^9, 
    3.784759794322298*^9}, {3.784759989862686*^9, 3.784759990420109*^9}, 
-   3.784760104499997*^9, {3.784847860790823*^9, 3.784847861269431*^9}},
+   3.784760104499997*^9, {3.784847860790823*^9, 3.784847861269431*^9}, {
+   3.7849110812454233`*^9, 3.784911081642194*^9}},
  CellLabel->
-  "Out[234]=",ExpressionUUID->"0c048233-29e4-4d6c-8245-4aabd617759a"],
+  "Out[2665]=",ExpressionUUID->"f7baa83d-b2af-4028-8e37-14f87cd2e5cb"],
 
 Cell[BoxData["e"], "Output",
  CellChangeTimes->{
@@ -1154,12 +1155,13 @@ Cell[BoxData["e"], "Output",
    3.78475514348879*^9, {3.7847583548226023`*^9, 3.7847583552820807`*^9}, {
    3.784759322334984*^9, 3.7847593228776007`*^9}, {3.784759793754876*^9, 
    3.784759794322298*^9}, {3.784759989862686*^9, 3.784759990420109*^9}, 
-   3.784760104499997*^9, {3.784847860790823*^9, 3.784847861278585*^9}},
+   3.784760104499997*^9, {3.784847860790823*^9, 3.784847861269431*^9}, {
+   3.7849110812454233`*^9, 3.7849110816500273`*^9}},
  CellLabel->
-  "Out[235]=",ExpressionUUID->"14262356-9417-44df-b639-8d105c096452"]
+  "Out[2666]=",ExpressionUUID->"f72e06ec-f16e-483b-9b19-68260f36f626"]
 }, Open  ]]
-}, Open  ]]
-}, Open  ]],
+}, Closed]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1200,7 +1202,7 @@ Cell[BoxData[
    3.691346372215829*^9, 3.691346379937498*^9}, {3.69134830962848*^9, 
    3.691348380261441*^9}, {3.691618877779533*^9, 3.691618892258176*^9}},
  CellLabel->
-  "In[297]:=",ExpressionUUID->"2d4b85c4-75f9-4a80-a7c3-79d1a9e6ca1a"]
+  "In[2728]:=",ExpressionUUID->"2d4b85c4-75f9-4a80-a7c3-79d1a9e6ca1a"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -1335,7 +1337,7 @@ Cell[BoxData[{
    3.7797407473728867`*^9, 3.779740856128405*^9}, {3.7797409074034224`*^9, 
    3.779740935284237*^9}},
  CellLabel->
-  "In[298]:=",ExpressionUUID->"eab06bde-dac4-4543-b3e4-dd8a5cfa5a9f"]
+  "In[2729]:=",ExpressionUUID->"eab06bde-dac4-4543-b3e4-dd8a5cfa5a9f"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -2503,7 +2505,7 @@ Cell[BoxData[{
    3.784759971025591*^9, 3.784759972320204*^9}, {3.7847600769273357`*^9, 
    3.784760096314665*^9}, {3.784760144942812*^9, 3.784760254461423*^9}},
  CellLabel->
-  "In[304]:=",ExpressionUUID->"cc35f83c-036d-4558-9ef4-8571356e9f49"]
+  "In[2735]:=",ExpressionUUID->"cc35f83c-036d-4558-9ef4-8571356e9f49"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -4303,8 +4305,8 @@ Cell[BoxData[{
    3.784806506458089*^9, 3.7848065083700113`*^9}, {3.784807073221361*^9, 
    3.784807152588169*^9}, 3.784898317379073*^9},
  CellLabel->
-  "In[3210]:=",ExpressionUUID->"5b437657-c103-44f2-923e-4e6a07bccda2"]
-}, Open  ]],
+  "In[2757]:=",ExpressionUUID->"5b437657-c103-44f2-923e-4e6a07bccda2"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -4797,9 +4799,9 @@ Cell[BoxData[
             "The", " ", "only", " ", "time", " ", "there", " ", "may", " ", 
              "be", " ", "square", " ", "terms", " ", "is", " ", "during", " ",
               "computation", " ", "of", " ", "\n", "\t\t\t\t", "geometric", 
-             " ", "product", "\n", "\t\t", "ConstantToZeroG", " ", "changees",
-              " ", "the", " ", "1", " ", "st", " ", "element", " ", "in", " ",
-              "the", " ", "list", " ", "to", " ", "1", " ", "if", " ", 
+             " ", "product", "\n", "\t\t", "ConstantToOneG", " ", "changees", 
+             " ", "the", " ", "1", " ", "st", " ", "element", " ", "in", " ", 
+             "the", " ", "list", " ", "to", " ", "1", " ", "if", " ", 
              "constant", " ", "term"}], " ", "\[NotEqual]", " ", 
             RowBox[{
             "0", "\n", "\t\t", "ToAtomEijList", " ", "changes", " ", "clif", 
@@ -6089,10 +6091,11 @@ Cell[BoxData[
    3.784896809879846*^9, 3.784896833607441*^9}, {3.784896940731861*^9, 
    3.784896953588717*^9}, {3.7848970755007563`*^9, 3.784897141436084*^9}, {
    3.784897181184753*^9, 3.7848974327896957`*^9}, {3.784897952632387*^9, 
-   3.784897952992962*^9}, {3.784898346119776*^9, 
-   3.784898347567444*^9}},ExpressionUUID->"0cd99394-7461-4bed-8931-\
-53bb46a7c3e7"]
-}, Open  ]],
+   3.784897952992962*^9}, {3.784898346119776*^9, 3.784898347567444*^9}, {
+   3.784910663824831*^9, 3.784910671503585*^9}},
+ CellLabel->
+  "In[2780]:=",ExpressionUUID->"0cd99394-7461-4bed-8931-53bb46a7c3e7"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -8562,10 +8565,10 @@ uvw@sbcglobal.net\>\"", "]"}], ",", "\n", "\t", "\n", "\t",
    3.78455099985402*^9}, {3.784585568796249*^9, 3.784585741581216*^9}, {
    3.7845857738849993`*^9, 3.784585783792852*^9}, {3.784847136640553*^9, 
    3.784847141374935*^9}, 3.784847312542728*^9, {3.784896533847645*^9, 
-   3.784896540136869*^9}, {3.784896572450906*^9, 
-   3.7848966358410263`*^9}},ExpressionUUID->"adb2e33b-3392-4e4d-adae-\
-ed10dbc77e4d"]
-}, Open  ]],
+   3.784896540136869*^9}, {3.784896572450906*^9, 3.7848966358410263`*^9}},
+ CellLabel->
+  "In[2806]:=",ExpressionUUID->"adb2e33b-3392-4e4d-adae-ed10dbc77e4d"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -9666,7 +9669,7 @@ Cell[BoxData[{
    3.7842414406122637`*^9}, 3.784320618227336*^9, {3.784668925206299*^9, 
    3.784668982875448*^9}, {3.784669234120617*^9, 3.7846692682902317`*^9}},
  CellLabel->
-  "In[390]:=",ExpressionUUID->"d9221d14-bb4f-46a3-8f96-ef51c063cb88"],
+  "In[2823]:=",ExpressionUUID->"d9221d14-bb4f-46a3-8f96-ef51c063cb88"],
 
 Cell[BoxData["\<\"GeomAlg2019Dec`Private`\"\>"], "Output",
  CellChangeTimes->{
@@ -9774,9 +9777,9 @@ Cell[BoxData["\<\"GeomAlg2019Dec`Private`\"\>"], "Output",
    3.784758355517761*^9}, {3.784759322579536*^9, 3.784759323149067*^9}, {
    3.784759794028061*^9, 3.784759794590454*^9}, {3.784759990122332*^9, 
    3.784759990683723*^9}, 3.7847601047345552`*^9, {3.7848478610260973`*^9, 
-   3.784847861574924*^9}},
+   3.784847861574924*^9}, {3.784911081495639*^9, 3.7849110818552227`*^9}},
  CellLabel->
-  "Out[413]=",ExpressionUUID->"9fb5d04f-efd2-4311-96cd-088269c8d172"]
+  "Out[2846]=",ExpressionUUID->"53a49087-0e74-4ceb-b9c9-f5e62562c262"]
 }, Open  ]]
 }, Closed]],
 
@@ -9819,13 +9822,16 @@ to report that it was unable to \n\t\tprocess some of them. ",
 further simplify inverse functions which often are\n\tvery complex. However, \
 these functions work on any multivector\nCompletely rewrote EvenClifG using \
 GradesListG, which didn\[CloseCurlyQuote]t exist  earlier. \nAdded OddClifG\n\
-Rewrote EijListSortG to take advantage of new functions AtomListToEijListG \
-and EijListToAtomListG\nRenamed AtomListToEijListG and EijListToAtomListG to \
-ToClifEijListG and ToClifListG to better represent\n\ttheir functions. That \
-is, the atoms can have coefficients; they don\[CloseCurlyQuote]t have to be \
-pure atoms.\nRenamed EijSortG to ClifSortG, for use now internally only by \
+Created ConstantToOneG, similar to ConstantToZeroG. It is used by EijListG. \
+ConstantToZeroG is used by \n\tGradeListG.\nRewrote EijListSortG to take \
+advantage of new functions AtomListToEijListG and EijListToAtomListG\nRenamed \
+AtomListToEijListG and EijListToAtomListG to ToClifEijListG and ToClifListG \
+and expanded\n\t\ttheir  functions. The atoms now can have coefficients; they \
+don\[CloseCurlyQuote]t have to be pure atoms.\nCreated internal function \
+ToAtomEijListG to replace EijListToAtomListG, which creates atom Eij lists\n\
+Added Eij\nRenamed EijSortG to ClifListSortG, for use now internally only by \
 CollectG to create a sort list\nCreated new EijSortG global function to sort \
-an Eij list",
+an Eij list\n",
   FontSize->18],
  StyleBox["\n\n2019 November \n",
   FontSize->18,
@@ -10155,8 +10161,12 @@ then sort \n\t\tmultivectors in a consistent way",
    3.7847524436652203`*^9, {3.7847582075026207`*^9, 3.784758319092359*^9}, {
    3.784846643356038*^9, 3.784846708294386*^9}, {3.7848467598264627`*^9, 
    3.784846803720874*^9}, {3.784846859089801*^9, 3.7848469414685097`*^9}, {
-   3.784898364161377*^9, 
-   3.784898475110189*^9}},ExpressionUUID->"eeff93c6-7e93-41ff-be77-\
+   3.784898364161377*^9, 3.784898475110189*^9}, {3.784910314864744*^9, 
+   3.7849103222694883`*^9}, {3.784910390392929*^9, 3.784910391213173*^9}, {
+   3.784910482802794*^9, 3.784910516156457*^9}, {3.784910603426507*^9, 
+   3.784910613131646*^9}, {3.784910692099659*^9, 3.784910716022789*^9}, {
+   3.784910773481283*^9, 3.78491083545995*^9}, {3.784910869030774*^9, 
+   3.7849110353545237`*^9}},ExpressionUUID->"eeff93c6-7e93-41ff-be77-\
 8724c23a53cb"],
 
 Cell[CellGroupData[{
@@ -10169,7 +10179,7 @@ Cell[BoxData[
   3.78293354399673*^9, 3.782933545242577*^9}, {3.7845527820535707`*^9, 
   3.7845527830820417`*^9}},
  CellLabel->
-  "In[415]:=",ExpressionUUID->"3b03f9de-f94e-42d5-88d1-7a03e8595620"],
+  "In[2848]:=",ExpressionUUID->"3b03f9de-f94e-42d5-88d1-7a03e8595620"],
 
 Cell[BoxData[
  DynamicModuleBox[{Typeset`open$$ = True}, 
@@ -10189,466 +10199,452 @@ Cell[BoxData[
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"AtomCoefG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"AtomCoefG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["ConstantG",
+         ButtonBox["debug0",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ConstantG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug0", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["DimListG",
+         ButtonBox["DotPrdtG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"DimListG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"DotPrdtG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["GradedClifG",
+         ButtonBox["GradeListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"GradedClifG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"GradeListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["LeftContractionG",
+         ButtonBox["MaxDimG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {
-            "LeftContractionG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"MaxDimG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["RightContractionG",
+         ButtonBox["ScalarPrdtG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {
-            "RightContractionG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"ScalarPrdtG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["AtomG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"AtomG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"AtomG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["debug0",
+         ButtonBox["debug1",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info28483784889481-3034769", {"debug1", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["e",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info28483784889481-3034769", {"e", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["HodgeDual1G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug0", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"HodgeDual1G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["DotPrdtG",
+         ButtonBox["MaxGradeG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"DotPrdtG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"MaxGradeG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["GradeInvoluteG",
+         ButtonBox["SignatureG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"GradeInvoluteG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["ListToClifG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"ListToClifG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["RotorG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"RotorG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"SignatureG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["AtomListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"AtomListG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["debug1",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"debug1", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["e",
-          BaseStyle->"InformationLink",
-          ButtonData:>{"Info4153784826261-6175741", {"e", "GeomAlg2019Dec`"}},
-          
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["GradeListG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"GradeListG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["MaxDimG",
-          BaseStyle->"InformationLink",
-          ButtonData:>{
-           "Info4153784826261-6175741", {"MaxDimG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["ScalarPrdtG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"ScalarPrdtG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"]},
-        {
-         ButtonBox["AtomListToEijListG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {
-            "AtomListToEijListG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"AtomListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug10",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug10", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug10", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["EijListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"EijListG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"EijListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["HodgeDual1G",
+         ButtonBox["HodgeDual2G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"HodgeDual1G", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"HodgeDual2G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["MaxGradeG",
+         ButtonBox["mCutG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"MaxGradeG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"mCutG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["SignatureG",
+         ButtonBox["SimplifyG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"SignatureG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"SimplifyG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["BiVectorG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"BiVectorG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"BiVectorG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug11",
           BaseStyle->"InformationLink",
+          
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug11", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug11", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["EijListToAtomListG",
+         ButtonBox["EijSortG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {
-            "EijListToAtomListG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"EijSortG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["HodgeDual2G",
+         ButtonBox["HodgeDual3G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"HodgeDual2G", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"HodgeDual3G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["mCutG",
+         ButtonBox["NormG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"mCutG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"NormG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["SimplifyG",
+         ButtonBox["SubscriptListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"SimplifyG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {
+            "SubscriptListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["BladeG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"BladeG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"BladeG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug2",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug2", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug2", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["EijSortG",
+         ButtonBox["EvenClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"EijSortG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"EvenClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["HodgeDual3G",
+         ButtonBox["HodgeDual4G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"HodgeDual3G", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"HodgeDual4G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["NormG",
+         ButtonBox["OddClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"NormG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"OddClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["SubscriptListG",
+         ButtonBox["ToClifEijListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"SubscriptListG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {
+            "ToClifEijListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["ClifConjugateG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ClifConjugateG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {
+            "ClifConjugateG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug3",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug3", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug3", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["EvenClifG",
+         ButtonBox["ExpandG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"EvenClifG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"ExpandG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["HodgeDual4G",
+         ButtonBox["HodgeDual5G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"HodgeDual4G", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"HodgeDual5G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["OddClifG",
+         ButtonBox["PrdtG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"OddClifG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"PrdtG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["ToClifEijListG",
+         ButtonBox["ToClifListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ToClifEijListG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"ToClifListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["ClifFormatG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ClifFormatG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"ClifFormatG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug4",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug4", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug4", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["ExpandG",
+         ButtonBox["FreeTermG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ExpandG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"FreeTermG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["HodgeDual5G",
+         ButtonBox["HodgeDualG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"HodgeDual5G", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"HodgeDualG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["PrdtG",
+         ButtonBox["PseudoScalarG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"PrdtG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"PseudoScalarG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["ToClifListG",
+         ButtonBox["VectorG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ToClifListG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"VectorG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["ClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ClifG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"ClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug5",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug5", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug5", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["FreeTermG",
+         ButtonBox["FullSimplifyG",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info28483784889481-3034769", {"FullSimplifyG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["Inverse4G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"FreeTermG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"Inverse4G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["HodgeDualG",
+         ButtonBox["pSliceG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"HodgeDualG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"pSliceG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["PseudoScalarG",
+         ButtonBox["WedgePrdtG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"PseudoScalarG", "GeomAlg2019Dec`"}},
-          
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["VectorG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"VectorG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"WedgePrdtG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["ClifToListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ClifToListG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"ClifToListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug6",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug6", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["FullSimplifyG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"FullSimplifyG", "GeomAlg2019Dec`"}},
-          
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["Inverse4G",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"Inverse4G", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["pSliceG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"pSliceG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["WedgePrdtG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"WedgePrdtG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"]},
-        {
-         ButtonBox["CoeffListG",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"CoeffListG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["debug7",
-          BaseStyle->"InformationLink",
-          
-          ButtonData:>{
-           "Info4153784826261-6175741", {"debug7", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug6", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["GeomPrdtAtomG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"GeomPrdtAtomG", "GeomAlg2019Dec`"}},
-          
+           "Info28483784889481-3034769", {"GeomPrdtAtomG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["Inverse5G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"Inverse5G", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"Inverse5G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["QuaternionG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"QuaternionG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"QuaternionG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], ""},
+        {
+         ButtonBox["CoeffListG",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info28483784889481-3034769", {"CoeffListG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["debug7",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {"debug7", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["GeomPrdtG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {"GeomPrdtG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["InverseG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {"InverseG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["ReduceG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {"ReduceG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], ""},
         {
          ButtonBox["CollectG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"CollectG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"CollectG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug8",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug8", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug8", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["GeomPrdtG",
+         ButtonBox["GormG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"GeomPrdtG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"GormG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["InverseG",
+         ButtonBox["InverseNG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"InverseG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"InverseNG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["ReduceG",
+         ButtonBox["ReverseG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ReduceG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"ReverseG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], ""},
         {
          ButtonBox["ComplexG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ComplexG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"ComplexG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug9",
           BaseStyle->"InformationLink",
+          
           ButtonData:>{
-           "Info4153784826261-6175741", {"debug9", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"debug9", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["GormG",
+         ButtonBox["GradedClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"GormG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {"GradedClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["InverseNG",
+         ButtonBox["LeftContractionG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"InverseNG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {
+            "LeftContractionG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["ReverseG",
+         ButtonBox["RightContractionG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4153784826261-6175741", {"ReverseG", "GeomAlg2019Dec`"}},
+           "Info28483784889481-3034769", {
+            "RightContractionG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], ""},
+        {
+         ButtonBox["ConstantG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {"ConstantG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["DimListG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {"DimListG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["GradeInvoluteG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {
+            "GradeInvoluteG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["ListToClifG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {"ListToClifG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["RotorG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info28483784889481-3034769", {"RotorG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], ""}
        },
        DefaultBaseStyle->"InfoGrid",
@@ -10659,8 +10655,8 @@ Cell[BoxData[
    Dynamic[Typeset`open$$],
    ImageSize->Automatic]]], "Print", "InfoCell",
  CellChangeTimes->{
-  3.784847861652163*^9},ExpressionUUID->"0bf1c28c-7220-4e65-b694-\
-18fc6111a338"]
+  3.784911081912341*^9},ExpressionUUID->"a174b452-a08e-4497-ad47-\
+9f43920d26b6"]
 }, Open  ]],
 
 Cell["", "Text",
@@ -10671,14 +10667,14 @@ Cell["", "Text",
 Cell[BoxData[" "], "Input",
  CellChangeTimes->{3.783095543465054*^9},
  CellLabel->
-  "In[416]:=",ExpressionUUID->"d2580c29-14bc-491c-b40b-521b9f99ef14"],
+  "In[2849]:=",ExpressionUUID->"d2580c29-14bc-491c-b40b-521b9f99ef14"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["\[AliasDelimiter]"], "Input",
  CellChangeTimes->{3.783189600044696*^9},
  CellLabel->
-  "In[417]:=",ExpressionUUID->"5d47b2b4-006b-46b4-ad30-bb4d5906fabf"],
+  "In[2850]:=",ExpressionUUID->"5d47b2b4-006b-46b4-ad30-bb4d5906fabf"],
 
 Cell[BoxData["\[AliasDelimiter]"], "Output",
  CellChangeTimes->{
@@ -10705,16 +10701,16 @@ Cell[BoxData["\[AliasDelimiter]"], "Output",
    3.78467147023635*^9, 3.784734933237159*^9, 3.784735172917918*^9, 
    3.7847368020855827`*^9, 3.7847550898507633`*^9, 3.78475514406542*^9, 
    3.784758355700924*^9, 3.784759323329968*^9, 3.7847597947909946`*^9, 
-   3.784759990867969*^9, 3.784847861770727*^9},
+   3.784759990867969*^9, 3.784847861770727*^9, 3.784911082011546*^9},
  CellLabel->
-  "Out[417]=",ExpressionUUID->"698883a5-07ff-423e-bb1c-6d99d7596194"]
+  "Out[2850]=",ExpressionUUID->"e06d2e34-eee7-4b72-96f5-03ac0678696e"]
 }, Open  ]]
-}, Open  ]]
+}, Closed]]
 }, Open  ]]
 },
 WindowToolbars->{"RulerBar", "EditBar"},
 WindowSize->{1103, 1262},
-WindowMargins->{{345, Automatic}, {Automatic, 0}},
+WindowMargins->{{Automatic, 288}, {Automatic, 0}},
 DockedCells->FEPrivate`FrontEndResource[
  "NotebookTemplatingExpressions", "AuthoringDockedCell"],
 PrintingCopies->1,
@@ -10752,71 +10748,71 @@ Cell[CellGroupData[{
 Cell[8314, 168, 162, 3, 58, "Chapter",ExpressionUUID->"66501c1f-93ac-4157-b1f6-4144dd1837af"],
 Cell[CellGroupData[{
 Cell[8501, 175, 154, 3, 65, "Subchapter",ExpressionUUID->"bfdd283e-5130-49c3-82ad-f7a9980651e0"],
-Cell[8658, 180, 4847, 93, 528, "Code",ExpressionUUID->"c65fb9e5-a372-4be3-a098-944901ffd52b"]
+Cell[8658, 180, 4848, 93, 528, "Code",ExpressionUUID->"c65fb9e5-a372-4be3-a098-944901ffd52b"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[13542, 278, 2063, 29, 49, "Subchapter",ExpressionUUID->"0b6b0107-d707-4aa2-84e0-633ce91bf664"],
-Cell[15608, 309, 2895, 43, 58, "Text",ExpressionUUID->"a138d2aa-7b8e-4d91-9508-5664fb9215ec"],
-Cell[18506, 354, 4470, 91, 262, "Code",ExpressionUUID->"b2bdf740-d97a-4118-9aa7-49a73fe5e38a"]
+Cell[13543, 278, 2063, 29, 49, "Subchapter",ExpressionUUID->"0b6b0107-d707-4aa2-84e0-633ce91bf664"],
+Cell[15609, 309, 2895, 43, 58, "Text",ExpressionUUID->"a138d2aa-7b8e-4d91-9508-5664fb9215ec"],
+Cell[18507, 354, 4471, 91, 262, "Code",ExpressionUUID->"b2bdf740-d97a-4118-9aa7-49a73fe5e38a"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[23013, 450, 221, 4, 49, "Subchapter",ExpressionUUID->"31efb45a-7932-43ba-83a8-a6cc2ae30fb8"],
-Cell[23237, 456, 3522, 74, 380, "Text",ExpressionUUID->"20a98674-b109-4d95-8d9c-5eea15db0abb"]
+Cell[23015, 450, 221, 4, 49, "Subchapter",ExpressionUUID->"31efb45a-7932-43ba-83a8-a6cc2ae30fb8"],
+Cell[23239, 456, 3522, 74, 380, "Text",ExpressionUUID->"20a98674-b109-4d95-8d9c-5eea15db0abb"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[26796, 535, 329, 5, 49, "Subchapter",ExpressionUUID->"d7d51bbd-350c-4d00-aa9f-f0cb00af5dd3"],
+Cell[26798, 535, 329, 5, 49, "Subchapter",ExpressionUUID->"d7d51bbd-350c-4d00-aa9f-f0cb00af5dd3"],
 Cell[CellGroupData[{
-Cell[27150, 544, 23500, 484, 1393, "Code",ExpressionUUID->"bb95fb8d-d9f3-4598-863d-ce86f7c663a4"],
-Cell[50653, 1030, 4553, 63, 34, "Output",ExpressionUUID->"0c048233-29e4-4d6c-8245-4aabd617759a"],
-Cell[55209, 1095, 4531, 63, 34, "Output",ExpressionUUID->"14262356-9417-44df-b639-8d105c096452"]
+Cell[27152, 544, 23523, 484, 1393, "Code",ExpressionUUID->"bb95fb8d-d9f3-4598-863d-ce86f7c663a4"],
+Cell[50678, 1030, 4606, 64, 70, "Output",ExpressionUUID->"f7baa83d-b2af-4028-8e37-14f87cd2e5cb"],
+Cell[55287, 1096, 4586, 64, 70, "Output",ExpressionUUID->"f72e06ec-f16e-483b-9b19-68260f36f626"]
 }, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[59801, 1165, 187, 3, 69, "Chapter",ExpressionUUID->"a1525982-1156-48eb-8125-efcb2d27577c"],
-Cell[59991, 1170, 2168, 32, 52, "Code",ExpressionUUID->"2d4b85c4-75f9-4a80-a7c3-79d1a9e6ca1a"]
+}, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[62196, 1207, 186, 3, 58, "Chapter",ExpressionUUID->"58177a45-6844-4477-ad51-5a2c82db5919"],
-Cell[62385, 1212, 6080, 125, 262, "Code",ExpressionUUID->"eab06bde-dac4-4543-b3e4-dd8a5cfa5a9f"]
+Cell[59934, 1167, 187, 3, 58, "Chapter",ExpressionUUID->"a1525982-1156-48eb-8125-efcb2d27577c"],
+Cell[60124, 1172, 2169, 32, 52, "Code",ExpressionUUID->"2d4b85c4-75f9-4a80-a7c3-79d1a9e6ca1a"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[68502, 1342, 355, 8, 146, "Chapter",ExpressionUUID->"e4a04ef0-9773-466f-8f2a-2556d621d191"],
-Cell[68860, 1352, 48553, 1153, 4381, "Code",ExpressionUUID->"cc35f83c-036d-4558-9ef4-8571356e9f49"]
+Cell[62330, 1209, 186, 3, 58, "Chapter",ExpressionUUID->"58177a45-6844-4477-ad51-5a2c82db5919"],
+Cell[62519, 1214, 6081, 125, 262, "Code",ExpressionUUID->"eab06bde-dac4-4543-b3e4-dd8a5cfa5a9f"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[117450, 2510, 251, 4, 58, "Chapter",ExpressionUUID->"9c63b62e-9730-433c-8884-b0391cc574d1"],
-Cell[117704, 2516, 88519, 1789, 7229, "Code",ExpressionUUID->"5b437657-c103-44f2-923e-4e6a07bccda2"]
-}, Open  ]],
+Cell[68637, 1344, 355, 8, 146, "Chapter",ExpressionUUID->"e4a04ef0-9773-466f-8f2a-2556d621d191"],
+Cell[68995, 1354, 48554, 1153, 4381, "Code",ExpressionUUID->"cc35f83c-036d-4558-9ef4-8571356e9f49"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[206260, 4310, 174, 3, 69, "Chapter",ExpressionUUID->"0a8c74b9-4fd4-409f-9416-1e5362d89626"],
-Cell[206437, 4315, 87573, 1778, 6228, "Code",ExpressionUUID->"0cd99394-7461-4bed-8931-53bb46a7c3e7"]
-}, Open  ]],
+Cell[117586, 2512, 251, 4, 58, "Chapter",ExpressionUUID->"9c63b62e-9730-433c-8884-b0391cc574d1"],
+Cell[117840, 2518, 88519, 1789, 7229, "Code",ExpressionUUID->"5b437657-c103-44f2-923e-4e6a07bccda2"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[294047, 6098, 325, 7, 109, "Chapter",ExpressionUUID->"c4071c67-5988-4b9c-9562-4d1442c8ccac"],
-Cell[294375, 6107, 120612, 2459, 10070, "Code",ExpressionUUID->"adb2e33b-3392-4e4d-adae-ed10dbc77e4d"]
-}, Open  ]],
+Cell[206396, 4312, 174, 3, 58, "Chapter",ExpressionUUID->"0a8c74b9-4fd4-409f-9416-1e5362d89626"],
+Cell[206573, 4317, 87645, 1779, 6228, "Code",ExpressionUUID->"0cd99394-7461-4bed-8931-53bb46a7c3e7"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[415024, 8571, 532, 10, 149, "Chapter",ExpressionUUID->"5ad0718c-8782-4e67-ac94-06033f01f375"],
+Cell[294255, 6101, 325, 7, 98, "Chapter",ExpressionUUID->"c4071c67-5988-4b9c-9562-4d1442c8ccac"],
+Cell[294583, 6110, 120635, 2459, 10070, "Code",ExpressionUUID->"adb2e33b-3392-4e4d-adae-ed10dbc77e4d"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[415581, 8585, 46076, 1083, 4834, "Code",ExpressionUUID->"d9221d14-bb4f-46a3-8f96-ef51c063cb88"],
-Cell[461660, 9670, 7799, 108, 34, "Output",ExpressionUUID->"9fb5d04f-efd2-4311-96cd-088269c8d172"]
+Cell[415255, 8574, 532, 10, 138, "Chapter",ExpressionUUID->"5ad0718c-8782-4e67-ac94-06033f01f375"],
+Cell[CellGroupData[{
+Cell[415812, 8588, 46077, 1083, 4834, "Code",ExpressionUUID->"d9221d14-bb4f-46a3-8f96-ef51c063cb88"],
+Cell[461892, 9673, 7848, 108, 70, "Output",ExpressionUUID->"53a49087-0e74-4ceb-b9c9-f5e62562c262"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[469508, 9784, 361, 7, 58, "Chapter",ExpressionUUID->"be00a341-2295-4156-8c23-6784eec6d87f"],
-Cell[469872, 9793, 17132, 366, 4023, "Text",ExpressionUUID->"eeff93c6-7e93-41ff-be77-8724c23a53cb"],
+Cell[469789, 9787, 361, 7, 58, "Chapter",ExpressionUUID->"be00a341-2295-4156-8c23-6784eec6d87f"],
+Cell[470153, 9796, 17709, 373, 4153, "Text",ExpressionUUID->"eeff93c6-7e93-41ff-be77-8724c23a53cb"],
 Cell[CellGroupData[{
-Cell[487029, 10163, 466, 8, 30, "Input",ExpressionUUID->"3b03f9de-f94e-42d5-88d1-7a03e8595620"],
-Cell[487498, 10173, 17844, 489, 332, "Print",ExpressionUUID->"0bf1c28c-7220-4e65-b694-18fc6111a338"]
+Cell[487887, 10173, 467, 8, 30, "Input",ExpressionUUID->"3b03f9de-f94e-42d5-88d1-7a03e8595620"],
+Cell[488357, 10183, 17421, 475, 70, "Print",ExpressionUUID->"a174b452-a08e-4497-ad47-9f43920d26b6"]
 }, Open  ]],
-Cell[505357, 10665, 141, 3, 35, "Text",ExpressionUUID->"065fbefc-66c9-493d-b274-40929693f606"],
-Cell[505501, 10670, 152, 3, 30, "Input",ExpressionUUID->"d2580c29-14bc-491c-b40b-521b9f99ef14"],
+Cell[505793, 10661, 141, 3, 35, "Text",ExpressionUUID->"065fbefc-66c9-493d-b274-40929693f606"],
+Cell[505937, 10666, 153, 3, 30, "Input",ExpressionUUID->"d2580c29-14bc-491c-b40b-521b9f99ef14"],
 Cell[CellGroupData[{
-Cell[505678, 10677, 168, 3, 30, "Input",ExpressionUUID->"5d47b2b4-006b-46b4-ad30-bb4d5906fabf"],
-Cell[505849, 10682, 1822, 27, 34, "Output",ExpressionUUID->"698883a5-07ff-423e-bb1c-6d99d7596194"]
+Cell[506115, 10673, 169, 3, 30, "Input",ExpressionUUID->"5d47b2b4-006b-46b4-ad30-bb4d5906fabf"],
+Cell[506287, 10678, 1845, 27, 70, "Output",ExpressionUUID->"e06d2e34-eee7-4b72-96f5-03ac0678696e"]
 }, Open  ]]
-}, Open  ]]
+}, Closed]]
 }, Open  ]]
 }
 ]

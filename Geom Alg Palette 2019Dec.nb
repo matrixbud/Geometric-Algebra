@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     96693,       1609]
-NotebookOptionsPosition[     95478,       1574]
-NotebookOutlinePosition[     96119,       1596]
-CellTagsIndexPosition[     96076,       1593]
+NotebookDataLength[     97383,       1622]
+NotebookOptionsPosition[     96168,       1587]
+NotebookOutlinePosition[     96809,       1609]
+CellTagsIndexPosition[     96766,       1606]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -806,11 +806,11 @@ in a multivector\>\""}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t",
                     "\"\<AtomListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<SubscriptListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<EijListG[clif]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<AtomListToEijListG[list]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<EijListToAtomListG[list]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<ToClifEijListG[list]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<ToClifListG[list]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<GradeListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<SignatureG[list]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<EijSort[list]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<EijSortG[list]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<\>\""}], "}"}]}], ",", "\n", "\t\t", "\n", 
                     "\t\t     ", 
                     RowBox[{"tips", "=", "\n", "\t ", 
@@ -840,10 +840,13 @@ just once. \>\"", "<>", "\"\<Constant, if any, is listed as {0}\>\""}], ",",
                     "\n", "\t   ", 
                     "\"\<   Generate a list of \!\(\*SubscriptBox[\(e\), \(i, \
 j, k,  ... \)]\) matching the order of ClifToListG\>\"", ",", "\n", "\t   ", 
-                    "\"\<   Convert a list of atoms to a matching list of \
-\!\(\*SubscriptBox[\(e\), \(i, j, k,  ... \)]\)\>\"", ",", "\n", "\t   ", 
-                    "\"\<   Convert a list of \!\(\*SubscriptBox[\(e\), \(i, \
-j, k,  ... \)]\) to a matching list of atoms\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Converts atoms \!\(\*SubscriptBox[\(e\), \(i\)]\)\
+\!\(\*SubscriptBox[\(e\), \(j\)]\)\!\(\*SubscriptBox[\(e\), \(k\)]\)... in a \
+list to \!\(\*SubscriptBox[\(e\), \(i, j, k,  ... \)]\)\>\"", ",", "\n", 
+                    "\t   ", 
+                    "\"\<   Converts \!\(\*SubscriptBox[\(e\), \(i, j, k,  .. \
+\)]\)'s in a list to \!\(\*SubscriptBox[\(e\), \(i\)]\)\!\(\*SubscriptBox[\(e\
+\), \(j\)]\)\!\(\*SubscriptBox[\(e\), \(k\)]\)'s\>\"", ",", "\n", "\t   ", 
                     "\"\<   Generate a list of grades matching the order of \
 ClifToListG\>\"", ",", "\n", "\t   ", 
                     RowBox[{
@@ -853,13 +856,12 @@ numbers, letters, words, \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\) or\>\"",
                     "\"\< any set of items that Mathematica knows how to sort\
 \>\""}], ",", "\n", "\t   ", 
                     RowBox[{
-                    "\"\<   Sort list so that constants appear 1st, then \
-singleton atoms \!\(\*SubscriptBox[\(e\), \(i\)]\),\>\"", "<>", 
-                    "\"\< then pairs \!\(\*SubscriptBox[\(e\), \
-\(i\)]\)\!\(\*SubscriptBox[\(e\), \(j\)]\), triples \!\(\*SubscriptBox[\(e\), \
-\(i\)]\)\!\(\*SubscriptBox[\(e\), \(j\)]\)\!\(\*SubscriptBox[\(e\), \(k\)]\), \
-etc.\>\""}], ",", "\n", "\t  ", "\"\<\>\""}], "}"}]}]}], "}"}], ",", "\n", 
-                  "\n", "\t", 
+                    "\"\<   Sort clif Eij list so that constants appear 1st, \
+then singletons \!\(\*SubscriptBox[\(e\), \(i\)]\),\>\"", "<>", 
+                    "\"\< pairs \!\(\*SubscriptBox[\(e\), \(i, j\)]\), \
+triples \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\), etc.\>\""}], ",", "\n", 
+                    "\t  ", "\"\<\>\""}], "}"}]}]}], "}"}], ",", "\n", "\n", 
+                  "\t", 
                   RowBox[{"Grid", "[", 
                    RowBox[{
                     RowBox[{"Partition", "[", "\n", "\t\t", 
@@ -1450,28 +1452,31 @@ etc.\>\""}], ",", "\n", "\t  ", "\"\<\>\""}], "}"}]}]}], "}"}], ",", "\n",
    3.784760737300624*^9, 3.784760741629307*^9}, {3.784760775460916*^9, 
    3.784760779651526*^9}, {3.7847608105570097`*^9, 3.784760907652197*^9}, {
    3.7847609462014303`*^9, 3.78476136489563*^9}, {3.78476154401698*^9, 
-   3.7847616832980957`*^9}, {3.784761775662305*^9, 3.7847617987135887`*^9}},
- CellLabel->"In[56]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+   3.7847616832980957`*^9}, {3.784761775662305*^9, 3.7847617987135887`*^9}, {
+   3.784847361268272*^9, 3.7848473921397753`*^9}, {3.7848475683551483`*^9, 
+   3.7848477250988073`*^9}, {3.784903084726808*^9, 3.7849031261971893`*^9}, {
+   3.784903156252717*^9, 3.784903218662313*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["722sc_shm", 3, 1]],234,
-   "FrontEndObject[LinkObject[\"722sc_shm\", 3, 1]]","234",
+    LinkObject["mffzs_shm", 3, 1]],310,
+   "FrontEndObject[LinkObject[\"mffzs_shm\", 3, 1]]","310",
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->CompressedData["
-1:eJwVzk0og3EcwPFn2NqWhFpe0sJjXorh4bDk7S+KHRDjQiNjxGqFprW10LxH
-DmxyoMhbDixL5mU3bczFgcQcdlL6K3ldCL/f4dvn+k1q09d18BiGKYQapUyi
-KYkSb5HTgGqLHaNodcTFEho5cOhFF23yejOY8sPqUaVz+YdJpqRcJI7igfts
-uxR9nvfnykHF6owSdduMDWisT8Ry4Hh2ShYasW0uQ3e+qq7ywFQVN5kPvnS1
-SpvAt/jDezV4rrl+ROuE/He09abgG1XqJmpawKBwqBMtfQr9O5dRwo2t7frA
-ZI/YhV5xms+5VErEkvdf9CDmIWwetGT5VXZwh46ItsCjwF+3Dwyu8/tQXcAU
-+ppGycfphgwd1vr20P5aWfADVNVKeK50StR3lkQ0ftMRosygZOGRzUSfEsaj
-28BKf4e+FzzR6KbQQavDhprjXmvcoF2xYtRmU3J7uTWLrmgy1YIc+O7xdKEb
-JdMG1Bq+tIs6K97KBRwlx0ZG0QzO8l12A7i5PigaAdWsV+AHz6p4OvQfiiPd
-Lw==
+1:eJwVzk0og3EcwPFnZsuWhJKXtDaPeSmvD4elvPxFsQNiXGhkjFit0LQsIe8i
+BzY5UN7lwFiyebnJeFwcvMQcnER/Ja8L4fc7fPtcv4paY2m9gGGYbKhCxsg7
+FJS4Mx0mVJ9l70eLAk5n0MB2lxudtiaVWcDoH9aIqh2zP0wUJXkSaZAA3Gbr
+ZOjzpCc1CVTNj6nRA6u5HA3jJSwHDiZHJ6IBa5ZcdP2r8DwNjNFww+ngS2ON
+rBJ8i3DdasET3cUjWuonekdrrjK+UbVhqLga9Pp1N6A5T8K/EyUl3MDiBg9G
+HUmd6Dmn+5yIoUQa8v6L7oTe+06CnYkejQ1cp32SVXD37q+JB71LolbUcNch
+fI2l5ONwWYn26PkttK1E6f0ANSUhAmccJdqbTjkasWL3UcdTMvXIJqBPkYPB
+tWCBp97YAu7rDCNoV6/dilrCX4sPQJtqzqxPpuT6bHUcndMlaMUp8N181Igu
+Z4+a0F7/mQ3Ukf+WJ+Yo2TMzqipwXOS0mcCVpS5JH6hl3WIPeFwoMKDyxYdg
+cRoll5t8CrrgFBYpwH/Qludx
   "],
- CellLabel->"Out[57]=",ExpressionUUID->"5fdc0929-9943-4b1d-bc44-34f27049aa2e"]
+ CellLabel->"Out[2]=",ExpressionUUID->"5f19dab5-d82f-496d-b208-8d6a5144fb7d"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1486,7 +1491,14 @@ Cell[TextData[{
  StyleBox["2019 Dec\n",
   FontWeight->"Bold",
   FontColor->GrayLevel[0]],
- StyleBox["Added FullSimplifyG",
+ StyleBox["Added FullSimplifyG\nRenamed ",
+  FontColor->GrayLevel[0]],
+ StyleBox["AtomListToEijListG and EijListToAtomListG to ToClifEijListG and \
+ToClifListG",
+  FontSize->14,
+  FontColor->GrayLevel[0]],
+ StyleBox[" \nChanged description of  replacement  EijSortG function",
+  FontSize->18,
   FontColor->GrayLevel[0]],
  StyleBox["\n\n2019 Nov\n",
   FontWeight->"Bold",
@@ -1567,8 +1579,9 @@ and made those the defaults\n\n"
    3.7829444767395277`*^9, 3.782944501726821*^9}, {3.7829445633997793`*^9, 
    3.7829445819309883`*^9}, {3.782945100593498*^9, 3.782945106424261*^9}, {
    3.782945553198545*^9, 3.782945567925881*^9}, {3.782946094044135*^9, 
-   3.782946148954752*^9}, {3.784553494476666*^9, 
-   3.7845535346144*^9}},ExpressionUUID->"4a3489c9-27cd-41f6-b43d-\
+   3.782946148954752*^9}, {3.784553494476666*^9, 3.7845535346144*^9}, {
+   3.784847420006867*^9, 3.7848474341961823`*^9}, {3.784902995774927*^9, 
+   3.7849030256824417`*^9}},ExpressionUUID->"4a3489c9-27cd-41f6-b43d-\
 5798658675ac"]
 }, Open  ]]
 },
@@ -1597,12 +1610,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[400, 13, 12214, 178, 2131, "Text",ExpressionUUID->"969d602e-3133-4ac8-b153-3e8836467719"],
 Cell[CellGroupData[{
-Cell[12639, 195, 77467, 1258, 5530, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
-Cell[90109, 1455, 895, 18, 43, "Output",ExpressionUUID->"5fdc0929-9943-4b1d-bc44-34f27049aa2e"]
+Cell[12639, 195, 77778, 1263, 5530, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+Cell[90420, 1460, 914, 18, 43, "Output",ExpressionUUID->"5f19dab5-d82f-496d-b208-8d6a5144fb7d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[91041, 1478, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
-Cell[91287, 1484, 4175, 87, 909, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
+Cell[91371, 1483, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
+Cell[91617, 1489, 4535, 95, 961, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
 }, Open  ]]
 }
 ]

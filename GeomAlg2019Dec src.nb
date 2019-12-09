@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    507939,      10750]
-NotebookOptionsPosition[    502600,      10641]
-NotebookOutlinePosition[    503566,      10670]
-CellTagsIndexPosition[    503523,      10667]
+NotebookDataLength[    513052,      10823]
+NotebookOptionsPosition[    507711,      10714]
+NotebookOutlinePosition[    508677,      10743]
+CellTagsIndexPosition[    508634,      10740]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -270,7 +270,8 @@ Cell[BoxData[
    3.779795348201017*^9}, {3.779810057747327*^9, 3.779810196288809*^9}, {
    3.782913971580585*^9, 3.782913998207828*^9}, {3.784222108906064*^9, 
    3.78422211369767*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"c65fb9e5-a372-4be3-a098-944901ffd52b"]
+ CellLabel->
+  "In[220]:=",ExpressionUUID->"c65fb9e5-a372-4be3-a098-944901ffd52b"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -441,7 +442,8 @@ Cell[BoxData[{
    3.779622157756878*^9, 3.779622160982108*^9}, {3.779641770056712*^9, 
    3.779641803674849*^9}, {3.783949393465641*^9, 3.7839494318444967`*^9}, {
    3.784312661615201*^9, 3.78431269565631*^9}},
- CellLabel->"In[20]:=",ExpressionUUID->"b2bdf740-d97a-4118-9aa7-49a73fe5e38a"]
+ CellLabel->
+  "In[222]:=",ExpressionUUID->"b2bdf740-d97a-4118-9aa7-49a73fe5e38a"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -590,12 +592,6 @@ multivector x.\>\""}], ";"}], "\n",
 of multivector x\>\""}], ";"}], "\n", 
  RowBox[{
   RowBox[{
-   RowBox[{"AtomListToEijListG", "::", "usage"}], "=", 
-   "\"\<Changes an \!\(\*SubscriptBox[\(e\), \(i, j,  ... \)]\) list to a \
-\!\(\*SubscriptBox[\(e\), \(i\)]\)\!\(\*SubscriptBox[\(e\), \(j\)]\)... \
-list\>\""}], ";"}], "\n", 
- RowBox[{
-  RowBox[{
    RowBox[{"BiVectorG", "::", "usage"}], "=", 
    "\"\<BiVectorG[n] is product of 2 vectors in n dimensions\>\""}], 
   ";"}], "\n", 
@@ -663,16 +659,9 @@ j,  ... \)]\) corresponding to the components of multivector x\>\""}],
   ";"}], "\n", 
  RowBox[{
   RowBox[{
-   RowBox[{"EijListToAtomListG", "::", "usage"}], "=", 
-   "\"\<Changes a \!\(\*SubscriptBox[\(e\), \(i\)]\)\!\(\*SubscriptBox[\(e\), \
-\(j\)]\)... list to an \!\(\*SubscriptBox[\(e\), \(i, j,  ... \)]\) \
-list\>\""}], ";"}], "\n", 
- RowBox[{
-  RowBox[{
    RowBox[{"EijSortG", "::", "usage"}], 
-   "\"\<EijSortG[xList] sorts a multivector list with singlet atoms terms \
-first, then product-pairs of atoms next, then \nproduct triples, etc.\>\""}], 
-  ";"}], "\n", 
+   "\"\<EijSortG[xList] sorts an Eij list with singlet terms first, then \
+product-pairs, product triples, etc.\>\""}], ";"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"EvenClifG", "::", "usage"}], "=", 
@@ -883,6 +872,18 @@ applying Simplify to clif\>\""}], ";"}], "\n",
 multivector x\>\""}], ";"}], "\n", 
  RowBox[{
   RowBox[{
+   RowBox[{"ToClifEijListG", "::", "usage"}], "=", 
+   "\"\<Changes an \!\(\*SubscriptBox[\(e\), \(i, j,  ... \)]\) list to a \
+\!\(\*SubscriptBox[\(e\), \(i\)]\)\!\(\*SubscriptBox[\(e\), \(j\)]\)... \
+list\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ToClifListG", "::", "usage"}], "=", 
+   "\"\<Changes a \!\(\*SubscriptBox[\(e\), \(i\)]\)\!\(\*SubscriptBox[\(e\), \
+\(j\)]\)... list to an \!\(\*SubscriptBox[\(e\), \(i, j,  ... \)]\) \
+list\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
    RowBox[{"VectorG", "::", "usage"}], "=", 
    "\"\<VectorG[a,n] generates a general (1-dimensional) vector of dimension \
 n with coefficients \!\(\*SubscriptBox[\(a\), \(i\)]\)\>\""}], ";"}], "\n", 
@@ -1021,8 +1022,11 @@ of multivectors x, y, ..., z\>\""}], ";"}]}], "Code",
    3.784736360791325*^9, 3.78473639160958*^9}, {3.784736494562001*^9, 
    3.784736523523878*^9}, {3.784736554193474*^9, 3.784736556071724*^9}, {
    3.784736631865334*^9, 3.784736771285516*^9}, {3.784755111157077*^9, 
-   3.7847551314624853`*^9}},
- CellLabel->"In[32]:=",ExpressionUUID->"bb95fb8d-d9f3-4598-863d-ce86f7c663a4"],
+   3.7847551314624853`*^9}, 3.784847028923971*^9, {3.784847187655232*^9, 
+   3.7848472430564203`*^9}, {3.784898131610187*^9, 3.784898173525095*^9}, {
+   3.784898239270535*^9, 
+   3.784898289389098*^9}},ExpressionUUID->"bb95fb8d-d9f3-4598-863d-\
+ce86f7c663a4"],
 
 Cell[BoxData["\<\"GeomAlg2019Dec`\"\>"], "Output",
  CellChangeTimes->{
@@ -1085,8 +1089,9 @@ Cell[BoxData["\<\"GeomAlg2019Dec`\"\>"], "Output",
    3.78475514348879*^9, {3.7847583548226023`*^9, 3.7847583552820807`*^9}, {
    3.784759322334984*^9, 3.7847593228776007`*^9}, {3.784759793754876*^9, 
    3.784759794322298*^9}, {3.784759989862686*^9, 3.784759990420109*^9}, 
-   3.784760104499997*^9},
- CellLabel->"Out[32]=",ExpressionUUID->"a4e9a7ff-a1f2-489d-a2b6-b51d4d01172f"],
+   3.784760104499997*^9, {3.784847860790823*^9, 3.784847861269431*^9}},
+ CellLabel->
+  "Out[234]=",ExpressionUUID->"0c048233-29e4-4d6c-8245-4aabd617759a"],
 
 Cell[BoxData["e"], "Output",
  CellChangeTimes->{
@@ -1149,11 +1154,12 @@ Cell[BoxData["e"], "Output",
    3.78475514348879*^9, {3.7847583548226023`*^9, 3.7847583552820807`*^9}, {
    3.784759322334984*^9, 3.7847593228776007`*^9}, {3.784759793754876*^9, 
    3.784759794322298*^9}, {3.784759989862686*^9, 3.784759990420109*^9}, 
-   3.7847601045076723`*^9},
- CellLabel->"Out[33]=",ExpressionUUID->"5c535056-258d-410d-b7a3-a8b34fd4aeb8"]
-}, Closed]]
-}, Closed]]
-}, Closed]],
+   3.784760104499997*^9, {3.784847860790823*^9, 3.784847861278585*^9}},
+ CellLabel->
+  "Out[235]=",ExpressionUUID->"14262356-9417-44df-b639-8d105c096452"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1193,7 +1199,8 @@ Cell[BoxData[
    3.691170901550271*^9, 3.691170931919511*^9, 3.691191012184572*^9, {
    3.691346372215829*^9, 3.691346379937498*^9}, {3.69134830962848*^9, 
    3.691348380261441*^9}, {3.691618877779533*^9, 3.691618892258176*^9}},
- CellLabel->"In[95]:=",ExpressionUUID->"2d4b85c4-75f9-4a80-a7c3-79d1a9e6ca1a"]
+ CellLabel->
+  "In[297]:=",ExpressionUUID->"2d4b85c4-75f9-4a80-a7c3-79d1a9e6ca1a"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -1327,7 +1334,8 @@ Cell[BoxData[{
    3.779740189107279*^9}, {3.7797403097473497`*^9, 3.779740326091112*^9}, {
    3.7797407473728867`*^9, 3.779740856128405*^9}, {3.7797409074034224`*^9, 
    3.779740935284237*^9}},
- CellLabel->"In[96]:=",ExpressionUUID->"eab06bde-dac4-4543-b3e4-dd8a5cfa5a9f"]
+ CellLabel->
+  "In[298]:=",ExpressionUUID->"eab06bde-dac4-4543-b3e4-dd8a5cfa5a9f"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -2493,9 +2501,9 @@ Cell[BoxData[{
    3.784759106740309*^9}, {3.784759498527687*^9, 3.784759512008932*^9}, {
    3.784759569981634*^9, 3.784759593390332*^9}, 3.784759675430455*^9, {
    3.784759971025591*^9, 3.784759972320204*^9}, {3.7847600769273357`*^9, 
-   3.784760096314665*^9}, {3.784760144942812*^9, 
-   3.784760254461423*^9}},ExpressionUUID->"cc35f83c-036d-4558-9ef4-\
-8571356e9f49"]
+   3.784760096314665*^9}, {3.784760144942812*^9, 3.784760254461423*^9}},
+ CellLabel->
+  "In[304]:=",ExpressionUUID->"cc35f83c-036d-4558-9ef4-8571356e9f49"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -2590,8 +2598,8 @@ Cell[BoxData[{
              SubscriptBox["e", "2"], " ", "or", " ", 
              SubscriptBox["e", "1"], 
              SubscriptBox["e", "2"], 
-             SubscriptBox["e", "4"]}], ")"}], "\n", "\n", "\t\t", "Cases"}]}],
-          "..."}], 
+             SubscriptBox["e", "4"]}], ")"}], "\n", "\t\t", "Cases"}]}], 
+         "..."}], 
         RowBox[{"Except", "[", "1", "]"}], " ", "removes", " ", "any", " ", 
         "terms", " ", "consisting", " ", "of", " ", "just", " ", "1", "\n", 
         "\t\t", 
@@ -2609,10 +2617,13 @@ Cell[BoxData[{
      RowBox[{"sometimes", " ", "in", " ", "reverse", " ", 
       RowBox[{
        RowBox[{"order", "!!"}], "!"}], "\n", "\t\t\t", "At", " ", "least", 
-      " ", "the", " ", "terms", " ", "are", " ", "organized"}], ",", " ", 
+      " ", "the", " ", "terms", " ", "are", " ", "collected", " ", 
+      "correctly"}], ",", " ", 
+     RowBox[{"whether", " ", "forward", " ", "or", " ", "backwards"}], ",", 
+     " ", 
      RowBox[{
       RowBox[{
-      "whether", " ", "forward", " ", "or", " ", "backwards", "\n", "\t", 
+      "or", " ", "a", " ", "little", " ", "of", " ", "both", "\n", "\t", 
        "This", " ", "function", " ", "is", " ", "used", " ", "by", " ", 
        "other", " ", "functions", " ", "and", " ", "can", " ", "also", " ", 
        "be", " ", "called", " ", "directly", " ", "by", " ", "the", " ", 
@@ -2623,7 +2634,7 @@ Cell[BoxData[{
        SuperscriptBox[
         SubscriptBox["e", "i"], "2"], " ", "multiplications", " ", "carried", 
        " ", "out", " ", "and", " ", "then", " ", "arranged", " ", "by", " ", 
-       "\n", "\t", "products", " ", "of", " ", 
+       "\n", "\t\t", "products", " ", "of", " ", 
        SubscriptBox["e", "i"], " ", "terms", "  ", "\n", "\t", 
        RowBox[{"Note", ":", " ", 
         RowBox[{"Just", " ", "as", " ", "in", " ", "step", " ", "1"}]}]}]}], 
@@ -2678,8 +2689,9 @@ Cell[BoxData[{
           RowBox[{"\"\<CollectG:  Input: clif = \>\"", ",", "clif"}], "]"}], 
          ";", "\n", "\t\t\t", 
          RowBox[{"Print", "[", 
-          RowBox[{"\"\<clif2 = \>\"", ",", "clif2"}], "]"}], ";", "\n", 
-         "\t\t\t", 
+          RowBox[{
+          "\"\<clif2 = Expanded clif + \[ScriptS] + \[ScriptT] = \>\"", ",", 
+           "clif2"}], "]"}], ";", "\n", "\t\t\t", 
          RowBox[{"Print", "[", 
           RowBox[{"\"\<clif2List = \>\"", ",", "clif2List"}], "]"}], ";", 
          "\n", "\t\t\t", 
@@ -2688,7 +2700,7 @@ Cell[BoxData[{
        "\t\t", "]"}], ";", "\[IndentingNewLine]", "\t\t", 
       RowBox[{"eList", "=", 
        RowBox[{"Reverse", "[", 
-        RowBox[{"EijSortG", "[", 
+        RowBox[{"ClifListSortG", "[", 
          RowBox[{"Cases", "[", 
           RowBox[{
            RowBox[{"DeleteDuplicates", "[", 
@@ -4287,10 +4299,12 @@ Cell[BoxData[{
    3.784734169670719*^9, 3.784734287425973*^9}, {3.784734851176296*^9, 
    3.7847349071904984`*^9}, {3.784734987020214*^9, 3.784735095256743*^9}, {
    3.784735162218617*^9, 3.7847351632129717`*^9}, {3.784736162102827*^9, 
-   3.7847362220394077`*^9}},
+   3.7847362220394077`*^9}, {3.784806394578795*^9, 3.784806448812022*^9}, {
+   3.784806506458089*^9, 3.7848065083700113`*^9}, {3.784807073221361*^9, 
+   3.784807152588169*^9}, 3.784898317379073*^9},
  CellLabel->
-  "In[124]:=",ExpressionUUID->"5b437657-c103-44f2-923e-4e6a07bccda2"]
-}, Closed]],
+  "In[3210]:=",ExpressionUUID->"5b437657-c103-44f2-923e-4e6a07bccda2"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -4311,8 +4325,14 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"ClifAtomsG", "[", "freelist_", "]"}], ":=", 
     RowBox[{
-     RowBox[{"AtomListToEijListG", "[", "freelist", "]"}], "/.", 
-     RowBox[{"List", "\[Rule]", "Plus"}]}]}], "\n", 
+     RowBox[{"ToClifEijListG", "[", "freelist", "]"}], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"w_", " ", 
+         SubscriptBox["e", "u__"]}], "\[Rule]", 
+        SubscriptBox["e", "u"]}], ",", 
+       RowBox[{"List", "\[Rule]", "Plus"}]}], "}"}]}]}], "\n", 
    RowBox[{"(*", " ", 
     RowBox[{
      RowBox[{"Example", ".", " ", 
@@ -4640,7 +4660,14 @@ Cell[BoxData[
        RowBox[{"conList", "=", 
         RowBox[{"List", "[", "conTerm", "]"}]}], ";", "\n", "\t", 
        RowBox[{"freeList1", "=", 
-        RowBox[{"List", "@@", "freeTerm"}]}], ";", "\n", "\t", 
+        RowBox[{"List", "@@", "freeTerm"}]}], ";", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Note", ":", " ", 
+         RowBox[{
+          RowBox[{"List", "@@", " ", "does"}], " ", "not", " ", "change", " ",
+           "order", " ", "of", " ", 
+          RowBox[{"terms", ".", " ", "They"}], " ", "are", " ", "still", " ", 
+          "sorted", " ", "correctly"}]}], " ", "*)"}], "\n", "\t", 
        RowBox[{"roundoffList", "=", 
         RowBox[{"Cases", "[", 
          RowBox[{
@@ -4749,47 +4776,75 @@ Cell[BoxData[
       RowBox[{"INPUT", ":", " ", "clif"}], " ", "=", " ", 
       RowBox[{
        RowBox[{"A", " ", "multivector", "\n", "\t", 
-        RowBox[{"PROCESS", ":", "\n", "\t", "OUTPUT", ":", " ", "eList"}]}], 
-       " ", "=", " ", 
+        RowBox[{"PROCESS", ":", "  ", "\n", "\t\t", "clifList"}]}], " ", "=", 
+       " ", 
        RowBox[{
         RowBox[{
-         RowBox[{
-          RowBox[{
-           RowBox[{"list", " ", "of", " ", 
+        "clif", " ", "list", " ", "with", " ", "reduced", " ", "square", " ", 
+         
+         RowBox[{"terms", ".", " ", 
+          RowBox[{"Example", ":", " ", 
+           RowBox[{
+            SubsuperscriptBox["e", "3", "2"], 
+            SubsuperscriptBox["e", "4", "2"], " ", "changes", " ", "to", " ", 
+            
             SubscriptBox["e", 
-             RowBox[{"i", ",", "j", ",", "..."}]], "corresponding", " ", "to",
-             " ", 
-            SubscriptBox["e", "i"], 
-            SubscriptBox["e", "j"]}], "..."}], " ", "terms", " ", "in", " ", 
-          "clif", "\n", "\t\t\t", "1", "st", " ", "term", " ", "is", " ", 
-          "replaced", " ", "by", " ", "0", " ", "if", " ", "constant", " ", 
-          "term", " ", "of", " ", "clif", " ", "is", " ", "non"}], "-", 
-         RowBox[{"zero", " ", "\n", "\t\t\t", "eList"}]}], " ", "=", " ", 
+             RowBox[{"3", ",", "3"}]], " ", 
+            SubscriptBox["e", 
+             RowBox[{"4", ",", "4"}]], "\n", "\t\t\t", "Note"}], ":", " ", 
+           RowBox[{
+            RowBox[{
+            "The", " ", "only", " ", "time", " ", "there", " ", "may", " ", 
+             "be", " ", "square", " ", "terms", " ", "is", " ", "during", " ",
+              "computation", " ", "of", " ", "\n", "\t\t\t\t", "geometric", 
+             " ", "product", "\n", "\t\t", "ConstantToZeroG", " ", "changees",
+              " ", "the", " ", "1", " ", "st", " ", "element", " ", "in", " ",
+              "the", " ", "list", " ", "to", " ", "1", " ", "if", " ", 
+             "constant", " ", "term"}], " ", "\[NotEqual]", " ", 
+            RowBox[{
+            "0", "\n", "\t\t", "ToAtomEijList", " ", "changes", " ", "clif", 
+             " ", "list", " ", "into", " ", "a", " ", "Eij", " ", "list", " ",
+              "without", " ", "coefficients", "\n", "\t", 
+             RowBox[{"OUTPUT", ":", " ", "eList"}]}]}]}]}]}], " ", "=", " ", 
         RowBox[{
          RowBox[{
-          RowBox[{"{", " ", "1", " ", "}"}], " ", "if", " ", "clif"}], " ", 
-         "=", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"list", " ", "of", " ", 
+             SubscriptBox["e", 
+              RowBox[{"i", ",", "j", ",", "..."}]], "corresponding", " ", 
+             "to", " ", 
+             SubscriptBox["e", "i"], 
+             SubscriptBox["e", "j"]}], "..."}], " ", "terms", " ", "in", " ", 
+           "clif", "\n", "\t\t\t", "1", "st", " ", "term", " ", "is", " ", 
+           "replaced", " ", "by", " ", "1", " ", "if", " ", "constant", " ", 
+           "term", " ", "of", " ", "clif", " ", "is", " ", "non"}], "-", 
+          RowBox[{"zero", " ", "\n", "\t\t\t", "eList"}]}], " ", "=", " ", 
          RowBox[{
           RowBox[{
-           RowBox[{"0", "\n", "\t\t\t", 
-            RowBox[{"Example", ":", " ", 
-             RowBox[{"5", " ", "+", " ", 
-              RowBox[{
-               SqrtBox["5"], 
-               SubscriptBox["e", "1"], 
-               SubscriptBox["e", 
-                RowBox[{"2", " "}]]}], "+", " ", 
-              RowBox[{"3", " ", 
-               SubscriptBox["e", "1"], 
-               SubscriptBox["e", "2"]}]}]}]}], " ", "\[Rule]", " ", "eList"}],
-           " ", "=", " ", 
-          RowBox[{"{", 
-           RowBox[{"1", ",", " ", 
-            RowBox[{
-             SubscriptBox["e", 
-              RowBox[{"1", ",", "2"}]], " ", 
-             SubscriptBox["e", 
-              RowBox[{"1", ",", "2"}]]}]}], "}"}]}]}]}]}]}], "  ", "*)"}], 
+           RowBox[{"{", " ", "1", " ", "}"}], " ", "if", " ", "clif"}], " ", 
+          "=", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"0", "\n", "\t\t\t", 
+             RowBox[{"Example", ":", " ", 
+              RowBox[{"5", " ", "+", " ", 
+               RowBox[{
+                SqrtBox["5"], 
+                SubscriptBox["e", "1"], 
+                SubscriptBox["e", 
+                 RowBox[{"2", " "}]]}], "+", " ", 
+               RowBox[{"3", " ", 
+                SubscriptBox["e", "1"], 
+                SubscriptBox["e", "2"]}]}]}]}], " ", "\[Rule]", " ", 
+            "eList"}], " ", "=", " ", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", " ", 
+             RowBox[{
+              SubscriptBox["e", 
+               RowBox[{"1", ",", "2"}]], " ", 
+              SubscriptBox["e", 
+               RowBox[{"1", ",", "2"}]]}]}], "}"}]}]}]}]}]}]}], "  ", "*)"}], 
     "\n", "\n", "\t", 
     RowBox[{"Module", "[", 
      RowBox[{
@@ -4805,47 +4860,13 @@ Cell[BoxData[
            SubscriptBox["e", "u_"], "2"], "\[Rule]", 
           SubscriptBox["e", 
            RowBox[{"u", ",", "u"}]]}]}]}], ";", " ", "\n", "\t\t", 
-       RowBox[{"(*", " ", 
-        RowBox[{
-         RowBox[{"Reduce", " ", "square", " ", "terms"}], ",", " ", 
-         RowBox[{"if", " ", 
-          RowBox[{"any", ".", " ", 
-           RowBox[{"Example", ":", " ", 
-            RowBox[{
-             SubsuperscriptBox["e", "3", "2"], 
-             SubsuperscriptBox["e", "4", "2"], " ", "changes", " ", "to", " ", 
-             SubscriptBox["e", 
-              RowBox[{"3", ",", "3"}]], " ", 
-             SubscriptBox["e", 
-              RowBox[{"4", ",", "4"}]], "  ", "\n", "\t\t\t", "Note"}], ":", 
-            " ", 
-            RowBox[{
-            "The", " ", "only", " ", "time", " ", "there", " ", "may", " ", 
-             "be", " ", "square", " ", "terms", " ", "is", " ", "during", " ",
-              "computation", " ", "of", " ", "geometric", " ", 
-             "product"}]}]}]}]}], " ", "*)"}], "\n", "\t\t", 
        RowBox[{"const", "=", 
         RowBox[{"ConstantG", "[", "clif", "]"}]}], ";", "\n", "\t\t", 
        RowBox[{"eList", "=", 
-        RowBox[{"AtomListToEijListG", "[", 
+        RowBox[{"ToAtomEijListG", "[", 
          RowBox[{"ConstantToOneG", "[", 
-          RowBox[{"clifList", ",", "const"}], "]"}], "]"}]}], ";", "\n", "\n",
-        "\t\t", 
-       RowBox[{"(*", " ", 
-        RowBox[{
-         RowBox[{
-          RowBox[{
-          "AtomListToEijList", " ", "changes", " ", "clif", " ", "list", " ", 
-           "into", " ", "a", " ", 
-           SubscriptBox["e", 
-            RowBox[{"i", ",", 
-             RowBox[{"j", "..."}]}]]}], "-", 
-          RowBox[{
-          "subscript", " ", "list", "\n", "\t\t\t", "ConstantToZeroG", " ", 
-           "changees", " ", "the", " ", "1", "st", " ", "element", " ", "in", 
-           " ", "the", " ", "list", " ", "to", " ", "0", " ", "if", " ", 
-           "constant", " ", "term"}]}], " ", "\[NotEqual]", " ", "0"}], 
-        "    ", "*)"}], "\n", "\t\t", "eList"}]}], "\n", "\t", "]"}]}], " ", 
+          RowBox[{"clifList", ",", "const"}], "]"}], "]"}]}]}]}], "\n", "\t", 
+     "]"}]}], " ", 
    RowBox[{"(*", " ", 
     RowBox[{"End", " ", "of", " ", "EijListG"}], " ", "*)"}], "\n", "\n", 
    RowBox[{
@@ -4866,12 +4887,12 @@ Cell[BoxData[
       RowBox[{"1", "-", 
        RowBox[{"1", " ", "matching", " ", "ClifToListG", " \t", "\n", "\t", 
         RowBox[{"Note", ":", " ", 
-         RowBox[{"Unlike", " ", "EijListG"}]}]}]}], ",", " ", 
-      RowBox[{
-       RowBox[{
-       "1", "st", " ", "term", " ", "equals", " ", "1", " ", "if", " ", 
-        "clif", " ", "constant", " ", "is", " ", "non"}], "-", "zero"}]}], 
-     " ", "*)"}], "\n", "\t", "\n", "\t", 
+         RowBox[{
+          RowBox[{
+          "1", "st", " ", "term", " ", "equals", " ", "1", " ", "if", " ", 
+           "clif", " ", "has", " ", "a", " ", "non"}], "-", 
+          RowBox[{"zero", " ", "constant"}]}]}]}]}]}], "  ", "*)"}], "\n", 
+    "\t", "\n", "\t", 
     RowBox[{"Module", "[", 
      RowBox[{
       RowBox[{"{", "atomList", "}"}], ",", "\n", "\t", 
@@ -4910,7 +4931,7 @@ Cell[BoxData[
     RowBox[{"End", " ", "of", " ", "AtomListG", " ", "module"}], " ", "*)"}], 
    "\n", "\n", 
    RowBox[{
-    RowBox[{"AtomListToEijListG", "[", "list_", "]"}], ":=", 
+    RowBox[{"ToClifEijListG", "[", "list_", "]"}], ":=", 
     RowBox[{"list", "//.", 
      RowBox[{"{", 
       RowBox[{
@@ -4921,10 +4942,6 @@ Cell[BoxData[
         SubscriptBox["e", 
          RowBox[{"u", ",", "v"}]]}], ",", 
        RowBox[{
-        RowBox[{"w_", " ", 
-         SubscriptBox["e", "u__"]}], "\[Rule]", 
-        SubscriptBox["e", "u"]}], ",", 
-       RowBox[{
         SubscriptBox["e", "u__"], "\[RuleDelayed]", 
         RowBox[{"Subscript", "[", 
          RowBox[{"e", ",", 
@@ -4932,35 +4949,54 @@ Cell[BoxData[
            RowBox[{"Sort", "[", 
             RowBox[{"List", "[", "u", "]"}], "]"}]}]}], "]"}]}]}], "}"}]}]}], 
    "\n", 
-   RowBox[{"(*", " ", 
+   RowBox[{"(*", "  ", 
     RowBox[{
      RowBox[{
       RowBox[{
        RowBox[{
-       "The", " ", "repeated", " ", "replace", " ", "changes", " ", "clif", 
-        " ", "list", " ", "into", " ", "a", " ", 
-        SubscriptBox["e", 
-         RowBox[{"i", ",", "j", ",", "..."}]], " ", "subscript", " ", "list", 
-        "\n", "\t", "But"}], "..."}], " ", "Mathematica", " ", "replaces", 
-      " ", 
+        RowBox[{"By", " ", "'"}], "clif", " ", 
+        RowBox[{"list", "'"}], " ", "is", " ", "meant", " ", "a", " ", "list",
+         " ", "of", " ", "atoms", " ", "that", " ", "may", " ", "or", " ", 
+        "may", " ", "not", " ", "have", " ", "coefficients", "\n", "\t", 
+        RowBox[{"By", " ", "'"}], "clif", " ", "Eij", " ", 
+        RowBox[{"list", "'"}], " ", "is", " ", "mean", " ", "a", " ", "clif", 
+        " ", "list", " ", "where", " ", "the", " ", "products", " ", 
+        SubscriptBox["e", "1"], 
+        SubscriptBox["e", "2"]}], "..."}], " ", "are", " ", "changed", " ", 
+      "to", " ", "\n", "\t\t", 
+      SubscriptBox["e", 
+       RowBox[{"1", ",", "2", ",", "..."}]], "\n", "\t", "The", " ", 
+      "repeated", " ", "replace", " ", "changes", " ", "clif", " ", "list", 
+      " ", "into", " ", "a", " ", "clif", " ", "Eij", " ", "list", "\n", "\t",
+       "Because", " ", "Mathematica", " ", "replaces", " ", 
       SubscriptBox["e", "1"], 
       SubscriptBox["e", "2"], 
       SubscriptBox["e", "3"], " ", "by", " ", 
-      RowBox[{
-       RowBox[{
-        SubscriptBox["e", 
-         RowBox[{"3", ",", "1", ",", "2"}]], " ", "!!"}], "!"}], "\n", "\t", 
-      "Thus"}], ",", " ", 
+      SubscriptBox["e", 
+       RowBox[{"3", ",", "1", ",", "2"}]]}], ",", " ", 
      RowBox[{"we", " ", "sort", " ", 
       RowBox[{"List", "[", 
        RowBox[{"3", ",", "1", ",", "2"}], "]"}], " ", "to", " ", "get", " ", 
       RowBox[{"{", 
-       RowBox[{"1", ",", "2", ",", "3"}], "}"}], " ", "and", " ", "then", " ",
-       "use", " ", "Sequence", " ", "to", " ", "move", " ", "it", " ", "into",
-       " ", "a", " ", "subscript", " ", "of", " ", "e"}]}], "  ", "*)"}], 
-   "\n", "\n", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}], " ", "and", " ", "\n", "\t", 
+      "then", " ", "use", " ", "Sequence", " ", "to", " ", "make", " ", "it", 
+      " ", "a", " ", "subscript", " ", "of", " ", "e"}]}], "  ", "*)"}], "\n",
+    "\n", 
    RowBox[{
-    RowBox[{"EijListToAtomListG", "[", "list_", "]"}], ":=", 
+    RowBox[{"ToAtomEijListG", "[", "list_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"ToClifEijListG", "[", "list", "]"}], "/.", 
+     RowBox[{
+      RowBox[{"w_", " ", 
+       SubscriptBox["e", "u__"]}], "->", 
+      SubscriptBox["e", "u"]}]}]}], "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Local", " ", 
+     RowBox[{"function", ".", " ", "Converts"}], " ", "list", " ", "to", " ", 
+     "an", " ", "Eij", " ", "list", " ", "without", " ", "coefficients"}], 
+    " ", "*)"}], "\n", "\n", "\n", 
+   RowBox[{
+    RowBox[{"ToClifListG", "[", "list_", "]"}], ":=", 
     RowBox[{"list", " ", "//.", 
      RowBox[{"{", 
       RowBox[{
@@ -4971,12 +5007,34 @@ Cell[BoxData[
          SubscriptBox["e", "u"], " ", 
          SubscriptBox["e", "v"]}]}], ",", 
        RowBox[{
-        SubscriptBox["e", 
-         RowBox[{
-          RowBox[{"_", " ", "u_v"}], ",", "w__"}]], "\[Rule]", 
-        RowBox[{
-         SubscriptBox["e", "uv"], " ", 
-         SubscriptBox["e", "w"]}]}]}], "}"}]}]}], "\n", "\n", 
+        RowBox[{"u_", "/;", 
+         RowBox[{"u", "\[Equal]", "0"}]}], "\[Rule]", "0"}]}], "}"}]}]}], 
+   "\n", 
+   RowBox[{"(*", "  ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Change", " ", "a", " ", "clif", " ", "Eij", " ", "list", " ", 
+       RowBox[{"(", 
+        RowBox[{"or", " ", "an", " ", "atom", " ", "Eij", " ", "list"}], 
+        ")"}], " ", "back", " ", "to", " ", "a", " ", "clif", " ", "list", 
+       "\n", "\t", "The", " ", "rule", " ", "0"}], " ", "\[Rule]", " ", 
+      RowBox[{
+       RowBox[{
+       "0", " ", "converts", " ", "expressions", " ", "like", " ", "0."}], 
+       " ", "+", " ", 
+       RowBox[{
+        SubscriptBox["e", "1"], 
+        SubscriptBox["e", "2"], " ", "into", " ", 
+        SubscriptBox["e", "1"], 
+        SubscriptBox["e", "2"]}]}]}], ",", " ", 
+     RowBox[{"We", " ", "only", " ", 
+      RowBox[{"handle", " ", "'"}], 
+      RowBox[{"0.", "'"}], "\n", "\t", "when", " ", "returning", " ", "from", 
+      " ", "a", " ", "clif", " ", "Eij", " ", "list", " ", "to", " ", "a", 
+      " ", "clif", " ", "list", " ", "rather", " ", "than", " ", "also", " ", 
+      "doing", " ", "it", " ", "during", "\n", "\t", "conversion", " ", 
+      "from", " ", "clif", " ", "list", " ", "to", " ", "clif", " ", "Eij", 
+      " ", "list"}]}], "  ", "*)"}], "\n", "\n", 
    RowBox[{
     RowBox[{
      RowBox[{"CoeffListG", "[", "clif_", "]"}], ":=", " ", 
@@ -5599,120 +5657,79 @@ Cell[BoxData[
     RowBox[{"End", " ", "of", " ", "SubscriptListG", " ", "Module"}], " ", 
     "*)"}], "\n", "\t", "\n", 
    RowBox[{
-    RowBox[{"EijSortG", "[", "0.", "]"}], ":=", "0"}], "\n", "\n", 
+    RowBox[{"EijSortG", "[", "eijList_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"atomEijList", ",", "eList", ",", "sortedEijList"}], "}"}], 
+      ",", "\n", 
+      RowBox[{
+       RowBox[{"atomEijList", "=", 
+        RowBox[{"eijList", "/.", 
+         RowBox[{
+          RowBox[{"w_", " ", 
+           SubscriptBox["e", "u__"]}], "\[Rule]", 
+          SubscriptBox["e", "u"]}]}]}], ";", "\n", 
+       RowBox[{"eList", "=", 
+        RowBox[{"Reverse", "[", 
+         RowBox[{"Sort", "[", "atomEijList", "]"}], "]"}]}], ";", "\n", 
+       RowBox[{"sortedEijList", "=", 
+        RowBox[{"SortBy", "[", 
+         RowBox[{"atomEijList", ",", "eList"}], "]"}]}]}]}], "\n", "]"}]}], 
+   "\n", "\n", 
    RowBox[{
-    RowBox[{"EijSortG", "[", "clifList_", "]"}], ":=", "\n", 
-    RowBox[{
+    RowBox[{"ClifListSortG", "[", 
+     RowBox[{"{", "0.", "}"}], "]"}], ":=", "0"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{"ClifListSortG", "[", "clifList_", "]"}], ":=", 
+    RowBox[{"ToClifListG", "[", 
      RowBox[{"Sort", "[", 
-      RowBox[{"clifList", "//.", 
-       RowBox[{"{", 
+      RowBox[{"ToAtomEijListG", "[", "clifList", "]"}], "]"}], "]"}], " ", 
+    RowBox[{"(*", "\n", "\t", 
+     RowBox[{
+      RowBox[{"INPUT", ":", " ", 
+       RowBox[{"A", " ", "clif", " ", "list", "\n", "\t", "PROCESS"}], ":", 
+       " ", 
+       RowBox[{
         RowBox[{
          RowBox[{
-          RowBox[{
-           SubscriptBox["e", "u__"], 
-           SubscriptBox["e", "v__"]}], "->", 
+         "Sorts", " ", "list", " ", "as", " ", "though", " ", "products", " ",
+           "like", " ", 
+          SubscriptBox["e", "1"], " ", 
+          SubscriptBox["e", "2"], " ", "were", " ", 
           SubscriptBox["e", 
-           RowBox[{"u", ",", "v"}]]}], ",", 
-         RowBox[{
-          SubscriptBox["e", "u__"], "\[RuleDelayed]", 
-          RowBox[{"Subscript", "[", 
-           RowBox[{"e", ",", 
-            RowBox[{"Sequence", "@@", 
-             RowBox[{"Sort", "[", 
-              RowBox[{"List", "[", "u", "]"}], "]"}]}]}], "]"}]}]}], "}"}]}], 
-      "]"}], "//.", 
-     RowBox[{"{", 
+           RowBox[{"1", ",", "2", ",", "4"}]], " ", "\n", "             ", 
+          "Singlets", " ", "precede", " ", "pairs", " ", "precede", " ", 
+          "triples"}], " ", "..."}], " ", "\n", "             ", "Preserves", 
+        " ", "duplicates", " ", "\n", "        ", "First"}]}], ",", " ", 
       RowBox[{
-       RowBox[{
-        SubscriptBox["e", 
-         RowBox[{"u_", ",", "v__"}]], "\[Rule]", 
+      "change", " ", "clif", " ", "list", " ", "to", " ", "an", " ", "Eij", 
+       " ", "list", " ", "without", " ", "coefficients", "\n", "        ", 
+       "Next"}], ",", " ", 
+      RowBox[{"Sort", " ", "the", " ", "subscripted", " ", "list", " ", 
+       RowBox[{"(", 
         RowBox[{
-         SubscriptBox["e", "u"], " ", 
-         SubscriptBox["e", "v"]}]}], ",", 
-       RowBox[{
-        SubscriptBox["e", 
-         RowBox[{
-          RowBox[{"_", " ", "u_v"}], ",", "w__"}]], "\[Rule]", 
-        RowBox[{
-         SubscriptBox["e", "uv"], " ", 
-         SubscriptBox["e", "w"]}]}], ",", 
-       RowBox[{
-        RowBox[{"u_", "/;", 
-         RowBox[{"u", "\[Equal]", "0"}]}], "\[Rule]", "0"}]}], "}"}], " ", 
-     RowBox[{"(*", "\n", "\t", 
-      RowBox[{
-       RowBox[{"INPUT", ":", " ", 
-        RowBox[{"A", " ", "clif", " ", "list", "\n", "\t", "PROCESS"}], ":", 
-        " ", 
-        RowBox[{
-         RowBox[{
-          RowBox[{
-          "Sort", " ", "list", " ", "as", " ", "though", " ", "products", " ",
-            "like", " ", 
-           SubscriptBox["e", "1"], " ", 
-           SubscriptBox["e", "2"], " ", "were", " ", 
-           SubscriptBox["e", 
-            RowBox[{"1", ",", "2", ",", "4"}]], " ", "\n", "             ", 
-           "Singlets", " ", "precede", " ", "pairs", " ", "precede", " ", 
-           "triples"}], " ", "..."}], " ", "\n", "             ", "Preserves",
-          " ", "duplicates", " ", "\n", "             ", "First"}]}], ",", 
-       " ", 
-       RowBox[{"change", " ", "product", " ", "of", " ", 
-        RowBox[{
-         SubscriptBox["e", "i"], "'"}], "s", " ", "to", " ", 
-        SubscriptBox["e", 
-         RowBox[{"i", ",", "j", ",", "..."}]], "\n", "                ", 
-        RowBox[{"Sequence", "@@", "Sort"}], " ", "ensures", " ", 
-        SubscriptBox["e", 
-         RowBox[{"1", ",", "2", ",", "3"}]], " ", "for", " ", "example", " ", 
-        "rather", " ", "than", " ", 
-        SubscriptBox["e", 
-         RowBox[{"3", ",", "1", ",", "2"}]], "\n", "             ", "Next"}], 
-       ",", " ", 
-       RowBox[{"Sort", " ", "the", " ", "subscripted", " ", "list", " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"i", ".", "e", "."}], ",", " ", 
-          RowBox[{"an", " ", 
-           SubscriptBox["e", 
-            RowBox[{"i", ",", "j"}]], " ", "sort"}]}], ")"}], "\n", 
-        "             ", "Finally"}], ",", " ", 
-       RowBox[{
-       "convert", " ", "subscripted", " ", "list", " ", "back", " ", "to", 
-        " ", "a", " ", "product", " ", "list", "\n", "             ", 
+         RowBox[{"i", ".", "e", "."}], ",", " ", 
+         RowBox[{"an", " ", 
+          SubscriptBox["e", 
+           RowBox[{"i", ",", "j"}]], " ", "sort"}]}], ")"}], "\n", "        ",
         "Finally"}], ",", " ", 
+      RowBox[{
        RowBox[{
         RowBox[{
-         RowBox[{"finally", " ", "..."}], " ", "the", " ", "rule", " ", "0"}],
-         " ", "\[Rule]", " ", 
+         RowBox[{"convert", " ", 
+          RowBox[{
+           SubscriptBox["e", 
+            RowBox[{"i", ",", "j", ",", "..."}]], "'"}], "s", " ", "to", " ", 
+          "product", " ", 
+          SubscriptBox["e", "i"], 
+          SubscriptBox["e", "j"]}], "..."}], "'"}], "s", "\n", "    ", 
+       RowBox[{"OUTPUT", ":", " ", 
         RowBox[{
-         RowBox[{
-         "0", " ", "converts", " ", "expressions", " ", "like", " ", "0."}], 
-         " ", "+", " ", 
-         RowBox[{
-          SubscriptBox["e", "1"], 
-          SubscriptBox["e", "2"], " ", "into", " ", 
-          SubscriptBox["e", "1"], 
-          SubscriptBox["e", "2"], "\n", "\n", "        ", 
-          RowBox[{"OUTPUT", ":", " ", 
-           RowBox[{
-           "The", " ", "clif", " ", "list", " ", "sorted", " ", "as", " ", 
-            "though", " ", "it", " ", "were", " ", "subscripted", "\n", 
-            "            ", "Could", " ", "be", " ", "useful"}]}]}]}]}], ",", 
-       " ", 
-       RowBox[{"for", " ", "example"}], ",", " ", 
-       RowBox[{
-       "to", " ", "match", " ", "a", " ", "clif", " ", "list", " ", "to", " ",
-         "a", " ", "sorted", " ", "coefficient", " ", "list", " ", "like", 
-        " ", 
-        RowBox[{"{", 
-         RowBox[{
-          SubscriptBox["b", 
-           RowBox[{"1", ",", "3"}]], ",", " ", 
-          SubscriptBox["b", 
-           RowBox[{
-            RowBox[{"2", ",", "3", ",", "4"}], "}"}]]}], "\n"}]}]}], 
-      "*)"}]}]}]}]}]], "Code",
+        "The", " ", "clif", " ", "list", " ", "sorted", " ", "in", " ", "Eij",
+          " ", "order", "\n", "            ", "Used", " ", "by", " ", 
+         "CollecttG", " ", "to", " ", "sort", " ", "clif", " ", 
+         "lists"}]}]}]}], "\n", "*)"}]}]}]}]], "Code",
  CellChangeTimes->{
   3.690747757040749*^9, {3.690748490480057*^9, 3.690748533266705*^9}, {
    3.690748589310161*^9, 3.690748676533189*^9}, {3.690748711277614*^9, 
@@ -6045,10 +6062,37 @@ Cell[BoxData[
    3.784646098507721*^9}, 3.784646448340713*^9, {3.7846657842292633`*^9, 
    3.784665792948866*^9}, 3.7846658869645042`*^9, 3.784667456695911*^9, {
    3.784667827460155*^9, 3.784667843495006*^9}, {3.784668144906209*^9, 
-   3.784668145890602*^9}, {3.784668196462788*^9, 3.784668295877043*^9}},
- CellLabel->
-  "In[147]:=",ExpressionUUID->"0cd99394-7461-4bed-8931-53bb46a7c3e7"]
-}, Closed]],
+   3.784668145890602*^9}, {3.784668196462788*^9, 3.784668295877043*^9}, {
+   3.784806737738914*^9, 3.784806798340782*^9}, {3.7848068575624933`*^9, 
+   3.784806882448557*^9}, {3.784810016806476*^9, 3.78481002116917*^9}, {
+   3.784845249268087*^9, 3.784845263758712*^9}, 3.784845318669033*^9, {
+   3.784845372190811*^9, 3.784845418942285*^9}, {3.7848456928662663`*^9, 
+   3.7848457310501757`*^9}, {3.784845766280452*^9, 3.784845803197097*^9}, {
+   3.784845835032456*^9, 3.784845844366549*^9}, {3.784845881076448*^9, 
+   3.7848458912316923`*^9}, {3.7848459326320343`*^9, 3.784845947324573*^9}, {
+   3.7848459990119123`*^9, 3.784846055484811*^9}, {3.78484651855087*^9, 
+   3.7848465196900454`*^9}, {3.784847043830043*^9, 3.78484705194809*^9}, {
+   3.7848470941116333`*^9, 3.7848471237735*^9}, {3.784847304920944*^9, 
+   3.784847309054523*^9}, 3.784887901412648*^9, {3.784887938704638*^9, 
+   3.784888050498619*^9}, {3.784888445141859*^9, 3.7848884691895733`*^9}, {
+   3.784888503413824*^9, 3.784888773097848*^9}, {3.7848888093881407`*^9, 
+   3.784888913270431*^9}, {3.784888968241796*^9, 3.784889037570608*^9}, {
+   3.784893313295953*^9, 3.784893315636785*^9}, 3.78489340119424*^9, {
+   3.784893467137866*^9, 3.78489348075128*^9}, {3.784893512279914*^9, 
+   3.7848936032849293`*^9}, {3.784893638498707*^9, 3.784893808317947*^9}, {
+   3.7848946994281473`*^9, 3.784894726966551*^9}, {3.784894911991172*^9, 
+   3.784895135748083*^9}, {3.784895168602686*^9, 3.7848953035373697`*^9}, {
+   3.7848954198198433`*^9, 3.784895462527638*^9}, {3.784895816424993*^9, 
+   3.7848959391291113`*^9}, {3.784895983061211*^9, 3.784896058358707*^9}, {
+   3.784896238756997*^9, 3.784896281501696*^9}, {3.784896321823114*^9, 
+   3.784896425690246*^9}, {3.78489675905203*^9, 3.7848967646754923`*^9}, {
+   3.784896809879846*^9, 3.784896833607441*^9}, {3.784896940731861*^9, 
+   3.784896953588717*^9}, {3.7848970755007563`*^9, 3.784897141436084*^9}, {
+   3.784897181184753*^9, 3.7848974327896957`*^9}, {3.784897952632387*^9, 
+   3.784897952992962*^9}, {3.784898346119776*^9, 
+   3.784898347567444*^9}},ExpressionUUID->"0cd99394-7461-4bed-8931-\
+53bb46a7c3e7"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -6977,7 +7021,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{
          RowBox[{"clif1", " ", "\[Diamond]", " ", "clif2"}], "\n", "\t", 
-         "atomPrdtList"}], " ", "=", " ", 
+         "atomListPrdt"}], " ", "=", " ", 
         RowBox[{
          RowBox[{
          "a", " ", "list", " ", "of", " ", "the", " ", "atoms", " ", "of", 
@@ -6998,7 +7042,7 @@ Cell[BoxData[{
               SubscriptBox["e", "2"], "\[Diamond]", 
               SubscriptBox["e", "1"]}]}]}], ")"}], " ", "and", " ", "are", 
           " ", "removed", "\n", "\t", 
-          RowBox[{"atomPrdtEijList", ":", " ", 
+          RowBox[{"atomEijListPrdt", ":", " ", 
            RowBox[{
            "In", " ", "order", " ", "to", " ", "sort", " ", "a", " ", "long", 
             " ", "list", " ", "of", " ", "atoms", " ", "with", " ", 
@@ -7015,7 +7059,12 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{
       "we", " ", "convert", " ", "the", " ", "list", " ", "into", " ", "a", 
-       " ", "sorted", "\n", "\t\t", "Eij", " ", "list", "\n", "\t", 
+       " ", "sorted", "\n", "\t\t", "Eij", " ", 
+       RowBox[{"list", ".", " ", "It"}], " ", "is", " ", "slightly", " ", 
+       "more", " ", "efficient", " ", "to", " ", "use", " ", "ToClifEijListG",
+        " ", "rather", " ", "than", "\n", "\t\t", "ToAtomEijListG", " ", 
+       "because", " ", "the", " ", "conversion", " ", "to", " ", "atoms", " ",
+        "has", " ", "already", " ", "been", " ", "performed", "\n", "\t", 
        "coefPrdtList"}], " ", "=", " ", 
       RowBox[{
       "a", " ", "list", " ", "of", " ", "the", " ", "coeffcients", " ", 
@@ -7078,8 +7127,8 @@ Cell[BoxData[{
         RowBox[{"AtomListG", "[", "prdt", "]"}], "]"}]}], ";", "\n", " ", 
       RowBox[{"atomEijListPrdt", " ", "=", " ", 
        RowBox[{"Sort", "[", 
-        RowBox[{"AtomListToEijListG", "[", "atomListPrdt", "]"}], "]"}]}], 
-      ";", "\n", " ", 
+        RowBox[{"ToClifEijListG", "[", "atomListPrdt", "]"}], "]"}]}], ";", 
+      "\n", " ", 
       RowBox[{"coefListPrdt", " ", "=", " ", 
        RowBox[{"atomEijListPrdt", "/.", 
         RowBox[{"e", "->", "\[ScriptA]"}]}]}], ";", "\n", " ", 
@@ -7088,8 +7137,7 @@ Cell[BoxData[{
         RowBox[{"[", "1", "]"}], "]"}], " ", "=", " ", 
        SubscriptBox["\[ScriptA]", "0"]}], ";", "\n", " ", 
       RowBox[{"sortedAtomListPrdt", " ", "=", " ", 
-       RowBox[{"EijListToAtomListG", "[", "atomEijListPrdt", "]"}]}], ";", 
-      "\n", " ", 
+       RowBox[{"ToClifListG", "[", "atomEijListPrdt", "]"}]}], ";", "\n", " ", 
       RowBox[{"clifclif", " ", "=", " ", 
        RowBox[{"coefListPrdt", ".", "sortedAtomListPrdt"}]}], ";", "\n", " ", 
       "\n", " ", 
@@ -7361,7 +7409,7 @@ Cell[BoxData[{
             RowBox[{"atomListClif", ",", "1"}], "]"}]}], "\n", "\t", "]"}], 
          ";", "\[IndentingNewLine]", "\t", 
          RowBox[{"atomEijListClif", "=", 
-          RowBox[{"AtomListToEijListG", "[", "atomListClif", "]"}]}], ";", 
+          RowBox[{"ToClifEijListG", "[", "atomListClif", "]"}]}], ";", 
          "\[IndentingNewLine]", "\t", 
          RowBox[{"coefListClif1", "=", 
           RowBox[{"atomEijListClif", "/.", 
@@ -8512,10 +8560,12 @@ uvw@sbcglobal.net\>\"", "]"}], ",", "\n", "\t", "\n", "\t",
    3.784550367242638*^9}, {3.784550412172278*^9, 3.784550452093219*^9}, {
    3.784550494430052*^9, 3.78455049817663*^9}, {3.784550997635738*^9, 
    3.78455099985402*^9}, {3.784585568796249*^9, 3.784585741581216*^9}, {
-   3.7845857738849993`*^9, 3.784585783792852*^9}},
- CellLabel->
-  "In[171]:=",ExpressionUUID->"adb2e33b-3392-4e4d-adae-ed10dbc77e4d"]
-}, Closed]],
+   3.7845857738849993`*^9, 3.784585783792852*^9}, {3.784847136640553*^9, 
+   3.784847141374935*^9}, 3.784847312542728*^9, {3.784896533847645*^9, 
+   3.784896540136869*^9}, {3.784896572450906*^9, 
+   3.7848966358410263`*^9}},ExpressionUUID->"adb2e33b-3392-4e4d-adae-\
+ed10dbc77e4d"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -9616,7 +9666,7 @@ Cell[BoxData[{
    3.7842414406122637`*^9}, 3.784320618227336*^9, {3.784668925206299*^9, 
    3.784668982875448*^9}, {3.784669234120617*^9, 3.7846692682902317`*^9}},
  CellLabel->
-  "In[188]:=",ExpressionUUID->"d9221d14-bb4f-46a3-8f96-ef51c063cb88"],
+  "In[390]:=",ExpressionUUID->"d9221d14-bb4f-46a3-8f96-ef51c063cb88"],
 
 Cell[BoxData["\<\"GeomAlg2019Dec`Private`\"\>"], "Output",
  CellChangeTimes->{
@@ -9723,10 +9773,11 @@ Cell[BoxData["\<\"GeomAlg2019Dec`Private`\"\>"], "Output",
    3.7847550896333437`*^9}, 3.784755143792943*^9, {3.784758355068589*^9, 
    3.784758355517761*^9}, {3.784759322579536*^9, 3.784759323149067*^9}, {
    3.784759794028061*^9, 3.784759794590454*^9}, {3.784759990122332*^9, 
-   3.784759990683723*^9}, 3.7847601047345552`*^9},
+   3.784759990683723*^9}, 3.7847601047345552`*^9, {3.7848478610260973`*^9, 
+   3.784847861574924*^9}},
  CellLabel->
-  "Out[211]=",ExpressionUUID->"dc89640f-923f-4f2b-9c75-0f0a7be7e1ea"]
-}, Closed]]
+  "Out[413]=",ExpressionUUID->"9fb5d04f-efd2-4311-96cd-088269c8d172"]
+}, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -9767,7 +9818,14 @@ to report that it was unable to \n\t\tprocess some of them. ",
  StyleBox["Added SimplifyG[clif] and FullSimplifyG[clif], primarily to \
 further simplify inverse functions which often are\n\tvery complex. However, \
 these functions work on any multivector\nCompletely rewrote EvenClifG using \
-GradesListG, which didn\[CloseCurlyQuote]t exist  earlier. \nAdded OddClifG",
+GradesListG, which didn\[CloseCurlyQuote]t exist  earlier. \nAdded OddClifG\n\
+Rewrote EijListSortG to take advantage of new functions AtomListToEijListG \
+and EijListToAtomListG\nRenamed AtomListToEijListG and EijListToAtomListG to \
+ToClifEijListG and ToClifListG to better represent\n\ttheir functions. That \
+is, the atoms can have coefficients; they don\[CloseCurlyQuote]t have to be \
+pure atoms.\nRenamed EijSortG to ClifSortG, for use now internally only by \
+CollectG to create a sort list\nCreated new EijSortG global function to sort \
+an Eij list",
   FontSize->18],
  StyleBox["\n\n2019 November \n",
   FontSize->18,
@@ -10094,8 +10152,11 @@ then sort \n\t\tmultivectors in a consistent way",
    3.784552321390113*^9}, {3.784552367390944*^9, 3.78455244081603*^9}, {
    3.78455249266437*^9, 3.784552701574101*^9}, {3.78473696863675*^9, 
    3.784737008372407*^9}, {3.784752285653211*^9, 3.784752373018894*^9}, 
-   3.7847524436652203`*^9, {3.7847582075026207`*^9, 
-   3.784758319092359*^9}},ExpressionUUID->"eeff93c6-7e93-41ff-be77-\
+   3.7847524436652203`*^9, {3.7847582075026207`*^9, 3.784758319092359*^9}, {
+   3.784846643356038*^9, 3.784846708294386*^9}, {3.7848467598264627`*^9, 
+   3.784846803720874*^9}, {3.784846859089801*^9, 3.7848469414685097`*^9}, {
+   3.784898364161377*^9, 
+   3.784898475110189*^9}},ExpressionUUID->"eeff93c6-7e93-41ff-be77-\
 8724c23a53cb"],
 
 Cell[CellGroupData[{
@@ -10108,7 +10169,7 @@ Cell[BoxData[
   3.78293354399673*^9, 3.782933545242577*^9}, {3.7845527820535707`*^9, 
   3.7845527830820417`*^9}},
  CellLabel->
-  "In[408]:=",ExpressionUUID->"3b03f9de-f94e-42d5-88d1-7a03e8595620"],
+  "In[415]:=",ExpressionUUID->"3b03f9de-f94e-42d5-88d1-7a03e8595620"],
 
 Cell[BoxData[
  DynamicModuleBox[{Typeset`open$$ = True}, 
@@ -10128,38 +10189,38 @@ Cell[BoxData[
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"AtomCoefG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"AtomCoefG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["ConstantG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ConstantG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ConstantG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["DimListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"DimListG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"DimListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["GradedClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"GradedClifG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"GradedClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["LeftContractionG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {
+           "Info4153784826261-6175741", {
             "LeftContractionG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["RightContractionG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {
+           "Info4153784826261-6175741", {
             "RightContractionG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
@@ -10167,415 +10228,427 @@ Cell[BoxData[
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"AtomG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"AtomG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug0",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug0", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug0", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["DotPrdtG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"DotPrdtG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"DotPrdtG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["GradeInvoluteG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"GradeInvoluteG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"GradeInvoluteG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["ListToClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ListToClifG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ListToClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["RotorG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"RotorG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"RotorG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["AtomListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"AtomListG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"AtomListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug1",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug1", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug1", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["e",
           BaseStyle->"InformationLink",
-          ButtonData:>{"Info4083784738390-7434612", {"e", "GeomAlg2019Dec`"}},
+          ButtonData:>{"Info4153784826261-6175741", {"e", "GeomAlg2019Dec`"}},
           
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["GradeListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"GradeListG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"GradeListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["MaxDimG",
           BaseStyle->"InformationLink",
           ButtonData:>{
-           "Info4083784738390-7434612", {"MaxDimG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"MaxDimG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["ScalarPrdtG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ScalarPrdtG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ScalarPrdtG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["AtomListToEijListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {
+           "Info4153784826261-6175741", {
             "AtomListToEijListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug10",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug10", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug10", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["EijListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"EijListG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"EijListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["HodgeDual1G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"HodgeDual1G", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"HodgeDual1G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["MaxGradeG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"MaxGradeG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"MaxGradeG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["SignatureG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"SignatureG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"SignatureG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["BiVectorG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"BiVectorG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"BiVectorG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug11",
           BaseStyle->"InformationLink",
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug11", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug11", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["EijListToAtomListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {
+           "Info4153784826261-6175741", {
             "EijListToAtomListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["HodgeDual2G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"HodgeDual2G", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"HodgeDual2G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["mCutG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"mCutG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"mCutG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["SimplifyG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"SimplifyG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"SimplifyG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["BladeG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"BladeG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"BladeG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug2",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug2", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug2", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["EijSortG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"EijSortG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"EijSortG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["HodgeDual3G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"HodgeDual3G", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"HodgeDual3G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["NormG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"NormG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"NormG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["SubscriptListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"SubscriptListG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"SubscriptListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["ClifConjugateG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ClifConjugateG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ClifConjugateG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug3",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug3", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug3", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["EvenClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"EvenClifG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"EvenClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["HodgeDual4G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"HodgeDual4G", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"HodgeDual4G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["OddClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"OddClifG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"OddClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["VectorG",
+         ButtonBox["ToClifEijListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"VectorG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ToClifEijListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["ClifFormatG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ClifFormatG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ClifFormatG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug4",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug4", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug4", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["ExpandG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ExpandG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ExpandG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["HodgeDual5G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"HodgeDual5G", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"HodgeDual5G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["PrdtG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"PrdtG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"PrdtG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
-         ButtonBox["WedgePrdtG",
+         ButtonBox["ToClifListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"WedgePrdtG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ToClifListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["ClifG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ClifG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ClifG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug5",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug5", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug5", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["FreeTermG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"FreeTermG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"FreeTermG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["HodgeDualG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"HodgeDualG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"HodgeDualG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["PseudoScalarG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"PseudoScalarG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"PseudoScalarG", "GeomAlg2019Dec`"}},
           
-          ButtonNote->"GeomAlg2019Dec`"], ""},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["VectorG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info4153784826261-6175741", {"VectorG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["ClifToListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ClifToListG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ClifToListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug6",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug6", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug6", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["FullSimplifyG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"FullSimplifyG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"FullSimplifyG", "GeomAlg2019Dec`"}},
           
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["Inverse4G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"Inverse4G", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"Inverse4G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["pSliceG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"pSliceG", "GeomAlg2019Dec`"}},
-          ButtonNote->"GeomAlg2019Dec`"], ""},
+           "Info4153784826261-6175741", {"pSliceG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"], 
+         ButtonBox["WedgePrdtG",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info4153784826261-6175741", {"WedgePrdtG", "GeomAlg2019Dec`"}},
+          ButtonNote->"GeomAlg2019Dec`"]},
         {
          ButtonBox["CoeffListG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"CoeffListG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"CoeffListG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug7",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug7", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug7", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["GeomPrdtAtomG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"GeomPrdtAtomG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"GeomPrdtAtomG", "GeomAlg2019Dec`"}},
           
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["Inverse5G",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"Inverse5G", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"Inverse5G", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["QuaternionG",
           BaseStyle->"InformationLink",
+          
           ButtonData:>{
-           "Info4083784738390-7434612", {"QuaternionG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"QuaternionG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], ""},
         {
          ButtonBox["CollectG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"CollectG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"CollectG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug8",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug8", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug8", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["GeomPrdtG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"GeomPrdtG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"GeomPrdtG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["InverseG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"InverseG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"InverseG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["ReduceG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ReduceG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ReduceG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], ""},
         {
          ButtonBox["ComplexG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ComplexG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ComplexG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["debug9",
           BaseStyle->"InformationLink",
-          
           ButtonData:>{
-           "Info4083784738390-7434612", {"debug9", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"debug9", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["GormG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"GormG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"GormG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["InverseNG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"InverseNG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"InverseNG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], 
          ButtonBox["ReverseG",
           BaseStyle->"InformationLink",
           
           ButtonData:>{
-           "Info4083784738390-7434612", {"ReverseG", "GeomAlg2019Dec`"}},
+           "Info4153784826261-6175741", {"ReverseG", "GeomAlg2019Dec`"}},
           ButtonNote->"GeomAlg2019Dec`"], ""}
        },
        DefaultBaseStyle->"InfoGrid",
@@ -10586,9 +10659,9 @@ Cell[BoxData[
    Dynamic[Typeset`open$$],
    ImageSize->Automatic]]], "Print", "InfoCell",
  CellChangeTimes->{
-  3.784759990753331*^9},ExpressionUUID->"e52075e1-4834-472a-a36a-\
-9b31b95c4035"]
-}, Closed]],
+  3.784847861652163*^9},ExpressionUUID->"0bf1c28c-7220-4e65-b694-\
+18fc6111a338"]
+}, Open  ]],
 
 Cell["", "Text",
  CellChangeTimes->{{3.777915808897131*^9, 
@@ -10598,14 +10671,14 @@ Cell["", "Text",
 Cell[BoxData[" "], "Input",
  CellChangeTimes->{3.783095543465054*^9},
  CellLabel->
-  "In[409]:=",ExpressionUUID->"d2580c29-14bc-491c-b40b-521b9f99ef14"],
+  "In[416]:=",ExpressionUUID->"d2580c29-14bc-491c-b40b-521b9f99ef14"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["\[AliasDelimiter]"], "Input",
  CellChangeTimes->{3.783189600044696*^9},
  CellLabel->
-  "In[410]:=",ExpressionUUID->"5d47b2b4-006b-46b4-ad30-bb4d5906fabf"],
+  "In[417]:=",ExpressionUUID->"5d47b2b4-006b-46b4-ad30-bb4d5906fabf"],
 
 Cell[BoxData["\[AliasDelimiter]"], "Output",
  CellChangeTimes->{
@@ -10632,16 +10705,16 @@ Cell[BoxData["\[AliasDelimiter]"], "Output",
    3.78467147023635*^9, 3.784734933237159*^9, 3.784735172917918*^9, 
    3.7847368020855827`*^9, 3.7847550898507633`*^9, 3.78475514406542*^9, 
    3.784758355700924*^9, 3.784759323329968*^9, 3.7847597947909946`*^9, 
-   3.784759990867969*^9},
+   3.784759990867969*^9, 3.784847861770727*^9},
  CellLabel->
-  "Out[410]=",ExpressionUUID->"808a3830-f0c7-454a-9c6c-e6d32dae11be"]
-}, Closed]]
-}, Closed]]
+  "Out[417]=",ExpressionUUID->"698883a5-07ff-423e-bb1c-6d99d7596194"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 WindowToolbars->{"RulerBar", "EditBar"},
 WindowSize->{1103, 1262},
-WindowMargins->{{364, Automatic}, {Automatic, 0}},
+WindowMargins->{{345, Automatic}, {Automatic, 0}},
 DockedCells->FEPrivate`FrontEndResource[
  "NotebookTemplatingExpressions", "AuthoringDockedCell"],
 PrintingCopies->1,
@@ -10679,71 +10752,71 @@ Cell[CellGroupData[{
 Cell[8314, 168, 162, 3, 58, "Chapter",ExpressionUUID->"66501c1f-93ac-4157-b1f6-4144dd1837af"],
 Cell[CellGroupData[{
 Cell[8501, 175, 154, 3, 65, "Subchapter",ExpressionUUID->"bfdd283e-5130-49c3-82ad-f7a9980651e0"],
-Cell[8658, 180, 4843, 92, 528, "Code",ExpressionUUID->"c65fb9e5-a372-4be3-a098-944901ffd52b"]
+Cell[8658, 180, 4847, 93, 528, "Code",ExpressionUUID->"c65fb9e5-a372-4be3-a098-944901ffd52b"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[13538, 277, 2063, 29, 49, "Subchapter",ExpressionUUID->"0b6b0107-d707-4aa2-84e0-633ce91bf664"],
-Cell[15604, 308, 2895, 43, 58, "Text",ExpressionUUID->"a138d2aa-7b8e-4d91-9508-5664fb9215ec"],
-Cell[18502, 353, 4466, 90, 262, "Code",ExpressionUUID->"b2bdf740-d97a-4118-9aa7-49a73fe5e38a"]
+Cell[13542, 278, 2063, 29, 49, "Subchapter",ExpressionUUID->"0b6b0107-d707-4aa2-84e0-633ce91bf664"],
+Cell[15608, 309, 2895, 43, 58, "Text",ExpressionUUID->"a138d2aa-7b8e-4d91-9508-5664fb9215ec"],
+Cell[18506, 354, 4470, 91, 262, "Code",ExpressionUUID->"b2bdf740-d97a-4118-9aa7-49a73fe5e38a"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[23005, 448, 221, 4, 49, "Subchapter",ExpressionUUID->"31efb45a-7932-43ba-83a8-a6cc2ae30fb8"],
-Cell[23229, 454, 3522, 74, 380, "Text",ExpressionUUID->"20a98674-b109-4d95-8d9c-5eea15db0abb"]
+Cell[23013, 450, 221, 4, 49, "Subchapter",ExpressionUUID->"31efb45a-7932-43ba-83a8-a6cc2ae30fb8"],
+Cell[23237, 456, 3522, 74, 380, "Text",ExpressionUUID->"20a98674-b109-4d95-8d9c-5eea15db0abb"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[26788, 533, 329, 5, 49, "Subchapter",ExpressionUUID->"d7d51bbd-350c-4d00-aa9f-f0cb00af5dd3"],
+Cell[26796, 535, 329, 5, 49, "Subchapter",ExpressionUUID->"d7d51bbd-350c-4d00-aa9f-f0cb00af5dd3"],
 Cell[CellGroupData[{
-Cell[27142, 542, 23396, 482, 1412, "Code",ExpressionUUID->"bb95fb8d-d9f3-4598-863d-ce86f7c663a4"],
-Cell[50541, 1026, 4503, 62, 70, "Output",ExpressionUUID->"a4e9a7ff-a1f2-489d-a2b6-b51d4d01172f"],
-Cell[55047, 1090, 4483, 62, 70, "Output",ExpressionUUID->"5c535056-258d-410d-b7a3-a8b34fd4aeb8"]
-}, Closed]]
-}, Closed]]
+Cell[27150, 544, 23500, 484, 1393, "Code",ExpressionUUID->"bb95fb8d-d9f3-4598-863d-ce86f7c663a4"],
+Cell[50653, 1030, 4553, 63, 34, "Output",ExpressionUUID->"0c048233-29e4-4d6c-8245-4aabd617759a"],
+Cell[55209, 1095, 4531, 63, 34, "Output",ExpressionUUID->"14262356-9417-44df-b639-8d105c096452"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59801, 1165, 187, 3, 69, "Chapter",ExpressionUUID->"a1525982-1156-48eb-8125-efcb2d27577c"],
+Cell[59991, 1170, 2168, 32, 52, "Code",ExpressionUUID->"2d4b85c4-75f9-4a80-a7c3-79d1a9e6ca1a"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[59591, 1159, 187, 3, 58, "Chapter",ExpressionUUID->"a1525982-1156-48eb-8125-efcb2d27577c"],
-Cell[59781, 1164, 2164, 31, 52, "Code",ExpressionUUID->"2d4b85c4-75f9-4a80-a7c3-79d1a9e6ca1a"]
+Cell[62196, 1207, 186, 3, 58, "Chapter",ExpressionUUID->"58177a45-6844-4477-ad51-5a2c82db5919"],
+Cell[62385, 1212, 6080, 125, 262, "Code",ExpressionUUID->"eab06bde-dac4-4543-b3e4-dd8a5cfa5a9f"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[61982, 1200, 186, 3, 58, "Chapter",ExpressionUUID->"58177a45-6844-4477-ad51-5a2c82db5919"],
-Cell[62171, 1205, 6076, 124, 262, "Code",ExpressionUUID->"eab06bde-dac4-4543-b3e4-dd8a5cfa5a9f"]
+Cell[68502, 1342, 355, 8, 146, "Chapter",ExpressionUUID->"e4a04ef0-9773-466f-8f2a-2556d621d191"],
+Cell[68860, 1352, 48553, 1153, 4381, "Code",ExpressionUUID->"cc35f83c-036d-4558-9ef4-8571356e9f49"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[68284, 1334, 355, 8, 146, "Chapter",ExpressionUUID->"e4a04ef0-9773-466f-8f2a-2556d621d191"],
-Cell[68642, 1344, 48531, 1153, 4381, "Code",ExpressionUUID->"cc35f83c-036d-4558-9ef4-8571356e9f49"]
+Cell[117450, 2510, 251, 4, 58, "Chapter",ExpressionUUID->"9c63b62e-9730-433c-8884-b0391cc574d1"],
+Cell[117704, 2516, 88519, 1789, 7229, "Code",ExpressionUUID->"5b437657-c103-44f2-923e-4e6a07bccda2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[206260, 4310, 174, 3, 69, "Chapter",ExpressionUUID->"0a8c74b9-4fd4-409f-9416-1e5362d89626"],
+Cell[206437, 4315, 87573, 1778, 6228, "Code",ExpressionUUID->"0cd99394-7461-4bed-8931-53bb46a7c3e7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[294047, 6098, 325, 7, 109, "Chapter",ExpressionUUID->"c4071c67-5988-4b9c-9562-4d1442c8ccac"],
+Cell[294375, 6107, 120612, 2459, 10070, "Code",ExpressionUUID->"adb2e33b-3392-4e4d-adae-ed10dbc77e4d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[415024, 8571, 532, 10, 149, "Chapter",ExpressionUUID->"5ad0718c-8782-4e67-ac94-06033f01f375"],
+Cell[CellGroupData[{
+Cell[415581, 8585, 46076, 1083, 4834, "Code",ExpressionUUID->"d9221d14-bb4f-46a3-8f96-ef51c063cb88"],
+Cell[461660, 9670, 7799, 108, 34, "Output",ExpressionUUID->"9fb5d04f-efd2-4311-96cd-088269c8d172"]
+}, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[117210, 2502, 251, 4, 58, "Chapter",ExpressionUUID->"9c63b62e-9730-433c-8884-b0391cc574d1"],
-Cell[117464, 2508, 88180, 1783, 7248, "Code",ExpressionUUID->"5b437657-c103-44f2-923e-4e6a07bccda2"]
-}, Closed]],
+Cell[469508, 9784, 361, 7, 58, "Chapter",ExpressionUUID->"be00a341-2295-4156-8c23-6784eec6d87f"],
+Cell[469872, 9793, 17132, 366, 4023, "Text",ExpressionUUID->"eeff93c6-7e93-41ff-be77-8724c23a53cb"],
 Cell[CellGroupData[{
-Cell[205681, 4296, 174, 3, 58, "Chapter",ExpressionUUID->"0a8c74b9-4fd4-409f-9416-1e5362d89626"],
-Cell[205858, 4301, 84742, 1748, 5997, "Code",ExpressionUUID->"0cd99394-7461-4bed-8931-53bb46a7c3e7"]
-}, Closed]],
+Cell[487029, 10163, 466, 8, 30, "Input",ExpressionUUID->"3b03f9de-f94e-42d5-88d1-7a03e8595620"],
+Cell[487498, 10173, 17844, 489, 332, "Print",ExpressionUUID->"0bf1c28c-7220-4e65-b694-18fc6111a338"]
+}, Open  ]],
+Cell[505357, 10665, 141, 3, 35, "Text",ExpressionUUID->"065fbefc-66c9-493d-b274-40929693f606"],
+Cell[505501, 10670, 152, 3, 30, "Input",ExpressionUUID->"d2580c29-14bc-491c-b40b-521b9f99ef14"],
 Cell[CellGroupData[{
-Cell[290637, 6054, 325, 7, 98, "Chapter",ExpressionUUID->"c4071c67-5988-4b9c-9562-4d1442c8ccac"],
-Cell[290965, 6063, 120124, 2453, 10051, "Code",ExpressionUUID->"adb2e33b-3392-4e4d-adae-ed10dbc77e4d"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[411126, 8521, 532, 10, 138, "Chapter",ExpressionUUID->"5ad0718c-8782-4e67-ac94-06033f01f375"],
-Cell[CellGroupData[{
-Cell[411683, 8535, 46076, 1083, 4834, "Code",ExpressionUUID->"d9221d14-bb4f-46a3-8f96-ef51c063cb88"],
-Cell[457762, 9620, 7747, 107, 70, "Output",ExpressionUUID->"dc89640f-923f-4f2b-9c75-0f0a7be7e1ea"]
-}, Closed]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[465558, 9733, 361, 7, 58, "Chapter",ExpressionUUID->"be00a341-2295-4156-8c23-6784eec6d87f"],
-Cell[465922, 9742, 16449, 356, 3893, "Text",ExpressionUUID->"eeff93c6-7e93-41ff-be77-8724c23a53cb"],
-Cell[CellGroupData[{
-Cell[482396, 10102, 466, 8, 30, "Input",ExpressionUUID->"3b03f9de-f94e-42d5-88d1-7a03e8595620"],
-Cell[482865, 10112, 17388, 477, 70, "Print",ExpressionUUID->"e52075e1-4834-472a-a36a-9b31b95c4035"]
-}, Closed]],
-Cell[500268, 10592, 141, 3, 31, "Text",ExpressionUUID->"065fbefc-66c9-493d-b274-40929693f606"],
-Cell[500412, 10597, 152, 3, 30, "Input",ExpressionUUID->"d2580c29-14bc-491c-b40b-521b9f99ef14"],
-Cell[CellGroupData[{
-Cell[500589, 10604, 168, 3, 30, "Input",ExpressionUUID->"5d47b2b4-006b-46b4-ad30-bb4d5906fabf"],
-Cell[500760, 10609, 1800, 27, 70, "Output",ExpressionUUID->"808a3830-f0c7-454a-9c6c-e6d32dae11be"]
-}, Closed]]
-}, Closed]]
+Cell[505678, 10677, 168, 3, 30, "Input",ExpressionUUID->"5d47b2b4-006b-46b4-ad30-bb4d5906fabf"],
+Cell[505849, 10682, 1822, 27, 34, "Output",ExpressionUUID->"698883a5-07ff-423e-bb1c-6d99d7596194"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]

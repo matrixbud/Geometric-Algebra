@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9321,        187]
-NotebookOptionsPosition[      8716,        163]
-NotebookOutlinePosition[      9072,        179]
-CellTagsIndexPosition[      9029,        176]
+NotebookDataLength[      9414,        188]
+NotebookOptionsPosition[      8770,        164]
+NotebookOutlinePosition[      9165,        180]
+CellTagsIndexPosition[      9122,        177]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -62,9 +62,9 @@ modify it.\n\n3. This is a 1-time operation. Next read Quick Start.",
  StyleBox["Documentation",
   FontWeight->"Bold"],
  " - User Guide (Microsoft Word and Mathematica Notebook)\n\n",
- StyleBox["Examples",
+ StyleBox["Working Tutorial",
   FontWeight->"Bold"],
- " - Sample file demonstrating usage of many of the functions\n\n",
+ " - Notebook that explains and demonstrates this package\n\n",
  StyleBox["g-1fg Example ",
   FontWeight->"Bold"],
  "- A step-by-step example on how to use this package (actually, on how to \
@@ -156,16 +156,17 @@ with many packages\n\n",
    3.779835208087369*^9, 3.779835208893663*^9}, {3.779878470853633*^9, 
    3.779878686675172*^9}, {3.7798788031874437`*^9, 3.7798788062744017`*^9}, {
    3.77988248573372*^9, 3.779882492935033*^9}, {3.7847536957756033`*^9, 
-   3.784753696498743*^9}, {3.78476373370385*^9, 3.7847637380443163`*^9}},
+   3.784753696498743*^9}, {3.78476373370385*^9, 3.7847637380443163`*^9}, {
+   3.816081794740539*^9, 3.816081881638855*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 },
 WindowSize->{835, 1188},
-WindowMargins->{{Automatic, 189}, {55, Automatic}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
-StyleDefinitions->"Default.nb"
+WindowMargins->{{Automatic, 143}, {20, Automatic}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b9a58404-0e38-4494-8b1b-63611da3d2d9"
 ]
 (* End of Notebook Content *)
 
@@ -180,7 +181,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
-Cell[752, 25, 7948, 135, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
+Cell[752, 25, 8002, 136, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]

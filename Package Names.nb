@@ -10,40 +10,41 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5892,        116]
-NotebookOptionsPosition[      5544,        102]
-NotebookOutlinePosition[      5939,        118]
-CellTagsIndexPosition[      5896,        115]
+NotebookDataLength[     20647,        421]
+NotebookOptionsPosition[     18912,        391]
+NotebookOutlinePosition[     19307,        407]
+CellTagsIndexPosition[     19264,        404]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", " ", 
    RowBox[{"Names", " ", "File"}], " ", "*)"}], "\n", "\n", 
   RowBox[{
    RowBox[{"DeclarePackage", "[", 
-    RowBox[{"\"\<GeomAlg2019Dec`\>\"", ",", 
+    RowBox[{"\"\<GeomAlg2020Dec`\>\"", ",", 
      RowBox[{"{", 
       RowBox[{
       "\"\<AtomCoefG\>\"", ",", "\"\<AtomG\>\"", ",", "\"\<AtomListG\>\"", 
-       ",", "\"\<AtomListToEijListG\>\"", ",", "\"\<BiVectorG\>\"", ",", 
-       "\"\<BladeG\>\"", ",", "\"\<ClifConjugateG\>\"", ",", 
-       "\"\<ClifFormatG\>\"", ",", "\"\<ClifG\>\"", ",", 
-       "\"\<ClifToListG\>\"", ",", "\"\<CoeffListG\>\"", ",", 
-       "\"\<CollectG\>\"", ",", "\"\<ComplexG\>\"", ",", "\"\<ConstantG\>\"", 
-       ",", "\"\<debug0\>\"", ",", "\"\<debug1\>\"", ",", "\"\<debug10\>\"", 
-       ",", "\"\<debug11\>\"", ",", "\"\<debug2\>\"", ",", "\"\<debug3\>\"", 
-       ",", "\"\<debug4\>\"", ",", "\"\<debug5\>\"", ",", "\"\<debug6\>\"", 
-       ",", "\"\<debug7\>\"", ",", "\"\<debug8\>\"", ",", "\"\<debug9\>\"", 
-       ",", "\"\<DimListG\>\"", ",", "\"\<DotPrdtG\>\"", ",", "\"\<e\>\"", 
-       ",", "\"\<EijListG\>\"", ",", "\"\<EijListToAtomListG\>\"", ",", 
+       ",", "\"\<BiVectorG\>\"", ",", "\"\<BladeG\>\"", ",", 
+       "\"\<ClifConjugateG\>\"", ",", "\"\<ClifFormatG\>\"", ",", 
+       "\"\<ClifG\>\"", ",", "\"\<ClifToListG\>\"", ",", "\"\<CoeffListG\>\"",
+        ",", "\"\<CollectG\>\"", ",", "\"\<ComplexG\>\"", ",", 
+       "\"\<ConstantG\>\"", ",", "\"\<debug0\>\"", ",", "\"\<debug1\>\"", 
+       ",", "\"\<debug10\>\"", ",", "\"\<debug11\>\"", ",", "\"\<debug2\>\"", 
+       ",", "\"\<debug3\>\"", ",", "\"\<debug4\>\"", ",", "\"\<debug5\>\"", 
+       ",", "\"\<debug6\>\"", ",", "\"\<debug7\>\"", ",", "\"\<debug8\>\"", 
+       ",", "\"\<debug9\>\"", ",", "\"\<DimListG\>\"", ",", 
+       "\"\<DotPrdtG\>\"", ",", "\"\<e\>\"", ",", "\"\<EijListG\>\"", ",", 
        "\"\<EijSortG\>\"", ",", "\"\<EvenClifG\>\"", ",", "\"\<ExpandG\>\"", 
-       ",", "\"\<FreeTermG\>\"", ",", "\"\<FullSimplifyG\>\"", ",", 
-       "\"\<GeomPrdtAtomG\>\"", ",", "\"\<GeomPrdtG\>\"", ",", 
-       "\"\<GormG\>\"", ",", "\"\<GradedClifG\>\"", ",", 
-       "\"\<GradeInvoluteG\>\"", ",", "\"\<GradeListG\>\"", ",", 
+       ",", "\"\<FactorMatrixG\>\"", ",", "\"\<FreeTermG\>\"", ",", 
+       "\"\<FullSimplifyG\>\"", ",", "\"\<GeomPrdtAtomG\>\"", ",", 
+       "\"\<GeomPrdtG\>\"", ",", "\"\<GormG\>\"", ",", "\"\<GradedClifG\>\"", 
+       ",", "\"\<GradeInvoluteG\>\"", ",", "\"\<GradeListG\>\"", ",", 
        "\"\<HodgeDual1G\>\"", ",", "\"\<HodgeDual2G\>\"", ",", 
        "\"\<HodgeDual3G\>\"", ",", "\"\<HodgeDual4G\>\"", ",", 
        "\"\<HodgeDual5G\>\"", ",", "\"\<HodgeDualG\>\"", ",", 
@@ -51,19 +52,21 @@ Cell[BoxData[
         ",", "\"\<InverseNG\>\"", ",", "\"\<LeftContractionG\>\"", ",", 
        "\"\<ListToClifG\>\"", ",", "\"\<MaxDimG\>\"", ",", 
        "\"\<MaxGradeG\>\"", ",", "\"\<mCutG\>\"", ",", "\"\<NormG\>\"", ",", 
-       "\"\<PrdtG\>\"", ",", "\"\<PseudoScalarG\>\"", ",", "\"\<pSliceG\>\"", 
-       ",", "\"\<QuaternionG\>\"", ",", "\"\<ReduceG\>\"", ",", 
-       "\"\<ReverseG\>\"", ",", "\"\<RightContractionG\>\"", ",", 
-       "\"\<RotorG\>\"", ",", "\"\<ScalarPrdtG\>\"", ",", 
+       "\"\<OddClifG\>\"", ",", "\"\<PrdtG\>\"", ",", "\"\<PseudoScalarG\>\"",
+        ",", "\"\<pSliceG\>\"", ",", "\"\<QuaternionG\>\"", ",", 
+       "\"\<ReduceG\>\"", ",", "\"\<ReverseG\>\"", ",", 
+       "\"\<RightContractionG\>\"", ",", "\"\<RotorG\>\"", ",", 
+       "\"\<RotorToMatrixG\>\"", ",", "\"\<ScalarPrdtG\>\"", ",", 
        "\"\<SignatureG\>\"", ",", "\"\<SimplifyG\>\"", ",", 
-       "\"\<SubscriptListG\>\"", ",", "\"\<VectorG\>\"", ",", 
+       "\"\<SubscriptListG\>\"", ",", "\"\<ToClifEijListG\>\"", ",", 
+       "\"\<ToClifListG\>\"", ",", "\"\<VectorG\>\"", ",", 
        "\"\<WedgePrdtG\>\""}], "}"}]}], "]"}], "\n", "\n", 
    RowBox[{"(*", " ", 
     RowBox[{
      RowBox[{"Use", " ", "the", " ", "command", " ", 
       RowBox[{"Names", "[", 
        RowBox[{"\[OpenCurlyDoubleQuote]", 
-        RowBox[{"GeomAlg2019Dec`", "*"}], "\[CloseCurlyDoubleQuote]"}], "]"}],
+        RowBox[{"GeomAlg2020Dec`", "*"}], "\[CloseCurlyDoubleQuote]"}], "]"}],
        " ", "to", " ", "generate", " ", "the", " ", "latest", " ", 
       RowBox[{"list", ".", " ", "The"}], " ", "list", " ", "will", " ", 
       "lack", " ", "quotations", " ", "but", " ", "they", " ", "will", " ", 
@@ -76,7 +79,7 @@ Cell[BoxData[
      RowBox[{
      "simply", " ", "delete", " ", "the", " ", "two", " ", "quotes", " ", 
       "and", " ", "then", " ", "retype", " ", "them"}]}], " ", "*)"}], 
-   "\n"}]}]], "Input",
+   "\[IndentingNewLine]", "\n"}]}]], "Input",
  CellChangeTimes->{{3.690556855123518*^9, 3.690556965392563*^9}, {
    3.690557020890552*^9, 3.690557314676291*^9}, {3.690557752614789*^9, 
    3.690557845029039*^9}, {3.692793396756822*^9, 3.692793401171687*^9}, {
@@ -97,11 +100,297 @@ Cell[BoxData[
    3.7798797654069433`*^9, 3.779879795545465*^9, 3.779984200878221*^9, 
    3.779984260649906*^9, {3.784753786537458*^9, 3.784753787112103*^9}, {
    3.784753981436729*^9, 3.7847541448984957`*^9}, {3.8160816011623907`*^9, 
-   3.8160816018722887`*^9}},ExpressionUUID->"d2a9a9b9-1ea8-43a8-9192-\
-29b9f4376055"]
+   3.8160816018722887`*^9}, {3.816295888021027*^9, 3.816295888399995*^9}, {
+   3.8162960112290773`*^9, 3.8162960122036552`*^9}, {3.816296048588875*^9, 
+   3.816296127404192*^9}, {3.816296295395535*^9, 
+   3.81629629778724*^9}},ExpressionUUID->"d2a9a9b9-1ea8-43a8-9192-\
+29b9f4376055"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Get", "noopen", 
+   "\"Cannot open \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\"}]\\).\"", 2, 456, 20,
+    22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079472279*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"2d25a9c2-234a-49b1-8db5-97c056910d26"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Needs", "nocont", 
+   "\"Context \\!\\(\\*RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\"}]\\) \
+was not created when Needs was evaluated.\"", 2, 456, 21, 
+   22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079476321*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"f3b4855f-24aa-4af7-bf72-379c8a938a83"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeclarePackage", "aldec", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"AtomCoefG\\\\\\\"\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"DeclarePackage\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"AtomCoefG\\\\\\\"\\\", \\\",\\\", \\\"\
+\\\\\\\"AtomG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"AtomListG\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"AtomListToEijListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"BiVectorG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"BladeG\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"ClifConjugateG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifFormatG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifToListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"CoeffListG\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"29\\\", \\\"\[RightSkeleton]\\\"}], \
+\\\",\\\", \\\"\\\\\\\"GradeInvoluteG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"GradeListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"HodgeDual1G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual2G\\\\\\\
+\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual3G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\
+\"HodgeDual4G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual5G\\\\\\\"\\\", \\\
+\",\\\", \\\"\\\\\\\"HodgeDualG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Inverse4G\
+\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Inverse5G\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"22\\\", \\\"\[RightSkeleton]\\\"}]}], \\\
+\"}\\\"}]}], \\\"]\\\"}]\\) has already been declared.\"", 2, 456, 22, 
+   22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079480049*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"a95343ff-c0df-4b7d-83c5-807744ac4e76"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Get", "noopen", 
+   "\"Cannot open \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\"}]\\).\"", 2, 456, 23,
+    22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079484687*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"b301cb2a-1fd2-482c-9307-3902dc96622b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Needs", "nocont", 
+   "\"Context \\!\\(\\*RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\"}]\\) \
+was not created when Needs was evaluated.\"", 2, 456, 24, 
+   22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079488072*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"60f99f73-b6fc-4f05-b25d-9580a1c0f3d7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeclarePackage", "aldec", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"AtomG\\\\\\\"\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"DeclarePackage\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"AtomCoefG\\\\\\\"\\\", \\\",\\\", \\\"\
+\\\\\\\"AtomG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"AtomListG\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"AtomListToEijListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"BiVectorG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"BladeG\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"ClifConjugateG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifFormatG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifToListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"CoeffListG\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"29\\\", \\\"\[RightSkeleton]\\\"}], \
+\\\",\\\", \\\"\\\\\\\"GradeInvoluteG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"GradeListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"HodgeDual1G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual2G\\\\\\\
+\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual3G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\
+\"HodgeDual4G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual5G\\\\\\\"\\\", \\\
+\",\\\", \\\"\\\\\\\"HodgeDualG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Inverse4G\
+\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Inverse5G\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"22\\\", \\\"\[RightSkeleton]\\\"}]}], \\\
+\"}\\\"}]}], \\\"]\\\"}]\\) has already been declared.\"", 2, 456, 25, 
+   22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079491665*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"db4a9d9c-95ee-46ba-a403-45c11da13ad0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Get", "noopen", 
+   "\"Cannot open \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\"}]\\).\"", 2, 456, 26,
+    22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079495822*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"5cf4e5b9-3152-4882-abea-7e9647988a72"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Get\\\", \\\"::\\\", \\\
+\"noopen\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 456, 27, 22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.8162960794993668`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"ce28f837-fc3a-4d26-ba79-8d9cbcec601d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Needs", "nocont", 
+   "\"Context \\!\\(\\*RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\"}]\\) \
+was not created when Needs was evaluated.\"", 2, 456, 28, 
+   22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079503009*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"2f613e88-7f43-4028-8830-c961475fd779"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Needs\\\", \\\"::\\\", \
+\\\"nocont\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 456, 29, 22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079506535*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"ab26b9c9-7c72-487b-9ed9-8651cbd35d2c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeclarePackage", "aldec", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"AtomListG\\\\\\\"\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"DeclarePackage\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"GeomAlg2019Dec`\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"AtomCoefG\\\\\\\"\\\", \\\",\\\", \\\"\
+\\\\\\\"AtomG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"AtomListG\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"AtomListToEijListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"BiVectorG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"BladeG\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"ClifConjugateG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifFormatG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"ClifToListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"CoeffListG\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"29\\\", \\\"\[RightSkeleton]\\\"}], \
+\\\",\\\", \\\"\\\\\\\"GradeInvoluteG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"GradeListG\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"HodgeDual1G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual2G\\\\\\\
+\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual3G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\
+\"HodgeDual4G\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"HodgeDual5G\\\\\\\"\\\", \\\
+\",\\\", \\\"\\\\\\\"HodgeDualG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Inverse4G\
+\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Inverse5G\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"22\\\", \\\"\[RightSkeleton]\\\"}]}], \\\
+\"}\\\"}]}], \\\"]\\\"}]\\) has already been declared.\"", 2, 456, 30, 
+   22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079510015*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"d36b0f5f-ea4f-41d2-b3b3-b6c68c117321"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"DeclarePackage\\\", \
+\\\"::\\\", \\\"aldec\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 456, 31, 22044030707045241541, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.816296062304514*^9, 3.816296079513998*^9}},
+ CellLabel->
+  "During evaluation of \
+In[456]:=",ExpressionUUID->"ad61d20e-1292-4056-a784-9231fb34fb02"],
+
+Cell[BoxData["\<\"GeomAlg2019Dec`\"\>"], "Output",
+ CellChangeTimes->{
+  3.8162960181528797`*^9, {3.816296062370922*^9, 3.816296079534152*^9}},
+ CellLabel->
+  "Out[456]=",ExpressionUUID->"eb5f9e7a-7f79-42f7-a006-93220a35e300"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"GeomAlg2020Dec`AtomCoefG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`AtomG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`AtomListG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`BiVectorG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`BladeG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ClifConjugateG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ClifFormatG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ClifG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ClifToListG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`CoeffListG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`CollectG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ComplexG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ConstantG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`debug0\"\>", ",", "\<\"GeomAlg2020Dec`debug1\"\>",
+    ",", "\<\"GeomAlg2020Dec`debug10\"\>", 
+   ",", "\<\"GeomAlg2020Dec`debug11\"\>", 
+   ",", "\<\"GeomAlg2020Dec`debug2\"\>", ",", "\<\"GeomAlg2020Dec`debug3\"\>",
+    ",", "\<\"GeomAlg2020Dec`debug4\"\>", 
+   ",", "\<\"GeomAlg2020Dec`debug5\"\>", ",", "\<\"GeomAlg2020Dec`debug6\"\>",
+    ",", "\<\"GeomAlg2020Dec`debug7\"\>", 
+   ",", "\<\"GeomAlg2020Dec`debug8\"\>", ",", "\<\"GeomAlg2020Dec`debug9\"\>",
+    ",", "\<\"GeomAlg2020Dec`DimListG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`DotPrdtG\"\>", ",", "\<\"GeomAlg2020Dec`e\"\>", 
+   ",", "\<\"GeomAlg2020Dec`EijListG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`EijSortG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`EvenClifG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ExpandG\"\>", ",", "\<\"FactorMatrixG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`FreeTermG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`FullSimplifyG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`GeomPrdtAtomG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`GeomPrdtG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`GormG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`GradedClifG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`GradeInvoluteG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`GradeListG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`HodgeDual1G\"\>", 
+   ",", "\<\"GeomAlg2020Dec`HodgeDual2G\"\>", 
+   ",", "\<\"GeomAlg2020Dec`HodgeDual3G\"\>", 
+   ",", "\<\"GeomAlg2020Dec`HodgeDual4G\"\>", 
+   ",", "\<\"GeomAlg2020Dec`HodgeDual5G\"\>", 
+   ",", "\<\"GeomAlg2020Dec`HodgeDualG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`Inverse4G\"\>", 
+   ",", "\<\"GeomAlg2020Dec`Inverse5G\"\>", 
+   ",", "\<\"GeomAlg2020Dec`InverseG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`InverseNG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`LeftContractionG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ListToClifG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`MaxDimG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`MaxGradeG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`mCutG\"\>", ",", "\<\"GeomAlg2020Dec`NormG\"\>", 
+   ",", "\<\"OddClifG\"\>", ",", "\<\"GeomAlg2020Dec`PrdtG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`PseudoScalarG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`pSliceG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`QuaternionG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ReduceG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ReverseG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`RightContractionG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`RotorG\"\>", ",", "\<\"RotorToMatrixG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`ScalarPrdtG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`SignatureG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`SimplifyG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`SubscriptListG\"\>", 
+   ",", "\<\"ToClifEijListG\"\>", ",", "\<\"ToClifListG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`VectorG\"\>", 
+   ",", "\<\"GeomAlg2020Dec`WedgePrdtG\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.8162960181528797`*^9, {3.816296062370922*^9, 3.8162960795396223`*^9}},
+ CellLabel->
+  "Out[457]=",ExpressionUUID->"969a2f8e-a199-42e5-a8e0-e29d76931dbd"]
+}, Closed]]
 },
 WindowSize->{794, 679},
-WindowMargins->{{Automatic, 109}, {Automatic, 165}},
+WindowMargins->{{Automatic, 670}, {Automatic, 158}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"2b64ac86-9df3-4704-9130-2c9c54871c21"
@@ -117,7 +406,23 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4982, 80, 514, "Input",ExpressionUUID->"d2a9a9b9-1ea8-43a8-9192-29b9f4376055"]
+Cell[CellGroupData[{
+Cell[580, 22, 5287, 84, 535, "Input",ExpressionUUID->"d2a9a9b9-1ea8-43a8-9192-29b9f4376055"],
+Cell[5870, 108, 396, 10, 24, "Message",ExpressionUUID->"2d25a9c2-234a-49b1-8db5-97c056910d26"],
+Cell[6269, 120, 435, 10, 24, "Message",ExpressionUUID->"f3b4855f-24aa-4af7-bf72-379c8a938a83"],
+Cell[6707, 132, 1783, 30, 77, "Message",ExpressionUUID->"a95343ff-c0df-4b7d-83c5-807744ac4e76"],
+Cell[8493, 164, 396, 10, 24, "Message",ExpressionUUID->"b301cb2a-1fd2-482c-9307-3902dc96622b"],
+Cell[8892, 176, 435, 10, 24, "Message",ExpressionUUID->"60f99f73-b6fc-4f05-b25d-9580a1c0f3d7"],
+Cell[9330, 188, 1779, 30, 77, "Message",ExpressionUUID->"db4a9d9c-95ee-46ba-a403-45c11da13ad0"],
+Cell[11112, 220, 396, 10, 24, "Message",ExpressionUUID->"5cf4e5b9-3152-4882-abea-7e9647988a72"],
+Cell[11511, 232, 478, 10, 24, "Message",ExpressionUUID->"ce28f837-fc3a-4d26-ba79-8d9cbcec601d"],
+Cell[11992, 244, 435, 10, 24, "Message",ExpressionUUID->"2f613e88-7f43-4028-8830-c961475fd779"],
+Cell[12430, 256, 478, 10, 24, "Message",ExpressionUUID->"ab26b9c9-7c72-487b-9ed9-8651cbd35d2c"],
+Cell[12911, 268, 1783, 30, 77, "Message",ExpressionUUID->"d36b0f5f-ea4f-41d2-b3b3-b6c68c117321"],
+Cell[14697, 300, 486, 10, 24, "Message",ExpressionUUID->"ad61d20e-1292-4056-a784-9231fb34fb02"],
+Cell[15186, 312, 226, 4, 34, "Output",ExpressionUUID->"eb5f9e7a-7f79-42f7-a006-93220a35e300"],
+Cell[15415, 318, 3481, 70, 539, "Output",ExpressionUUID->"969a2f8e-a199-42e5-a8e0-e29d76931dbd"]
+}, Closed]]
 }
 ]
 *)

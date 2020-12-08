@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    104520,       1745]
-NotebookOptionsPosition[    103281,       1711]
-NotebookOutlinePosition[    103944,       1732]
-CellTagsIndexPosition[    103901,       1729]
+NotebookDataLength[    107562,       1788]
+NotebookOptionsPosition[    106320,       1754]
+NotebookOutlinePosition[    106983,       1775]
+CellTagsIndexPosition[    106940,       1772]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -444,7 +444,7 @@ Esc  (Star)\>\"", ",", "\n", "\t   ",
 \)\!\(\*SubscriptBox[\(x\), \(2\)]\) + \!\(\*SubscriptBox[\(e\), \(3\)]\)\!\(\
 \*SubscriptBox[\(x\), \(3\)]\)\>\"", ",", "\n", "\t\t\t", 
                     "\"\<BiVectorG[3]                                         \
-                               \>\"", ",", " ", 
+                               \>\"", ",", " ", "\[IndentingNewLine]", 
                     "\"\<(-\!\(\*SubscriptBox[\(a\), \
 \(2\)]\)\!\(\*SubscriptBox[\(b\), \(1\)]\) + \!\(\*SubscriptBox[\(a\), \(1\)]\
 \)\!\(\*SubscriptBox[\(b\), \(2\)]\)) \!\(\*SubscriptBox[\(e\), \
@@ -454,7 +454,15 @@ Esc  (Star)\>\"", ",", "\n", "\t   ",
 \(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\) + (-\!\(\*SubscriptBox[\(a\), \
 \(3\)]\)\!\(\*SubscriptBox[\(b\), \(2\)]\) + \!\(\*SubscriptBox[\(a\), \(2\)]\
 \)\!\(\*SubscriptBox[\(b\), \(3\)]\))\!\(\*SubscriptBox[\(e\), \
-\(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\>\"", ",", "\n", "\t", 
+\(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\>\"", ",", "\[IndentingNewLine]", 
+                    "\"\<BiVectorG[3]                          \>\"", ",", 
+                    "\[IndentingNewLine]", 
+                    "\"\<\!\(\*SubscriptBox[\(e\), \
+\(1\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(c\), \(1, 2\)]\
+\) + \!\(\*SubscriptBox[\(e\), \(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\!\(\
+\*SubscriptBox[\(c\), \(\(1\)\(,\)\(3\)\(\\\ \\\ \\\ \)\)]\)+ \
+\!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \
+\(3\)]\)\!\(\*SubscriptBox[\(c\), \(2, 3\)]\)\>\"", ",", 
                     "\"\<BladeG[2,3]                                          \
                                         \>\"", ",", 
                     "\"\<(-\!\(\*SubscriptBox[\(a\), \
@@ -483,6 +491,7 @@ Esc  (Star)\>\"", ",", "\n", "\t   ",
 \*SubscriptBox[\(a\), \(3, 4\)]\)\>\"", ",", "\n", "\t\t\t", 
                     "\"\<ClifG[b,3]                                           \
                                                       \>\"", ",", 
+                    
                     "\"\<\!\(\*SubscriptBox[\(b\), \(0\)]\) + \
 \!\(\*SubscriptBox[\(b\), \(1\)]\)\!\(\*SubscriptBox[\(e\), \(1\)]\) + \
 \!\(\*SubscriptBox[\(b\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\) + \
@@ -554,38 +563,41 @@ Sin[\!\(\*FractionBox[\(\[Pi]\), \(4\)]\)] \!\(\*SubscriptBox[\(e\), \(2\)]\)\
                     RowBox[{"tips", "=", "\n", "\n", "\t ", 
                     RowBox[{"{", " ", 
                     RowBox[{
-                    "\"\<  Generates a 3-'atom' with subscripts 1,2,and \
-4\>\"", ",", "\n", "\t   ", "\"\<   Key in the AtomG output\>\"", ",", 
-                    "\[IndentingNewLine]", 
-                    "\"\<   Generates a standard vector in 3 dimensions with \
+                    "\"\<  Generate a 3-'atom' with subscripts 1,2,and 4\>\"",
+                     ",", "\n", "\t   ", "\"\<   Key in the AtomG output\>\"",
+                     ",", "\[IndentingNewLine]", 
+                    "\"\<   Generate a standard vector in 3 dimensions with \
 \!\(\*SubscriptBox[\(x\), \(i\)]\) coefficients\>\"", ",", "\n", "\t   ", 
                     "\"\<   Key in the nVector output}\>\"", ",", "\n", 
                     "\t   ", 
-                    "\"\<   Generates a general bivector in 3 dimensions from \
+                    "\"\<   Generate a product bivector in 3 dimensions from \
 two vectors\>\"", ",", "\n", "\t   ", 
                     "\"\<   Key in the BiVectorG output\>\"", ",", "\n", 
-                    "\t   ", 
+                    "\t  ", 
+                    "\"\<   Generate a general bivector in 3 dimensions\>\"", 
+                    ",", "\[IndentingNewLine]", 
+                    "\"\<Key in the BiVectorG output\>\"", ",", 
+                    "\[IndentingNewLine]", " ", 
                     RowBox[{
-                    
-                    "\"\<   Generates a general 2-blade (i.e., bivector) in \
-\>\"", "<>", "\"\<3 dimensions asgeometric product of two vectors\>\""}], ",",
-                     "\n", "\t   ", "\"\<   Key in the BladeG output\>\"", 
-                    ",", "\n", "\t   ", 
+                    "\"\<   Generate a general 2-blade (i.e., bivector) in \>\
+\"", "<>", "\"\<3 dimensions asgeometric product of two vectors\>\""}], ",", 
+                    "\n", "\t   ", "\"\<   Key in the BladeG output\>\"", ",",
+                     "\n", "\t   ", 
                     RowBox[{
-                    "\"\<   Generates a general grade-2 multivector in 4 \
+                    "\"\<   Generate a general grade-2 multivector in 4 \
 dimensions \>\"", "<>", 
                     "\"\<with coefficients \!\(\*SubscriptBox[\(a\), \(i, \
 j\)]\)\>\""}], ",", "\n", "\t   ", "\"\<   Key in the GradedClif output\>\"", 
                     ",", "\n", "\t    ", 
                     RowBox[{
-                    "\"\<   Generates a general multivector (a.k.a.\>\"", 
+                    "\"\<   Generate a general multivector (a.k.a.\>\"", 
                     "<>", "\"\< clif) in 3 dimensions with coefficients \
 \!\(\*SubscriptBox[\(b\), \(i, j,  ... \)]\)\>\""}], ",", "\n", "\t   ", 
                     "\"\<   Key in the ClifG output\>\"", ",", "\n", "\t   ", 
                     
                     RowBox[{
-                    "\"\<   Generates an even multivector in 3 dimensions \
-with coefficients\>\"", "<>", 
+                    "\"\<   Generate an even multivector in 3 dimensions with \
+coefficients\>\"", "<>", 
                     "\"\< \!\(\*SubscriptBox[\(c\), \(i, j,  ... \)]\) \
 OddClifG is also available.\>\""}], ",", "\n", "\t   ", 
                     "\"\<   Key in the EvenClifG output\>\"", ",", "\n", 
@@ -595,31 +607,30 @@ OddClifG is also available.\>\""}], ",", "\n", "\t   ",
                     "\"\<   Key in the pseudoscalar output\>\"", ",", "\n", 
                     "\t  ", 
                     RowBox[{
-                    "\"\<   Generates rotor to spin \!\(\*SubscriptBox[\(e\), \
+                    "\"\<   Generate rotor to spin \!\(\*SubscriptBox[\(e\), \
 \(2\)]\)\!\(\*SubscriptBox[\(e\), \(4\)]\)-plane CCW 90\[Degree]. If plane is \
 \>\"", "<>", "\[IndentingNewLine]", "\"\<timelike, generates a boost\>\""}], 
                     ",", "\n", "\t   ", 
                     "\"\<   Key in the spacelike RotorG output\>\"", ",", 
-                    "\[IndentingNewLine]", " ", 
-                    "\"\<   Generates a general 3-space rotor\>\"", ",", 
                     "\[IndentingNewLine]", 
-                    "\"\<Key in the 3-space rotor output\>\"", ",", 
+                    "\"\<   Generate a general 3-space rotor or a 1-2 \
+spacetime boost\>\"", ",", "\[IndentingNewLine]", 
+                    "\"\<   Key in the 3-space rotor output\>\"", ",", 
                     "\[IndentingNewLine]", 
-                    "\"\<   Generates a general 2-dimensional \
-rotor/boost\>\"", ",", "\[IndentingNewLine]", 
                     RowBox[{
-                    "\"\<   The 2D rotor output. A 3D rotor would mimic the \
-output above.\>\"", "<>", "\[IndentingNewLine]", "\t", 
-                    
-                    "\"\<This function can generate a general rotor in \
-dimension n\>\""}], ",", "\[IndentingNewLine]", 
-                    "\"\<   Generates a complex number a + bi where \
+                    "\"\<   Generate a general 2-dimensional rotor or boost\>\
+\"", "<>", 
+                    "\"\< This function can generate a general rotor or boost \
+in n dimensions\>\""}], ",", "\[IndentingNewLine]", 
+                    "\"\<   Key in the 2-space rotor output. A 3-space rotor \
+would mimic the output above.\>\"", ",", "\[IndentingNewLine]", 
+                    "\"\<   Generate a complex number a + bi where \
 \!\(\*SubscriptBox[SubscriptBox[\(e\), \(1\)], \(`\)]\)\!\(\*SubscriptBox[\(e\
 \), \(2\)]\) = i\>\"", ",", "\n", "\t   ", 
                     "\"\<   Key in the complex number\>\"", ",", "\n", 
                     "\t   ", 
                     RowBox[{
-                    "\"\<   Generates a quaternion a + bi + cj + dk where i = \
+                    "\"\<   Generate a quaternion a + bi + cj + dk where i = \
 \!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\), \>\"", 
                     "<>", "\"\<j = -\!\(\*SubscriptBox[\(e\), \
 \(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\), k = \!\(\*SubscriptBox[\(e\), \(1\
@@ -777,10 +788,12 @@ available.\>\""}]}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t",
                     RowBox[{
                     "\"\<ExpandG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<CollectG[clif]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<ReduceG[clif]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<FullSimplifyG[clif]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<MaxGradeG[clif]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<MaxDimG[clif]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<ReduceG[clif]\>\"", ",", "\[IndentingNewLine]", 
+                    "\"\<ClearSubscriptsG[a]\>\"", ",", 
+                    "\[IndentingNewLine]", "\"\<SimplifyG[clif]\>\"", ",", 
+                    "\[IndentingNewLine]", "\"\<FullSimplifyG[clif]\>\"", ",",
+                     "\n", "\t\t\t", "\"\<MaxGradeG[clif]\>\"", ",", "\n", 
+                    "\t\t\t", "\"\<MaxDimG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<GradeInvoluteG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<ClifConjugateG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<ConstantG[clif]\>\"", ",", "\n", "\t\t\t", 
@@ -800,19 +813,23 @@ available.\>\""}]}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t",
                     "\"\<   Reduce any square powers of \
 \!\(\*SubscriptBox[\(e\), \(i\)]\)'s and then Collect terms by blades up to \
 dimension n\>\"", ",", "\n", "\t   ", 
-                    "\"\<   Reduces any square \!\(\*SubscriptBox[\(e\), \
-\(i\)]\) terms in clif according to initialization scheme\>\"", ",", "\n", 
-                    "\t   ", 
-                    "\"\<   Applies FullSimplify to any clif, term-by-term. \
-SimplifyG is also available for your use.\>\"", ",", "\n", "\t   ", 
-                    "\"\<   Find the maximum grade among the terms of the \
-multivector \>\"", ",", "\n", "\t   ", 
+                    "\"\<   Reduce any square \!\(\*SubscriptBox[\(e\), \
+\(i\)]\) terms in clif according to initialization scheme\>\"", ",", 
+                    "\[IndentingNewLine]", 
+                    "\"\<  Clears values of subcripted symbols \
+\!\(\*SubscriptBox[\(a\), \(i, j,  ... \)]\) all at once. Awkward to do this \
+in Mathematica\>\"", " ", ",", 
+                    "\"\<   Apply Simplify to any clif, term-by-term\>\"", 
+                    ",", "\n", "\t   ", 
+                    "\"\<   Apply FullSimplify to any clif, term-by-term\>\"",
+                     ",", "\"\<   Find the maximum grade among the terms of \
+the multivector \>\"", ",", "\n", "\t   ", 
                     "\"\<   Find the maximum dimension of terms in the \
 multivector\>\"", ",", "\n", "\t   ", 
-                    "\"\<   Reverses sign of any terms having odd grade\>\"", 
+                    "\"\<   Reverse sign of any terms having odd grade\>\"", 
                     ",", "\n", "\t   ", 
-                    "\"\<   Reverses sign of any terms having grades 1 or 2, \
-5 or 6, 9 or 10, ...\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Reverse sign of any terms having grades 1 or 2, 5 \
+or 6, 9 or 10, ...\>\"", ",", "\n", "\t   ", 
                     "\"\<   Generate the constant term(s) of the \
 mulitvector\>\"", ",", "\n", "\t   ", 
                     "\"\<   Generate the non-constant term(s) of the \
@@ -821,7 +838,7 @@ mulitvector\>\"", ",", "\n", "\t   ",
 multivector\>\"", ",", "\n", "\t   ", 
                     "\"\<   Collect the coefficients of a given atom, if any, \
 in a multivector\>\"", ",", "\[IndentingNewLine]", 
-                    "\"\<Convert generic 3-space rotor of form a + b \
+                    "\"\<  Convert generic 3-space rotor of form a + b \
 \!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\) - c \!\(\
 \*SubscriptBox[\(e\), \(1\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\) + d \
 \!\(\*SubscriptBox[\(e\), \(1\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\) to a \
@@ -916,11 +933,12 @@ just once. \>\"", "<>", "\"\<Constant, if any, is listed as {0}\>\""}], ",",
                     "\n", "\t   ", 
                     "\"\<   Generate a list of \!\(\*SubscriptBox[\(e\), \(i, \
 j, k,  ... \)]\) matching the order of ClifToListG\>\"", ",", "\n", "\t   ", 
-                    "\"\<   Converts atoms \!\(\*SubscriptBox[\(e\), \(i\)]\)\
-\!\(\*SubscriptBox[\(e\), \(j\)]\)\!\(\*SubscriptBox[\(e\), \(k\)]\)... in a \
-list to \!\(\*SubscriptBox[\(e\), \(i, j, k,  ... \)]\)\>\"", ",", "\n", 
-                    "\t   ", 
-                    "\"\<   Converts \!\(\*SubscriptBox[\(e\), \(i, j, k,  .. \
+                    "\"\<   Convert atoms \!\(\*SubscriptBox[\(e\), \
+\(i\)]\)\!\(\*SubscriptBox[\(e\), \(j\)]\)\!\(\*SubscriptBox[\(e\), \
+\(k\)]\)... in a list to \!\(\*SubscriptBox[\(e\), \(i, j, k,  ... \)]\)\>\"",
+                     ",", "\n", "\t   ", 
+                    
+                    "\"\<   Convert \!\(\*SubscriptBox[\(e\), \(i, j, k,  .. \
 \)]\)'s in a list to \!\(\*SubscriptBox[\(e\), \(i\)]\)\!\(\*SubscriptBox[\(e\
 \), \(j\)]\)\!\(\*SubscriptBox[\(e\), \(k\)]\)'s\>\"", ",", "\n", "\t   ", 
                     "\"\<   Generate a list of grades matching the order of \
@@ -1561,15 +1579,33 @@ triples \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\), etc.\>\""}], ",", "\n",
    3.816291954581232*^9, 3.8162919547435427`*^9}, {3.816292039564713*^9, 
    3.816292130805953*^9}, {3.816292206045539*^9, 3.816292234394876*^9}, {
    3.816292974977749*^9, 3.8162929868720837`*^9}, {3.8162931308606253`*^9, 
-   3.816293216444502*^9}, {3.816293653886593*^9, 3.816293774802115*^9}},
+   3.816293216444502*^9}, {3.816293653886593*^9, 3.816293774802115*^9}, {
+   3.8163865133723087`*^9, 3.816386543525255*^9}, {3.8163865778003197`*^9, 
+   3.816386605013389*^9}, {3.816386667003684*^9, 3.816386669895342*^9}, {
+   3.816386700801792*^9, 3.8163867103820267`*^9}, {3.816386776816516*^9, 
+   3.816386823117278*^9}, {3.816386872315167*^9, 3.8163869011693687`*^9}, {
+   3.8164293926243267`*^9, 3.816429403021693*^9}, {3.816429436352667*^9, 
+   3.816429440581665*^9}, {3.816429619128545*^9, 3.816429644172351*^9}, {
+   3.8164440202839108`*^9, 3.816444051183648*^9}, {3.8164440953513613`*^9, 
+   3.816444273425433*^9}, {3.8164443378937197`*^9, 3.816444341555419*^9}, {
+   3.816444427385906*^9, 3.816444449137607*^9}, {3.816444516885612*^9, 
+   3.816444517750807*^9}, 3.816444581799521*^9, {3.8164456084956284`*^9, 
+   3.8164457266364107`*^9}, {3.816445764826239*^9, 3.8164459227936497`*^9}, {
+   3.816446042119779*^9, 3.8164460660184603`*^9}, {3.816446110966709*^9, 
+   3.816446120051161*^9}, {3.816450122298416*^9, 3.8164501928118057`*^9}, {
+   3.816450295968526*^9, 3.816450328721933*^9}, {3.816450376167472*^9, 
+   3.816450405085918*^9}, {3.816450453749*^9, 3.816450458085946*^9}, {
+   3.8164506024337254`*^9, 3.816450608298074*^9}, {3.8164507448934517`*^9, 
+   3.8164507478130913`*^9}, {3.816450812262274*^9, 3.816450843865168*^9}, {
+   3.816450903077674*^9, 3.816451000842979*^9}},
  CellLabel->
-  "In[1343]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+  "In[11465]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
 
 Cell[BoxData[
  TemplateBox[{
    FrontEndObject[
-    LinkObject["hby87_shm", 3, 1]], 79, 
-   "FrontEndObject[LinkObject[\"hby87_shm\", 3, 1]]", "79", 
+    LinkObject["m5k4r_shm", 3, 1]], 239, 
+   "FrontEndObject[LinkObject[\"m5k4r_shm\", 3, 1]]", "239", 
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->{3.816039515368878*^9, 3.816039691413103*^9, 
@@ -1578,9 +1614,14 @@ Cell[BoxData[
   3.816259858169648*^9, 3.8162601175611143`*^9, 3.816260246566163*^9, 
   3.8162602891103487`*^9, 3.816260381902499*^9, 3.8162605260547647`*^9, 
   3.816260645561371*^9, 3.816260715665636*^9, 3.816292267268682*^9, 
-  3.816293239160307*^9, 3.816295295481202*^9},
+  3.816293239160307*^9, 3.816295295481202*^9, 3.816386956969926*^9, 
+  3.816429547955276*^9, 3.816429660564013*^9, 3.816444293201973*^9, 
+  3.8164443553659277`*^9, 3.816444462156872*^9, 3.816444549976914*^9, 
+  3.816445561371832*^9, 3.816445929406461*^9, 3.81644607006689*^9, 
+  3.816446127510399*^9, 3.8164502048265343`*^9, 3.816450415128173*^9, 
+  3.816450463533893*^9, 3.8164507530235558`*^9, 3.816451093705134*^9},
  CellLabel->
-  "Out[1344]=",ExpressionUUID->"e8e34b6e-3efa-4fca-90af-cf1a3115a028"]
+  "Out[11466]=",ExpressionUUID->"d822884f-6e5a-40bd-b434-55a978637e47"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1595,8 +1636,9 @@ Cell[TextData[{
  StyleBox["2020 Dec\n",
   FontWeight->"Bold",
   FontColor->GrayLevel[0]],
- StyleBox["Added two new RotorG commands, one specifically for 3D space and \
-one for dimension n, space or spacetime",
+ StyleBox["Added two new RotorG commands, one specifically for 3-space and \
+one for dimension n, both space or spacetime\nAdded ClearSubscriptsG and \
+SimplifyG",
   FontColor->GrayLevel[0]],
  StyleBox["\n",
   FontWeight->"Bold",
@@ -1704,13 +1746,14 @@ and made those the defaults\n\n"
    3.7849030256824417`*^9}, {3.8159560207966137`*^9, 3.815956114351668*^9}, {
    3.8160359840986147`*^9, 3.816036196323691*^9}, {3.816036243446931*^9, 
    3.816036257514299*^9}, {3.8160397664928513`*^9, 3.816039781701118*^9}, {
-   3.8162611343997*^9, 
-   3.8162612167126513`*^9}},ExpressionUUID->"4a3489c9-27cd-41f6-b43d-\
+   3.8162611343997*^9, 3.8162612167126513`*^9}, {3.8163870532250423`*^9, 
+   3.816387068868684*^9}, {3.816451037141193*^9, 
+   3.816451065379417*^9}},ExpressionUUID->"4a3489c9-27cd-41f6-b43d-\
 5798658675ac"]
 }, Open  ]]
 },
 WindowSize->{875, 1241},
-WindowMargins->{{Automatic, 295}, {Automatic, 38}},
+WindowMargins->{{Automatic, 413}, {Automatic, 39}},
 SpellingDictionaries->{"CorrectWords"->{"aaa", "Windowsize"}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->Notebook[{
@@ -1733,12 +1776,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[400, 13, 12214, 178, 2131, "Text",ExpressionUUID->"969d602e-3133-4ac8-b153-3e8836467719"],
 Cell[CellGroupData[{
-Cell[12639, 195, 84061, 1370, 6175, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
-Cell[96703, 1567, 773, 15, 43, "Output",ExpressionUUID->"e8e34b6e-3efa-4fca-90af-cf1a3115a028"]
+Cell[12639, 195, 86583, 1406, 6336, "Input",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+Cell[99225, 1603, 1148, 20, 43, "Output",ExpressionUUID->"d822884f-6e5a-40bd-b434-55a978637e47"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[97513, 1587, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
-Cell[97759, 1593, 5506, 115, 1145, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
+Cell[100410, 1628, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
+Cell[100656, 1634, 5648, 117, 1168, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
 }, Open  ]]
 }
 ]

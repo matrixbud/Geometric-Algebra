@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16051,        335]
-NotebookOptionsPosition[     15460,        314]
-NotebookOutlinePosition[     15838,        331]
-CellTagsIndexPosition[     15795,        328]
+NotebookDataLength[     16078,        333]
+NotebookOptionsPosition[     15448,        312]
+NotebookOutlinePosition[     15865,        329]
+CellTagsIndexPosition[     15822,        326]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,20 +35,20 @@ Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"Needs", "[", "\"\<GeomAlg2019Dec`\>\"", "]"}], "\n", 
+  RowBox[{"Needs", "[", "\"\<GeomAlg2020Dec`\>\"", "]"}], "\n", 
   RowBox[{"(*", " ", 
    RowBox[{
    "Make", " ", "sure", " ", "latest", " ", "version", " ", "is", " ", 
-    "listed", " ", "above"}], " ", "*)"}], "\[IndentingNewLine]"}], "\n", 
+    "listed", " ", "above"}], " ", "*)"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"\[Theta]", "=."}], ";", 
    RowBox[{"f", "=."}], ";", 
-   RowBox[{"g", "=."}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"g", "=."}], ";"}], "\n", "\n", 
   RowBox[{"(*", "  ", 
    RowBox[{
    "Initialize", " ", "table", " ", "of", " ", "output", " ", "to", " ", 
-    "export"}], " ", "*)"}]}], "\n", 
+    "export"}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"mytable", "=", 
@@ -245,8 +245,8 @@ Cell[BoxData[{
    3.7798286986504917`*^9, {3.7798288456309137`*^9, 3.7798288685714684`*^9}, {
    3.779829028517036*^9, 3.779829102713924*^9}, 3.7798291825894413`*^9, {
    3.784752541497682*^9, 3.784752542683406*^9}, {3.784752667824259*^9, 
-   3.784752698995007*^9}},ExpressionUUID->"a6a25514-f36d-46e0-a8bb-\
-65b699cb8e47"],
+   3.784752698995007*^9}, {3.8167123657299757`*^9, 3.816712366870235*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"a6a25514-f36d-46e0-a8bb-65b699cb8e47"],
 
 Cell[BoxData[
  TagBox[
@@ -292,32 +292,30 @@ Cell[BoxData[
       "1.`4.", "0.2938926261462365646`4.", "0.095491502812526288`4.", 
       "0.2938926261462365646`4.", "1.`4."}
     },
-    GridBoxAlignment->{
-     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-      "RowsIndexed" -> {}},
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
     GridBoxSpacings->{"Columns" -> {
         Offset[0.27999999999999997`], {
          Offset[0.7]}, 
-        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.27999999999999997`]}, "Rows" -> {
         Offset[0.2], {
          Offset[0.4]}, 
-        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
   Function[BoxForm`e$, 
    MatrixForm[BoxForm`e$]]]], "Output",
  CellChangeTimes->{3.779829103971444*^9, 3.779829185798583*^9, 
-  3.779834227971764*^9, 3.7847526487697697`*^9},
+  3.779834227971764*^9, 3.7847526487697697`*^9, 3.816712369410778*^9},
  CellLabel->
-  "Out[6]//MatrixForm=",ExpressionUUID->"0a841e85-fc7c-4a55-889d-\
-18ad48aab2ab"]
+  "Out[6]//MatrixForm=",ExpressionUUID->"51cfdd88-de8a-4ba9-9215-\
+3fdfb42c2f33"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{768, 1308},
-WindowMargins->{{Automatic, 479}, {Automatic, 0}},
+WindowMargins->{{Automatic, 199}, {Automatic, 4}},
 CellContext->Notebook,
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7898f619-75fb-4fe2-9554-96df2fdd1a6e"
 ]
 (* End of Notebook Content *)
 
@@ -333,8 +331,8 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 379, 9, 105, "Section",ExpressionUUID->"f3100592-43af-4841-bb42-d991fa16f5b5"],
 Cell[CellGroupData[{
-Cell[984, 35, 11223, 213, 535, "Input",ExpressionUUID->"a6a25514-f36d-46e0-a8bb-65b699cb8e47"],
-Cell[12210, 250, 3222, 60, 266, "Output",ExpressionUUID->"0a841e85-fc7c-4a55-889d-18ad48aab2ab"]
+Cell[984, 35, 11292, 213, 535, "Input",ExpressionUUID->"a6a25514-f36d-46e0-a8bb-65b699cb8e47"],
+Cell[12279, 250, 3141, 58, 314, "Output",ExpressionUUID->"51cfdd88-de8a-4ba9-9215-3fdfb42c2f33"]
 }, Open  ]]
 }, Open  ]]
 }

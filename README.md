@@ -4,5 +4,5 @@ Mathematica Package -- A user-friendly Clifford-algebra environment in Mathemati
 Please start with the Microsoft Word Read Me First file or the pdf Read Me First file for an overview of this package.
 Then go to Installation Guide for instructions on installing the package in your Mathematica environment.
 Next go to Quick Start to get going,
-followed by the main documentation, Working Tutorial, and then Documentation.
+followed by the main documentation (Working Tutorial), and then Documentation.
 The installation Guide explains what the various files are. The Working tutorial provides a hands-on guide to using this package.

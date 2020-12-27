@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9414,        188]
-NotebookOptionsPosition[      8770,        164]
-NotebookOutlinePosition[      9165,        180]
-CellTagsIndexPosition[      9122,        177]
+NotebookDataLength[      9463,        189]
+NotebookOptionsPosition[      8820,        165]
+NotebookOutlinePosition[      9214,        181]
+CellTagsIndexPosition[      9171,        178]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,7 +25,7 @@ Installation Instructions
 
 Cell[TextData[{
  StyleBox["1. Open the notebook \[OpenCurlyDoubleQuote]Geom Alg Palette \
-2019Dec\[CloseCurlyDoubleQuote]. Double click on the 2nd bracket to the left \
+2021Jan\[CloseCurlyDoubleQuote]. Double click on the 2nd bracket to the left \
 on the right hand side of Begin Package. That opens the next level of \
 documentation which, in this case, is some code. Place you cursor anywhere in \
 the code and press shift-enter to run the code. A palette should be created. \
@@ -39,7 +39,7 @@ palette. Then click on the Palette menu to verify the new palette, Geometric \
 Algebra Palette, is there. Close the source file.\n\nNote: On a Mac, the \
 default location for the installed palette is \
 Library/Mathematica/SystemFiles/FrontEnd/Palettes/Geometric Algebra.nb in \
-your home folder\n\n2. Open the notebook GeomAlg2019Oct src. Save it as a \
+your home folder\n\n2. Open the notebook GeomAlg2021Jan src. Save it as a \
 type .m Mathematica file (that is, a Wolfram Mathematica Package) in the \
 Applications folder of your  $UserBaseDirectory. Do not change its name. On a \
 Macintosh, for example, one would select SAVE AS from the file menu, navigate \
@@ -75,7 +75,7 @@ executing that step, and so on until the simplest answer is reached.\n\n",
   FontWeight->"Bold"],
  " - Shows how function AtomCoefG can be used to format output to line up in \
 a table format\n\n",
- StyleBox["GeomAlg2019Dec src",
+ StyleBox["GeomAlg2021Jan src",
   FontWeight->"Bold"],
  " - Source file for package\n\n",
  StyleBox["Geom Alg Palette src",
@@ -157,13 +157,14 @@ with many packages\n\n",
    3.779878686675172*^9}, {3.7798788031874437`*^9, 3.7798788062744017`*^9}, {
    3.77988248573372*^9, 3.779882492935033*^9}, {3.7847536957756033`*^9, 
    3.784753696498743*^9}, {3.78476373370385*^9, 3.7847637380443163`*^9}, {
-   3.816081794740539*^9, 3.816081881638855*^9}},
+   3.816081794740539*^9, 3.816081881638855*^9}, {3.817993244419856*^9, 
+   3.817993286774498*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 },
 WindowSize->{835, 1188},
-WindowMargins->{{Automatic, 143}, {20, Automatic}},
+WindowMargins->{{Automatic, 753}, {Automatic, 0}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"b9a58404-0e38-4494-8b1b-63611da3d2d9"
@@ -181,7 +182,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
-Cell[752, 25, 8002, 136, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
+Cell[752, 25, 8052, 137, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]

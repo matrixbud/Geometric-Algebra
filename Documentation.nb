@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     44027,        906]
-NotebookOptionsPosition[     43394,        882]
-NotebookOutlinePosition[     43788,        898]
-CellTagsIndexPosition[     43745,        895]
+NotebookDataLength[     44075,        906]
+NotebookOptionsPosition[     43442,        882]
+NotebookOutlinePosition[     43836,        898]
+CellTagsIndexPosition[     43793,        895]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -715,7 +715,7 @@ different context than the notebook \[OpenCurlyDoubleQuote]e\
 performing any package operations. Otherwise the context of e will not be \
 preserved and those computations will fail dramatically. If you forget and \
 try to execute a function in the package, then you need to quit the kernel \
-and then execute Needs [\[OpenCurlyDoubleQuote]GeomAlg201pOct`\
+and then execute Needs [\[OpenCurlyDoubleQuote]GeomAlg2021Jan`\
 \[CloseCurlyDoubleQuote]] as soon as you see the failure. And, as mentioned \
 earlier, you must also close and reopen the palette and use section 1 to \
 re-initialize your GA.\n\n"
@@ -875,7 +875,7 @@ re-initialize your GA.\n\n"
    3.779915713940271*^9}, {3.77991586978188*^9, 3.779915879443565*^9}, {
    3.816041123580134*^9, 3.8160411461061068`*^9}, 3.816041329090496*^9, 
    3.816041442244336*^9, 3.816041480118606*^9, {3.816082349845583*^9, 
-   3.816082350491835*^9}},
+   3.816082350491835*^9}, {3.818002063504139*^9, 3.8180020689001417`*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
 }, Open  ]]
@@ -899,7 +899,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 253, 4, 67, "Section",ExpressionUUID->"17a443f8-29fb-439e-bb35-2523a67c3a7a"],
-Cell[678, 21, 42700, 858, 4911, "Text",ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
+Cell[678, 21, 42748, 858, 4911, "Text",ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
 }, Open  ]]
 }
 ]

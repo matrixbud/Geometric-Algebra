@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    116696,       1930]
-NotebookOptionsPosition[    115456,       1896]
-NotebookOutlinePosition[    116118,       1917]
-CellTagsIndexPosition[    116075,       1914]
+NotebookDataLength[    116927,       1934]
+NotebookOptionsPosition[    115687,       1900]
+NotebookOutlinePosition[    116349,       1921]
+CellTagsIndexPosition[    116306,       1918]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1007,8 +1007,10 @@ just once. \>\"", "\n", "\t    ", "<>",
 1]]\)\!\(\*StyleBox[\"listed\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\
 \" \",FontColor->RGBColor[1, 0, \
 1]]\)\!\(\*StyleBox[\"as\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \
-\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\"0\",FontColor->RGBColor[1, \
-0, 1]]\)\>\""}], ",", "\n", "\t   ", 
+\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\"{\",FontColor->RGBColor[1, \
+0, 1]]\)\!\(\*StyleBox[\"0\",FontColor->RGBColor[1, 0, \
+1]]\)\!\(\*StyleBox[\"}\",FontColor->RGBColor[1, 0, 1]]\)\>\""}], ",", "\n", 
+                    "\t   ", 
                     RowBox[{
                     "\"\<   Generate a list of \!\(\*SubscriptBox[\(e\), \(i, \
 j, k,  ... \)]\) matching the order of ClifToListG. \>\"", "\n", "\t    ", 
@@ -1737,15 +1739,16 @@ numbers, letters, words, \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\) or \>\"",
    3.817760766357795*^9, 3.81776076779657*^9}, {3.8177608143128977`*^9, 
    3.8177608268276367`*^9}, {3.81776103083368*^9, 3.817761138060885*^9}, {
    3.817944797290289*^9, 3.817944840247212*^9}, 3.8179905843447027`*^9, 
-   3.817991264242277*^9, {3.818005232445813*^9, 3.8180052683564034`*^9}},
+   3.817991264242277*^9, {3.818005232445813*^9, 3.8180052683564034`*^9}, {
+   3.818114851038307*^9, 3.818114854713798*^9}},
  CellLabel->
-  "In[1859]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+  "In[1834]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
 
 Cell[BoxData[
  TemplateBox[{
    FrontEndObject[
-    LinkObject["n5rz4_shm", 3, 1]], 92, 
-   "FrontEndObject[LinkObject[\"n5rz4_shm\", 3, 1]]", "92", 
+    LinkObject["y77hm_shm", 3, 1]], 266, 
+   "FrontEndObject[LinkObject[\"y77hm_shm\", 3, 1]]", "266", 
    "\"Geometric Algebra Palette\""},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->{
@@ -1753,9 +1756,10 @@ Cell[BoxData[
    3.816949533271246*^9}, {3.8177608601083517`*^9, 3.817760860371882*^9}, 
    3.817760954386723*^9, 3.81776115113848*^9, {3.8179448899004173`*^9, 
    3.817944908107026*^9}, {3.81799117990315*^9, 3.8179911801721687`*^9}, 
-   3.8179912844569283`*^9, {3.818005337581139*^9, 3.8180053377790422`*^9}},
+   3.8179912844569283`*^9, {3.818005337581139*^9, 3.8180053377790422`*^9}, {
+   3.8182732471104116`*^9, 3.818273247305339*^9}},
  CellLabel->
-  "Out[1860]=",ExpressionUUID->"5372b011-9174-4501-89a7-1c53ff5891ff"]
+  "Out[1835]=",ExpressionUUID->"d790d6c4-755c-440d-a9e4-e8159e7160ff"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1918,12 +1922,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[400, 13, 12214, 178, 2131, "Text",ExpressionUUID->"969d602e-3133-4ac8-b153-3e8836467719"],
 Cell[CellGroupData[{
-Cell[12639, 195, 95564, 1546, 5664, "Code",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
-Cell[108206, 1743, 695, 14, 43, "Output",ExpressionUUID->"5372b011-9174-4501-89a7-1c53ff5891ff"]
+Cell[12639, 195, 95741, 1549, 5664, "Code",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
+Cell[108383, 1746, 749, 15, 43, "Output",ExpressionUUID->"d790d6c4-755c-440d-a9e4-e8159e7160ff"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[108938, 1762, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
-Cell[109184, 1768, 6256, 125, 1280, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
+Cell[109169, 1766, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
+Cell[109415, 1772, 6256, 125, 1280, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
 }, Open  ]]
 }
 ]

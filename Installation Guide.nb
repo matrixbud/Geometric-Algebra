@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9463,        189]
-NotebookOptionsPosition[      8820,        165]
-NotebookOutlinePosition[      9214,        181]
-CellTagsIndexPosition[      9171,        178]
+NotebookDataLength[      9743,        194]
+NotebookOptionsPosition[      9100,        170]
+NotebookOutlinePosition[      9494,        186]
+CellTagsIndexPosition[      9451,        183]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -71,6 +71,11 @@ modify it.\n\n3. This is a 1-time operation. Next read Quick Start.",
 use Mathematica) to solve equations by examining the output, deciding how to \
 simplify it and executing that step, deciding how to further simplify and \
 executing that step, and so on until the simplest answer is reached.\n\n",
+ StyleBox["Compare all Lists ",
+  FontWeight->"Bold"],
+ "- A Notebook to supplement the Working Tutorial that displays, \
+side-by-side, examples of the different lists that this GA package can \
+generate from a given multivector.",
  StyleBox["Example Formatted Output",
   FontWeight->"Bold"],
  " - Shows how function AtomCoefG can be used to format output to line up in \
@@ -158,7 +163,7 @@ with many packages\n\n",
    3.77988248573372*^9, 3.779882492935033*^9}, {3.7847536957756033`*^9, 
    3.784753696498743*^9}, {3.78476373370385*^9, 3.7847637380443163`*^9}, {
    3.816081794740539*^9, 3.816081881638855*^9}, {3.817993244419856*^9, 
-   3.817993286774498*^9}},
+   3.817993286774498*^9}, {3.8183528174862747`*^9, 3.818352833209869*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
@@ -182,7 +187,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
-Cell[752, 25, 8052, 137, 879, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
+Cell[752, 25, 8332, 142, 913, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]

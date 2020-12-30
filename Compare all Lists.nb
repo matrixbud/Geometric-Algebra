@@ -1,0 +1,469 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19575,        461]
+NotebookOptionsPosition[     17925,        430]
+NotebookOutlinePosition[     18320,        446]
+CellTagsIndexPosition[     18277,        443]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<GeomAlg2021Jan`\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"b", ",", "Subscript"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["b", "0"], "=", "3"}], ";", 
+  RowBox[{
+   SubscriptBox["b", "1"], "=", "2."}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"clif", "=", 
+   RowBox[{"ClifG", "[", 
+    RowBox[{"b", ",", "2"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Clif list = \>\"", ",", 
+    RowBox[{"clist", "=", 
+     RowBox[{"ClifToListG", "[", "clif", "]"}]}]}], "]"}], ";", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<AtomList = EiEjList = \>\"", ",", 
+    RowBox[{"aL", "=", 
+     RowBox[{"AtomListG", "[", "clif", "]"}]}]}], "]"}], ";", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<EijList = \>\"", ",", 
+    RowBox[{"EijListG", "[", "clif", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Coefficient list = \>\"", ",", 
+    RowBox[{"CoefListG", "[", "clif", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Subscript list = \>\"", ",", 
+    RowBox[{"SubscriptListG", "[", "clif", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<GradeList = \>\"", ",", 
+    RowBox[{"GradeListG", "[", "clif", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Free list = \>\"", ",", 
+    RowBox[{"FreeListG", "[", "clif", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Constant = \>\"", ",", 
+    RowBox[{"ConstantG", "[", "clif", "]"}]}], "]"}], ";", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Numerical clif: NG[clif] = \>\"", ",", 
+    RowBox[{"NG", "[", "clif", "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Dimension of clif: n = \>\"", ",", 
+    RowBox[{"n", "=", 
+     RowBox[{"MaxDimG", "[", "clif", "]"}]}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<SignatureG of \>\"", ",", 
+    RowBox[{"jlist", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"{", "n", "}"}], ",", 
+       RowBox[{"Range", "[", "n", "]"}]}], "]"}]}], ",", "\"\< = \>\"", ",", 
+    RowBox[{"SignatureG", "[", "jlist", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<Mathematica's Signature of \>\"", ",", "jlist", ",", "\"\< = \>\"", 
+    ",", 
+    RowBox[{"Signature", "[", "jlist", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.818281353491466*^9, 3.818281423869834*^9}, {
+   3.818281455954651*^9, 3.818281469862265*^9}, {3.818281900361425*^9, 
+   3.818281931023841*^9}, {3.818282664046206*^9, 3.818282783832193*^9}, {
+   3.818282861033503*^9, 3.818282912047155*^9}, {3.818282971486086*^9, 
+   3.818282989770679*^9}, 3.818283028864327*^9, {3.8182831863309107`*^9, 
+   3.818283225775276*^9}, {3.8182836362287207`*^9, 3.8182836478874693`*^9}, {
+   3.818283701855855*^9, 3.818283727896131*^9}, {3.818284898870665*^9, 
+   3.8182849594522343`*^9}, 3.818285170881441*^9, {3.818285419500278*^9, 
+   3.818285476100636*^9}, 3.818285910574553*^9, {3.818285973638123*^9, 
+   3.8182859880491543`*^9}, {3.8182860800495167`*^9, 3.818286081820396*^9}, {
+   3.818286502331707*^9, 3.818286518186157*^9}, {3.818286570542501*^9, 
+   3.818286579650393*^9}, {3.818287095801116*^9, 3.818287099107724*^9}, {
+   3.8182879983058567`*^9, 3.818288014355226*^9}, 3.818288398406579*^9, {
+   3.818288454725079*^9, 3.8182885114144707`*^9}, {3.818288668989235*^9, 
+   3.818288695120036*^9}, {3.818289069878982*^9, 3.818289087994081*^9}, 
+   3.8182891219683247`*^9, {3.818289205885069*^9, 3.818289223684263*^9}, {
+   3.8182892728589697`*^9, 3.8182892771775227`*^9}, {3.818289859767788*^9, 
+   3.81828986538026*^9}, {3.818289984236422*^9, 3.8182900239452667`*^9}, 
+   3.8182900679753532`*^9, {3.818291088597917*^9, 3.818291103981567*^9}, {
+   3.81829113874438*^9, 3.818291197386189*^9}, {3.818291369880754*^9, 
+   3.818291393981637*^9}, {3.8182915147020493`*^9, 3.818291542576517*^9}, {
+   3.818291748107397*^9, 3.8182917771515703`*^9}, 3.818291876079574*^9, {
+   3.818292025986271*^9, 3.818292055901215*^9}, 3.8183259946230803`*^9, {
+   3.81832638304502*^9, 3.8183264539398518`*^9}, {3.81832870902582*^9, 
+   3.8183288347775087`*^9}, {3.8183293705635643`*^9, 3.818329379196189*^9}, {
+   3.81832946054315*^9, 3.818329515645569*^9}, {3.8183295546343193`*^9, 
+   3.818329559480961*^9}, {3.818329747302147*^9, 3.8183297495648527`*^9}, {
+   3.818329809231894*^9, 3.818329816909998*^9}, {3.818329890993507*^9, 
+   3.818329921756114*^9}, {3.8183300560051327`*^9, 3.818330058595418*^9}, {
+   3.818331387643156*^9, 3.818331398906801*^9}, {3.818331465899477*^9, 
+   3.818331477759378*^9}, {3.818331795757659*^9, 3.818331891655759*^9}, {
+   3.818331952700034*^9, 3.818332108942833*^9}, {3.8183321579385853`*^9, 
+   3.818332187981312*^9}, {3.818332219052947*^9, 3.818332495092965*^9}, 
+   3.818332543529155*^9, {3.818332641759204*^9, 3.8183327045436287`*^9}, {
+   3.8183328351392393`*^9, 3.818332878655267*^9}, 3.8183329138634*^9, {
+   3.818333093050091*^9, 3.818333103501302*^9}, {3.818333156703045*^9, 
+   3.818333213333233*^9}, {3.8183503801114063`*^9, 3.8183503864255657`*^9}, {
+   3.818350449425242*^9, 3.81835052868058*^9}, {3.818350781448635*^9, 
+   3.818350787707011*^9}, {3.8183508208671303`*^9, 3.818350829095447*^9}, {
+   3.818350930228085*^9, 3.81835099895819*^9}, {3.818351029698533*^9, 
+   3.8183511495380573`*^9}, {3.818351286269828*^9, 3.8183512911006193`*^9}, {
+   3.8183513312777452`*^9, 3.818351433208706*^9}, {3.818351463295905*^9, 
+   3.818351539753632*^9}, {3.818351615696623*^9, 3.818351655698884*^9}, {
+   3.8183517101962347`*^9, 3.818351712812846*^9}, {3.8183517682682343`*^9, 
+   3.818351781435145*^9}, 3.818351822808206*^9},
+ CellLabel->
+  "In[3886]:=",ExpressionUUID->"5d2640b4-273c-479a-a3cd-1c7916224f8b"],
+
+Cell[BoxData[
+ RowBox[{"3", "+", 
+  RowBox[{"2.`", " ", 
+   SubscriptBox["e", "1"]}], "+", 
+  RowBox[{
+   SubscriptBox["b", "2"], " ", 
+   SubscriptBox["e", "2"]}], "+", 
+  RowBox[{
+   SubscriptBox["e", "1"], " ", 
+   SubscriptBox["e", "2"], " ", 
+   SubscriptBox["b", 
+    RowBox[{"1", ",", "2"}]]}]}]], "Output",
+ CellChangeTimes->{{3.818351127172593*^9, 3.81835115213325*^9}, 
+   3.818351292337494*^9, {3.8183513509263363`*^9, 3.818351371520565*^9}, {
+   3.818351403913229*^9, 3.818351415876975*^9}, 3.818351540909463*^9, {
+   3.818351640088916*^9, 3.8183516578949413`*^9}, 3.818351714658661*^9, 
+   3.818351782869701*^9, 3.8183518250389843`*^9},
+ CellLabel->
+  "Out[3889]=",ExpressionUUID->"48c92088-c9fa-483b-a4db-8fc4bd28c91e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Clif list = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"3.`", ",", 
+     RowBox[{"2.`", " ", 
+      SubscriptBox["e", "1"]}], ",", 
+     RowBox[{
+      SubscriptBox["b", "2"], " ", 
+      SubscriptBox["e", "2"]}], ",", 
+     RowBox[{
+      SubscriptBox["e", "1"], " ", 
+      SubscriptBox["e", "2"], " ", 
+      SubscriptBox["b", 
+       RowBox[{"1", ",", "2"}]]}]}], "}"}]}],
+  SequenceForm[
+  "Clif list = ", {
+   3., 2. Subscript[GeomAlg2021Jan`e, 1], Subscript[$CellContext`b, 2] 
+    Subscript[GeomAlg2021Jan`e, 2], Subscript[GeomAlg2021Jan`e, 1] 
+    Subscript[GeomAlg2021Jan`e, 2] Subscript[$CellContext`b, 1, 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825040411*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"06ebc74c-6e30-4d54-a706-bb59fa1ddd98"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"AtomList = EiEjList = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     SubscriptBox["e", "1"], ",", 
+     SubscriptBox["e", "2"], ",", 
+     RowBox[{
+      SubscriptBox["e", "1"], " ", 
+      SubscriptBox["e", "2"]}]}], "}"}]}],
+  SequenceForm["AtomList = EiEjList = ", {1, 
+    Subscript[GeomAlg2021Jan`e, 1], 
+    Subscript[GeomAlg2021Jan`e, 2], Subscript[GeomAlg2021Jan`e, 1] 
+    Subscript[GeomAlg2021Jan`e, 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825041521*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"5fc25804-899b-4c0a-8efc-7aa09a67539c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"EijList = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     SubscriptBox["e", "1"], ",", 
+     SubscriptBox["e", "2"], ",", 
+     SubscriptBox["e", 
+      RowBox[{"1", ",", "2"}]]}], "}"}]}],
+  SequenceForm["EijList = ", {1, 
+    Subscript[GeomAlg2021Jan`e, 1], 
+    Subscript[GeomAlg2021Jan`e, 2], 
+    Subscript[GeomAlg2021Jan`e, 1, 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825042646*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"f251cfc6-e3e5-421d-a67d-710065022ae3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Coefficient list = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"3.`", ",", "2.`", ",", 
+     SubscriptBox["b", "2"], ",", 
+     SubscriptBox["b", 
+      RowBox[{"1", ",", "2"}]]}], "}"}]}],
+  SequenceForm["Coefficient list = ", {3., 2., 
+    Subscript[$CellContext`b, 2], 
+    Subscript[$CellContext`b, 1, 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.8183518250435123`*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"04089fbf-145e-4af5-b48c-d3a7779e6b10"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Subscript list = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "0", "}"}], ",", 
+     RowBox[{"{", "1", "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}]}], "}"}]}],
+  SequenceForm["Subscript list = ", {{0}, {1}, {2}, {1, 2}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825044559*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"83229ac3-4941-4c0f-a226-96508277147c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"GradeList = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "1", ",", "2"}], "}"}]}],
+  SequenceForm["GradeList = ", {0, 1, 1, 2}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.8183518250453863`*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"a79f74a3-715d-499f-bd0b-b61122281935"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Free list = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2.`", " ", 
+      SubscriptBox["e", "1"]}], ",", 
+     RowBox[{
+      SubscriptBox["b", "2"], " ", 
+      SubscriptBox["e", "2"]}], ",", 
+     RowBox[{
+      SubscriptBox["e", "1"], " ", 
+      SubscriptBox["e", "2"], " ", 
+      SubscriptBox["b", 
+       RowBox[{"1", ",", "2"}]]}]}], "}"}]}],
+  SequenceForm[
+  "Free list = ", {
+   2. Subscript[GeomAlg2021Jan`e, 1], Subscript[$CellContext`b, 2] 
+    Subscript[GeomAlg2021Jan`e, 2], Subscript[GeomAlg2021Jan`e, 1] 
+    Subscript[GeomAlg2021Jan`e, 2] Subscript[$CellContext`b, 1, 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825046219*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"c8aff024-755f-4049-a2f0-c2ed1f4f5edd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Constant = \"\>", "\[InvisibleSpace]", "3.`"}],
+  SequenceForm["Constant = ", 3.],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825047019*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"d724b045-7ea4-4bce-a5d4-8d31e1705be9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Numerical clif: NG[clif] = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"3", "+", 
+    RowBox[{"2", " ", 
+     SubscriptBox["e", "1"]}], "+", 
+    RowBox[{
+     SubscriptBox["b", "2"], " ", 
+     SubscriptBox["e", "2"]}], "+", 
+    RowBox[{
+     SubscriptBox["e", "1"], " ", 
+     SubscriptBox["e", "2"], " ", 
+     SubscriptBox["b", 
+      RowBox[{"1", ",", "2"}]]}]}]}],
+  SequenceForm[
+  "Numerical clif: NG[clif] = ", 3 + 2 Subscript[GeomAlg2021Jan`e, 1] + 
+   Subscript[$CellContext`b, 2] Subscript[GeomAlg2021Jan`e, 2] + 
+   Subscript[GeomAlg2021Jan`e, 1] Subscript[GeomAlg2021Jan`e, 2] 
+    Subscript[$CellContext`b, 1, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.8183518250478563`*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"b457d2db-f45d-46ca-9b1e-09ed36f52a98"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Dimension of clif: n = \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm["Dimension of clif: n = ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825048663*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"dc2142e9-4b57-4802-8d6d-98a7a2d06abf"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"SignatureG of \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "1", ",", "2"}], "}"}], 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm["SignatureG of ", {2, 1, 2}, " = ", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825049574*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"f5f1e844-2e9f-4fa5-aca4-5f9d88183fe2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Mathematica's Signature of \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "1", ",", "2"}], "}"}], 
+   "\[InvisibleSpace]", "\<\" = \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Mathematica's Signature of ", {2, 1, 2}, " = ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.818351127174796*^9, 3.818351152134624*^9}, 
+   3.818351292339085*^9, {3.818351350928866*^9, 3.818351371523467*^9}, {
+   3.818351403915784*^9, 3.8183514158800983`*^9}, 3.818351540912016*^9, {
+   3.818351640090671*^9, 3.818351657896311*^9}, 3.818351714660179*^9, 
+   3.818351782871395*^9, 3.818351825050921*^9},
+ CellLabel->
+  "During evaluation of \
+In[3886]:=",ExpressionUUID->"e2556689-eb35-4c14-aa98-a34942617191"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 1198},
+WindowMargins->{{Automatic, 358}, {Automatic, 16}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"08a02884-12df-4b4e-82b5-86473b6746b0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 6125, 125, 388, "Input",ExpressionUUID->"5d2640b4-273c-479a-a3cd-1c7916224f8b"],
+Cell[6708, 149, 733, 18, 37, "Output",ExpressionUUID->"48c92088-c9fa-483b-a4db-8fc4bd28c91e"],
+Cell[CellGroupData[{
+Cell[7466, 171, 1155, 28, 27, "Print",ExpressionUUID->"06ebc74c-6e30-4d54-a706-bb59fa1ddd98"],
+Cell[8624, 201, 960, 22, 24, "Print",ExpressionUUID->"5fc25804-899b-4c0a-8efc-7aa09a67539c"],
+Cell[9587, 225, 882, 21, 27, "Print",ExpressionUUID->"f251cfc6-e3e5-421d-a67d-710065022ae3"],
+Cell[10472, 248, 845, 19, 27, "Print",ExpressionUUID->"04089fbf-145e-4af5-b48c-d3a7779e6b10"],
+Cell[11320, 269, 831, 19, 24, "Print",ExpressionUUID->"83229ac3-4941-4c0f-a226-96508277147c"],
+Cell[12154, 290, 681, 14, 24, "Print",ExpressionUUID->"a79f74a3-715d-499f-bd0b-b61122281935"],
+Cell[12838, 306, 1139, 28, 27, "Print",ExpressionUUID->"c8aff024-755f-4049-a2f0-c2ed1f4f5edd"],
+Cell[13980, 336, 600, 12, 24, "Print",ExpressionUUID->"d724b045-7ea4-4bce-a5d4-8d31e1705be9"],
+Cell[14583, 350, 1146, 27, 27, "Print",ExpressionUUID->"b457d2db-f45d-46ca-9b1e-09ed36f52a98"],
+Cell[15732, 379, 621, 12, 24, "Print",ExpressionUUID->"dc2142e9-4b57-4802-8d6d-98a7a2d06abf"],
+Cell[16356, 393, 766, 16, 24, "Print",ExpressionUUID->"f5f1e844-2e9f-4fa5-aca4-5f9d88183fe2"],
+Cell[17125, 411, 772, 15, 24, "Print",ExpressionUUID->"e2556689-eb35-4c14-aa98-a34942617191"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

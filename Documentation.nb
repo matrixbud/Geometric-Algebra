@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     44075,        906]
-NotebookOptionsPosition[     43442,        882]
-NotebookOutlinePosition[     43836,        898]
-CellTagsIndexPosition[     43793,        895]
+NotebookDataLength[     43610,        898]
+NotebookOptionsPosition[     42841,        871]
+NotebookOutlinePosition[     43371,        890]
+CellTagsIndexPosition[     43328,        887]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -557,13 +557,12 @@ subscripts represented as e-subscripts. For example, EijListG[ 2 + ",
   "d278a5f8-14cc-4f04-ac73-dad0d8181d1c"],
  " }. Both lists can come in handy. \n\nGradeListG generates a list of \
 integers that represent the grades of the terms in a multivector. The order \
-of the grades matches the order of the terms in ClifToListG [clif]. That \
-allows you to perform (or check) GA operations on each terms of a clif.\n\n\
-The last item is a Signature operator that extends Mathematica\
-\[CloseCurlyQuote]s signature function. Mathematica\[CloseCurlyQuote]s \
-operator will find the signature of a list of, say, integers as long as the \
-integers are all distinct. But, in GA we often as not deal with duplicate \
-integers such as in ",
+of the grades matches the order of the terms in ClifListG [clif]. That allows \
+you to perform (or check) GA operations on each terms of a clif.\n\nThe last \
+item is a Signature operator that extends Mathematica\[CloseCurlyQuote]s \
+signature function. Mathematica\[CloseCurlyQuote]s operator will find the \
+signature of a list of, say, integers as long as the integers are all \
+distinct. But, in GA we often as not deal with duplicate integers such as in ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -607,7 +606,7 @@ correct sign during antisymmetrization operations. For example, ",
    SubscriptBox["e", "2"], TraditionalForm]],ExpressionUUID->
   "aac1457f-63b5-4a50-8741-6c8db5467362"],
  " in 2-space in a + + Clifford algebra.\n\n",
- StyleBox["Cautions and Work-arounds", "Text",
+ StyleBox["Cautions and Work-Arounds", "Text",
   FontSize->16,
   FontColor->RGBColor[0, 0, 1]],
  "\n   1. If you receive a warning about ",
@@ -706,19 +705,7 @@ used in the basis ",
 package yet the package manipulates the basis elements contained in A. Were \
 the package \[OpenCurlyDoubleQuote]e\[CloseCurlyDoubleQuote] to have a \
 different context than the notebook \[OpenCurlyDoubleQuote]e\
-\[CloseCurlyDoubleQuote], those manipulations would fail.\n\n",
- StyleBox["Warning:",
-  FontWeight->"Bold",
-  FontColor->RGBColor[1, 0, 0]],
- " If you open a second notebook during a session, you must execute the \
-\[OpenCurlyDoubleQuote]Needs\[CloseCurlyDoubleQuote] statement before \
-performing any package operations. Otherwise the context of e will not be \
-preserved and those computations will fail dramatically. If you forget and \
-try to execute a function in the package, then you need to quit the kernel \
-and then execute Needs [\[OpenCurlyDoubleQuote]GeomAlg2021Jan`\
-\[CloseCurlyDoubleQuote]] as soon as you see the failure. And, as mentioned \
-earlier, you must also close and reopen the palette and use section 1 to \
-re-initialize your GA.\n\n"
+\[CloseCurlyDoubleQuote], those manipulations would fail.\n\n\n"
 }], "Text",
  CellChangeTimes->{{3.690220627457881*^9, 3.690221159129568*^9}, {
    3.690221214249576*^9, 3.690221647753193*^9}, {3.6902217987675743`*^9, 
@@ -875,13 +862,18 @@ re-initialize your GA.\n\n"
    3.779915713940271*^9}, {3.77991586978188*^9, 3.779915879443565*^9}, {
    3.816041123580134*^9, 3.8160411461061068`*^9}, 3.816041329090496*^9, 
    3.816041442244336*^9, 3.816041480118606*^9, {3.816082349845583*^9, 
-   3.816082350491835*^9}, {3.818002063504139*^9, 3.8180020689001417`*^9}},
+   3.816082350491835*^9}, {3.818002063504139*^9, 3.8180020689001417`*^9}, {
+   3.821018868899732*^9, 3.821018881716092*^9}, {3.821019178804018*^9, 
+   3.821019209105164*^9}},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
 }, Open  ]]
 },
 WindowSize->{710, 1162},
 WindowMargins->{{Automatic, 298}, {Automatic, 1}},
+SpellingDictionaries->{"CorrectWords"->{
+ "Multivector", "Multivectors", "Gorm", "clif", "multivector", "multivectors",
+   "Arounds"}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"5bdc5fe7-ad22-490d-9756-9cbde15d9960"
@@ -899,7 +891,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 253, 4, 67, "Section",ExpressionUUID->"17a443f8-29fb-439e-bb35-2523a67c3a7a"],
-Cell[678, 21, 42748, 858, 4911, "Text",ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
+Cell[678, 21, 42147, 847, 4797, "Text",ExpressionUUID->"b6194025-9ee4-45a6-811c-910e54f90562"]
 }, Open  ]]
 }
 ]

@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    116927,       1934]
-NotebookOptionsPosition[    115687,       1900]
-NotebookOutlinePosition[    116349,       1921]
-CellTagsIndexPosition[    116306,       1918]
+NotebookDataLength[    117726,       1934]
+NotebookOptionsPosition[    116616,       1903]
+NotebookOutlinePosition[    117279,       1924]
+CellTagsIndexPosition[    117236,       1921]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -191,8 +191,6 @@ dialog example for OpenerView), just inside the last opener bracket ]. "
    3.779741981851467*^9},ExpressionUUID->"969d602e-3133-4ac8-b153-\
 3e8836467719"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"\n", 
   RowBox[{
@@ -215,28 +213,29 @@ Cell[BoxData[
         "\t", 
        RowBox[{"Global`numTimelike", "=", "0"}]}]}], "\t", "\n", "]"}], ";"}],
     " ", "\n", "\n", 
-   RowBox[{"CreatePalette", "[", "\n", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"TextCell", "[", "\"\<\>\"", "]"}], ",", "\n", 
-       RowBox[{"Grid", "[", 
-        RowBox[{
-         RowBox[{"{", "\n", "\n", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"OpenerView", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"Style", "[", 
-                 RowBox[{
-                 "\"\<Initialize Geometric Algebra\>\"", ",", "Bold", ",", 
-                  "14"}], "]"}], ",", "\n", 
-                RowBox[{"Grid", "[", 
-                 RowBox[{
-                  RowBox[{"{", "\n", "\n", 
-                   RowBox[{
+   RowBox[{
+    RowBox[{"CreatePalette", "[", "\n", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"TextCell", "[", "\"\<\>\"", "]"}], ",", "\n", 
+        RowBox[{"Grid", "[", 
+         RowBox[{
+          RowBox[{"{", "\n", "\n", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"OpenerView", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<Initialize Geometric Algebra\>\"", ",", "Bold", ",", 
+                   "14"}], "]"}], ",", "\n", 
+                 RowBox[{"Grid", "[", 
+                  RowBox[{
+                   RowBox[{"{", "\n", "\n", 
+                    RowBox[{
                     RowBox[{"{", 
                     RowBox[{"Style", "[", 
                     RowBox[{
@@ -286,29 +285,29 @@ Cell[BoxData[
                     RowBox[{"Needs", "[", "\"\<GeomAlg2021Jan`\>\"", "]"}], 
                     "]"}], ",", 
                     RowBox[{"ImageSize", "\[Rule]", "200"}]}], "]"}], "}"}]}],
-                    "\n", "\n", "}"}], ",", 
-                  RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]}], "}"}], 
-              ",", 
-              RowBox[{"Dynamic", "[", 
-               RowBox[{"CurrentValue", "[", 
-                RowBox[{
-                 RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"TaggingRules", ",", "\"\<op1\>\""}], "}"}]}], 
-                "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", 
-           RowBox[{"{", 
-            RowBox[{"OpenerView", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"Style", "[", 
+                     "\n", "\n", "}"}], ",", 
+                   RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]}], "}"}],
+                ",", 
+               RowBox[{"Dynamic", "[", 
+                RowBox[{"CurrentValue", "[", 
                  RowBox[{
-                 "\"\<Typing Aids: Subscripts & Operators\>\"", ",", "Bold", 
-                  ",", "14"}], "]"}], ",", "\n", "\t ", 
-                RowBox[{"With", "[", 
-                 RowBox[{
+                  RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{
+                   RowBox[{"TaggingRules", ",", "\"\<op1\>\""}], "}"}]}], 
+                 "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", 
+            RowBox[{"{", 
+             RowBox[{"OpenerView", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<Typing Aids: Subscripts & Operators\>\"", ",", "Bold", 
+                   ",", "14"}], "]"}], ",", "\n", "\t ", 
+                 RowBox[{"With", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
                     RowBox[{"chrs", "=", 
                     RowBox[{"{", "\n", "\t ", 
                     RowBox[{
@@ -359,9 +358,9 @@ Esc  (Star)\>\"", ",", "\n", "\t   ",
                     "\"\<\>\"", ",", "\"\<\>\"", ",", "\"\<\>\"", ",", 
                     "\"\<\>\"", ",", "\"\<\>\"", ",", "\"\<\>\"", ",", 
                     "\"\<\>\"", ",", "\"\<\>\"", ",", "\"\<\>\""}], "}"}]}]}],
-                    "\n", "\t  ", "}"}], ",", "\n", "\t", 
-                  RowBox[{"Grid", "[", 
-                   RowBox[{
+                     "\n", "\t  ", "}"}], ",", "\n", "\t", 
+                   RowBox[{"Grid", "[", 
+                    RowBox[{
                     RowBox[{"Partition", "[", "\n", "\t\t", 
                     RowBox[{
                     RowBox[{"MapThread", "[", "\n", "\t\t", 
@@ -381,55 +380,55 @@ Esc  (Star)\>\"", ",", "\n", "\t   ",
                     RowBox[{"Spacings", "\[Rule]", 
                     RowBox[{"{", 
                     RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}]}], "]"}]}], 
-               "}"}], ",", 
-              RowBox[{"Dynamic", "[", 
-               RowBox[{"CurrentValue", "[", 
-                RowBox[{
-                 RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"TaggingRules", ",", "\"\<op2\>\""}], "}"}]}], 
-                "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", 
-           RowBox[{"(*", 
-            StyleBox[" ",
-             FontColor->RGBColor[1, 0, 1]], 
-            RowBox[{
-             StyleBox[
-              RowBox[{"Don", "'"}],
-              FontColor->RGBColor[1, 0, 1]], 
-             StyleBox["t",
-              FontColor->RGBColor[1, 0, 1]], 
-             StyleBox[" ",
-              FontColor->RGBColor[1, 0, 1]], 
-             StyleBox["clean",
-              FontColor->RGBColor[1, 0, 1]], 
-             StyleBox[" ",
-              FontColor->RGBColor[1, 0, 1]], 
-             StyleBox["up",
-              FontColor->RGBColor[1, 0, 1]], 
-             StyleBox[" ",
-              FontColor->RGBColor[1, 0, 1]], 
-             StyleBox["spacing",
-              FontColor->RGBColor[1, 0, 1]], 
-             StyleBox[" ",
-              FontColor->RGBColor[1, 0, 1]], 
-             RowBox[{
-              StyleBox["below",
-               FontColor->RGBColor[1, 0, 1]], ".", " ", "This"}], " ", 
-             "makes", " ", "LHS", " ", "boxes", " ", "match", " ", "size", 
-             " ", "of", " ", "RHS"}], "  ", "*)"}], "\n", 
-           RowBox[{"{", 
-            RowBox[{"OpenerView", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"Style", "[", 
+                "}"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                RowBox[{"CurrentValue", "[", 
                  RowBox[{
-                 "\"\<Typing Aids: Multivector Generators\>\"", ",", "Bold", 
-                  ",", "14"}], "]"}], ",", "\n", "\t ", 
-                RowBox[{"With", "[", 
-                 RowBox[{
+                  RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{
+                   RowBox[{"TaggingRules", ",", "\"\<op2\>\""}], "}"}]}], 
+                 "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", 
+            RowBox[{"(*", 
+             StyleBox[" ",
+              FontColor->RGBColor[1, 0, 1]], 
+             RowBox[{
+              StyleBox[
+               RowBox[{"Don", "'"}],
+               FontColor->RGBColor[1, 0, 1]], 
+              StyleBox["t",
+               FontColor->RGBColor[1, 0, 1]], 
+              StyleBox[" ",
+               FontColor->RGBColor[1, 0, 1]], 
+              StyleBox["clean",
+               FontColor->RGBColor[1, 0, 1]], 
+              StyleBox[" ",
+               FontColor->RGBColor[1, 0, 1]], 
+              StyleBox["up",
+               FontColor->RGBColor[1, 0, 1]], 
+              StyleBox[" ",
+               FontColor->RGBColor[1, 0, 1]], 
+              StyleBox["spacing",
+               FontColor->RGBColor[1, 0, 1]], 
+              StyleBox[" ",
+               FontColor->RGBColor[1, 0, 1]], 
+              RowBox[{
+               StyleBox["below",
+                FontColor->RGBColor[1, 0, 1]], ".", " ", "This"}], " ", 
+              "makes", " ", "LHS", " ", "boxes", " ", "match", " ", "size", 
+              " ", "of", " ", "RHS"}], "  ", "*)"}], "\n", 
+            RowBox[{"{", 
+             RowBox[{"OpenerView", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<Typing Aids: Multivector Generators\>\"", ",", "Bold", 
+                   ",", "14"}], "]"}], ",", "\n", "\t ", 
+                 RowBox[{"With", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
                     RowBox[{"chrs", "=", 
                     RowBox[{"{", "\n", "\t\t\t", 
                     RowBox[{
@@ -455,7 +454,7 @@ Esc  (Star)\>\"", ",", "\n", "\t   ",
 \(3\)]\)\!\(\*SubscriptBox[\(b\), \(2\)]\) + \!\(\*SubscriptBox[\(a\), \(2\)]\
 \)\!\(\*SubscriptBox[\(b\), \(3\)]\))\!\(\*SubscriptBox[\(e\), \
 \(2\)]\)\!\(\*SubscriptBox[\(e\), \(3\)]\)\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<BiVectorG[3]                          \>\"", ",", 
+                    "\"\<BiVectorG[c,3]                          \>\"", ",", 
                     "\n", "\t\t\t", 
                     "\"\<\!\(\*SubscriptBox[\(e\), \
 \(1\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\*SubscriptBox[\(c\), \(1, 2\)]\
@@ -491,7 +490,6 @@ Esc  (Star)\>\"", ",", "\n", "\t   ",
 \*SubscriptBox[\(a\), \(3, 4\)]\)\>\"", ",", "\n", "\t\t\t", 
                     "\"\<ClifG[b,3]                                           \
                                                       \>\"", ",", 
-                    
                     "\"\<\!\(\*SubscriptBox[\(b\), \(0\)]\) + \
 \!\(\*SubscriptBox[\(b\), \(1\)]\)\!\(\*SubscriptBox[\(e\), \(1\)]\) + \
 \!\(\*SubscriptBox[\(b\), \(2\)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\) + \
@@ -640,8 +638,8 @@ would mimic the output above.\>\"", ",", "\n", "\t   ",
 \)]\)\!\(\*SubscriptBox[\(e\), \(2\)]\)\>\""}], ",", "\n", "\t   ", 
                     "\"\<   Key in the quaternion\>\""}], "\n", "\t", 
                     "}"}]}]}], "}"}], ",", "\n", "\t", 
-                  RowBox[{"Grid", "[", 
-                   RowBox[{
+                   RowBox[{"Grid", "[", 
+                    RowBox[{
                     RowBox[{"Partition", "[", "\n", "\t\t", 
                     RowBox[{
                     RowBox[{"MapThread", "[", "\n", "\t\t", 
@@ -662,27 +660,27 @@ would mimic the output above.\>\"", ",", "\n", "\t   ",
                      "\n", "\t\t\t", "chrs"}], ",", "tips"}], "}"}]}], "]"}], 
                     ",", "2"}], "]"}], ",", "\n", "\t\t", "\n", 
                     RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]}], 
-                 "]"}]}], "}"}], ",", 
-              RowBox[{"Dynamic", "[", 
-               RowBox[{"CurrentValue", "[", 
-                RowBox[{
-                 RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"TaggingRules", ",", "\"\<op3\>\""}], "}"}]}], 
-                "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", "\n", 
-           RowBox[{"{", 
-            RowBox[{"OpenerView", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"Style", "[", 
+                  "]"}]}], "}"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                RowBox[{"CurrentValue", "[", 
                  RowBox[{
-                 "\"\<Primary GA Operations\>\"", ",", "Bold", ",", "14"}], 
-                 "]"}], ",", "\n", "\t ", 
-                RowBox[{"With", "[", 
-                 RowBox[{
+                  RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{
+                   RowBox[{"TaggingRules", ",", "\"\<op3\>\""}], "}"}]}], 
+                 "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", "\n", 
+            RowBox[{"{", 
+             RowBox[{"OpenerView", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<Primary GA Operations\>\"", ",", "Bold", ",", "14"}], 
+                  "]"}], ",", "\n", "\t ", 
+                 RowBox[{"With", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
                     RowBox[{"chrs", "=", 
                     RowBox[{"{", "\n", "\t\t\t", 
                     RowBox[{
@@ -725,6 +723,7 @@ Three other Hodge Duals\>\"", "\n", "\t    ", "<>",
                     "\"\< with different formulas are available for use. See \
 next item in palette.\>\""}], ",", "\n", "\t  ", 
                     RowBox[{
+                    
                     "\"\<   Alternative definiition:  *A = A \[Diamond] \
 \!\(\*SuperscriptBox[\(i\), \(-1\)]\) where i is the pseduoscalar.\>\"", "\n",
                      "\t    ", "<>", 
@@ -744,8 +743,8 @@ next item in palette.\>\""}], ",", "\n", "\t  ",
 exist.\>\"", "\n", "        ", "<>", 
                     "\"\< Uses functions Inverse4G, 5G, and NG that are \
 separately available.\>\""}]}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t", 
-                  RowBox[{"Grid", "[", 
-                   RowBox[{
+                   RowBox[{"Grid", "[", 
+                    RowBox[{
                     RowBox[{"Partition", "[", "\n", "\t\t", 
                     RowBox[{
                     RowBox[{"MapThread", "[", "\n", "\t\t", 
@@ -766,27 +765,27 @@ separately available.\>\""}]}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t",
                      "\n", "\t\t\t", "chrs"}], ",", "tips"}], "}"}]}], "]"}], 
                     ",", "2"}], "]"}], ",", "\n", "\t\t", "\n", 
                     RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]}], 
-                 "]"}]}], "}"}], ",", 
-              RowBox[{"Dynamic", "[", 
-               RowBox[{"CurrentValue", "[", 
-                RowBox[{
-                 RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"TaggingRules", ",", "\"\<op4\>\""}], "}"}]}], 
-                "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", 
-           RowBox[{"{", 
-            RowBox[{"OpenerView", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"Style", "[", 
+                  "]"}]}], "}"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                RowBox[{"CurrentValue", "[", 
                  RowBox[{
-                 "\"\<Multivector Support\>\"", ",", "Bold", ",", "14"}], 
-                 "]"}], ",", "\n", "\t ", 
-                RowBox[{"With", "[", 
-                 RowBox[{
+                  RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{
+                   RowBox[{"TaggingRules", ",", "\"\<op4\>\""}], "}"}]}], 
+                 "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", 
+            RowBox[{"{", 
+             RowBox[{"OpenerView", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<Multivector Support\>\"", ",", "Bold", ",", "14"}], 
+                  "]"}], ",", "\n", "\t ", 
+                 RowBox[{"With", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
                     RowBox[{"chrs", "=", 
                     RowBox[{"{", "\n", "\t\t", 
                     RowBox[{
@@ -807,18 +806,19 @@ separately available.\>\""}]}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t",
                     "\"\<ConstantG[clif]\>\"", ",", "\n", "\t\t", 
                     "\"\<FreeTermG[clif]\>\"", ",", "\n", "\t\t", 
                     "\"\<pSliceG[clif, p]\>\"", ",", "\n", "\t\t", 
-                    "\"\<AtomCoefG[clif,atom]\>\""}], "\[IndentingNewLine]", 
+                    "\"\<CoefG[clif,atom]\>\""}], "\[IndentingNewLine]", 
                     "}"}]}], ",", "\n", "\n", "\t\t     ", 
                     RowBox[{"tips", "=", "\n", "\t", 
                     StyleBox[
                     RowBox[{"{", 
                     RowBox[{
-                    "\"\<   Reduce any square powers of \
-\!\(\*SubscriptBox[\(e\), \(i\)]\)'s and then Expand multivector. \>\"", ",", 
+                    "\"\<   Multivector-aware Expand function. \>\"", ",", 
                     "\n", "\t ", 
-                    "\"\<   Reduce any square powers of \
-\!\(\*SubscriptBox[\(e\), \(i\)]\)'s and then Collect terms by blades\>\"", 
-                    ",", "\n", "\t ", 
+                    RowBox[{
+                    "\"\<   Multivector-aware Collect function. CollectG also \
+accepts the additional \>\"", "\n", "\t   ", "<>", 
+                    "\"\<arguments of 'Collect'. See Mathematica's \
+documentation for details.\>\""}], ",", "\n", "\t ", 
                     "\"\<   Reduce any square \!\(\*SubscriptBox[\(e\), \
 \(i\)]\) terms in clif according to initialization scheme\>\"", ",", "\n", 
                     "\t ", 
@@ -830,15 +830,15 @@ separately available.\>\""}]}], "}"}]}]}], "}"}], ",", "\n", "\n", "\t",
                     "\t ", 
                     RowBox[{
                     "\"\<   Apply Simplify to any clif, term-by-term. For a \
-vector, matrix, or tensor it returns \>\"", "\n", "\t   ", "<>", 
-                    "\"\<a list containing the GCD and the reduced \
-vector/matrix/tensor\>\""}], ",", "\n", "\t ", 
+vector, matrix, tensor, or any \>\"", "\n", "\t   ", "<>", 
+                    "\"\<list, it returns a list containing the GCD and the \
+reduced vector/matrix/tensor\>\""}], ",", "\n", "\t ", 
                     "\"\<   Apply FullSimplify to any clif, term-by-term\>\"",
                      ",", "\n", "\t ", 
                     RowBox[{
                     "\"\<   Alternative Print function to make printouts of \
 clifs and matrix objects \>\"", "\n", "\t   ", "<>", 
-                    "\"\<(vectors, matrices, tensors) more readable. Has a \
+                    "\"\<(vectors, matrices, tensors) more organized. Has a \
 limit of 4 clifs or 1 matrix\>\""}], ",", "\n", "\t ", 
                     RowBox[{
                     "\"\<   Multivector-aware version of Mathematica's N \
@@ -871,10 +871,10 @@ all the coefficients of a given\>\"", "\n", "\t ", "<>",
                     "\"\< atom such as \!\(\*SubscriptBox[\(e\), \(2\)]\)\!\(\
 \*SubscriptBox[\(e\), \(3\)]\). It is the 0 multivector if there are no such \
 terms.\>\""}]}], "\[IndentingNewLine]", "}"}], "Code"]}]}], 
-                   StyleBox["}", "Code"]}], 
-                  StyleBox[",", "Code"], "\n", "\n", "\t", 
-                  RowBox[{"Grid", "[", 
-                   RowBox[{
+                    StyleBox["}", "Code"]}], 
+                   StyleBox[",", "Code"], "\n", "\n", "\t", 
+                   RowBox[{"Grid", "[", 
+                    RowBox[{
                     RowBox[{"Partition", "[", "\n", "\t\t", 
                     RowBox[{
                     RowBox[{"MapThread", "[", "\n", "\t\t", 
@@ -892,41 +892,43 @@ terms.\>\""}]}], "\[IndentingNewLine]", "}"}], "Code"]}]}],
                      "\n", "\t\t\t", "chrs"}], ",", "tips"}], "}"}]}], "]"}], 
                     ",", "2"}], "]"}], ",", "\n", "\t\t", "\n", 
                     RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]}], 
-                 "]"}]}], "}"}], ",", 
-              RowBox[{"Dynamic", "[", 
-               RowBox[{"CurrentValue", "[", 
-                RowBox[{
-                 RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"TaggingRules", ",", "\"\<op5\>\""}], "}"}]}], 
-                "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", "\n", 
-           RowBox[{"{", 
-            RowBox[{"OpenerView", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"Style", "[", 
+                  "]"}]}], "}"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                RowBox[{"CurrentValue", "[", 
                  RowBox[{
-                 "\"\<List Operations and Support\>\"", ",", "Bold", ",", 
-                  "14"}], "]"}], ",", "\n", "\t ", 
-                RowBox[{"With", "[", 
-                 RowBox[{
+                  RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
                   RowBox[{"{", 
-                   RowBox[{
+                   RowBox[{"TaggingRules", ",", "\"\<op5\>\""}], "}"}]}], 
+                 "]"}], "]"}]}], "]"}], "}"}], ",", "\n", "\n", "\n", "\n", 
+            RowBox[{"{", 
+             RowBox[{"OpenerView", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<Lists and List Operations\>\"", ",", "Bold", ",", 
+                   "14"}], "]"}], ",", "\n", "\t ", 
+                 RowBox[{"With", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
                     RowBox[{"chrs", "=", 
                     RowBox[{"{", "\n", "\t\t\t", 
                     RowBox[{
-                    "\"\<ClifToListG[clif]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<ClifListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<ListToClifG[clifList]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<CoefListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<AtomListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<SubscriptListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<EijListG[clif]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<FreeListG\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<GradeListG[clif]\>\"", ",", "\t\t\t", "\n", 
+                    "\t\t\t", "\"\<ToListG[clif]\>\"", ",", "\n", "\t\t\t", 
+                    "\"\<DimListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<EiEjToEijG[list]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<EijToEiEjG[list]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<EijSortG[list]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<RemoveCoefG[object]\>\"", ",", "\n", "\t\t\t", 
-                    "\"\<GradeListG[clif]\>\"", ",", "\n", "\t\t\t", 
                     "\"\<SignatureG[list]\>\""}], "\n", "\t\t\t", "}"}]}], 
                     ",", "\n", "\t\t", "\n", "\t\t     ", 
                     RowBox[{"tips", "=", "\n", "\t ", 
@@ -953,7 +955,7 @@ terms. Each atom is listed \>\"", "\n", "\t    ", "<>",
 multivector\>\"", ",", "\n", "\t   ", 
                     RowBox[{
                     "\"\<   Generate a list of coefficients matching the \
-order of ClifToListG. \>\"", "\n", "\t     ", "<>", 
+order of ClifListG. \>\"", "\n", "\t     ", "<>", 
                     "\"\<\!\(\*StyleBox[\"Multiple\",FontColor->RGBColor[1, \
 0, 1]]\)\!\(\*StyleBox[\" \",FontColor->RGBColor[1, 0, \
 1]]\)\!\(\*StyleBox[\"coefficients\",FontColor->RGBColor[1, 0, \
@@ -975,7 +977,7 @@ order of ClifToListG. \>\"", "\n", "\t     ", "<>",
                     "\n", "\t   ", 
                     RowBox[{
                     "\"\<   Generate a list of atoms matching the order of \
-ClifToListG. \>\"", "\n", "\t    ", "<>", 
+ClifListG. \>\"", "\n", "\t    ", "<>", 
                     "\"\<\!\(\*StyleBox[\"Constant\",FontColor->RGBColor[1, \
 0, 1]]\)\!\(\*StyleBox[\",\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \
 \",FontColor->RGBColor[1, 0, \
@@ -991,29 +993,29 @@ ClifToListG. \>\"", "\n", "\t    ", "<>",
 \",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\"1\",FontColor->RGBColor[1, \
 0, 1]]\)\>\""}], ",", "\n", "\t   ", 
                     RowBox[{
-                    "\"\<   Generate a list of subscripts matching the order \
-of \>\"", "\n", "\t    ", "<>", 
-                    "\"\<ClifToListG. Each subscript, like {1,2,3}, is listed \
-just once. \>\"", "\n", "\t    ", "<>", 
-                    "\"\<\!\(\*StyleBox[\"Constant\",FontColor->RGBColor[1, \
-0, 1]]\)\!\(\*StyleBox[\",\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \
-\",FontColor->RGBColor[1, 0, \
-1]]\)\!\(\*StyleBox[\"if\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \
-\",FontColor->RGBColor[1, 0, \
-1]]\)\!\(\*StyleBox[\"any\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\",\
+                    "\"\<   Generate list of subscripts matching ClifListG. \
+Each subscript is \>\"", "\n", "\t    ", "<>", 
+                    "\"\<listed just once. \
+\!\(\*StyleBox[\"Constant\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\",\
 \",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \",FontColor->RGBColor[1, \
-0, 1]]\)\!\(\*StyleBox[\"is\",FontColor->RGBColor[1, 0, \
-1]]\)\!\(\*StyleBox[\" \",FontColor->RGBColor[1, 0, \
+0, 1]]\)\!\(\*StyleBox[\"if\",FontColor->RGBColor[1, 0, \
+1]]\)\!\(\*StyleBox[\" \",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\"any\
+\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\",\",FontColor->RGBColor[1, \
+0, 1]]\)\!\(\*StyleBox[\" \",FontColor->RGBColor[1, 0, \
+1]]\)\!\(\*StyleBox[\"is\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \
+\",FontColor->RGBColor[1, 0, \
 1]]\)\!\(\*StyleBox[\"listed\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\
 \" \",FontColor->RGBColor[1, 0, \
 1]]\)\!\(\*StyleBox[\"as\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \
-\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\"{\",FontColor->RGBColor[1, \
-0, 1]]\)\!\(\*StyleBox[\"0\",FontColor->RGBColor[1, 0, \
-1]]\)\!\(\*StyleBox[\"}\",FontColor->RGBColor[1, 0, 1]]\)\>\""}], ",", "\n", 
-                    "\t   ", 
+\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\"0\",FontColor->RGBColor[1, \
+0, 1]]\)\!\(\*StyleBox[\" \",FontColor->RGBColor[1, 0, \
+1]]\)\!\(\*StyleBox[\"in\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \
+\",FontColor->RGBColor[1, 0, \
+1]]\)\!\(\*StyleBox[\"braces\",FontColor->RGBColor[1, 0, 1]]\)\>\""}], ",", 
+                    "\n", "\t   ", 
                     RowBox[{
                     "\"\<   Generate a list of \!\(\*SubscriptBox[\(e\), \(i, \
-j, k,  ... \)]\) matching the order of ClifToListG. \>\"", "\n", "\t    ", 
+j, k,  ... \)]\) matching the order of ClifListG. \>\"", "\n", "\t    ", 
                     "<>", "\"\<\!\(\*StyleBox[\"Constant\",FontColor->\
 RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\",\",FontColor->RGBColor[1, 0, \
 1]]\)\!\(\*StyleBox[\" \",FontColor->RGBColor[1, 0, \
@@ -1028,6 +1030,17 @@ RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\",\",FontColor->RGBColor[1, 0, \
 1]]\)\!\(\*StyleBox[\"as\",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\" \
 \",FontColor->RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\"1\",FontColor->RGBColor[1, \
 0, 1]]\)\>\""}], ",", "\n", "\t   ", 
+                    "\"\<   Generate a list the free terms, matching the \
+order of ClifListG\>\"", ",", "\n", "\t   ", 
+                    "\"\<   Generate a list of grades matching the order of \
+ClifListG\>\"", ",", "\n", "\t   ", 
+                    RowBox[{
+                    "\"\<   Make a list, term-by-term, that precisely matches \
+clif. Unlike ClifListG, \>\"", "\n", "\t    ", "<>", 
+                    "\"\<ToListG does not collect and group terms\>\""}], ",",
+                     "\n", "\t   ", 
+                    "\"\<   List of the highest dimension of each term\>\"", 
+                    ",", "\n", "\t   ", 
                     "\"\<   Convert atoms \!\(\*SubscriptBox[\(e\), \
 \(i\)]\)\!\(\*SubscriptBox[\(e\), \(j\)]\)\!\(\*SubscriptBox[\(e\), \
 \(k\)]\)... in a list to \!\(\*SubscriptBox[\(e\), \(i, j, k,  ... \)]\)\>\"",
@@ -1035,16 +1048,8 @@ RGBColor[1, 0, 1]]\)\!\(\*StyleBox[\",\",FontColor->RGBColor[1, 0, \
                     "\"\<   Convert \!\(\*SubscriptBox[\(e\), \(i, j, k,  .. \
 \)]\)'s in a list to \!\(\*SubscriptBox[\(e\), \(i\)]\)\!\(\*SubscriptBox[\(e\
 \), \(j\)]\)\!\(\*SubscriptBox[\(e\), \(k\)]\)'s\>\"", ",", "\n", "\t   ", 
-                    RowBox[{
-                    "\"\<   Sort clif Eij list so that constants appear 1st, \
-then singletons \!\(\*SubscriptBox[\(e\), \(i\)]\), \>\"", "\n", "\t    ", 
-                    "<>", "\"\<pairs \!\(\*SubscriptBox[\(e\), \(i, j\)]\), \
-triples \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\), etc.\>\""}], ",", "\n", 
-                    "\t   ", 
                     "\"\<   Remove coefficients from any clif or list, \
-whether of type EiEj or Eij\>\"", ",", "\n", "\t   ", 
-                    "\"\<   Generate a list of grades matching the order of \
-ClifToListG\>\"", ",", "\n", "\t   ", 
+whether of type EiEj or Eij\>\"", ",", "\n", "\n", "\t   ", 
                     RowBox[{
                     "\"\<   Find signature (\[PlusMinus]1) of a list of \
 numbers, letters, words, \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\) or \>\"", 
@@ -1055,8 +1060,8 @@ numbers, letters, words, \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\) or \>\"",
 1]]\)\!\(\*StyleBox[\" \",FontColor->RGBColor[1, 0, \
 1]]\)\!\(\*StyleBox[\"duplicates\",FontColor->RGBColor[1, 0, 1]]\)\>\""}]}], 
                     "\n", "\t  ", "}"}]}]}], "}"}], ",", "\n", "\n", "\t", 
-                  RowBox[{"Grid", "[", 
-                   RowBox[{
+                   RowBox[{"Grid", "[", 
+                    RowBox[{
                     RowBox[{"Partition", "[", "\n", "\t\t", 
                     RowBox[{
                     RowBox[{"MapThread", "[", "\n", "\t\t", 
@@ -1074,44 +1079,44 @@ numbers, letters, words, \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\) or \>\"",
                      "\n", "\t\t\t", "chrs"}], ",", "tips"}], "}"}]}], "]"}], 
                     ",", "2"}], "]"}], ",", "\n", "\t\t", "\n", 
                     RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]}], 
-                 "]"}]}], "}"}], ",", 
-              RowBox[{"Dynamic", "[", 
-               RowBox[{"CurrentValue", "[", 
-                RowBox[{
-                 RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"TaggingRules", ",", "\"\<op6\>\""}], "}"}]}], 
-                "]"}], "]"}]}], "]"}], "}"}]}], "\n", "\n", "\n", "}"}], ",", 
-         "\n", "\n", 
-         RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
-         RowBox[{"Spacings", "\[Rule]", 
-          RowBox[{"{", 
-           RowBox[{"0", ",", "1.5"}], "}"}]}]}], "]"}]}], "}"}], ",", "\n", 
-     RowBox[{"TaggingRules", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"\"\<op1\>\"", "\[Rule]", "True"}], ",", 
-        RowBox[{"\"\<op2\>\"", "\[Rule]", "True"}], ",", 
-        RowBox[{"\"\<op3\>\"", "\[Rule]", "False"}], ",", 
-        RowBox[{"\"\<op4\>\"", "\[Rule]", "False"}], ",", 
-        RowBox[{"\"\<op5\>\"", "\[Rule]", "False"}], ",", 
-        RowBox[{"\"\<op6\>\"", "\[Rule]", "False"}]}], "}"}]}], ",", "\n", 
-     "\n", 
-     RowBox[{"WindowTitle", "->", "\"\<Geometric Algebra Palette\>\""}], ",", 
-     "\n", 
-     RowBox[{"WindowMargins", "->", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"Automatic", ",", "Automatic"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"Automatic", ",", "0"}], "}"}]}], "}"}]}], ",", 
-     RowBox[{"WindowSize", "\[Rule]", "All"}], ",", 
-     RowBox[{"WindowElements", "\n", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{
-       "\"\<HorizontalScrollBar\>\"", ",", "\"\<VerticalScrollBar\>\"", ",", 
-        "\"\<MagnificationPopUp\>\""}], "}"}]}]}], "]"}], "\n", 
+                  "]"}]}], "}"}], ",", 
+               RowBox[{"Dynamic", "[", 
+                RowBox[{"CurrentValue", "[", 
+                 RowBox[{
+                  RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"TaggingRules", ",", "\"\<op6\>\""}], "}"}]}], 
+                 "]"}], "]"}]}], "]"}], "}"}]}], "\n", "\n", "\n", "}"}], ",",
+           "\n", "\n", 
+          RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+          RowBox[{"Spacings", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1.5"}], "}"}]}]}], "]"}]}], "}"}], ",", "\n", 
+      RowBox[{"TaggingRules", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\"\<op1\>\"", "\[Rule]", "True"}], ",", 
+         RowBox[{"\"\<op2\>\"", "\[Rule]", "True"}], ",", 
+         RowBox[{"\"\<op3\>\"", "\[Rule]", "False"}], ",", 
+         RowBox[{"\"\<op4\>\"", "\[Rule]", "False"}], ",", 
+         RowBox[{"\"\<op5\>\"", "\[Rule]", "False"}], ",", 
+         RowBox[{"\"\<op6\>\"", "\[Rule]", "False"}]}], "}"}]}], ",", "\n", 
+      "\n", 
+      RowBox[{"WindowTitle", "->", "\"\<Geometric Algebra Palette\>\""}], ",",
+       "\n", 
+      RowBox[{"WindowMargins", "->", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"Automatic", ",", "Automatic"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Automatic", ",", "0"}], "}"}]}], "}"}]}], ",", 
+      RowBox[{"WindowSize", "\[Rule]", "All"}], ",", 
+      RowBox[{"WindowElements", "\n", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<HorizontalScrollBar\>\"", ",", "\"\<VerticalScrollBar\>\"", ",", 
+         "\"\<MagnificationPopUp\>\""}], "}"}]}]}], "]"}], ";"}], "\n", 
    "\n"}]}]], "Code",
  CellChangeTimes->{
   3.688172665623805*^9, {3.6882311450668907`*^9, 3.688231148373808*^9}, {
@@ -1740,27 +1745,23 @@ numbers, letters, words, \!\(\*SubscriptBox[\(e\), \(i, j, k\)]\) or \>\"",
    3.8177608268276367`*^9}, {3.81776103083368*^9, 3.817761138060885*^9}, {
    3.817944797290289*^9, 3.817944840247212*^9}, 3.8179905843447027`*^9, 
    3.817991264242277*^9, {3.818005232445813*^9, 3.8180052683564034`*^9}, {
-   3.818114851038307*^9, 3.818114854713798*^9}},
+   3.818114851038307*^9, 3.818114854713798*^9}, {3.818284165148636*^9, 
+   3.818284245701565*^9}, {3.8182843598617373`*^9, 3.818284365034481*^9}, {
+   3.818284420782291*^9, 3.818284425362677*^9}, {3.818284529427888*^9, 
+   3.81828453338272*^9}, {3.8182845728262653`*^9, 3.818284614103031*^9}, {
+   3.8182847280147867`*^9, 3.818284735028357*^9}, 3.819454834869273*^9, {
+   3.819665313635708*^9, 3.81966537515567*^9}, {3.819804060917657*^9, 
+   3.819804062735889*^9}, 3.819804276794156*^9, {3.820512925799498*^9, 
+   3.820512958745714*^9}, {3.820513466750548*^9, 3.820513466794969*^9}, {
+   3.8206009802980013`*^9, 3.820601038306034*^9}, {3.8206011013872757`*^9, 
+   3.820601285730152*^9}, 3.820601393444635*^9, {3.820601423847457*^9, 
+   3.820601485566609*^9}, {3.820601530045988*^9, 3.820601578167562*^9}, {
+   3.8206800453466187`*^9, 3.8206800458999662`*^9}, {3.821012112635374*^9, 
+   3.821012211252164*^9}, {3.8210122566700068`*^9, 3.821012509551729*^9}, {
+   3.821013069924342*^9, 3.821013187082486*^9}, {3.8210199422745953`*^9, 
+   3.8210199594737377`*^9}},
  CellLabel->
-  "In[1834]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
-
-Cell[BoxData[
- TemplateBox[{
-   FrontEndObject[
-    LinkObject["y77hm_shm", 3, 1]], 266, 
-   "FrontEndObject[LinkObject[\"y77hm_shm\", 3, 1]]", "266", 
-   "\"Geometric Algebra Palette\""},
-  "NotebookObjectUnsaved"]], "Output",
- CellChangeTimes->{
-  3.816817694560418*^9, 3.81681785020989*^9, {3.816949532862473*^9, 
-   3.816949533271246*^9}, {3.8177608601083517`*^9, 3.817760860371882*^9}, 
-   3.817760954386723*^9, 3.81776115113848*^9, {3.8179448899004173`*^9, 
-   3.817944908107026*^9}, {3.81799117990315*^9, 3.8179911801721687`*^9}, 
-   3.8179912844569283`*^9, {3.818005337581139*^9, 3.8180053377790422`*^9}, {
-   3.8182732471104116`*^9, 3.818273247305339*^9}},
- CellLabel->
-  "Out[1835]=",ExpressionUUID->"d790d6c4-755c-440d-a9e4-e8159e7160ff"]
-}, Open  ]],
+  "In[2120]:=",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
 
 Cell[CellGroupData[{
 
@@ -1776,7 +1777,8 @@ Cell[TextData[{
   FontColor->GrayLevel[0]],
  StyleBox["Added PrintG\nRenamed AtomListToEijListG to EijToEijG, and \
 EijListToAtomG to EijToEiEjG. Eliminated obsolete ToClifEijListG\nChanged \
-spelling of CoeffListG to CoefListG",
+spelling of CoeffListG to CoefListG\nRenamed ClifToListG to ClifList\nDeleted \
+EijSort",
   FontColor->GrayLevel[0]],
  StyleBox["\n\n2020 Dec\n",
   FontWeight->"Bold",
@@ -1814,8 +1816,8 @@ GradeInvoluteG, ClifConjugateG, EijSortG",
   FontWeight->"Bold",
   FontColor->GrayLevel[0]],
  StyleBox["Rename EiEjListG to AtomListG and reordered palette\n Added  \
-CoeffListG  as a companion to ClifToListG and AtomListG\n Improved \
-descriptions of list functions",
+CoeffListG  as a companion to ClifListG and AtomListG\n Improved descriptions \
+of list functions",
   FontColor->GrayLevel[0]],
  StyleBox["\n\n2019 Sep\n",
   FontWeight->"Bold",
@@ -1894,12 +1896,13 @@ and made those the defaults\n\n"
    3.817760436579323*^9, 3.817760469730505*^9}, {3.817990656241496*^9, 
    3.817990696973488*^9}, {3.817990928686049*^9, 3.817990936077599*^9}, {
    3.817990967763433*^9, 3.817991021184527*^9}, {3.817991057804596*^9, 
-   3.817991059184627*^9}},ExpressionUUID->"4a3489c9-27cd-41f6-b43d-\
+   3.817991059184627*^9}, {3.8205134668710938`*^9, 
+   3.8205135302612743`*^9}},ExpressionUUID->"4a3489c9-27cd-41f6-b43d-\
 5798658675ac"]
 }, Open  ]]
 },
 WindowSize->{875, 1241},
-WindowMargins->{{Automatic, 492}, {Automatic, 0}},
+WindowMargins->{{Automatic, 593}, {Automatic, 68}},
 SpellingDictionaries->{"CorrectWords"->{"aaa", "Windowsize"}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->Notebook[{
@@ -1921,13 +1924,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[400, 13, 12214, 178, 2131, "Text",ExpressionUUID->"969d602e-3133-4ac8-b153-3e8836467719"],
+Cell[12617, 193, 97352, 1570, 5756, "Code",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
 Cell[CellGroupData[{
-Cell[12639, 195, 95741, 1549, 5664, "Code",ExpressionUUID->"76c7630f-7b66-408b-8f27-d8808eef805d"],
-Cell[108383, 1746, 749, 15, 43, "Output",ExpressionUUID->"d790d6c4-755c-440d-a9e4-e8159e7160ff"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[109169, 1766, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
-Cell[109415, 1772, 6256, 125, 1280, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
+Cell[109994, 1767, 243, 4, 54, "Subsection",ExpressionUUID->"eb334d1c-290f-4d45-bba3-40b141dadf3a"],
+Cell[110240, 1773, 6360, 127, 1326, "Text",ExpressionUUID->"4a3489c9-27cd-41f6-b43d-5798658675ac"]
 }, Open  ]]
 }
 ]

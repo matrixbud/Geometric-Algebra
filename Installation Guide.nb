@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9743,        194]
-NotebookOptionsPosition[      9100,        170]
-NotebookOutlinePosition[      9494,        186]
-CellTagsIndexPosition[      9451,        183]
+NotebookDataLength[      9741,        194]
+NotebookOptionsPosition[      9108,        170]
+NotebookOutlinePosition[      9502,        186]
+CellTagsIndexPosition[      9459,        183]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -106,7 +106,7 @@ with many packages\n\n",
  StyleBox["Read Me First",
   FontWeight->"Bold"],
  " - Overview and 1st file to read. Then read this file.\n"
-}],
+}], "Text",
  CellChangeTimes->{{3.690220627457881*^9, 3.690221159129568*^9}, {
    3.690221214249576*^9, 3.690221647753193*^9}, {3.6902217987675743`*^9, 
    3.690221884507244*^9}, {3.690221946363057*^9, 3.690221976324597*^9}, {
@@ -187,7 +187,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
-Cell[752, 25, 8332, 142, 913, InheritFromParent,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
+Cell[752, 25, 8340, 142, 1062, "Text",ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]

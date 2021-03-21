@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9512,        168]
-NotebookOptionsPosition[      8839,        143]
-NotebookOutlinePosition[      9262,        160]
-CellTagsIndexPosition[      9219,        157]
+NotebookDataLength[      9509,        168]
+NotebookOptionsPosition[      8847,        143]
+NotebookOutlinePosition[      9270,        160]
+CellTagsIndexPosition[      9227,        157]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -71,7 +71,7 @@ LeftTee, and RightTee, shown here:\n\t",
   Background->RGBColor[0.88, 1, 0.88]],
  " \nIf the symbols are visible here and in the palette, then no font change \
 is required.\n\n\n\n\n"
-}],
+}], "Text",
  CellChangeTimes->{{3.690220627457881*^9, 3.690221159129568*^9}, {
    3.690221214249576*^9, 3.690221647753193*^9}, {3.6902217987675743`*^9, 
    3.690221884507244*^9}, {3.690221946363057*^9, 3.690221976324597*^9}, {
@@ -161,7 +161,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 213, 4, 101, "Section",ExpressionUUID->"952567d1-b041-42fc-90c1-0d8f7eab655e"],
-Cell[638, 21, 8185, 119, 1389, InheritFromParent,ExpressionUUID->"ee8102e5-0e84-4ae6-a873-601ec5c15b47"]
+Cell[638, 21, 8193, 119, 1700, "Text",ExpressionUUID->"ee8102e5-0e84-4ae6-a873-601ec5c15b47"]
 }, Open  ]]
 }
 ]

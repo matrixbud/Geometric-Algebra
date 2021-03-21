@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[      9741,        194]
-NotebookOptionsPosition[      9108,        170]
-NotebookOutlinePosition[      9502,        186]
-CellTagsIndexPosition[      9459,        183]
+NotebookDataLength[      9859,        194]
+NotebookOptionsPosition[      9225,        170]
+NotebookOutlinePosition[      9620,        186]
+CellTagsIndexPosition[      9577,        183]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,13 +25,13 @@ Installation Instructions
 
 Cell[TextData[{
  StyleBox["1. Open the notebook \[OpenCurlyDoubleQuote]Geom Alg Palette \
-2021Jan\[CloseCurlyDoubleQuote]. Double click on the 2nd bracket to the left \
-on the right hand side of Begin Package. That opens the next level of \
-documentation which, in this case, is some code. Place you cursor anywhere in \
-the code and press shift-enter to run the code. A palette should be created. \
-Move it to where you would like it. (You can move it again later. It will \
-\[OpenCurlyDoubleQuote]remember\[CloseCurlyDoubleQuote] the location as well \
-as which triangles are open and closed). From the Palette menu, select \
+2021Mar\[CloseCurlyDoubleQuote]. Double click on the 2nd bracket to the left \
+on the right-hand side of Begin Package. That opens the next level of \
+documentation which, in this case, is some code. Place your cursor anywhere \
+in the code and press shift-enter to run the code. A palette should be \
+created. Move it to where you would like it. (You can move it again later. It \
+will \[OpenCurlyDoubleQuote]remember\[CloseCurlyDoubleQuote] the location as \
+well as which triangles are open and closed). From the Palette menu, select \
 Install Palette. In the Source drop-down menu select Geometric Algebra \
 Palette. In the Install Name box, type Geometric Algebra. Click OK. That \
 should install the palette. To check, click the red circle to put away the \
@@ -39,7 +39,7 @@ palette. Then click on the Palette menu to verify the new palette, Geometric \
 Algebra Palette, is there. Close the source file.\n\nNote: On a Mac, the \
 default location for the installed palette is \
 Library/Mathematica/SystemFiles/FrontEnd/Palettes/Geometric Algebra.nb in \
-your home folder\n\n2. Open the notebook GeomAlg2021Jan src. Save it as a \
+your home folder\n\n2. Open the notebook GeomAlg2021Mar src. Save it as a \
 type .m Mathematica file (that is, a Wolfram Mathematica Package) in the \
 Applications folder of your  $UserBaseDirectory. Do not change its name. On a \
 Macintosh, for example, one would select SAVE AS from the file menu, navigate \
@@ -75,20 +75,17 @@ executing that step, and so on until the simplest answer is reached.\n\n",
   FontWeight->"Bold"],
  "- A Notebook to supplement the Working Tutorial that displays, \
 side-by-side, examples of the different lists that this GA package can \
-generate from a given multivector.",
+generate from a given multivector.\n\n",
  StyleBox["Example Formatted Output",
   FontWeight->"Bold"],
  " - Shows how function AtomCoefG can be used to format output to line up in \
 a table format\n\n",
- StyleBox["GeomAlg2021Jan src",
+ StyleBox["GeomAlg2021Mar src",
   FontWeight->"Bold"],
  " - Source file for package\n\n",
- StyleBox["Geom Alg Palette src",
+ StyleBox["GeomAlgMarPalette",
   FontWeight->"Bold"],
  " - Source file for creating palette. Includes development notes.\n\n",
- StyleBox["Improvements List",
-  FontWeight->"Bold"],
- " - Wish list of future mods (Microsoft Word)\n\n",
  StyleBox["Installation Guide",
   FontWeight->"Bold"],
  " - This file (Microsoft Word and Mathematica Notebook)\n\n",
@@ -163,13 +160,16 @@ with many packages\n\n",
    3.77988248573372*^9, 3.779882492935033*^9}, {3.7847536957756033`*^9, 
    3.784753696498743*^9}, {3.78476373370385*^9, 3.7847637380443163`*^9}, {
    3.816081794740539*^9, 3.816081881638855*^9}, {3.817993244419856*^9, 
-   3.817993286774498*^9}, {3.8183528174862747`*^9, 3.818352833209869*^9}},
+   3.817993286774498*^9}, {3.8183528174862747`*^9, 3.818352833209869*^9}, {
+   3.825348063540771*^9, 3.825348067477687*^9}, {3.8253481698749437`*^9, 
+   3.825348194670796*^9}, {3.8253482603511667`*^9, 3.825348261092719*^9}, {
+   3.825348304299608*^9, 3.825348345584527*^9}, 3.825348463195036*^9},
  FontFamily->"Arial",
  FontSize->14,ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 },
 WindowSize->{835, 1188},
-WindowMargins->{{Automatic, 753}, {Automatic, 0}},
+WindowMargins->{{395, Automatic}, {Automatic, 19}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"b9a58404-0e38-4494-8b1b-63611da3d2d9"
@@ -187,7 +187,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[422, 15, 327, 8, 105, "Section",ExpressionUUID->"eb2254dd-5c0e-474d-9fa3-9541db189946"],
-Cell[752, 25, 8340, 142, 1062, "Text",ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
+Cell[752, 25, 8457, 142, 1062, "Text",ExpressionUUID->"ea2b8a0b-7f0b-403f-928d-bcd6b98bf4da"]
 }, Open  ]]
 }
 ]
